@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-021",
+  "deal_name": "Autumn Lead Generation",
+  "event_id": "EV-42-0138",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0593",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "48.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0594",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "12460000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0595",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0596",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "IL/OH/MI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0597",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0598",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "CTV",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0039",
+  "scenario_kind": "order_booked",
+  "seed": 42,
+  "subject": "Order line IO-42-0039 booked on Autumn Lead Generation",
+  "timestamp": "2025-09-17",
+  "trust_class": "system_of_record"
+}

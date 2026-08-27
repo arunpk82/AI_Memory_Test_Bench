@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-012",
+  "deal_name": "Autumn Brand Awareness",
+  "event_id": "EV-42-0025",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0023",
+      "fact_id": "F-42-0129",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0072",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-02"
+      },
+      "value": "26.70",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-42-0023",
+  "scenario_kind": "rate_revision",
+  "seed": 42,
+  "subject": "Revised rate on IO-42-0023",
+  "timestamp": "2025-03-02",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,9 @@
+Subject: Order line IO-42-0028 booked on Spring Store Visits
+Date: November 16, 2025
+
+System notification.
+
+The order line is in the system. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0028. We are holding at a $28.50 CPM, and the goal is 11,120,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is M18-49, and the format is OLV. Let me know if anything looks off.
+
+Thanks,
+ad sales ops

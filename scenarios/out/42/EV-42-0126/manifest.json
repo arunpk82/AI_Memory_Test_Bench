@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-017",
+  "deal_name": "Spring Product Launch",
+  "event_id": "EV-42-0126",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0523",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "26.70",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0524",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "19510000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0525",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0526",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0527",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0034",
+      "fact_id": "F-42-0528",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "Audio",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0034",
+  "scenario_kind": "order_booked",
+  "seed": 42,
+  "subject": "Order line IO-42-0034 booked on Spring Product Launch",
+  "timestamp": "2025-09-09",
+  "trust_class": "system_of_record"
+}

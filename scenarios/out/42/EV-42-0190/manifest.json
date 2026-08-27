@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-42-09",
+  "advertiser_name": "Verapine Studios",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Rosalind Okonkwo",
+  "deal_id": "DEAL-42-030",
+  "deal_name": "Winter App Installs",
+  "event_id": "EV-42-0190",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0783",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2026-02-03",
+        "start": "2026-01-20"
+      },
+      "value": "paused for creative swap",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0784",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-20"
+      },
+      "value": "2026-02-03",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0053",
+  "scenario_kind": "pacing_note",
+  "seed": 42,
+  "subject": "Pacing call notes on IO-42-0053",
+  "timestamp": "2026-01-20",
+  "trust_class": "first_party_note"
+}

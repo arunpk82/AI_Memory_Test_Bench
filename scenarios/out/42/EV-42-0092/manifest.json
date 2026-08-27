@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Ingrid Eyre",
+  "deal_id": "DEAL-42-022",
+  "deal_name": "Holiday Loyalty Retention",
+  "event_id": "EV-42-0092",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-022",
+      "fact_id": "F-42-0399",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "Holiday Loyalty Retention",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-022",
+      "fact_id": "F-42-0400",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "loyalty retention",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-022",
+      "fact_id": "F-42-0401",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "763000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-022",
+      "fact_id": "F-42-0402",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-08-16",
+        "start": "2025-07-16"
+      },
+      "value": "2025-08-11",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-022",
+      "fact_id": "F-42-0403",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-08-16",
+        "start": "2025-07-16"
+      },
+      "value": "2025-09-25",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Holiday Loyalty Retention brief for Kestrelia Collective",
+  "timestamp": "2025-07-16",
+  "trust_class": "counterparty_asserted"
+}

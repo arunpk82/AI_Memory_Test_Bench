@@ -1,0 +1,20 @@
+{
+  "attempt_history": [],
+  "attempts": 1,
+  "author": "system",
+  "channel": "order_system",
+  "event_id": "EV-42-0179",
+  "fidelity": "pass",
+  "fidelity_missing_facts": [],
+  "fidelity_unsupported": {
+    "dates": [],
+    "names": [],
+    "numbers": []
+  },
+  "model": null,
+  "render_mode": "deterministic",
+  "scenario_kind": "order_booked",
+  "seed": 42,
+  "template_version": "det-v2",
+  "timestamp": "2025-11-18"
+}

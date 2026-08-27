@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-028",
+  "deal_name": "Summer Seasonal Clearance",
+  "event_id": "EV-42-0150",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0648",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0565",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-06"
+      },
+      "value": "22720000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0050",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 42,
+  "subject": "Delivery goal reset on IO-42-0050",
+  "timestamp": "2025-10-06",
+  "trust_class": "system_of_record"
+}

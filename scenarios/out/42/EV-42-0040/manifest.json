@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Sorrel Nakashima",
+  "deal_id": "DEAL-42-033",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-42-0040",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-033",
+      "fact_id": "F-42-0205",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "Summer Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-033",
+      "fact_id": "F-42-0206",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-033",
+      "fact_id": "F-42-0207",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "185000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-033",
+      "fact_id": "F-42-0208",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "2025-04-25",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-033",
+      "fact_id": "F-42-0209",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "2025-06-24",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Summer Product Launch brief for Umberfield Outfitters",
+  "timestamp": "2025-03-25",
+  "trust_class": "counterparty_asserted"
+}

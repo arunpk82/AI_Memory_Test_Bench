@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Hollis Kastellan",
+  "deal_id": "DEAL-42-019",
+  "deal_name": "Spring Loyalty Retention",
+  "event_id": "EV-42-0079",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0353",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-28"
+      },
+      "value": "Spring Loyalty Retention",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0354",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-28"
+      },
+      "value": "loyalty retention",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0355",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-28"
+      },
+      "value": "757000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0356",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-28"
+      },
+      "value": "2025-08-20",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0357",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-28"
+      },
+      "value": "2025-10-19",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Spring Loyalty Retention brief for Zellwood Labs",
+  "timestamp": "2025-06-28",
+  "trust_class": "counterparty_asserted"
+}

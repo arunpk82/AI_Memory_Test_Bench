@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-012",
+  "deal_name": "Autumn Brand Awareness",
+  "event_id": "EV-42-0003",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-012",
+      "fact_id": "F-42-0011",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "Autumn Brand Awareness",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-012",
+      "fact_id": "F-42-0012",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "brand awareness",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-012",
+      "fact_id": "F-42-0013",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "727000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-012",
+      "fact_id": "F-42-0014",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "2025-03-10",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-012",
+      "fact_id": "F-42-0015",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "2025-04-24",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Autumn Brand Awareness brief for Ravensmoor Holdings",
+  "timestamp": "2025-01-27",
+  "trust_class": "counterparty_asserted"
+}

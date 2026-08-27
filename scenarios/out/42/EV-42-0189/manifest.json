@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Imani Umberto",
+  "deal_id": "DEAL-42-025",
+  "deal_name": "Winter Product Launch",
+  "event_id": "EV-42-0189",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0046",
+      "fact_id": "F-42-0781",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2026-02-19",
+        "start": "2026-01-15"
+      },
+      "value": "paused for creative swap",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0046",
+      "fact_id": "F-42-0782",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-15"
+      },
+      "value": "2026-02-19",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0046",
+  "scenario_kind": "pacing_note",
+  "seed": 42,
+  "subject": "Pacing call notes on IO-42-0046",
+  "timestamp": "2026-01-15",
+  "trust_class": "first_party_note"
+}

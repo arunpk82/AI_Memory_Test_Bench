@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-033",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-42-0053",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0060",
+      "fact_id": "F-42-0261",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0224",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-21"
+      },
+      "value": "delivering",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-42-0060",
+  "scenario_kind": "line_activation",
+  "seed": 42,
+  "subject": "IO-42-0060 moved into delivery",
+  "timestamp": "2025-04-21",
+  "trust_class": "system_of_record"
+}

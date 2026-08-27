@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-020",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-42-0108",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0449",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0450",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "29380000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0451",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0452",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "WA/OR/NV",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0453",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "A35-64",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0038",
+      "fact_id": "F-42-0454",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-22"
+      },
+      "value": "Native",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0038",
+  "scenario_kind": "order_booked",
+  "seed": 42,
+  "subject": "Order line IO-42-0038 booked on Winter Loyalty Retention",
+  "timestamp": "2025-08-22",
+  "trust_class": "system_of_record"
+}

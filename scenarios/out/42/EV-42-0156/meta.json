@@ -1,0 +1,20 @@
+{
+  "attempt_history": [],
+  "attempts": 1,
+  "author": "counterparty",
+  "channel": "email_received",
+  "event_id": "EV-42-0156",
+  "fidelity": "pass",
+  "fidelity_missing_facts": [],
+  "fidelity_unsupported": {
+    "dates": [],
+    "names": [],
+    "numbers": []
+  },
+  "model": null,
+  "render_mode": "deterministic",
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "template_version": "det-v2",
+  "timestamp": "2025-10-20"
+}

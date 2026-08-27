@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-42-01",
+  "advertiser_name": "Kelvinshaw Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-002",
+  "deal_name": "Holiday Brand Awareness",
+  "event_id": "EV-42-0071",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0321",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "48.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0322",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "6120000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0323",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0324",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "MA/CT/RI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0325",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "A35-64",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0002",
+      "fact_id": "F-42-0326",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-03"
+      },
+      "value": "Audio",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0002",
+  "scenario_kind": "order_booked",
+  "seed": 42,
+  "subject": "Order line IO-42-0002 booked on Holiday Brand Awareness",
+  "timestamp": "2025-06-03",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Ingrid Eyre",
+  "deal_id": "DEAL-42-020",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-42-0198",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-06",
+      "fact_id": "F-42-0798",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-22"
+      },
+      "value": "committed for next fiscal year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-06",
+      "fact_id": "F-42-0799",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-22"
+      },
+      "value": "369000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 42,
+  "subject": "Renewal conversation notes for Kestrelia Collective",
+  "timestamp": "2026-02-22",
+  "trust_class": "first_party_note"
+}

@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-011",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-42-0074",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-011",
+      "fact_id": "F-42-0339",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0275",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "2025-07-25",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-011",
+      "fact_id": "F-42-0340",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0276",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "2025-09-23",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 42,
+  "subject": "Autumn Product Launch flight moved for Ravensmoor Holdings",
+  "timestamp": "2025-06-07",
+  "trust_class": "first_party_sent"
+}

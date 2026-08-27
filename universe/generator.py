@@ -372,10 +372,25 @@ def _distinct_names(rng: random.Random, roots, suffixes, count: int) -> list[str
 
 
 def _person_names(rng: random.Random, count: int) -> list[str]:
+    """Distinct people, with distinct first names while the pool allows it.
+
+    First names are drawn without replacement because the corpus greets people
+    by first name. Sampling with replacement gave four of eleven advertisers a
+    contact called "Quentin", which reads as synthetic and makes a first-name
+    greeting ambiguous across accounts.
+    """
+    firsts = list(FIRST_NAMES)
+    lasts = list(LAST_NAMES)
+    rng.shuffle(firsts)
+    rng.shuffle(lasts)
     names: list[str] = []
     seen: set[str] = set()
+    index = 0
     while len(names) < count:
-        candidate = f"{rng.choice(FIRST_NAMES)} {rng.choice(LAST_NAMES)}"
+        first = firsts[index % len(firsts)]
+        last = lasts[(index * 7 + index // len(firsts)) % len(lasts)]
+        index += 1
+        candidate = f"{first} {last}"
         if candidate in seen:
             continue
         seen.add(candidate)

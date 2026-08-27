@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-009",
+  "deal_name": "Summer Loyalty Retention",
+  "event_id": "EV-42-0102",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0015",
+      "fact_id": "F-42-0435",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0367",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-08-29",
+        "start": "2025-08-11"
+      },
+      "value": "on hold",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-42-0015",
+  "scenario_kind": "line_hold",
+  "seed": 42,
+  "subject": "Hold placed on IO-42-0015",
+  "timestamp": "2025-08-11",
+  "trust_class": "system_of_record"
+}

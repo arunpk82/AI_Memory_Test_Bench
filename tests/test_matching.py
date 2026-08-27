@@ -165,6 +165,12 @@ def test_currency_and_grouping_extracted_once():
     assert found == [Decimal("12500")]
 
 
+def test_possessive_suffix_is_not_a_token():
+    text = "Northwind's revision landed today."
+    assert m.extract_name_phrases(text) == ["Northwind"]
+    assert m.value_in_text("Northwind", text)
+
+
 def test_edge_punct_strip_preserves_interior():
     assert m.strip_edge_punct('"A25-54",') == "A25-54"
     assert m.strip_edge_punct("Studios.") == "Studios"

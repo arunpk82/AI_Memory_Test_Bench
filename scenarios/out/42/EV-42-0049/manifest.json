@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Bertrand Whitfield",
+  "deal_id": "DEAL-42-013",
+  "deal_name": "Holiday Product Launch",
+  "event_id": "EV-42-0049",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0243",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "Holiday Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0244",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0245",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "117000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0246",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "2025-05-29",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0247",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "2025-07-13",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Holiday Product Launch brief for Harrowgate Holdings",
+  "timestamp": "2025-04-11",
+  "trust_class": "counterparty_asserted"
+}

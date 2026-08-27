@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Desmond Quintrell",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-42-0115",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-08",
+      "fact_id": "F-42-0474",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0051",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-01"
+      },
+      "value": "Desmond Quintrell",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-42-008-B",
+      "fact_id": "F-42-0475",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-01"
+      },
+      "value": "investment lead",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-42-008-B",
+      "fact_id": "F-42-0476",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-01"
+      },
+      "value": "desmond.quintrell@larkspire.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 42,
+  "subject": "New day-to-day contact at Larkspire Provisions",
+  "timestamp": "2025-09-01",
+  "trust_class": "counterparty_asserted"
+}

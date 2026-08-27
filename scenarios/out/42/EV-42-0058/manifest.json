@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-008",
+  "deal_name": "Holiday Brand Awareness",
+  "event_id": "EV-42-0058",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-42-0014",
+      "fact_id": "F-42-0271",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-12"
+      },
+      "value": "36.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-42-0014",
+  "scenario_kind": "client_rate_claim",
+  "seed": 42,
+  "subject": "Rate question on IO-42-0014",
+  "timestamp": "2025-05-12",
+  "trust_class": "counterparty_asserted"
+}

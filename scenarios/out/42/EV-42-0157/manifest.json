@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Ingrid Eyre",
+  "deal_id": "DEAL-42-020",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-42-0157",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-42-0037",
+      "fact_id": "F-42-0668",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-23"
+      },
+      "value": "34.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-42-0037",
+  "scenario_kind": "client_rate_claim",
+  "seed": 42,
+  "subject": "Rate question on IO-42-0037",
+  "timestamp": "2025-10-23",
+  "trust_class": "counterparty_asserted"
+}

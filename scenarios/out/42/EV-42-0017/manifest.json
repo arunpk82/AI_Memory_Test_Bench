@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-42-02",
+  "advertiser_name": "Cindervale Studios",
+  "agency_name": "Cindersmith Trading",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-005",
+  "deal_name": "Holiday Brand Awareness",
+  "event_id": "EV-42-0017",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-005",
+      "fact_id": "F-42-0084",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "Holiday Brand Awareness",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-005",
+      "fact_id": "F-42-0085",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "brand awareness",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-005",
+      "fact_id": "F-42-0086",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "170000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-005",
+      "fact_id": "F-42-0087",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "2025-04-23",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-005",
+      "fact_id": "F-42-0088",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "2025-05-23",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 42,
+  "subject": "Holiday Brand Awareness brief for Cindervale Studios",
+  "timestamp": "2025-02-20",
+  "trust_class": "counterparty_asserted"
+}

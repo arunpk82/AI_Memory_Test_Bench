@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-015",
+  "deal_name": "Spring Seasonal Clearance",
+  "event_id": "EV-42-0168",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0709",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0643",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-03"
+      },
+      "value": "18200000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0030",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 42,
+  "subject": "Delivery goal reset on IO-42-0030",
+  "timestamp": "2025-11-03",
+  "trust_class": "system_of_record"
+}

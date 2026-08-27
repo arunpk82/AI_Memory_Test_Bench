@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-42-02",
+  "advertiser_name": "Cindervale Studios",
+  "agency_name": "Cindersmith Trading",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-006",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-42-0155",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0010",
+      "fact_id": "F-42-0660",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-11-09",
+        "start": "2025-10-19"
+      },
+      "value": "paused for creative swap",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0010",
+      "fact_id": "F-42-0661",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-19"
+      },
+      "value": "2025-11-09",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-02",
+      "fact_id": "F-42-0662",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-19"
+      },
+      "value": "TAX-8433-QG",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-42-0010",
+  "scenario_kind": "pacing_note",
+  "seed": 42,
+  "subject": "Pacing call notes on IO-42-0010",
+  "timestamp": "2025-10-19",
+  "trust_class": "first_party_note"
+}

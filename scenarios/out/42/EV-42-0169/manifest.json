@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-010",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-42-0169",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0710",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-11-24",
+        "start": "2025-11-03"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0711",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-03"
+      },
+      "value": "2025-11-24",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-42-0019",
+  "scenario_kind": "pacing_note",
+  "seed": 42,
+  "subject": "Pacing call notes on IO-42-0019",
+  "timestamp": "2025-11-03",
+  "trust_class": "first_party_note"
+}

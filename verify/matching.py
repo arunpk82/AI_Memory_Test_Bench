@@ -374,7 +374,8 @@ service set setting several share shared she shift shifted short should show
 side sign signed since single sir sit six slot small so social some something
 soon sorry sound speak spend spent split spot spots start started starting
 state status step still stop stopped straight sub such sudden sum sure switch
-switched sync system take taken taking talk talked team tell ten term terms
+subject switched sync system take taken taking talk talked team tell ten term
+terms
 than thank thanks that the their them then there these they thing things
 think third this those though three through thursday thus time times to today
 together told tomorrow too took top total touch track trade traffic
@@ -386,6 +387,19 @@ within without word work worked working works would wrap write written wrong
 yes yesterday yet you your yours
 """.split())
 
+#: Ordinary business-email words that turn up sentence-initially. Kept separate
+#: from COMMON_WORDS so the reason each block exists stays visible: this block
+#: grew from real precision-side false positives ("Reach them at ..." reported
+#: "Reach" as an unsupported company name).
+CORRESPONDENCE_WORDS = frozenset("""
+afternoon apologies appreciate attaching cheers circling confirmations
+correction corrections details evening everybody everyone flagging follows
+greetings heads hello howdy including logging looping meanwhile morning
+neither noting otherwise overall passing quickly reach reaching recap
+recapping regarding regards reminder revisions sending sharing shortly
+sounds summary thanking tomorrow understood updates weekend welcome
+""".split())
+
 #: Signature terms of the domain. These are vocabulary, not entity names, so a
 #: run consisting only of these is not reported as unsupported.
 DOMAIN_WORDS = frozenset("""
@@ -393,7 +407,8 @@ ad ads adserver advertiser advertisers agency campaign cpm cpms flight
 insertion io ios ops sales targeting impressions makegood makegoods
 """.split())
 
-_SAFE_WORDS = COMMON_WORDS | DOMAIN_WORDS | {"of", "and", "de", "la"}
+_SAFE_WORDS = (COMMON_WORDS | CORRESPONDENCE_WORDS | DOMAIN_WORDS
+               | {"of", "and", "de", "la"})
 
 
 def _split_on_safe_words(tokens: list[str]) -> list[list[str]]:
@@ -451,8 +466,21 @@ def _extract_dates_segment(segment: str) -> tuple[list[tuple[str, date]],
     return found, partial, spans
 
 
+_POSSESSIVE_RE = re.compile(r"'s?$")
+
+
+def bare_token(token: str) -> str:
+    """A token stripped of edge punctuation and of a possessive suffix.
+
+    ``Northwind's`` yields ``Northwind``. Without this, the possessive ``s``
+    survives normalization as a standalone one-letter token and every
+    possessive in the corpus reads as an unsupported name.
+    """
+    return _POSSESSIVE_RE.sub("", strip_edge_punct(token))
+
+
 def _is_nameish(token: str) -> bool:
-    bare = strip_edge_punct(token)
+    bare = bare_token(token)
     if not bare:
         return False
     if _CODE_TOKEN_RE.fullmatch(bare):
@@ -471,22 +499,22 @@ def _extract_names_segment(segment: str) -> list[str]:
     run: list[str] = []
 
     def flush() -> None:
-        while run and strip_edge_punct(run[-1]).lower() in _CONNECTORS:
+        while run and bare_token(run[-1]).lower() in _CONNECTORS:
             run.pop()
         # Sentence-initial capitalization makes ordinary words look like the
         # first token of a name ("Line IO-42-0071"). Leading words that are not
         # entity names are dropped; trailing ones are kept, because company
         # names legitimately end in ordinary words ("Contoso Media").
-        while run and strip_edge_punct(run[0]).casefold() in _SAFE_WORDS:
+        while run and bare_token(run[0]).casefold() in _SAFE_WORDS:
             run.pop(0)
         if run:
-            phrase = " ".join(strip_edge_punct(token) for token in run).strip()
+            phrase = " ".join(bare_token(token) for token in run).strip()
             if phrase:
                 names.append(phrase)
         run.clear()
 
     for token in tokens:
-        bare = strip_edge_punct(token)
+        bare = bare_token(token)
         if _is_nameish(token):
             run.append(token)
         elif run and bare.lower() in _CONNECTORS:
