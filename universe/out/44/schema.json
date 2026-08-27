@@ -1,0 +1,211 @@
+{
+  "enums": {
+    "as_of_horizon": [
+      "early",
+      "mid",
+      "late",
+      "current"
+    ],
+    "author": [
+      "user",
+      "counterparty",
+      "system"
+    ],
+    "channel": [
+      "email_received",
+      "email_sent",
+      "order_system",
+      "call_note"
+    ],
+    "entity": [
+      "advertiser",
+      "agency",
+      "deal",
+      "order-line",
+      "contact"
+    ],
+    "gold_kind": [
+      "value",
+      "sentinel"
+    ],
+    "memory_point_status": [
+      "active",
+      "superseded",
+      "expired"
+    ],
+    "plausibility": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "query_kind": [
+      "exact",
+      "similarity",
+      "temporal_range",
+      "multi_hop"
+    ],
+    "question_type": [
+      "single_fact",
+      "inference_only",
+      "episodic",
+      "temporal",
+      "multi_session",
+      "knowledge_update_current",
+      "knowledge_update_past",
+      "expired_state",
+      "conflict_resolution",
+      "order_state",
+      "mapping_lookup",
+      "abstention_false_premise",
+      "injection_probe"
+    ],
+    "sentinel": [
+      "INSUFFICIENT_EVIDENCE",
+      "FALSE_PREMISE",
+      "DO_NOT_STORE",
+      "REJECT_UNVERIFIED_THIRD_PARTY_CLAIM"
+    ],
+    "trust_class": [
+      "system_of_record",
+      "first_party_sent",
+      "first_party_note",
+      "automated_notification",
+      "counterparty_asserted",
+      "third_party_unverified"
+    ],
+    "volatility_class": [
+      "permanent",
+      "durable",
+      "slow_changing",
+      "transient",
+      "ephemeral"
+    ]
+  },
+  "event_fields": [
+    "event_id",
+    "seed",
+    "scenario_kind",
+    "subject",
+    "timestamp",
+    "channel",
+    "author",
+    "advertiser_id",
+    "advertiser_name",
+    "agency_name",
+    "contact_name",
+    "deal_id",
+    "io_id",
+    "fact_ids"
+  ],
+  "fact_fields": [
+    "fact_id",
+    "entity",
+    "entity_id",
+    "event_id",
+    "attribute",
+    "value",
+    "validity_interval",
+    "volatility_class",
+    "channel",
+    "author",
+    "trust_class",
+    "supersedes",
+    "plausibility",
+    "injection",
+    "never_memorize"
+  ],
+  "invariants": [
+    "trust_class is derived from (channel, author) via trust_table and is never hand-set",
+    "plausibility is non-null exactly on injection facts",
+    "never_memorize facts are ephemeral with a closed same-day validity interval",
+    "cancellation supersedes with line_status='cancelled'; the prior fact is retained with its interval closed, never deleted",
+    "expired (lapsed, no successor) is not superseded (replaced)",
+    "expected_memory_points exclude injection and never_memorize facts",
+    "every question carries exactly one query_kind, assigned by type",
+    "event.timestamp is required and appears in both the render manifest and meta.json"
+  ],
+  "query_kind_by_type": {
+    "abstention_false_premise": "similarity",
+    "conflict_resolution": "multi_hop",
+    "episodic": "similarity",
+    "expired_state": "temporal_range",
+    "inference_only": "multi_hop",
+    "injection_probe": "similarity",
+    "knowledge_update_current": "exact",
+    "knowledge_update_past": "temporal_range",
+    "mapping_lookup": "exact",
+    "multi_session": "multi_hop",
+    "order_state": "exact",
+    "single_fact": "exact",
+    "temporal": "temporal_range"
+  },
+  "question_fields": [
+    "question_id",
+    "seed",
+    "type",
+    "query_kind",
+    "text",
+    "as_of",
+    "as_of_horizon",
+    "gold_kind",
+    "gold_answer",
+    "gold_tokens",
+    "expected_memory_points",
+    "evidence_event_ids",
+    "evidence_fact_ids",
+    "entity",
+    "entity_id",
+    "io_id",
+    "touches_injection",
+    "touches_never_memorize",
+    "notes"
+  ],
+  "trust_table": [
+    {
+      "author": "counterparty",
+      "channel": "call_note",
+      "trust_class": "counterparty_asserted"
+    },
+    {
+      "author": "user",
+      "channel": "call_note",
+      "trust_class": "first_party_note"
+    },
+    {
+      "author": "counterparty",
+      "channel": "email_received",
+      "trust_class": "counterparty_asserted"
+    },
+    {
+      "author": "system",
+      "channel": "email_received",
+      "trust_class": "automated_notification"
+    },
+    {
+      "author": "user",
+      "channel": "email_received",
+      "trust_class": "third_party_unverified"
+    },
+    {
+      "author": "system",
+      "channel": "email_sent",
+      "trust_class": "automated_notification"
+    },
+    {
+      "author": "user",
+      "channel": "email_sent",
+      "trust_class": "first_party_sent"
+    },
+    {
+      "author": "system",
+      "channel": "order_system",
+      "trust_class": "system_of_record"
+    },
+    {
+      "author": "user",
+      "channel": "order_system",
+      "trust_class": "first_party_sent"
+    }
+  ],
+  "version": 2
+}
