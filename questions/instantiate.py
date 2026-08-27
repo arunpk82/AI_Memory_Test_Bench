@@ -58,6 +58,15 @@ CURRENT_STATE_TYPES = frozenset({
     "inference_only",
 })
 
+#: Human phrasing for each channel, for episodic question text. Raw channel
+#: identifiers read badly in a question ("In the order system dated ...").
+CHANNEL_PHRASE = {
+    "email_received": "the inbound email",
+    "email_sent": "the email we sent",
+    "order_system": "the order-system notification",
+    "call_note": "the call note",
+}
+
 #: Human phrasing for each fact attribute, used in question text.
 ATTRIBUTE_PHRASE = {
     "cpm_rate": "CPM rate",
@@ -77,7 +86,7 @@ ATTRIBUTE_PHRASE = {
     "legal_entity_name": "legal entity name",
     "billing_country": "billing country",
     "industry_vertical": "industry vertical",
-    "advertiser_tax_id": "tax reference on file",
+    "advertiser_tax_id": "tax reference",
     "contact_email": "email address",
     "contact_role": "role",
     "pacing_status": "pacing status",
@@ -215,7 +224,7 @@ class UniverseIndex:
 
     def event_label(self, event_id: str) -> str:
         event = self.events_by_id[event_id]
-        return f"the {event['channel'].replace('_', ' ')} dated {event['timestamp']}"
+        return f"{CHANNEL_PHRASE[event['channel']]} dated {event['timestamp']}"
 
     def horizon_for(self, as_of: date) -> str:
         if as_of >= self.current:
