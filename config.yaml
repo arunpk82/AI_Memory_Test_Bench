@@ -1,0 +1,37 @@
+# mem-testbed v2 — models and sampling.
+#
+# Every key is read at runtime. A value of TBD is a hard error, not a default:
+# modules raise RuntimeError naming the exact key rather than silently
+# substituting a fallback model. See DORMANT PATHS in the completion report.
+
+renderer:
+  # Anthropic models on Bedrock require the `us.` inference-profile prefix.
+  model: us.anthropic.claude-sonnet-4-6
+  # Claude on Bedrock rejects temperature and top_p together. Only temperature
+  # is sent; there is deliberately no top_p key here.
+  temperature: 0.7
+  max_tokens: 1024
+  # Fidelity retry budget. Attempt 1 is the initial draft, so 3 retries means
+  # at most 4 Bedrock calls per scenario.
+  max_retries: 3
+
+answerability:
+  # Cross-family from renderer.model by requirement: a Claude-rendered corpus
+  # must not be audited by a Claude oracle.
+  oracle_model: amazon.nova-pro-v1:0
+  temperature: 0.0
+  max_tokens: 512
+
+aws:
+  # Overridden by the AWS_REGION environment variable when set.
+  region: us-east-1
+
+universe:
+  seeds: [42, 43, 44]
+  # "Current" as-of date = max fact validity_interval.start + current_offset_days.
+  current_offset_days: 365
+
+questions:
+  target_min: 220
+  target_max: 260
+  min_per_type: 10
