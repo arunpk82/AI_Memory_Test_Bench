@@ -327,6 +327,12 @@ def _is_abbreviation_boundary(preceding: str) -> bool:
 _CODE_TOKEN_RE = re.compile(r"(?<![\w-])(?=[A-Za-z0-9-]*[A-Za-z])(?=[A-Za-z0-9-]*\d)"
                             r"[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?![\w-])")
 
+#: A magnitude-suffixed number is not a code. Without this exclusion the code
+#: matcher claims the "2M" out of "$1.2M", masks it before number extraction,
+#: and the remaining "1." reads as the number 1 -- so a budget of 1,200,000
+#: written as $1.2M becomes a planted-recall miss.
+_MAGNITUDE_NUMBER_RE = re.compile(r"\d+(?:\.\d+)?(?:k|mm|m|bn|b)", re.IGNORECASE)
+
 #: Runs made only of these words are never reported as names. Sentence-initial
 #: capitalization makes almost any word look like a proper noun, so the
 #: precision side needs an explicit list of words that are not entity names.
@@ -546,7 +552,9 @@ def extract_all(text: str) -> Extraction:
         result.partial_dates.extend(partials)
         without_dates = _mask(body, date_spans)
 
-        code_spans = [(m.start(), m.end()) for m in _CODE_TOKEN_RE.finditer(without_dates)]
+        code_spans = [(m.start(), m.end())
+                      for m in _CODE_TOKEN_RE.finditer(without_dates)
+                      if not _MAGNITUDE_NUMBER_RE.fullmatch(m.group(0))]
         result.names.extend(_extract_names_segment(without_dates))
 
         without_codes = _mask(without_dates, code_spans)
