@@ -20,7 +20,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-04-27",
+        "end": "2025-04-20",
         "start": "2025-04-02"
       },
       "value": "22.75",

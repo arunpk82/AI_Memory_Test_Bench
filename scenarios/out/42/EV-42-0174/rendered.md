@@ -1,9 +1,9 @@
-Subject: Updated remittance details for Cindervale Studios
-Date: November 8, 2025
+Subject: Order line IO-42-0066 booked on Summer Loyalty Retention
+Date: November 6, 2025
 
-Hi there,
+System notification.
 
-One administrative item to pass along. This one is on Cindervale Studios for the Back-to-School Store Visits program. Creative is due November 25, 2025, and please send remittance to Kirkwall Settlements going forward. Let me know if anything looks off.
+The order line is in the system. This one is on Umberfield Outfitters for the Summer Loyalty Retention program, order line IO-42-0066. We are holding at a $48.00 CPM, and the goal is 14,690,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is W25-54, and the format is Display. Let me know if anything looks off.
 
 Thanks,
-the Cindervale Studios team
+ad sales ops

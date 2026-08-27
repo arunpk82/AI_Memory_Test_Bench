@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0043 booked on Spring Seasonal Clearance
-Date: September 7, 2025
+Subject: Spring Product Launch brief for Zellwood Labs
+Date: September 5, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0043. We are holding at a $36.50 CPM, and the goal is 24,600,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A25-54, and the format is Native. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Zellwood Labs for the Spring Product Launch program. The goal is product launch, and the working budget is $521,000. The flight opens October 18, 2025, and it wraps December 17, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Zellwood Labs team

@@ -1,53 +1,104 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-012",
-  "deal_name": "Autumn Brand Awareness",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Jarrah Bramhall",
+  "deal_id": "DEAL-42-027",
+  "deal_name": "Winter Loyalty Retention",
   "event_id": "EV-42-0051",
   "facts": [
     {
-      "attribute": "pacing_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0023",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-027",
+      "fact_id": "F-42-0251",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-14"
+      },
+      "value": "Winter Loyalty Retention",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-027",
+      "fact_id": "F-42-0252",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-14"
+      },
+      "value": "loyalty retention",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-027",
       "fact_id": "F-42-0253",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
-        "end": "2025-05-14",
-        "start": "2025-04-16"
+        "end": null,
+        "start": "2025-04-14"
       },
-      "value": "paused for creative swap",
-      "volatility_class": "transient"
+      "value": "140000",
+      "volatility_class": "durable"
     },
     {
-      "attribute": "pacing_review_through",
-      "entity": "order-line",
-      "entity_id": "IO-42-0023",
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-027",
       "fact_id": "F-42-0254",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-04-16"
+        "start": "2025-04-14"
       },
-      "value": "2025-05-14",
+      "value": "2025-06-19",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-027",
+      "fact_id": "F-42-0255",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-14"
+      },
+      "value": "2025-08-03",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0023",
-  "scenario_kind": "pacing_note",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0023",
-  "timestamp": "2025-04-16",
-  "trust_class": "first_party_note"
+  "subject": "Winter Loyalty Retention brief for Larkspire Provisions",
+  "timestamp": "2025-04-14",
+  "trust_class": "counterparty_asserted"
 }

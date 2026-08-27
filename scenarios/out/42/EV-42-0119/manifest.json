@@ -1,104 +1,36 @@
 {
   "advertiser_id": "ADV-42-03",
   "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-010",
-  "deal_name": "Autumn App Installs",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-009",
+  "deal_name": "Summer Loyalty Retention",
   "event_id": "EV-42-0119",
   "facts": [
     {
-      "attribute": "deal_name",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0493",
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0015",
+      "fact_id": "F-42-0489",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "supersedes": "F-42-0452",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-07"
+        "start": "2025-09-04"
       },
-      "value": "Autumn App Installs",
-      "volatility_class": "permanent"
-    },
-    {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0494",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-07"
-      },
-      "value": "app installs",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0495",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-07"
-      },
-      "value": "701000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0496",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": "2025-10-12",
-        "start": "2025-09-07"
-      },
-      "value": "2025-11-01",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0497",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": "2025-10-12",
-        "start": "2025-09-07"
-      },
-      "value": "2025-12-31",
-      "volatility_class": "durable"
+      "value": "cancelled",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "deal_kickoff",
+  "io_id": "IO-42-0015",
+  "scenario_kind": "line_cancellation",
   "seed": 42,
-  "subject": "Autumn App Installs brief for Ravensmoor Holdings",
-  "timestamp": "2025-09-07",
-  "trust_class": "counterparty_asserted"
+  "subject": "Cancellation posted for IO-42-0015",
+  "timestamp": "2025-09-04",
+  "trust_class": "system_of_record"
 }

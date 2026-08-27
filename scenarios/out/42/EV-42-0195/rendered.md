@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Ravensmoor Holdings
-Date: February 10, 2026
+Subject: Pacing call notes on IO-42-0066
+Date: February 4, 2026
 
 Notes from the call.
 
-Notes from the renewal chat. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program. They are undecided pending performance review, and they floated roughly $871,000 for next year. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Umberfield Outfitters for the Summer Loyalty Retention program, order line IO-42-0066. Pacing is paused for creative swap, and we review again through February 18, 2026. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

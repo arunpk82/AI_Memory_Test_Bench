@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0014 booked on Holiday Brand Awareness
-Date: March 18, 2025
+Subject: Revised rate on IO-42-0011
+Date: March 17, 2025
 
-System notification.
+Hi Perrin,
 
-The order line is in the system. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program, order line IO-42-0014. We are holding at a $48.00 CPM, and the goal is 7,120,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A18-34, and the format is Display. Let me know if anything looks off.
+Confirming the rate change we talked through. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0011. We are holding at a $31.25 CPM. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

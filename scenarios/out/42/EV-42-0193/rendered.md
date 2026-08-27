@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Cindervale Studios
-Date: February 6, 2026
+Subject: Pacing call notes on IO-42-0028
+Date: January 29, 2026
 
 Notes from the call.
 
-Notes from the renewal chat. This one is on Cindervale Studios for the Back-to-School Store Visits program. They are leaning toward renewal, and they floated roughly $151,000 for next year. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0028. Pacing is paused for creative swap, and we review again through February 26, 2026. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

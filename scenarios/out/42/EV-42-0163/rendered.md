@@ -1,9 +1,9 @@
-Subject: Holiday Seasonal Clearance brief for Zellwood Labs
-Date: October 28, 2025
+Subject: Order line IO-42-0047 booked on Winter Product Launch
+Date: October 25, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Zellwood Labs for the Holiday Seasonal Clearance program. The goal is seasonal clearance, and the working budget is $447,000. The flight opens December 31, 2025, and it wraps February 14, 2026. Let me know if anything looks off.
+The order line is in the system. This one is on Stonebrook Media for the Winter Product Launch program, order line IO-42-0047. We are holding at a $45.75 CPM, and the goal is 5,180,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A35-64, and the format is Audio. Let me know if anything looks off.
 
 Thanks,
-the Zellwood Labs team
+ad sales ops

@@ -1,36 +1,70 @@
 {
-  "advertiser_id": "ADV-42-10",
-  "advertiser_name": "Umberfield Outfitters",
-  "agency_name": null,
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-035",
-  "deal_name": "Holiday Loyalty Retention",
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Hollis Kastellan",
+  "deal_id": null,
+  "deal_name": null,
   "event_id": "EV-42-0106",
   "facts": [
     {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0447",
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-05",
+      "fact_id": "F-42-0441",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0420",
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0030",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-08-21"
+        "start": "2025-08-11"
       },
-      "value": "25260000",
+      "value": "Hollis Kastellan",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-42-005-B",
+      "fact_id": "F-42-0442",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "account director",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-42-005-B",
+      "fact_id": "F-42-0443",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "hollis.kastellan@zellwood.example",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0064",
-  "scenario_kind": "impressions_adjustment",
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
   "seed": 42,
-  "subject": "Delivery goal reset on IO-42-0064",
-  "timestamp": "2025-08-21",
-  "trust_class": "system_of_record"
+  "subject": "New day-to-day contact at Zellwood Labs",
+  "timestamp": "2025-08-11",
+  "trust_class": "counterparty_asserted"
 }

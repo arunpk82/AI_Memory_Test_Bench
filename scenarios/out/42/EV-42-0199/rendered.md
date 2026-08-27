@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Stonebrook Media
-Date: February 26, 2026
+Subject: Rate card snapshot for IO-42-0035
+Date: February 12, 2026
 
-Notes from the call.
+System notification.
 
-Notes from the renewal chat. This one is on Stonebrook Media for the Holiday Seasonal Clearance program. They are undecided pending performance review, and they floated roughly $937,000 for next year. Let me know if anything looks off.
+Today the rate card pull came through. This one is on Zellwood Labs for the Holiday Seasonal Clearance program, order line IO-42-0035. The card is showing $21.00 CPM today. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

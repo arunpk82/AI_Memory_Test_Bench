@@ -1,53 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-010",
-  "deal_name": "Autumn App Installs",
+  "advertiser_id": "ADV-42-09",
+  "advertiser_name": "Verapine Studios",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-030",
+  "deal_name": "Winter App Installs",
   "event_id": "EV-42-0169",
   "facts": [
     {
-      "attribute": "pacing_status",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0019",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0706",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-01"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0707",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-01"
+      },
+      "value": "36810000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0708",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-01"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
+      "fact_id": "F-42-0709",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-01"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0053",
       "fact_id": "F-42-0710",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-11-24",
-        "start": "2025-11-03"
+        "end": null,
+        "start": "2025-11-01"
       },
-      "value": "under-delivering",
-      "volatility_class": "transient"
+      "value": "P18-49",
+      "volatility_class": "durable"
     },
     {
-      "attribute": "pacing_review_through",
+      "attribute": "creative_format",
       "entity": "order-line",
-      "entity_id": "IO-42-0019",
+      "entity_id": "IO-42-0053",
       "fact_id": "F-42-0711",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-03"
+        "start": "2025-11-01"
       },
-      "value": "2025-11-24",
+      "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0019",
-  "scenario_kind": "pacing_note",
+  "io_id": "IO-42-0053",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0019",
-  "timestamp": "2025-11-03",
-  "trust_class": "first_party_note"
+  "subject": "Order line IO-42-0053 booked on Winter App Installs",
+  "timestamp": "2025-11-01",
+  "trust_class": "system_of_record"
 }

@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "rate_card_snapshot",
+  "scenario_kind": "order_booked",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-09-08"
+  "timestamp": "2025-09-07"
 }

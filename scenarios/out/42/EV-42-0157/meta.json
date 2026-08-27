@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "client_rate_claim",
+  "scenario_kind": "injection_false_rate",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-10-23"
+  "timestamp": "2025-10-11"
 }

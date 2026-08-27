@@ -2,12 +2,13 @@
   "advertisers": 10,
   "agencies": 5,
   "correction_chains": 36,
-  "current_as_of": "2027-02-19",
+  "current_as_of": "2027-02-23",
   "deals": 41,
   "deals_with_correction_chains": 19,
   "deals_with_correction_chains_pct": 46.3,
-  "events_with_permanent_and_volatile_facts": 3,
-  "facts": 813,
+  "duplicate_active_facts": [],
+  "events_with_permanent_and_volatile_facts": 5,
+  "facts": 820,
   "injection_plausibility": {
     "high": 3,
     "low": 3,
@@ -21,7 +22,7 @@
   "scenario_kinds": {
     "account_setup": 10,
     "agency_change": 4,
-    "client_rate_claim": 7,
+    "client_rate_claim": 12,
     "contact_handoff": 4,
     "deal_kickoff": 41,
     "flight_shift": 6,
@@ -38,10 +39,10 @@
     "rate_revision": 10,
     "renewal_conversation": 10
   },
-  "scenarios": 204,
+  "scenarios": 209,
   "supersession_edges": 42,
-  "timeline_end": "2026-02-19",
-  "timeline_span_days": 408,
+  "timeline_end": "2026-02-23",
+  "timeline_span_days": 412,
   "timeline_start": "2025-01-07",
   "transient_facts_with_end_dates": 14
 }

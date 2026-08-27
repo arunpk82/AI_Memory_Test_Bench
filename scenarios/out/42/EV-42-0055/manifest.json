@@ -1,121 +1,36 @@
 {
-  "advertiser_id": "ADV-42-04",
-  "advertiser_name": "Harrowgate Holdings",
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-013",
-  "deal_name": "Holiday Product Launch",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Bertrand Whitfield",
+  "deal_id": "DEAL-42-034",
+  "deal_name": "Back-to-School App Installs",
   "event_id": "EV-42-0055",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0026",
-      "fact_id": "F-42-0263",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-25"
-      },
-      "value": "18.50",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0026",
+      "entity_id": "IO-42-0062",
       "fact_id": "F-42-0264",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0210",
+      "trust_class": "first_party_sent",
       "validity_interval": {
         "end": null,
-        "start": "2025-04-25"
+        "start": "2025-04-22"
       },
-      "value": "6320000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0026",
-      "fact_id": "F-42-0265",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-25"
-      },
-      "value": "booked",
+      "value": "18.50",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0026",
-      "fact_id": "F-42-0266",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-25"
-      },
-      "value": "FL/GA/NC",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0026",
-      "fact_id": "F-42-0267",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-25"
-      },
-      "value": "A18-34",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0026",
-      "fact_id": "F-42-0268",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-25"
-      },
-      "value": "OLV",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0026",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0062",
+  "scenario_kind": "rate_revision",
   "seed": 42,
-  "subject": "Order line IO-42-0026 booked on Holiday Product Launch",
-  "timestamp": "2025-04-25",
-  "trust_class": "system_of_record"
+  "subject": "Revised rate on IO-42-0062",
+  "timestamp": "2025-04-22",
+  "trust_class": "first_party_sent"
 }

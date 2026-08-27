@@ -1,36 +1,53 @@
 {
   "advertiser_id": "ADV-42-03",
   "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": null,
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Oisin Zaragoza",
   "deal_id": "DEAL-42-009",
   "deal_name": "Summer Loyalty Retention",
   "event_id": "EV-42-0102",
   "facts": [
     {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0015",
-      "fact_id": "F-42-0435",
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-009",
+      "fact_id": "F-42-0432",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0367",
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0362",
+      "trust_class": "first_party_sent",
       "validity_interval": {
-        "end": "2025-08-29",
-        "start": "2025-08-11"
+        "end": null,
+        "start": "2025-08-03"
       },
-      "value": "on hold",
-      "volatility_class": "slow_changing"
+      "value": "2025-08-31",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-009",
+      "fact_id": "F-42-0433",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-42-0363",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "2025-10-30",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0015",
-  "scenario_kind": "line_hold",
+  "io_id": null,
+  "scenario_kind": "flight_shift",
   "seed": 42,
-  "subject": "Hold placed on IO-42-0015",
-  "timestamp": "2025-08-11",
-  "trust_class": "system_of_record"
+  "subject": "Summer Loyalty Retention flight moved for Ravensmoor Holdings",
+  "timestamp": "2025-08-03",
+  "trust_class": "first_party_sent"
 }

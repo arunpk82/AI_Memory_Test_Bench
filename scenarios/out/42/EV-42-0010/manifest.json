@@ -4,7 +4,7 @@
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Vesper Merriweather",
+  "contact_name": "Jarrah Bramhall",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0010",
@@ -88,10 +88,10 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-08-31",
+        "end": "2025-09-03",
         "start": "2025-02-02"
       },
-      "value": "Vesper Merriweather",
+      "value": "Jarrah Bramhall",
       "volatility_class": "slow_changing"
     }
   ],

@@ -1,9 +1,9 @@
-Subject: Summer Loyalty Retention brief for Ravensmoor Holdings
-Date: June 28, 2025
+Subject: Autumn Product Launch flight moved for Ravensmoor Holdings
+Date: June 11, 2025
 
-Hi there,
+Hi Oisin,
 
-Thanks for sending the brief over. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program. The goal is loyalty retention, and the working budget is $844,000. The flight opens August 17, 2025, and it wraps October 16, 2025. Let me know if anything looks off.
+We moved the dates the way you asked. This one is on Ravensmoor Holdings for the Autumn Product Launch program. The flight opens July 25, 2025, and it wraps September 23, 2025. Let me know if anything looks off.
 
 Thanks,
-the Ravensmoor Holdings team
+ad sales ops

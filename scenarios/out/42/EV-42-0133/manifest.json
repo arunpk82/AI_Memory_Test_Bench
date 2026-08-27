@@ -1,19 +1,19 @@
 {
-  "advertiser_id": "ADV-42-08",
-  "advertiser_name": "Larkspire Provisions",
-  "agency_name": "Saltmarsh Buying Desk",
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
+  "agency_name": "Hollowell Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-028",
-  "deal_name": "Summer Seasonal Clearance",
+  "deal_id": "DEAL-42-024",
+  "deal_name": "Spring Seasonal Clearance",
   "event_id": "EV-42-0133",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0564",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0556",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -23,31 +23,31 @@
         "end": null,
         "start": "2025-09-14"
       },
-      "value": "34.00",
+      "value": "21.00",
       "volatility_class": "slow_changing"
     },
     {
       "attribute": "impressions_goal",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0565",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0557",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-10-05",
+        "end": null,
         "start": "2025-09-14"
       },
-      "value": "25240000",
+      "value": "42760000",
       "volatility_class": "durable"
     },
     {
       "attribute": "line_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0566",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0558",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -63,8 +63,8 @@
     {
       "attribute": "geo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0567",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0559",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -74,14 +74,14 @@
         "end": null,
         "start": "2025-09-14"
       },
-      "value": "CA/NY/TX",
+      "value": "WA/OR/NV",
       "volatility_class": "durable"
     },
     {
       "attribute": "demo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0568",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0560",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -91,14 +91,14 @@
         "end": null,
         "start": "2025-09-14"
       },
-      "value": "W25-54",
+      "value": "A18-34",
       "volatility_class": "durable"
     },
     {
       "attribute": "creative_format",
       "entity": "order-line",
-      "entity_id": "IO-42-0050",
-      "fact_id": "F-42-0569",
+      "entity_id": "IO-42-0044",
+      "fact_id": "F-42-0561",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -108,14 +108,14 @@
         "end": null,
         "start": "2025-09-14"
       },
-      "value": "Display",
+      "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0050",
+  "io_id": "IO-42-0044",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0050 booked on Summer Seasonal Clearance",
+  "subject": "Order line IO-42-0044 booked on Spring Seasonal Clearance",
   "timestamp": "2025-09-14",
   "trust_class": "system_of_record"
 }

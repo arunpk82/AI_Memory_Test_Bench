@@ -1,9 +1,9 @@
-Subject: Delivery goal reset on IO-42-0064
-Date: August 21, 2025
+Subject: New day-to-day contact at Zellwood Labs
+Date: August 11, 2025
 
-System notification.
+Hi there,
 
-The delivery goal has been reset. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program, order line IO-42-0064. The goal is 25,260,000 impressions. Let me know if anything looks off.
+There is a contact change to pass along. This one is on Zellwood Labs. Day-to-day contact is Hollis Kastellan, and they come in as a account director. Reach them at hollis.kastellan@zellwood.example. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Zellwood Labs team

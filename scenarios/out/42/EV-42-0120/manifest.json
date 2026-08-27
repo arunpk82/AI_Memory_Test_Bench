@@ -1,121 +1,70 @@
 {
-  "advertiser_id": "ADV-42-01",
-  "advertiser_name": "Kelvinshaw Holdings",
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-003",
-  "deal_name": "Spring Loyalty Retention",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Desmond Quintrell",
+  "deal_id": null,
+  "deal_name": null,
   "event_id": "EV-42-0120",
   "facts": [
     {
-      "attribute": "cpm_rate",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0498",
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-08",
+      "fact_id": "F-42-0490",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0051",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-07"
+        "start": "2025-09-04"
       },
-      "value": "48.00",
+      "value": "Desmond Quintrell",
       "volatility_class": "slow_changing"
     },
     {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0499",
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-42-008-B",
+      "fact_id": "F-42-0491",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-07"
+        "start": "2025-09-04"
       },
-      "value": "10310000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0500",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-07"
-      },
-      "value": "booked",
+      "value": "account director",
       "volatility_class": "slow_changing"
     },
     {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0501",
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-42-008-B",
+      "fact_id": "F-42-0492",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-07"
+        "start": "2025-09-04"
       },
-      "value": "CA/NY/TX",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0502",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-07"
-      },
-      "value": "P18-49",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0004",
-      "fact_id": "F-42-0503",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-07"
-      },
-      "value": "CTV",
+      "value": "desmond.quintrell@larkspire.example",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0004",
-  "scenario_kind": "order_booked",
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
   "seed": 42,
-  "subject": "Order line IO-42-0004 booked on Spring Loyalty Retention",
-  "timestamp": "2025-09-07",
-  "trust_class": "system_of_record"
+  "subject": "New day-to-day contact at Larkspire Provisions",
+  "timestamp": "2025-09-04",
+  "trust_class": "counterparty_asserted"
 }

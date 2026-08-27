@@ -1,9 +1,9 @@
-Subject: Pacing call notes on IO-42-0019
-Date: November 3, 2025
+Subject: Order line IO-42-0053 booked on Winter App Installs
+Date: November 1, 2025
 
-Notes from the call.
+System notification.
 
-Quick notes from the pacing call. This one is on Ravensmoor Holdings for the Autumn App Installs program, order line IO-42-0019. Pacing is under-delivering, and we review again through November 24, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Verapine Studios for the Winter App Installs program, order line IO-42-0053. We are holding at a $18.50 CPM, and the goal is 36,810,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is P18-49, and the format is Audio. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

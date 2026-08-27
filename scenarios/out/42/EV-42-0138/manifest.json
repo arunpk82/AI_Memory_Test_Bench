@@ -1,19 +1,19 @@
 {
-  "advertiser_id": "ADV-42-06",
-  "advertiser_name": "Kestrelia Collective",
-  "agency_name": "Inkwell Collective",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-021",
-  "deal_name": "Autumn Lead Generation",
+  "deal_id": "DEAL-42-010",
+  "deal_name": "Autumn App Installs",
   "event_id": "EV-42-0138",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0593",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0585",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -21,16 +21,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
-      "value": "48.00",
+      "value": "21.00",
       "volatility_class": "slow_changing"
     },
     {
       "attribute": "impressions_goal",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0594",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0586",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -38,16 +38,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
-      "value": "12460000",
+      "value": "33380000",
       "volatility_class": "durable"
     },
     {
       "attribute": "line_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0595",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0587",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -55,7 +55,7 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
       "value": "booked",
       "volatility_class": "slow_changing"
@@ -63,8 +63,8 @@
     {
       "attribute": "geo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0596",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0588",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -72,16 +72,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
-      "value": "IL/OH/MI",
+      "value": "CO/AZ/UT",
       "volatility_class": "durable"
     },
     {
       "attribute": "demo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0597",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0589",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -89,16 +89,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
-      "value": "P18-49",
+      "value": "A35-64",
       "volatility_class": "durable"
     },
     {
       "attribute": "creative_format",
       "entity": "order-line",
-      "entity_id": "IO-42-0039",
-      "fact_id": "F-42-0598",
+      "entity_id": "IO-42-0020",
+      "fact_id": "F-42-0590",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -106,16 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-17"
+        "start": "2025-09-15"
       },
-      "value": "CTV",
+      "value": "OLV",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0039",
+  "io_id": "IO-42-0020",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0039 booked on Autumn Lead Generation",
-  "timestamp": "2025-09-17",
+  "subject": "Order line IO-42-0020 booked on Autumn App Installs",
+  "timestamp": "2025-09-15",
   "trust_class": "system_of_record"
 }

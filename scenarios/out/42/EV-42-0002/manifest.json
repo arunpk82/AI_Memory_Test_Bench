@@ -4,7 +4,7 @@
   "agency_name": "Cindersmith Trading",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Tobias Pemberly",
+  "contact_name": "Perrin Drummond",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0002",
@@ -88,10 +88,10 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-07-13",
+        "end": "2025-07-11",
         "start": "2025-01-27"
       },
-      "value": "Tobias Pemberly",
+      "value": "Perrin Drummond",
       "volatility_class": "slow_changing"
     }
   ],

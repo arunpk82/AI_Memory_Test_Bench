@@ -4,7 +4,7 @@
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Hollis Kastellan",
+  "contact_name": "Wilhelmina Rothwell",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0006",
@@ -71,7 +71,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-07-29",
+        "end": null,
         "start": "2025-01-30"
       },
       "value": "Saltmarsh Buying Desk",
@@ -88,10 +88,10 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": null,
+        "end": "2025-08-10",
         "start": "2025-01-30"
       },
-      "value": "Hollis Kastellan",
+      "value": "Wilhelmina Rothwell",
       "volatility_class": "slow_changing"
     }
   ],

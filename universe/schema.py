@@ -386,6 +386,8 @@ def validate_question(question: dict) -> dict:
             raise SchemaError(f"question.{flag} must be a bool, got {question[flag]!r}")
     if question["io_id"] is not None:
         _require_id(question["io_id"], "question.io_id")
+    if not isinstance(question["notes"], dict):
+        raise SchemaError(f"question.notes must be a dict, got {question['notes']!r}")
     return question
 
 

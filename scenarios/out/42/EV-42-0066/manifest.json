@@ -1,104 +1,53 @@
 {
-  "advertiser_id": "ADV-42-11",
-  "advertiser_name": "Ashgrove Labs",
-  "agency_name": "Cindersmith Trading",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Corinne Birkenshaw",
-  "deal_id": "DEAL-42-039",
-  "deal_name": "Holiday Seasonal Clearance",
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-016",
+  "deal_name": "Autumn Store Visits",
   "event_id": "EV-42-0066",
   "facts": [
     {
-      "attribute": "deal_name",
-      "entity": "deal",
-      "entity_id": "DEAL-42-039",
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0031",
       "fact_id": "F-42-0292",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "first_party_note",
       "validity_interval": {
-        "end": null,
-        "start": "2025-05-29"
+        "end": "2025-06-24",
+        "start": "2025-05-20"
       },
-      "value": "Holiday Seasonal Clearance",
-      "volatility_class": "permanent"
+      "value": "over-delivering",
+      "volatility_class": "transient"
     },
     {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-039",
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0031",
       "fact_id": "F-42-0293",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "first_party_note",
       "validity_interval": {
         "end": null,
-        "start": "2025-05-29"
+        "start": "2025-05-20"
       },
-      "value": "seasonal clearance",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-039",
-      "fact_id": "F-42-0294",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-05-29"
-      },
-      "value": "736000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-039",
-      "fact_id": "F-42-0295",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-05-29"
-      },
-      "value": "2025-08-02",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-039",
-      "fact_id": "F-42-0296",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-05-29"
-      },
-      "value": "2025-10-31",
+      "value": "2025-06-24",
       "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "deal_kickoff",
+  "io_id": "IO-42-0031",
+  "scenario_kind": "pacing_note",
   "seed": 42,
-  "subject": "Holiday Seasonal Clearance brief for Ashgrove Labs",
-  "timestamp": "2025-05-29",
-  "trust_class": "counterparty_asserted"
+  "subject": "Pacing call notes on IO-42-0031",
+  "timestamp": "2025-05-20",
+  "trust_class": "first_party_note"
 }

@@ -1,36 +1,19 @@
 {
-  "advertiser_id": "ADV-42-04",
-  "advertiser_name": "Harrowgate Holdings",
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
   "agency_name": "Saltmarsh Buying Desk",
   "author": "counterparty",
   "channel": "email_received",
-  "contact_name": "Hollis Kastellan",
-  "deal_id": null,
-  "deal_name": null,
+  "contact_name": "Bertrand Whitfield",
+  "deal_id": "DEAL-42-033",
+  "deal_name": "Summer Product Launch",
   "event_id": "EV-42-0101",
   "facts": [
     {
-      "attribute": "primary_contact",
-      "entity": "advertiser",
-      "entity_id": "ADV-42-04",
-      "fact_id": "F-42-0432",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": "F-42-0025",
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-08-09"
-      },
-      "value": "Hollis Kastellan",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "contact_role",
-      "entity": "contact",
-      "entity_id": "CT-42-004-B",
-      "fact_id": "F-42-0433",
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-42-0061",
+      "fact_id": "F-42-0431",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -38,33 +21,16 @@
       "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-08-09"
+        "start": "2025-08-02"
       },
-      "value": "activation manager",
+      "value": "42.00",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "contact_email",
-      "entity": "contact",
-      "entity_id": "CT-42-004-B",
-      "fact_id": "F-42-0434",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-08-09"
-      },
-      "value": "hollis.kastellan@harrowgate.example",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "contact_handoff",
+  "io_id": "IO-42-0061",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "New day-to-day contact at Harrowgate Holdings",
-  "timestamp": "2025-08-09",
+  "subject": "Rate question on IO-42-0061",
+  "timestamp": "2025-08-02",
   "trust_class": "counterparty_asserted"
 }

@@ -2,52 +2,35 @@
   "advertiser_id": "ADV-42-04",
   "advertiser_name": "Harrowgate Holdings",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Bertrand Whitfield",
-  "deal_id": "DEAL-42-013",
-  "deal_name": "Holiday Product Launch",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-014",
+  "deal_name": "Spring Store Visits",
   "event_id": "EV-42-0196",
   "facts": [
     {
-      "attribute": "renewal_intent",
-      "entity": "advertiser",
-      "entity_id": "ADV-42-04",
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-42-0027",
       "fact_id": "F-42-0794",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2026-02-14"
+        "start": "2026-02-04"
       },
-      "value": "reducing scope next year",
+      "value": "18.50",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "renewal_budget_indication",
-      "entity": "advertiser",
-      "entity_id": "ADV-42-04",
-      "fact_id": "F-42-0795",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
-      "validity_interval": {
-        "end": null,
-        "start": "2026-02-14"
-      },
-      "value": "428000",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "renewal_conversation",
+  "io_id": "IO-42-0027",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "Renewal conversation notes for Harrowgate Holdings",
-  "timestamp": "2026-02-14",
-  "trust_class": "first_party_note"
+  "subject": "Rate question on IO-42-0027",
+  "timestamp": "2026-02-04",
+  "trust_class": "counterparty_asserted"
 }

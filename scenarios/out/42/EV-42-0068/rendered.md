@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0022 booked on Autumn Product Launch
-Date: May 30, 2025
+Subject: Holiday Seasonal Clearance brief for Ashgrove Labs
+Date: May 29, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Ravensmoor Holdings for the Autumn Product Launch program, order line IO-42-0022. We are holding at a $18.50 CPM, and the goal is 15,300,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is P18-49, and the format is Audio. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Ashgrove Labs for the Holiday Seasonal Clearance program. The goal is seasonal clearance, and the working budget is $736,000. The flight opens August 2, 2025, and it wraps October 31, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ashgrove Labs team

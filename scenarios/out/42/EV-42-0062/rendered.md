@@ -1,9 +1,9 @@
-Subject: Rate card snapshot for IO-42-0006
-Date: May 23, 2025
+Subject: Rate question on IO-42-0014
+Date: May 14, 2025
 
-System notification.
+Hi there,
 
-Today the rate card pull came through. This one is on Cindervale Studios for the Back-to-School Store Visits program, order line IO-42-0006. The card is showing $42.00 CPM today. Let me know if anything looks off.
+One question came in about the rate. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program, order line IO-42-0014. They think the rate should be $28.50. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ravensmoor Holdings team

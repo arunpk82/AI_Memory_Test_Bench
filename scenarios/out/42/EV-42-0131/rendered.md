@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0044 booked on Spring Seasonal Clearance
-Date: September 14, 2025
+Subject: Spring Store Visits brief for Ashgrove Labs
+Date: September 13, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0044. We are holding at a $21.00 CPM, and the goal is 42,760,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A18-34, and the format is Audio. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Ashgrove Labs for the Spring Store Visits program. The goal is store visits, and the working budget is $658,000. The flight opens October 19, 2025, and it wraps January 17, 2026. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ashgrove Labs team

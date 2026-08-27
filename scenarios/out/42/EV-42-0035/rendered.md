@@ -1,9 +1,9 @@
-Subject: Back-to-School App Installs brief for Umberfield Outfitters
-Date: March 19, 2025
+Subject: Order line IO-42-0014 booked on Holiday Brand Awareness
+Date: March 18, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Umberfield Outfitters for the Back-to-School App Installs program. The goal is app installs, and the working budget is $775,000. The flight opens May 23, 2025, and it wraps July 22, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program, order line IO-42-0014. We are holding at a $48.00 CPM, and the goal is 7,120,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A18-34, and the format is Display. Let me know if anything looks off.
 
 Thanks,
-the Umberfield Outfitters team
+ad sales ops

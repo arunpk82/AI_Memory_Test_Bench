@@ -1,9 +1,9 @@
-Subject: Rate question on IO-42-0052
-Date: August 26, 2025
+Subject: Hold placed on IO-42-0015
+Date: August 19, 2025
 
-Hi there,
+System notification.
 
-One question came in about the rate. This one is on Larkspire Provisions for the Back-to-School Product Launch program, order line IO-42-0052. They think the rate should be $24.00. Let me know if anything looks off.
+We put a hold on the line for now. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0015. The line is on hold. Let me know if anything looks off.
 
 Thanks,
-the Larkspire Provisions team
+ad sales ops

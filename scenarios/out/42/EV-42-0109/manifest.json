@@ -1,36 +1,36 @@
 {
-  "advertiser_id": "ADV-42-08",
-  "advertiser_name": "Larkspire Provisions",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Vesper Merriweather",
-  "deal_id": "DEAL-42-029",
-  "deal_name": "Back-to-School Product Launch",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-009",
+  "deal_name": "Summer Loyalty Retention",
   "event_id": "EV-42-0109",
   "facts": [
     {
-      "attribute": "cpm_rate_claimed",
+      "attribute": "line_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0455",
+      "entity_id": "IO-42-0015",
+      "fact_id": "F-42-0452",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "supersedes": "F-42-0377",
+      "trust_class": "system_of_record",
       "validity_interval": {
-        "end": null,
-        "start": "2025-08-26"
+        "end": "2025-09-03",
+        "start": "2025-08-19"
       },
-      "value": "24.00",
+      "value": "on hold",
       "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0052",
-  "scenario_kind": "client_rate_claim",
+  "io_id": "IO-42-0015",
+  "scenario_kind": "line_hold",
   "seed": 42,
-  "subject": "Rate question on IO-42-0052",
-  "timestamp": "2025-08-26",
-  "trust_class": "counterparty_asserted"
+  "subject": "Hold placed on IO-42-0015",
+  "timestamp": "2025-08-19",
+  "trust_class": "system_of_record"
 }

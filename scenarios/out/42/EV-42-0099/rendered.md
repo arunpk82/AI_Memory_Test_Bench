@@ -1,9 +1,9 @@
-Subject: Rate question on IO-42-0021
-Date: July 30, 2025
+Subject: Order line IO-42-0064 booked on Holiday Loyalty Retention
+Date: July 29, 2025
 
-Hi there,
+System notification.
 
-One question came in about the rate. This one is on Ravensmoor Holdings for the Autumn Product Launch program, order line IO-42-0021. They think the rate should be $22.75. Let me know if anything looks off.
+The order line is in the system. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program, order line IO-42-0064. We are holding at a $28.50 CPM, and the goal is 20,210,000 impressions. The line is booked, and geo stays CO/AZ/UT. The demo is M18-49, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
-the Ravensmoor Holdings team
+ad sales ops

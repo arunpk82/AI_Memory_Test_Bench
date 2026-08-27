@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Umberfield Outfitters
-Date: March 10, 2026
+Subject: Rate question on IO-42-0053
+Date: February 19, 2026
 
-Notes from the call.
+Hi there,
 
-Notes from the renewal chat. This one is on Umberfield Outfitters for the Summer Product Launch program. They are reducing scope next year, and they floated roughly $433,000 for next year. Let me know if anything looks off.
+One question came in about the rate. This one is on Verapine Studios for the Winter App Installs program, order line IO-42-0053. They think the rate should be $21.00. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Verapine Studios team

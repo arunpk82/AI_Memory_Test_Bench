@@ -1,9 +1,9 @@
-Subject: Housekeeping on Larkspire Provisions paperwork
-Date: September 17, 2025
+Subject: Order line IO-42-0045 booked on Spring Seasonal Clearance
+Date: September 16, 2025
 
-Hi there,
+System notification.
 
-A couple of housekeeping items on the paperwork. This one is on Larkspire Provisions for the Winter Loyalty Retention program. We now buy through Cindersmith Trading, and creative is due September 28, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0045. We are holding at a $36.50 CPM, and the goal is 24,600,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is A35-64, and the format is Display. Let me know if anything looks off.
 
 Thanks,
-the Larkspire Provisions team
+ad sales ops

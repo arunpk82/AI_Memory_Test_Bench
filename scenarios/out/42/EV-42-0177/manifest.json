@@ -13,15 +13,15 @@
       "attribute": "line_status",
       "entity": "order-line",
       "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0748",
+      "fact_id": "F-42-0743",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0684",
+      "supersedes": "F-42-0674",
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-15"
+        "start": "2025-11-10"
       },
       "value": "cancelled",
       "volatility_class": "slow_changing"
@@ -31,6 +31,6 @@
   "scenario_kind": "line_cancellation",
   "seed": 42,
   "subject": "Cancellation posted for IO-42-0018",
-  "timestamp": "2025-11-15",
+  "timestamp": "2025-11-10",
   "trust_class": "system_of_record"
 }

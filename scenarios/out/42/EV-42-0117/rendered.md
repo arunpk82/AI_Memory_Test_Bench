@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0010 booked on Winter Store Visits
+Subject: Spring Loyalty Retention brief for Kelvinshaw Holdings
 Date: September 3, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Cindervale Studios for the Winter Store Visits program, order line IO-42-0010. We are holding at a $24.00 CPM, and the goal is 9,710,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is A35-64, and the format is Native. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Kelvinshaw Holdings for the Spring Loyalty Retention program. The goal is loyalty retention, and the working budget is $495,000. The flight opens October 16, 2025, and it wraps January 14, 2026. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Kelvinshaw Holdings team

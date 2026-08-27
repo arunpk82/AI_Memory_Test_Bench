@@ -1,53 +1,36 @@
 {
-  "advertiser_id": "ADV-42-09",
-  "advertiser_name": "Verapine Studios",
-  "agency_name": "Hollowell Buying Desk",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
   "author": "user",
-  "channel": "call_note",
-  "contact_name": "Rosalind Okonkwo",
-  "deal_id": "DEAL-42-032",
-  "deal_name": "Back-to-School Brand Awareness",
+  "channel": "email_sent",
+  "contact_name": "Oisin Zaragoza",
+  "deal_id": "DEAL-42-008",
+  "deal_name": "Holiday Brand Awareness",
   "event_id": "EV-42-0063",
   "facts": [
     {
-      "attribute": "pacing_status",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0058",
-      "fact_id": "F-42-0284",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
-      "validity_interval": {
-        "end": "2025-06-21",
-        "start": "2025-05-24"
-      },
-      "value": "over-delivering",
-      "volatility_class": "transient"
-    },
-    {
-      "attribute": "pacing_review_through",
-      "entity": "order-line",
-      "entity_id": "IO-42-0058",
+      "entity_id": "IO-42-0014",
       "fact_id": "F-42-0285",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
+      "supersedes": "F-42-0235",
+      "trust_class": "first_party_sent",
       "validity_interval": {
         "end": null,
-        "start": "2025-05-24"
+        "start": "2025-05-16"
       },
-      "value": "2025-06-21",
-      "volatility_class": "durable"
+      "value": "34.00",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0058",
-  "scenario_kind": "pacing_note",
+  "io_id": "IO-42-0014",
+  "scenario_kind": "rate_revision",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0058",
-  "timestamp": "2025-05-24",
-  "trust_class": "first_party_note"
+  "subject": "Revised rate on IO-42-0014",
+  "timestamp": "2025-05-16",
+  "trust_class": "first_party_sent"
 }

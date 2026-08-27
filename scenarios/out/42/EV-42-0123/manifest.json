@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-05",
-  "advertiser_name": "Zellwood Labs",
-  "agency_name": null,
+  "advertiser_id": "ADV-42-01",
+  "advertiser_name": "Kelvinshaw Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-019",
+  "deal_id": "DEAL-42-003",
   "deal_name": "Spring Loyalty Retention",
   "event_id": "EV-42-0123",
   "facts": [
     {
-      "attribute": "rate_card_cpm",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0036",
-      "fact_id": "F-42-0515",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0503",
       "injection": false,
-      "never_memorize": true,
+      "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-09-08",
-        "start": "2025-09-08"
+        "end": null,
+        "start": "2025-09-07"
       },
-      "value": "21.00",
-      "volatility_class": "ephemeral"
+      "value": "48.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0504",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-07"
+      },
+      "value": "10310000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0505",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-07"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0506",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-07"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0507",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-07"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
+      "fact_id": "F-42-0508",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-07"
+      },
+      "value": "CTV",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0036",
-  "scenario_kind": "rate_card_snapshot",
+  "io_id": "IO-42-0004",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Rate card snapshot for IO-42-0036",
-  "timestamp": "2025-09-08",
+  "subject": "Order line IO-42-0004 booked on Spring Loyalty Retention",
+  "timestamp": "2025-09-07",
   "trust_class": "system_of_record"
 }

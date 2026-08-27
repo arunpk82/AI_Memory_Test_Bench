@@ -1,9 +1,9 @@
-Subject: Autumn Lead Generation brief for Kestrelia Collective
-Date: September 9, 2025
+Subject: Summer Store Visits brief for Stonebrook Media
+Date: September 8, 2025
 
 Hi there,
 
-Thanks for sending the brief over. This one is on Kestrelia Collective for the Autumn Lead Generation program. The goal is lead generation, and the working budget is $598,000. The flight opens October 28, 2025, and it wraps December 12, 2025. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Stonebrook Media for the Summer Store Visits program. The goal is store visits, and the working budget is $315,000. The flight opens October 3, 2025, and it wraps December 2, 2025. Let me know if anything looks off.
 
 Thanks,
-the Kestrelia Collective team
+the Stonebrook Media team

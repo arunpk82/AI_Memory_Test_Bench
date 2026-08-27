@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": "Cindersmith Trading",
-  "author": "user",
-  "channel": "email_sent",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": null,
-  "deal_name": null,
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-019",
+  "deal_name": "Spring Loyalty Retention",
   "event_id": "EV-42-0088",
   "facts": [
     {
-      "attribute": "agency_of_record",
-      "entity": "advertiser",
-      "entity_id": "ADV-42-03",
-      "fact_id": "F-42-0392",
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0381",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0019",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-11"
+        "start": "2025-07-04"
       },
-      "value": "Cindersmith Trading",
+      "value": "31.25",
       "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0382",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-04"
+      },
+      "value": "24220000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0383",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-04"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0384",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-04"
+      },
+      "value": "CO/AZ/UT",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0385",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-04"
+      },
+      "value": "W25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0386",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-04"
+      },
+      "value": "Native",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "agency_change",
+  "io_id": "IO-42-0036",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Agency of record change for Ravensmoor Holdings",
-  "timestamp": "2025-07-11",
-  "trust_class": "first_party_sent"
+  "subject": "Order line IO-42-0036 booked on Spring Loyalty Retention",
+  "timestamp": "2025-07-04",
+  "trust_class": "system_of_record"
 }

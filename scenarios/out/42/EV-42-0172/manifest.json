@@ -1,18 +1,103 @@
 {
-  "advertiser_id": "ADV-42-10",
-  "advertiser_name": "Umberfield Outfitters",
-  "agency_name": "Saltmarsh Buying Desk",
+  "advertiser_id": "ADV-42-09",
+  "advertiser_name": "Verapine Studios",
+  "agency_name": "Hollowell Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-036",
-  "deal_name": "Summer Loyalty Retention",
+  "deal_id": "DEAL-42-030",
+  "deal_name": "Winter App Installs",
   "event_id": "EV-42-0172",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0066",
+      "entity_id": "IO-42-0054",
+      "fact_id": "F-42-0718",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "34.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0054",
+      "fact_id": "F-42-0719",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "20030000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0054",
+      "fact_id": "F-42-0720",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0054",
+      "fact_id": "F-42-0721",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "IL/OH/MI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0054",
+      "fact_id": "F-42-0722",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "A25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0054",
       "fact_id": "F-42-0723",
       "injection": false,
       "never_memorize": false,
@@ -21,101 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-06"
-      },
-      "value": "48.00",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0066",
-      "fact_id": "F-42-0724",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-06"
-      },
-      "value": "14690000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0066",
-      "fact_id": "F-42-0725",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-06"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0066",
-      "fact_id": "F-42-0726",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-06"
-      },
-      "value": "MA/CT/RI",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0066",
-      "fact_id": "F-42-0727",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-06"
-      },
-      "value": "W25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0066",
-      "fact_id": "F-42-0728",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-06"
+        "start": "2025-11-05"
       },
       "value": "Display",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0066",
+  "io_id": "IO-42-0054",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0066 booked on Summer Loyalty Retention",
-  "timestamp": "2025-11-06",
+  "subject": "Order line IO-42-0054 booked on Winter App Installs",
+  "timestamp": "2025-11-05",
   "trust_class": "system_of_record"
 }

@@ -1,18 +1,103 @@
 {
-  "advertiser_id": "ADV-42-08",
-  "advertiser_name": "Larkspire Provisions",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-029",
-  "deal_name": "Back-to-School Product Launch",
+  "deal_id": "DEAL-42-011",
+  "deal_name": "Autumn Product Launch",
   "event_id": "EV-42-0070",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0052",
+      "entity_id": "IO-42-0022",
+      "fact_id": "F-42-0310",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0022",
+      "fact_id": "F-42-0311",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "15300000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0022",
+      "fact_id": "F-42-0312",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0022",
+      "fact_id": "F-42-0313",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0022",
+      "fact_id": "F-42-0314",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0022",
       "fact_id": "F-42-0315",
       "injection": false,
       "never_memorize": false,
@@ -21,101 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-06-02"
-      },
-      "value": "18.50",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0316",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-02"
-      },
-      "value": "19140000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0317",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-02"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0318",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-02"
-      },
-      "value": "WA/OR/NV",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0319",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-02"
-      },
-      "value": "W25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0052",
-      "fact_id": "F-42-0320",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-02"
+        "start": "2025-05-30"
       },
       "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0052",
+  "io_id": "IO-42-0022",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0052 booked on Back-to-School Product Launch",
-  "timestamp": "2025-06-02",
+  "subject": "Order line IO-42-0022 booked on Autumn Product Launch",
+  "timestamp": "2025-05-30",
   "trust_class": "system_of_record"
 }

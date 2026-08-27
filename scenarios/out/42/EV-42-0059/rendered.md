@@ -1,9 +1,9 @@
-Subject: Autumn Product Launch brief for Ravensmoor Holdings
-Date: May 13, 2025
+Subject: Pacing call notes on IO-42-0012
+Date: May 1, 2025
 
-Hi there,
+Notes from the call.
 
-Thanks for sending the brief over. This one is on Ravensmoor Holdings for the Autumn Product Launch program. The goal is product launch, and the working budget is $283,000. The flight opens July 18, 2025, and it wraps September 16, 2025. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0012. Pacing is paused for creative swap, and we review again through May 22, 2025. Let me know if anything looks off.
 
 Thanks,
-the Ravensmoor Holdings team
+ad sales ops

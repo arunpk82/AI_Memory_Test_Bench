@@ -1,121 +1,36 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-008",
-  "deal_name": "Holiday Brand Awareness",
+  "advertiser_id": "ADV-42-02",
+  "advertiser_name": "Cindervale Studios",
+  "agency_name": "Cindersmith Trading",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Perrin Drummond",
+  "deal_id": "DEAL-42-007",
+  "deal_name": "Spring Store Visits",
   "event_id": "EV-42-0034",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0014",
+      "entity_id": "IO-42-0011",
       "fact_id": "F-42-0176",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0100",
+      "trust_class": "first_party_sent",
       "validity_interval": {
-        "end": "2025-04-05",
-        "start": "2025-03-18"
+        "end": "2025-04-20",
+        "start": "2025-03-17"
       },
-      "value": "48.00",
+      "value": "31.25",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0014",
-      "fact_id": "F-42-0177",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-03-18"
-      },
-      "value": "7120000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0014",
-      "fact_id": "F-42-0178",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-03-18"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0014",
-      "fact_id": "F-42-0179",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-03-18"
-      },
-      "value": "FL/GA/NC",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0014",
-      "fact_id": "F-42-0180",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-03-18"
-      },
-      "value": "A18-34",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0014",
-      "fact_id": "F-42-0181",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-03-18"
-      },
-      "value": "Display",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0014",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0011",
+  "scenario_kind": "rate_revision",
   "seed": 42,
-  "subject": "Order line IO-42-0014 booked on Holiday Brand Awareness",
-  "timestamp": "2025-03-18",
-  "trust_class": "system_of_record"
+  "subject": "Revised rate on IO-42-0011",
+  "timestamp": "2025-03-17",
+  "trust_class": "first_party_sent"
 }

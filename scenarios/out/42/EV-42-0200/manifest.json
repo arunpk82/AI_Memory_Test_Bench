@@ -1,19 +1,19 @@
 {
-  "advertiser_id": "ADV-42-08",
-  "advertiser_name": "Larkspire Provisions",
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
   "agency_name": "Saltmarsh Buying Desk",
   "author": "user",
   "channel": "call_note",
-  "contact_name": "Vesper Merriweather",
-  "deal_id": "DEAL-42-027",
-  "deal_name": "Winter Loyalty Retention",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-013",
+  "deal_name": "Holiday Product Launch",
   "event_id": "EV-42-0200",
   "facts": [
     {
       "attribute": "renewal_intent",
       "entity": "advertiser",
-      "entity_id": "ADV-42-08",
-      "fact_id": "F-42-0802",
+      "entity_id": "ADV-42-04",
+      "fact_id": "F-42-0800",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -21,16 +21,16 @@
       "trust_class": "first_party_note",
       "validity_interval": {
         "end": null,
-        "start": "2026-03-02"
+        "start": "2026-02-14"
       },
-      "value": "reducing scope next year",
+      "value": "leaning toward renewal",
       "volatility_class": "slow_changing"
     },
     {
       "attribute": "renewal_budget_indication",
       "entity": "advertiser",
-      "entity_id": "ADV-42-08",
-      "fact_id": "F-42-0803",
+      "entity_id": "ADV-42-04",
+      "fact_id": "F-42-0801",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -38,16 +38,16 @@
       "trust_class": "first_party_note",
       "validity_interval": {
         "end": null,
-        "start": "2026-03-02"
+        "start": "2026-02-14"
       },
-      "value": "232000",
+      "value": "693000",
       "volatility_class": "durable"
     }
   ],
   "io_id": null,
   "scenario_kind": "renewal_conversation",
   "seed": 42,
-  "subject": "Renewal conversation notes for Larkspire Provisions",
-  "timestamp": "2026-03-02",
+  "subject": "Renewal conversation notes for Harrowgate Holdings",
+  "timestamp": "2026-02-14",
   "trust_class": "first_party_note"
 }

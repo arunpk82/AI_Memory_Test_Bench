@@ -1,9 +1,9 @@
-Subject: Cancellation posted for IO-42-0015
-Date: August 30, 2025
+Subject: Delivery goal reset on IO-42-0064
+Date: August 27, 2025
 
 System notification.
 
-The cancellation is posted. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0015. The line is cancelled. Let me know if anything looks off.
+The delivery goal has been reset. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program, order line IO-42-0064. The goal is 25,260,000 impressions. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

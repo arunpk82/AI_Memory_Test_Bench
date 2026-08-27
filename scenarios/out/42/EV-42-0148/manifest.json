@@ -1,53 +1,121 @@
 {
-  "advertiser_id": "ADV-42-02",
-  "advertiser_name": "Cindervale Studios",
-  "agency_name": "Cindersmith Trading",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Tobias Pemberly",
-  "deal_id": "DEAL-42-007",
-  "deal_name": "Spring Store Visits",
+  "advertiser_id": "ADV-42-09",
+  "advertiser_name": "Verapine Studios",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-031",
+  "deal_name": "Autumn App Installs",
   "event_id": "EV-42-0148",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0011",
-      "fact_id": "F-42-0640",
-      "injection": true,
-      "never_memorize": false,
-      "plausibility": "high",
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-02"
-      },
-      "value": "21.00",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "creative_due_date",
-      "entity": "deal",
-      "entity_id": "DEAL-42-007",
-      "fact_id": "F-42-0641",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0632",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-02"
+        "start": "2025-10-01"
       },
-      "value": "2025-10-14",
+      "value": "28.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0633",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "29960000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0634",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0635",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "IL/OH/MI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0636",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0057",
+      "fact_id": "F-42-0637",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "CTV",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0011",
-  "scenario_kind": "injection_false_rate",
+  "io_id": "IO-42-0057",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Following up on IO-42-0011 billing",
-  "timestamp": "2025-10-02",
-  "trust_class": "counterparty_asserted"
+  "subject": "Order line IO-42-0057 booked on Autumn App Installs",
+  "timestamp": "2025-10-01",
+  "trust_class": "system_of_record"
 }

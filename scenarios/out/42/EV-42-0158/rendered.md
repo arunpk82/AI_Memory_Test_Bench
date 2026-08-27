@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0047 booked on Winter Product Launch
-Date: October 25, 2025
+Subject: Rate question on IO-42-0070
+Date: October 17, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Stonebrook Media for the Winter Product Launch program, order line IO-42-0047. We are holding at a $45.75 CPM, and the goal is 5,180,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A35-64, and the format is Audio. Let me know if anything looks off.
+One question came in about the rate. This one is on Ashgrove Labs for the Holiday Seasonal Clearance program, order line IO-42-0070. They think the rate should be $28.50. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ashgrove Labs team

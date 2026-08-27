@@ -4,7 +4,7 @@
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Bertrand Whitfield",
+  "contact_name": "Tobias Pemberly",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0005",
@@ -71,7 +71,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": null,
+        "end": "2025-07-07",
         "start": "2025-01-29"
       },
       "value": "Saltmarsh Buying Desk",
@@ -88,10 +88,10 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-08-08",
+        "end": null,
         "start": "2025-01-29"
       },
-      "value": "Bertrand Whitfield",
+      "value": "Tobias Pemberly",
       "volatility_class": "slow_changing"
     }
   ],

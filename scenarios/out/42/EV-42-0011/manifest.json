@@ -4,7 +4,7 @@
   "agency_name": "Hollowell Buying Desk",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Rosalind Okonkwo",
+  "contact_name": "Lorcan Calloway",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0011",
@@ -71,7 +71,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-08-20",
+        "end": "2025-08-23",
         "start": "2025-02-03"
       },
       "value": "Hollowell Buying Desk",
@@ -91,7 +91,7 @@
         "end": null,
         "start": "2025-02-03"
       },
-      "value": "Rosalind Okonkwo",
+      "value": "Lorcan Calloway",
       "volatility_class": "slow_changing"
     }
   ],

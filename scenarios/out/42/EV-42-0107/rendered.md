@@ -1,9 +1,9 @@
-Subject: Agency of record change for Verapine Studios
-Date: August 21, 2025
+Subject: Order line IO-42-0037 booked on Winter Loyalty Retention
+Date: August 16, 2025
 
-Hi Rosalind,
+System notification.
 
-The buying assignment changed. This one is on Verapine Studios. Buying is handled by Cindersmith Trading. Let me know if anything looks off.
+The order line is in the system. This one is on Kestrelia Collective for the Winter Loyalty Retention program, order line IO-42-0037. We are holding at a $31.25 CPM, and the goal is 22,560,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is A25-54, and the format is Display. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

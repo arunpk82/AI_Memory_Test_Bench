@@ -3,34 +3,51 @@
   "advertiser_name": "Cindervale Studios",
   "agency_name": "Cindersmith Trading",
   "author": "user",
-  "channel": "email_sent",
-  "contact_name": "Tobias Pemberly",
+  "channel": "call_note",
+  "contact_name": "Perrin Drummond",
   "deal_id": "DEAL-42-007",
   "deal_name": "Spring Store Visits",
   "event_id": "EV-42-0056",
   "facts": [
     {
-      "attribute": "cpm_rate",
+      "attribute": "pacing_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0011",
-      "fact_id": "F-42-0269",
+      "entity_id": "IO-42-0013",
+      "fact_id": "F-42-0265",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0198",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-05-14",
+        "start": "2025-04-23"
+      },
+      "value": "on pace",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0013",
+      "fact_id": "F-42-0266",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
       "validity_interval": {
         "end": null,
-        "start": "2025-04-26"
+        "start": "2025-04-23"
       },
-      "value": "36.50",
-      "volatility_class": "slow_changing"
+      "value": "2025-05-14",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0011",
-  "scenario_kind": "rate_revision",
+  "io_id": "IO-42-0013",
+  "scenario_kind": "pacing_note",
   "seed": 42,
-  "subject": "Revised rate on IO-42-0011",
-  "timestamp": "2025-04-26",
-  "trust_class": "first_party_sent"
+  "subject": "Pacing call notes on IO-42-0013",
+  "timestamp": "2025-04-23",
+  "trust_class": "first_party_note"
 }

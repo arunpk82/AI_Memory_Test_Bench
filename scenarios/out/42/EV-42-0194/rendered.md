@@ -1,9 +1,9 @@
-Subject: Pacing call notes on IO-42-0065
-Date: February 7, 2026
+Subject: Renewal conversation notes for Kelvinshaw Holdings
+Date: February 2, 2026
 
 Notes from the call.
 
-Quick notes from the pacing call. This one is on Umberfield Outfitters for the Summer Loyalty Retention program, order line IO-42-0065. Pacing is over-delivering, and we review again through February 21, 2026. Let me know if anything looks off.
+Notes from the renewal chat. This one is on Kelvinshaw Holdings for the Autumn Brand Awareness program. They are reducing scope next year, and they floated roughly $329,000 for next year. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

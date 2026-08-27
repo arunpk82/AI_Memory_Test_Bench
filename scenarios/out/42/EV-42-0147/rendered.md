@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0055 booked on Autumn App Installs
-Date: October 2, 2025
+Subject: New day-to-day contact at Ashgrove Labs
+Date: September 30, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Verapine Studios for the Autumn App Installs program, order line IO-42-0055. We are holding at a $26.70 CPM, and the goal is 31,990,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is M18-49, and the format is Display. Let me know if anything looks off.
+There is a contact change to pass along. This one is on Ashgrove Labs. Day-to-day contact is Kiona Yarborough, and they come in as a activation manager. Reach them at kiona.yarborough@ashgrove.example. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ashgrove Labs team

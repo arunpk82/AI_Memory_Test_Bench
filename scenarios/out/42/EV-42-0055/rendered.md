@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0026 booked on Holiday Product Launch
-Date: April 25, 2025
+Subject: Revised rate on IO-42-0062
+Date: April 22, 2025
 
-System notification.
+Hi Bertrand,
 
-The order line is in the system. This one is on Harrowgate Holdings for the Holiday Product Launch program, order line IO-42-0026. We are holding at a $18.50 CPM, and the goal is 6,320,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A18-34, and the format is OLV. Let me know if anything looks off.
+Confirming the rate change we talked through. This one is on Umberfield Outfitters for the Back-to-School App Installs program, order line IO-42-0062. We are holding at a $18.50 CPM. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

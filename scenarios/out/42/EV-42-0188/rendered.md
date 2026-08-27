@@ -1,9 +1,9 @@
-Subject: Rate card snapshot for IO-42-0067
-Date: December 31, 2025
+Subject: Rate question on IO-42-0043
+Date: December 12, 2025
 
-System notification.
+Hi there,
 
-Today the rate card pull came through. This one is on Ashgrove Labs for the Spring Store Visits program, order line IO-42-0067. The card is showing $45.75 CPM today. Let me know if anything looks off.
+One question came in about the rate. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0043. They think the rate should be $26.70. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Stonebrook Media team

@@ -1,121 +1,36 @@
 {
-  "advertiser_id": "ADV-42-11",
-  "advertiser_name": "Ashgrove Labs",
-  "agency_name": "Cindersmith Trading",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-038",
-  "deal_name": "Autumn Store Visits",
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-023",
+  "deal_name": "Holiday Seasonal Clearance",
   "event_id": "EV-42-0080",
   "facts": [
     {
-      "attribute": "cpm_rate",
+      "attribute": "cpm_rate_claimed",
       "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0358",
+      "entity_id": "IO-42-0042",
+      "fact_id": "F-42-0351",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-06-29"
+        "start": "2025-06-15"
       },
-      "value": "24.00",
+      "value": "21.00",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0359",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-29"
-      },
-      "value": "26830000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0360",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": "2025-07-14",
-        "start": "2025-06-29"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0361",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-29"
-      },
-      "value": "CA/NY/TX",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0362",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-29"
-      },
-      "value": "A18-34",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0069",
-      "fact_id": "F-42-0363",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-29"
-      },
-      "value": "Audio",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0069",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0042",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "Order line IO-42-0069 booked on Autumn Store Visits",
-  "timestamp": "2025-06-29",
-  "trust_class": "system_of_record"
+  "subject": "Rate question on IO-42-0042",
+  "timestamp": "2025-06-15",
+  "trust_class": "counterparty_asserted"
 }

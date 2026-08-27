@@ -1,9 +1,9 @@
-Subject: Rate card snapshot for IO-42-0061
-Date: July 2, 2025
+Subject: Agency of record change for Kelvinshaw Holdings
+Date: June 17, 2025
 
-System notification.
+Hi Dana,
 
-Today the rate card pull came through. This one is on Umberfield Outfitters for the Summer Product Launch program, order line IO-42-0061. The card is showing $28.50 CPM today. Let me know if anything looks off.
+The buying assignment changed. This one is on Kelvinshaw Holdings. Buying is handled by Hollowell Buying Desk. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

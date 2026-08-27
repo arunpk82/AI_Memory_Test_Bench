@@ -1,53 +1,36 @@
 {
-  "advertiser_id": "ADV-42-06",
-  "advertiser_name": "Kestrelia Collective",
-  "agency_name": "Inkwell Collective",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Ingrid Eyre",
-  "deal_id": "DEAL-42-020",
-  "deal_name": "Winter Loyalty Retention",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-010",
+  "deal_name": "Autumn App Installs",
   "event_id": "EV-42-0161",
   "facts": [
     {
-      "attribute": "pacing_status",
+      "attribute": "line_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0038",
-      "fact_id": "F-42-0682",
+      "entity_id": "IO-42-0018",
+      "fact_id": "F-42-0674",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
+      "supersedes": "F-42-0581",
+      "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-11-30",
-        "start": "2025-10-26"
+        "end": "2025-11-09",
+        "start": "2025-10-21"
       },
-      "value": "over-delivering",
-      "volatility_class": "transient"
-    },
-    {
-      "attribute": "pacing_review_through",
-      "entity": "order-line",
-      "entity_id": "IO-42-0038",
-      "fact_id": "F-42-0683",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-26"
-      },
-      "value": "2025-11-30",
-      "volatility_class": "durable"
+      "value": "on hold",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0038",
-  "scenario_kind": "pacing_note",
+  "io_id": "IO-42-0018",
+  "scenario_kind": "line_hold",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0038",
-  "timestamp": "2025-10-26",
-  "trust_class": "first_party_note"
+  "subject": "Hold placed on IO-42-0018",
+  "timestamp": "2025-10-21",
+  "trust_class": "system_of_record"
 }

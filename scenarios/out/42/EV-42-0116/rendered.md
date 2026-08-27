@@ -1,9 +1,9 @@
-Subject: Spring Loyalty Retention brief for Kelvinshaw Holdings
-Date: September 3, 2025
+Subject: Spring Seasonal Clearance brief for Stonebrook Media
+Date: August 31, 2025
 
 Hi there,
 
-Thanks for sending the brief over. This one is on Kelvinshaw Holdings for the Spring Loyalty Retention program. The goal is loyalty retention, and the working budget is $495,000. The flight opens October 16, 2025, and it wraps January 14, 2026. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Stonebrook Media for the Spring Seasonal Clearance program. The goal is seasonal clearance, and the working budget is $898,000. The flight opens October 5, 2025, and it wraps November 19, 2025. Let me know if anything looks off.
 
 Thanks,
-the Kelvinshaw Holdings team
+the Stonebrook Media team

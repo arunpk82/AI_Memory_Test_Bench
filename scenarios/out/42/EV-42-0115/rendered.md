@@ -1,9 +1,9 @@
-Subject: New day-to-day contact at Larkspire Provisions
-Date: September 1, 2025
+Subject: Winter Store Visits brief for Cindervale Studios
+Date: August 30, 2025
 
 Hi there,
 
-There is a contact change to pass along. This one is on Larkspire Provisions. Day-to-day contact is Desmond Quintrell, and they come in as a investment lead. Reach them at desmond.quintrell@larkspire.example. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Cindervale Studios for the Winter Store Visits program. The goal is store visits, and the working budget is $233,000. The flight opens November 3, 2025, and it wraps February 1, 2026. Let me know if anything looks off.
 
 Thanks,
-the Larkspire Provisions team
+the Cindervale Studios team

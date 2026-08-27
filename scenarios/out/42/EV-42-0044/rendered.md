@@ -1,9 +1,9 @@
-Subject: Revised rate on IO-42-0014
-Date: April 6, 2025
+Subject: Order line IO-42-0060 booked on Summer Product Launch
+Date: April 4, 2025
 
-Hi Yusuf,
+System notification.
 
-Confirming the rate change we talked through. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program, order line IO-42-0014. We are holding at a $48.00 CPM. Let me know if anything looks off.
+The order line is in the system. This one is on Umberfield Outfitters for the Summer Product Launch program, order line IO-42-0060. We are holding at a $26.70 CPM, and the goal is 6,930,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is P18-49, and the format is Audio. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

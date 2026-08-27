@@ -1,9 +1,9 @@
-Subject: New day-to-day contact at Ashgrove Labs
-Date: September 26, 2025
+Subject: Order line IO-42-0068 booked on Spring Store Visits
+Date: September 22, 2025
 
-Hi there,
+System notification.
 
-There is a contact change to pass along. This one is on Ashgrove Labs. Day-to-day contact is Kiona Yarborough, and they come in as a investment lead. Reach them at kiona.yarborough@ashgrove.example. Let me know if anything looks off.
+The order line is in the system. This one is on Ashgrove Labs for the Spring Store Visits program, order line IO-42-0068. We are holding at a $28.50 CPM, and the goal is 23,090,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is M18-49, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
-the Ashgrove Labs team
+ad sales ops

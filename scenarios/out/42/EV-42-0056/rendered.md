@@ -1,9 +1,9 @@
-Subject: Revised rate on IO-42-0011
-Date: April 26, 2025
+Subject: Pacing call notes on IO-42-0013
+Date: April 23, 2025
 
-Hi Tobias,
+Notes from the call.
 
-Confirming the rate change we talked through. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0011. We are holding at a $36.50 CPM. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0013. Pacing is on pace, and we review again through May 14, 2025. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

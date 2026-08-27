@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0054 booked on Winter App Installs
+Subject: Autumn Brand Awareness brief for Kelvinshaw Holdings
 Date: November 5, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Verapine Studios for the Winter App Installs program, order line IO-42-0054. We are holding at a $34.00 CPM, and the goal is 20,030,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is A25-54, and the format is Display. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Kelvinshaw Holdings for the Autumn Brand Awareness program. The goal is brand awareness, and the working budget is $82,000. The flight opens December 10, 2025, and it wraps January 24, 2026. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Kelvinshaw Holdings team

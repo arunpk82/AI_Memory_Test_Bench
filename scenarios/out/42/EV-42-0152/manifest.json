@@ -1,53 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "email_sent",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-010",
-  "deal_name": "Autumn App Installs",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-015",
+  "deal_name": "Spring Seasonal Clearance",
   "event_id": "EV-42-0152",
   "facts": [
     {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0654",
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0648",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0496",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-13"
+        "start": "2025-10-03"
       },
-      "value": "2025-11-08",
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0649",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-10-24",
+        "start": "2025-10-03"
+      },
+      "value": "22750000",
       "volatility_class": "durable"
     },
     {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-010",
-      "fact_id": "F-42-0655",
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0650",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0497",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-13"
+        "start": "2025-10-03"
       },
-      "value": "2026-01-07",
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0651",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-03"
+      },
+      "value": "IL/OH/MI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0652",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-03"
+      },
+      "value": "A25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0030",
+      "fact_id": "F-42-0653",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-03"
+      },
+      "value": "OLV",
       "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "flight_shift",
+  "io_id": "IO-42-0030",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Autumn App Installs flight moved for Ravensmoor Holdings",
-  "timestamp": "2025-10-13",
-  "trust_class": "first_party_sent"
+  "subject": "Order line IO-42-0030 booked on Spring Seasonal Clearance",
+  "timestamp": "2025-10-03",
+  "trust_class": "system_of_record"
 }

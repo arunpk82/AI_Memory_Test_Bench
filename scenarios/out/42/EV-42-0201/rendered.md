@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Verapine Studios
-Date: March 6, 2026
+Subject: Renewal conversation notes for Zellwood Labs
+Date: February 18, 2026
 
 Notes from the call.
 
-Notes from the renewal chat. This one is on Verapine Studios for the Winter App Installs program. They are reducing scope next year, and they floated roughly $631,000 for next year. Let me know if anything looks off.
+Notes from the renewal chat. This one is on Zellwood Labs for the Spring Product Launch program. They are leaning toward renewal, and they floated roughly $151,000 for next year. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

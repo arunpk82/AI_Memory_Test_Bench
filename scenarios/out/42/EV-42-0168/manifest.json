@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-04",
-  "advertiser_name": "Harrowgate Holdings",
-  "agency_name": null,
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
+  "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-015",
-  "deal_name": "Spring Seasonal Clearance",
+  "deal_id": "DEAL-42-036",
+  "deal_name": "Summer Loyalty Retention",
   "event_id": "EV-42-0168",
   "facts": [
     {
-      "attribute": "impressions_goal",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0709",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0700",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0643",
+      "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-03"
+        "start": "2025-10-30"
       },
-      "value": "18200000",
+      "value": "36.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0701",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-30"
+      },
+      "value": "19320000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0702",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-30"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0703",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-30"
+      },
+      "value": "PA/NJ/MD",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0704",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-30"
+      },
+      "value": "M18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0065",
+      "fact_id": "F-42-0705",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-30"
+      },
+      "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0030",
-  "scenario_kind": "impressions_adjustment",
+  "io_id": "IO-42-0065",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Delivery goal reset on IO-42-0030",
-  "timestamp": "2025-11-03",
+  "subject": "Order line IO-42-0065 booked on Summer Loyalty Retention",
+  "timestamp": "2025-10-30",
   "trust_class": "system_of_record"
 }

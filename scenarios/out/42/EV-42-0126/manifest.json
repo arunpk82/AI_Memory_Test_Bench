@@ -1,121 +1,104 @@
 {
-  "advertiser_id": "ADV-42-05",
-  "advertiser_name": "Zellwood Labs",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-017",
-  "deal_name": "Spring Product Launch",
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Marisol Sandoval",
+  "deal_id": "DEAL-42-021",
+  "deal_name": "Autumn Lead Generation",
   "event_id": "EV-42-0126",
   "facts": [
     {
-      "attribute": "cpm_rate",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-021",
+      "fact_id": "F-42-0520",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "Autumn Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-021",
+      "fact_id": "F-42-0521",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-021",
+      "fact_id": "F-42-0522",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-09"
+      },
+      "value": "598000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-021",
       "fact_id": "F-42-0523",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
         "start": "2025-09-09"
       },
-      "value": "26.70",
-      "volatility_class": "slow_changing"
+      "value": "2025-10-28",
+      "volatility_class": "durable"
     },
     {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-021",
       "fact_id": "F-42-0524",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
         "start": "2025-09-09"
       },
-      "value": "19510000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
-      "fact_id": "F-42-0525",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-09"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
-      "fact_id": "F-42-0526",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-09"
-      },
-      "value": "CA/NY/TX",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
-      "fact_id": "F-42-0527",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-09"
-      },
-      "value": "P18-49",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0034",
-      "fact_id": "F-42-0528",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-09"
-      },
-      "value": "Audio",
+      "value": "2025-12-12",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0034",
-  "scenario_kind": "order_booked",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Order line IO-42-0034 booked on Spring Product Launch",
+  "subject": "Autumn Lead Generation brief for Kestrelia Collective",
   "timestamp": "2025-09-09",
-  "trust_class": "system_of_record"
+  "trust_class": "counterparty_asserted"
 }

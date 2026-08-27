@@ -1,121 +1,36 @@
 {
-  "advertiser_id": "ADV-42-02",
-  "advertiser_name": "Cindervale Studios",
-  "agency_name": "Cindersmith Trading",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-004",
-  "deal_name": "Back-to-School Store Visits",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Oisin Zaragoza",
+  "deal_id": "DEAL-42-008",
+  "deal_name": "Holiday Brand Awareness",
   "event_id": "EV-42-0046",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0006",
-      "fact_id": "F-42-0230",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
-      },
-      "value": "24.00",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0006",
-      "fact_id": "F-42-0231",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
-      },
-      "value": "11210000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0006",
-      "fact_id": "F-42-0232",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0006",
-      "fact_id": "F-42-0233",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
-      },
-      "value": "PA/NJ/MD",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0006",
-      "fact_id": "F-42-0234",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
-      },
-      "value": "A25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0006",
+      "entity_id": "IO-42-0014",
       "fact_id": "F-42-0235",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
+      "supersedes": "F-42-0177",
+      "trust_class": "first_party_sent",
       "validity_interval": {
-        "end": null,
-        "start": "2025-04-07"
+        "end": "2025-05-15",
+        "start": "2025-04-08"
       },
-      "value": "Audio",
-      "volatility_class": "durable"
+      "value": "42.00",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0006",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0014",
+  "scenario_kind": "rate_revision",
   "seed": 42,
-  "subject": "Order line IO-42-0006 booked on Back-to-School Store Visits",
-  "timestamp": "2025-04-07",
-  "trust_class": "system_of_record"
+  "subject": "Revised rate on IO-42-0014",
+  "timestamp": "2025-04-08",
+  "trust_class": "first_party_sent"
 }

@@ -1,9 +1,9 @@
-Subject: Hold placed on IO-42-0018
-Date: October 27, 2025
+Subject: Following up on IO-42-0005 billing
+Date: October 24, 2025
 
-System notification.
+Hi there,
 
-We put a hold on the line for now. This one is on Ravensmoor Holdings for the Autumn App Installs program, order line IO-42-0018. The line is on hold. Let me know if anything looks off.
+Following up on a couple of billing items. This one is on Cindervale Studios for the Back-to-School Store Visits program, order line IO-42-0005. Creative is due November 9, 2025, and your team has us down at a $31.25 CPM. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Cindervale Studios team

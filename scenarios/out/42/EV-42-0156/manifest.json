@@ -1,18 +1,86 @@
 {
-  "advertiser_id": "ADV-42-10",
-  "advertiser_name": "Umberfield Outfitters",
-  "agency_name": "Saltmarsh Buying Desk",
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
+  "agency_name": "Hollowell Buying Desk",
   "author": "counterparty",
   "channel": "email_received",
-  "contact_name": "Sorrel Nakashima",
-  "deal_id": "DEAL-42-036",
-  "deal_name": "Summer Loyalty Retention",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-025",
+  "deal_name": "Winter Product Launch",
   "event_id": "EV-42-0156",
   "facts": [
     {
       "attribute": "deal_name",
       "entity": "deal",
-      "entity_id": "DEAL-42-036",
+      "entity_id": "DEAL-42-025",
+      "fact_id": "F-42-0659",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-11"
+      },
+      "value": "Winter Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-025",
+      "fact_id": "F-42-0660",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-11"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-025",
+      "fact_id": "F-42-0661",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-11"
+      },
+      "value": "237000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-025",
+      "fact_id": "F-42-0662",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-11"
+      },
+      "value": "2025-11-28",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-025",
       "fact_id": "F-42-0663",
       "injection": false,
       "never_memorize": false,
@@ -21,84 +89,16 @@
       "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-20"
+        "start": "2025-10-11"
       },
-      "value": "Summer Loyalty Retention",
-      "volatility_class": "permanent"
-    },
-    {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-036",
-      "fact_id": "F-42-0664",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-20"
-      },
-      "value": "loyalty retention",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-036",
-      "fact_id": "F-42-0665",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-20"
-      },
-      "value": "705000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-036",
-      "fact_id": "F-42-0666",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": "2025-11-23",
-        "start": "2025-10-20"
-      },
-      "value": "2025-12-21",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-036",
-      "fact_id": "F-42-0667",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": "2025-11-23",
-        "start": "2025-10-20"
-      },
-      "value": "2026-02-19",
+      "value": "2026-02-26",
       "volatility_class": "durable"
     }
   ],
   "io_id": null,
   "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Summer Loyalty Retention brief for Umberfield Outfitters",
-  "timestamp": "2025-10-20",
+  "subject": "Winter Product Launch brief for Stonebrook Media",
+  "timestamp": "2025-10-11",
   "trust_class": "counterparty_asserted"
 }

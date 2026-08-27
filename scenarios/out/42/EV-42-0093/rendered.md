@@ -1,9 +1,9 @@
-Subject: Holiday Loyalty Retention brief for Umberfield Outfitters
-Date: July 19, 2025
+Subject: IO-42-0069 moved into delivery
+Date: July 15, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program. The goal is loyalty retention, and the working budget is $576,000. The flight opens August 9, 2025, and it wraps November 7, 2025. Let me know if anything looks off.
+The line started delivering. This one is on Ashgrove Labs for the Autumn Store Visits program, order line IO-42-0069. The line is delivering. Let me know if anything looks off.
 
 Thanks,
-the Umberfield Outfitters team
+ad sales ops

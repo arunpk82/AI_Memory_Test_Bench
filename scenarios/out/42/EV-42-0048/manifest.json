@@ -1,36 +1,104 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": null,
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-012",
-  "deal_name": "Autumn Brand Awareness",
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Tobias Pemberly",
+  "deal_id": "DEAL-42-013",
+  "deal_name": "Holiday Product Launch",
   "event_id": "EV-42-0048",
   "facts": [
     {
-      "attribute": "rate_card_cpm",
-      "entity": "order-line",
-      "entity_id": "IO-42-0023",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
       "fact_id": "F-42-0242",
       "injection": false,
-      "never_memorize": true,
+      "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
-        "end": "2025-04-09",
-        "start": "2025-04-09"
+        "end": null,
+        "start": "2025-04-11"
       },
-      "value": "45.75",
-      "volatility_class": "ephemeral"
+      "value": "Holiday Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0243",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0244",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "117000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0245",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "2025-05-29",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-013",
+      "fact_id": "F-42-0246",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-11"
+      },
+      "value": "2025-07-13",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0023",
-  "scenario_kind": "rate_card_snapshot",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Rate card snapshot for IO-42-0023",
-  "timestamp": "2025-04-09",
-  "trust_class": "system_of_record"
+  "subject": "Holiday Product Launch brief for Harrowgate Holdings",
+  "timestamp": "2025-04-11",
+  "trust_class": "counterparty_asserted"
 }

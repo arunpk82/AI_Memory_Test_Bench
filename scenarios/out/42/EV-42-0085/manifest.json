@@ -1,121 +1,104 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-009",
-  "deal_name": "Summer Loyalty Retention",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Wilhelmina Rothwell",
+  "deal_id": "DEAL-42-019",
+  "deal_name": "Spring Loyalty Retention",
   "event_id": "EV-42-0085",
   "facts": [
     {
-      "attribute": "cpm_rate",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0383",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0364",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-07"
+        "start": "2025-06-28"
       },
-      "value": "22.75",
-      "volatility_class": "slow_changing"
+      "value": "Spring Loyalty Retention",
+      "volatility_class": "permanent"
     },
     {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0384",
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0365",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-07"
+        "start": "2025-06-28"
       },
-      "value": "37100000",
+      "value": "loyalty retention",
       "volatility_class": "durable"
     },
     {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0385",
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0366",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-07"
+        "start": "2025-06-28"
       },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0386",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-07-07"
-      },
-      "value": "FL/GA/NC",
+      "value": "757000",
       "volatility_class": "durable"
     },
     {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0387",
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0367",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-07"
+        "start": "2025-06-28"
       },
-      "value": "A25-54",
+      "value": "2025-08-20",
       "volatility_class": "durable"
     },
     {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0017",
-      "fact_id": "F-42-0388",
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-019",
+      "fact_id": "F-42-0368",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-07"
+        "start": "2025-06-28"
       },
-      "value": "OLV",
+      "value": "2025-10-19",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0017",
-  "scenario_kind": "order_booked",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Order line IO-42-0017 booked on Summer Loyalty Retention",
-  "timestamp": "2025-07-07",
-  "trust_class": "system_of_record"
+  "subject": "Spring Loyalty Retention brief for Zellwood Labs",
+  "timestamp": "2025-06-28",
+  "trust_class": "counterparty_asserted"
 }

@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-011",
-  "deal_name": "Autumn Product Launch",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-035",
+  "deal_name": "Holiday Loyalty Retention",
   "event_id": "EV-42-0099",
   "facts": [
     {
-      "attribute": "cpm_rate_claimed",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0021",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0422",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-29"
+      },
+      "value": "28.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0423",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-08-26",
+        "start": "2025-07-29"
+      },
+      "value": "20210000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0424",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-29"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0425",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-29"
+      },
+      "value": "CO/AZ/UT",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0064",
       "fact_id": "F-42-0426",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-30"
+        "start": "2025-07-29"
       },
-      "value": "22.75",
-      "volatility_class": "slow_changing"
+      "value": "M18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0427",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-29"
+      },
+      "value": "OLV",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0021",
-  "scenario_kind": "client_rate_claim",
+  "io_id": "IO-42-0064",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Rate question on IO-42-0021",
-  "timestamp": "2025-07-30",
-  "trust_class": "counterparty_asserted"
+  "subject": "Order line IO-42-0064 booked on Holiday Loyalty Retention",
+  "timestamp": "2025-07-29",
+  "trust_class": "system_of_record"
 }

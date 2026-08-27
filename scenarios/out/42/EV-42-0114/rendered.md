@@ -1,9 +1,9 @@
-Subject: Housekeeping on Verapine Studios paperwork
-Date: August 31, 2025
+Subject: Summer Seasonal Clearance brief for Larkspire Provisions
+Date: August 29, 2025
 
 Hi there,
 
-A couple of housekeeping items on the paperwork. This one is on Verapine Studios for the Winter App Installs program. We now buy through Inkwell Collective, and creative is due September 9, 2025. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Larkspire Provisions for the Summer Seasonal Clearance program. The goal is seasonal clearance, and the working budget is $858,000. The flight opens October 13, 2025, and it wraps November 12, 2025. Let me know if anything looks off.
 
 Thanks,
-the Verapine Studios team
+the Larkspire Provisions team

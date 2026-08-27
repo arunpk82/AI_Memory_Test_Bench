@@ -1,9 +1,9 @@
-Subject: Rate card snapshot for IO-42-0023
-Date: April 9, 2025
+Subject: Holiday Product Launch brief for Harrowgate Holdings
+Date: April 11, 2025
 
-System notification.
+Hi there,
 
-Today the rate card pull came through. This one is on Ravensmoor Holdings for the Autumn Brand Awareness program, order line IO-42-0023. The card is showing $45.75 CPM today. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Harrowgate Holdings for the Holiday Product Launch program. The goal is product launch, and the working budget is $117,000. The flight opens May 29, 2025, and it wraps July 13, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Harrowgate Holdings team

@@ -1,9 +1,9 @@
-Subject: Spring Store Visits brief for Harrowgate Holdings
-Date: November 8, 2025
+Subject: Updated remittance details for Zellwood Labs
+Date: November 5, 2025
 
 Hi there,
 
-Thanks for sending the brief over. This one is on Harrowgate Holdings for the Spring Store Visits program. The goal is store visits, and the working budget is $317,000. The flight opens December 25, 2025, and it wraps February 8, 2026. Let me know if anything looks off.
+One administrative item to pass along. This one is on Zellwood Labs for the Spring Product Launch program. Creative is due November 17, 2025, and please send remittance to Inkwell Settlements going forward. Let me know if anything looks off.
 
 Thanks,
-the Harrowgate Holdings team
+the Zellwood Labs team

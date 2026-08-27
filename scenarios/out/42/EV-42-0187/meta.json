@@ -1,8 +1,8 @@
 {
   "attempt_history": [],
   "attempts": 1,
-  "author": "system",
-  "channel": "order_system",
+  "author": "user",
+  "channel": "call_note",
   "event_id": "EV-42-0187",
   "fidelity": "pass",
   "fidelity_missing_facts": [],
@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "rate_card_snapshot",
+  "scenario_kind": "pacing_note",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-12-15"
+  "timestamp": "2025-12-12"
 }

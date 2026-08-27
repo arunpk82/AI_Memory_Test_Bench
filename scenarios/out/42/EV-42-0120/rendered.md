@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0004 booked on Spring Loyalty Retention
-Date: September 7, 2025
+Subject: New day-to-day contact at Larkspire Provisions
+Date: September 4, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Kelvinshaw Holdings for the Spring Loyalty Retention program, order line IO-42-0004. We are holding at a $48.00 CPM, and the goal is 10,310,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is P18-49, and the format is CTV. Let me know if anything looks off.
+There is a contact change to pass along. This one is on Larkspire Provisions. Day-to-day contact is Desmond Quintrell, and they come in as a account director. Reach them at desmond.quintrell@larkspire.example. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Larkspire Provisions team

@@ -1,9 +1,9 @@
-Subject: Rate question on IO-42-0053
-Date: January 30, 2026
+Subject: Rate question on IO-42-0068
+Date: January 25, 2026
 
 Hi there,
 
-One question came in about the rate. This one is on Verapine Studios for the Winter App Installs program, order line IO-42-0053. They think the rate should be $22.75. Let me know if anything looks off.
+One question came in about the rate. This one is on Ashgrove Labs for the Spring Store Visits program, order line IO-42-0068. They think the rate should be $24.00. Let me know if anything looks off.
 
 Thanks,
-the Verapine Studios team
+the Ashgrove Labs team

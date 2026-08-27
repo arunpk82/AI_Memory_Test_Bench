@@ -1,121 +1,36 @@
 {
-  "advertiser_id": "ADV-42-07",
-  "advertiser_name": "Stonebrook Media",
-  "agency_name": "Hollowell Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-025",
-  "deal_name": "Winter Product Launch",
+  "advertiser_id": "ADV-42-11",
+  "advertiser_name": "Ashgrove Labs",
+  "agency_name": "Cindersmith Trading",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Simone Ashcombe",
+  "deal_id": "DEAL-42-039",
+  "deal_name": "Holiday Seasonal Clearance",
   "event_id": "EV-42-0158",
   "facts": [
     {
-      "attribute": "cpm_rate",
+      "attribute": "cpm_rate_claimed",
       "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0669",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0666",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-25"
+        "start": "2025-10-17"
       },
-      "value": "45.75",
+      "value": "28.50",
       "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0670",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-25"
-      },
-      "value": "5180000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0671",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-25"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0672",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-25"
-      },
-      "value": "FL/GA/NC",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0673",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-25"
-      },
-      "value": "A35-64",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0047",
-      "fact_id": "F-42-0674",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-25"
-      },
-      "value": "Audio",
-      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0047",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0070",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "Order line IO-42-0047 booked on Winter Product Launch",
-  "timestamp": "2025-10-25",
-  "trust_class": "system_of_record"
+  "subject": "Rate question on IO-42-0070",
+  "timestamp": "2025-10-17",
+  "trust_class": "counterparty_asserted"
 }

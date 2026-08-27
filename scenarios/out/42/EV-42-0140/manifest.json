@@ -1,18 +1,86 @@
 {
-  "advertiser_id": "ADV-42-09",
-  "advertiser_name": "Verapine Studios",
-  "agency_name": "Hollowell Buying Desk",
+  "advertiser_id": "ADV-42-06",
+  "advertiser_name": "Kestrelia Collective",
+  "agency_name": "Inkwell Collective",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-031",
-  "deal_name": "Autumn App Installs",
+  "deal_id": "DEAL-42-021",
+  "deal_name": "Autumn Lead Generation",
   "event_id": "EV-42-0140",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0056",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0597",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "48.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0598",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "12460000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0599",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
+      "fact_id": "F-42-0600",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-17"
+      },
+      "value": "IL/OH/MI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0039",
       "fact_id": "F-42-0601",
       "injection": false,
       "never_memorize": false,
@@ -21,15 +89,15 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-19"
+        "start": "2025-09-17"
       },
-      "value": "21.00",
-      "volatility_class": "slow_changing"
+      "value": "P18-49",
+      "volatility_class": "durable"
     },
     {
-      "attribute": "impressions_goal",
+      "attribute": "creative_format",
       "entity": "order-line",
-      "entity_id": "IO-42-0056",
+      "entity_id": "IO-42-0039",
       "fact_id": "F-42-0602",
       "injection": false,
       "never_memorize": false,
@@ -38,84 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-19"
+        "start": "2025-09-17"
       },
-      "value": "40670000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0056",
-      "fact_id": "F-42-0603",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-19"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0056",
-      "fact_id": "F-42-0604",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-19"
-      },
-      "value": "WA/OR/NV",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0056",
-      "fact_id": "F-42-0605",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-19"
-      },
-      "value": "A25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0056",
-      "fact_id": "F-42-0606",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-09-19"
-      },
-      "value": "Native",
+      "value": "CTV",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0056",
+  "io_id": "IO-42-0039",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0056 booked on Autumn App Installs",
-  "timestamp": "2025-09-19",
+  "subject": "Order line IO-42-0039 booked on Autumn Lead Generation",
+  "timestamp": "2025-09-17",
   "trust_class": "system_of_record"
 }

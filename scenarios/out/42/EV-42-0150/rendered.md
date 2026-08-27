@@ -1,9 +1,9 @@
-Subject: Delivery goal reset on IO-42-0050
-Date: October 6, 2025
+Subject: Following up on IO-42-0023 billing
+Date: October 1, 2025
 
-System notification.
+Hi there,
 
-The delivery goal has been reset. This one is on Larkspire Provisions for the Summer Seasonal Clearance program, order line IO-42-0050. The goal is 22,720,000 impressions. Let me know if anything looks off.
+Following up on a couple of billing items. This one is on Ravensmoor Holdings for the Autumn Brand Awareness program, order line IO-42-0023. Creative is due October 19, 2025, and your team has us down at a $28.50 CPM. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ravensmoor Holdings team

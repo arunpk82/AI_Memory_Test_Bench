@@ -1,53 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "email_sent",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-011",
-  "deal_name": "Autumn Product Launch",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-029",
+  "deal_name": "Back-to-School Product Launch",
   "event_id": "EV-42-0074",
   "facts": [
     {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-011",
-      "fact_id": "F-42-0339",
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0324",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0275",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-06-07"
+        "start": "2025-06-02"
       },
-      "value": "2025-07-25",
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0325",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-02"
+      },
+      "value": "19140000",
       "volatility_class": "durable"
     },
     {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-011",
-      "fact_id": "F-42-0340",
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0326",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0276",
-      "trust_class": "first_party_sent",
+      "supersedes": null,
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-06-07"
+        "start": "2025-06-02"
       },
-      "value": "2025-09-23",
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0327",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-02"
+      },
+      "value": "WA/OR/NV",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0328",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-02"
+      },
+      "value": "W25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0052",
+      "fact_id": "F-42-0329",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-02"
+      },
+      "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "flight_shift",
+  "io_id": "IO-42-0052",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Autumn Product Launch flight moved for Ravensmoor Holdings",
-  "timestamp": "2025-06-07",
-  "trust_class": "first_party_sent"
+  "subject": "Order line IO-42-0052 booked on Back-to-School Product Launch",
+  "timestamp": "2025-06-02",
+  "trust_class": "system_of_record"
 }

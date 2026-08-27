@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0064 booked on Holiday Loyalty Retention
-Date: July 29, 2025
+Subject: Holiday Loyalty Retention brief for Umberfield Outfitters
+Date: July 19, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program, order line IO-42-0064. We are holding at a $28.50 CPM, and the goal is 20,210,000 impressions. The line is booked, and geo stays CO/AZ/UT. The demo is M18-49, and the format is OLV. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Umberfield Outfitters for the Holiday Loyalty Retention program. The goal is loyalty retention, and the working budget is $576,000. The flight opens August 9, 2025, and it wraps November 7, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Umberfield Outfitters team

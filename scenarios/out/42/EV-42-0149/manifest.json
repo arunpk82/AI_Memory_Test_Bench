@@ -1,121 +1,53 @@
 {
-  "advertiser_id": "ADV-42-04",
-  "advertiser_name": "Harrowgate Holdings",
+  "advertiser_id": "ADV-42-05",
+  "advertiser_name": "Zellwood Labs",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-015",
-  "deal_name": "Spring Seasonal Clearance",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Wilhelmina Rothwell",
+  "deal_id": "DEAL-42-019",
+  "deal_name": "Spring Loyalty Retention",
   "event_id": "EV-42-0149",
   "facts": [
     {
-      "attribute": "cpm_rate",
+      "attribute": "pacing_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0642",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0638",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "first_party_note",
       "validity_interval": {
-        "end": null,
-        "start": "2025-10-03"
+        "end": "2025-11-05",
+        "start": "2025-10-01"
       },
-      "value": "24.00",
-      "volatility_class": "slow_changing"
+      "value": "paused for creative swap",
+      "volatility_class": "transient"
     },
     {
-      "attribute": "impressions_goal",
+      "attribute": "pacing_review_through",
       "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0643",
+      "entity_id": "IO-42-0036",
+      "fact_id": "F-42-0639",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": "2025-11-02",
-        "start": "2025-10-03"
-      },
-      "value": "22750000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0644",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "first_party_note",
       "validity_interval": {
         "end": null,
-        "start": "2025-10-03"
+        "start": "2025-10-01"
       },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0645",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-03"
-      },
-      "value": "IL/OH/MI",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0646",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-03"
-      },
-      "value": "A25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0030",
-      "fact_id": "F-42-0647",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-10-03"
-      },
-      "value": "OLV",
+      "value": "2025-11-05",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0030",
-  "scenario_kind": "order_booked",
+  "io_id": "IO-42-0036",
+  "scenario_kind": "pacing_note",
   "seed": 42,
-  "subject": "Order line IO-42-0030 booked on Spring Seasonal Clearance",
-  "timestamp": "2025-10-03",
-  "trust_class": "system_of_record"
+  "subject": "Pacing call notes on IO-42-0036",
+  "timestamp": "2025-10-01",
+  "trust_class": "first_party_note"
 }

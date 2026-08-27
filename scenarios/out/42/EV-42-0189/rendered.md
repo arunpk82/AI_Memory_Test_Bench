@@ -1,9 +1,9 @@
-Subject: Pacing call notes on IO-42-0046
-Date: January 15, 2026
+Subject: Rate card snapshot for IO-42-0030
+Date: December 26, 2025
 
-Notes from the call.
+System notification.
 
-Quick notes from the pacing call. This one is on Stonebrook Media for the Winter Product Launch program, order line IO-42-0046. Pacing is paused for creative swap, and we review again through February 19, 2026. Let me know if anything looks off.
+Today the rate card pull came through. This one is on Harrowgate Holdings for the Spring Seasonal Clearance program, order line IO-42-0030. The card is showing $45.75 CPM today. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

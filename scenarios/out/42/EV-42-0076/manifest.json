@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
-  "agency_name": null,
+  "advertiser_id": "ADV-42-11",
+  "advertiser_name": "Ashgrove Labs",
+  "agency_name": "Cindersmith Trading",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-011",
-  "deal_name": "Autumn Product Launch",
+  "deal_id": "DEAL-42-039",
+  "deal_name": "Holiday Seasonal Clearance",
   "event_id": "EV-42-0076",
   "facts": [
     {
-      "attribute": "line_status",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0021",
-      "fact_id": "F-42-0346",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0336",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0299",
+      "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-07-09",
-        "start": "2025-06-23"
+        "end": null,
+        "start": "2025-06-06"
       },
-      "value": "on hold",
+      "value": "34.00",
       "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0337",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-06"
+      },
+      "value": "21650000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0338",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-06"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0339",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-06"
+      },
+      "value": "PA/NJ/MD",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0340",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-06"
+      },
+      "value": "A25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0070",
+      "fact_id": "F-42-0341",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-06"
+      },
+      "value": "CTV",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0021",
-  "scenario_kind": "line_hold",
+  "io_id": "IO-42-0070",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Hold placed on IO-42-0021",
-  "timestamp": "2025-06-23",
+  "subject": "Order line IO-42-0070 booked on Holiday Seasonal Clearance",
+  "timestamp": "2025-06-06",
   "trust_class": "system_of_record"
 }

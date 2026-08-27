@@ -1,36 +1,36 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
   "agency_name": null,
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-009",
-  "deal_name": "Summer Loyalty Retention",
+  "deal_id": "DEAL-42-035",
+  "deal_name": "Holiday Loyalty Retention",
   "event_id": "EV-42-0112",
   "facts": [
     {
-      "attribute": "line_status",
+      "attribute": "impressions_goal",
       "entity": "order-line",
-      "entity_id": "IO-42-0015",
-      "fact_id": "F-42-0466",
+      "entity_id": "IO-42-0064",
+      "fact_id": "F-42-0460",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0435",
+      "supersedes": "F-42-0423",
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-08-30"
+        "start": "2025-08-27"
       },
-      "value": "cancelled",
-      "volatility_class": "slow_changing"
+      "value": "25260000",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0015",
-  "scenario_kind": "line_cancellation",
+  "io_id": "IO-42-0064",
+  "scenario_kind": "impressions_adjustment",
   "seed": 42,
-  "subject": "Cancellation posted for IO-42-0015",
-  "timestamp": "2025-08-30",
+  "subject": "Delivery goal reset on IO-42-0064",
+  "timestamp": "2025-08-27",
   "trust_class": "system_of_record"
 }

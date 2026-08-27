@@ -54,7 +54,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-04-05",
+        "end": "2025-04-02",
         "start": "2025-03-14"
       },
       "value": "booked",

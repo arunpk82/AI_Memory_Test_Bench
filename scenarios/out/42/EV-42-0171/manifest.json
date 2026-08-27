@@ -1,121 +1,104 @@
 {
-  "advertiser_id": "ADV-42-09",
-  "advertiser_name": "Verapine Studios",
-  "agency_name": "Hollowell Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-030",
-  "deal_name": "Winter App Installs",
+  "advertiser_id": "ADV-42-01",
+  "advertiser_name": "Kelvinshaw Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Dana Birkenshaw",
+  "deal_id": "DEAL-42-001",
+  "deal_name": "Autumn Brand Awareness",
   "event_id": "EV-42-0171",
   "facts": [
     {
-      "attribute": "cpm_rate",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-001",
+      "fact_id": "F-42-0713",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "Autumn Brand Awareness",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-001",
+      "fact_id": "F-42-0714",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "brand awareness",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-001",
+      "fact_id": "F-42-0715",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "82000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-001",
+      "fact_id": "F-42-0716",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-05"
+      },
+      "value": "2025-12-10",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-001",
       "fact_id": "F-42-0717",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
         "start": "2025-11-05"
       },
-      "value": "34.00",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
-      "fact_id": "F-42-0718",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "20030000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
-      "fact_id": "F-42-0719",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
-      "fact_id": "F-42-0720",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "IL/OH/MI",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
-      "fact_id": "F-42-0721",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "A25-54",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0054",
-      "fact_id": "F-42-0722",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "Display",
+      "value": "2026-01-24",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0054",
-  "scenario_kind": "order_booked",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Order line IO-42-0054 booked on Winter App Installs",
+  "subject": "Autumn Brand Awareness brief for Kelvinshaw Holdings",
   "timestamp": "2025-11-05",
-  "trust_class": "system_of_record"
+  "trust_class": "counterparty_asserted"
 }

@@ -1,9 +1,9 @@
-Subject: Rate question on IO-42-0043
-Date: November 22, 2025
+Subject: Order line IO-42-0028 booked on Spring Store Visits
+Date: November 16, 2025
 
-Hi there,
+System notification.
 
-One question came in about the rate. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0043. They think the rate should be $36.50. Let me know if anything looks off.
+The order line is in the system. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0028. We are holding at a $28.50 CPM, and the goal is 11,120,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is M18-49, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
-the Stonebrook Media team
+ad sales ops

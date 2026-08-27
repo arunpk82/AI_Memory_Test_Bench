@@ -1,9 +1,9 @@
-Subject: Cancellation posted for IO-42-0021
-Date: July 10, 2025
+Subject: Order line IO-42-0015 booked on Summer Loyalty Retention
+Date: July 3, 2025
 
 System notification.
 
-The cancellation is posted. This one is on Ravensmoor Holdings for the Autumn Product Launch program, order line IO-42-0021. The line is cancelled. Let me know if anything looks off.
+The order line is in the system. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0015. We are holding at a $18.50 CPM, and the goal is 45,620,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A35-64, and the format is Native. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

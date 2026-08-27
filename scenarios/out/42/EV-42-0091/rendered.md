@@ -1,9 +1,9 @@
-Subject: IO-42-0069 moved into delivery
-Date: July 15, 2025
+Subject: Agency of record change for Harrowgate Holdings
+Date: July 8, 2025
 
-System notification.
+Hi Tobias,
 
-The line started delivering. This one is on Ashgrove Labs for the Autumn Store Visits program, order line IO-42-0069. The line is delivering. Let me know if anything looks off.
+The buying assignment changed. This one is on Harrowgate Holdings. Buying is handled by Hollowell Buying Desk. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

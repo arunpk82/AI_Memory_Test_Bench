@@ -1,9 +1,9 @@
-Subject: Spring Product Launch brief for Zellwood Labs
-Date: September 5, 2025
+Subject: Order line IO-42-0010 booked on Winter Store Visits
+Date: September 3, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Zellwood Labs for the Spring Product Launch program. The goal is product launch, and the working budget is $521,000. The flight opens October 18, 2025, and it wraps December 17, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Cindervale Studios for the Winter Store Visits program, order line IO-42-0010. We are holding at a $24.00 CPM, and the goal is 9,710,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is A35-64, and the format is Native. Let me know if anything looks off.
 
 Thanks,
-the Zellwood Labs team
+ad sales ops

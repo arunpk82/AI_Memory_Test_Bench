@@ -2,7 +2,7 @@
   "attempt_history": [],
   "attempts": 1,
   "author": "user",
-  "channel": "email_sent",
+  "channel": "call_note",
   "event_id": "EV-42-0060",
   "fidelity": "pass",
   "fidelity_missing_facts": [],
@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "rate_revision",
+  "scenario_kind": "pacing_note",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-05-13"
+  "timestamp": "2025-05-07"
 }

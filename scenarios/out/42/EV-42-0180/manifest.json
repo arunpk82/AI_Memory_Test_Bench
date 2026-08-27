@@ -1,36 +1,121 @@
 {
-  "advertiser_id": "ADV-42-07",
-  "advertiser_name": "Stonebrook Media",
-  "agency_name": "Hollowell Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Imani Umberto",
-  "deal_id": "DEAL-42-024",
-  "deal_name": "Spring Seasonal Clearance",
+  "advertiser_id": "ADV-42-04",
+  "advertiser_name": "Harrowgate Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-014",
+  "deal_name": "Spring Store Visits",
   "event_id": "EV-42-0180",
   "facts": [
     {
-      "attribute": "cpm_rate_claimed",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0043",
-      "fact_id": "F-42-0761",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0751",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-22"
+        "start": "2025-11-16"
       },
-      "value": "36.50",
+      "value": "28.50",
       "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0752",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-16"
+      },
+      "value": "11120000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0753",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-16"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0754",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-16"
+      },
+      "value": "PA/NJ/MD",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0755",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-16"
+      },
+      "value": "M18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0028",
+      "fact_id": "F-42-0756",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-16"
+      },
+      "value": "OLV",
+      "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0043",
-  "scenario_kind": "client_rate_claim",
+  "io_id": "IO-42-0028",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Rate question on IO-42-0043",
-  "timestamp": "2025-11-22",
-  "trust_class": "counterparty_asserted"
+  "subject": "Order line IO-42-0028 booked on Spring Store Visits",
+  "timestamp": "2025-11-16",
+  "trust_class": "system_of_record"
 }

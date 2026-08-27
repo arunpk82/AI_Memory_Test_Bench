@@ -1,9 +1,9 @@
-Subject: Winter Product Launch brief for Stonebrook Media
-Date: October 11, 2025
+Subject: Order line IO-42-0055 booked on Autumn App Installs
+Date: October 2, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Stonebrook Media for the Winter Product Launch program. The goal is product launch, and the working budget is $237,000. The flight opens November 28, 2025, and it wraps February 26, 2026. Let me know if anything looks off.
+The order line is in the system. This one is on Verapine Studios for the Autumn App Installs program, order line IO-42-0055. We are holding at a $26.70 CPM, and the goal is 31,990,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is M18-49, and the format is Display. Let me know if anything looks off.
 
 Thanks,
-the Stonebrook Media team
+ad sales ops

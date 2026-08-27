@@ -1,104 +1,36 @@
 {
   "advertiser_id": "ADV-42-01",
   "advertiser_name": "Kelvinshaw Holdings",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Dana Birkenshaw",
-  "deal_id": "DEAL-42-001",
-  "deal_name": "Autumn Brand Awareness",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-003",
+  "deal_name": "Spring Loyalty Retention",
   "event_id": "EV-42-0170",
   "facts": [
     {
-      "attribute": "deal_name",
-      "entity": "deal",
-      "entity_id": "DEAL-42-001",
+      "attribute": "rate_card_cpm",
+      "entity": "order-line",
+      "entity_id": "IO-42-0004",
       "fact_id": "F-42-0712",
       "injection": false,
-      "never_memorize": false,
+      "never_memorize": true,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
+        "end": "2025-11-04",
+        "start": "2025-11-04"
       },
-      "value": "Autumn Brand Awareness",
-      "volatility_class": "permanent"
-    },
-    {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-001",
-      "fact_id": "F-42-0713",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "brand awareness",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-001",
-      "fact_id": "F-42-0714",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "82000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-001",
-      "fact_id": "F-42-0715",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "2025-12-10",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-001",
-      "fact_id": "F-42-0716",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-05"
-      },
-      "value": "2026-01-24",
-      "volatility_class": "durable"
+      "value": "45.75",
+      "volatility_class": "ephemeral"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "deal_kickoff",
+  "io_id": "IO-42-0004",
+  "scenario_kind": "rate_card_snapshot",
   "seed": 42,
-  "subject": "Autumn Brand Awareness brief for Kelvinshaw Holdings",
-  "timestamp": "2025-11-05",
-  "trust_class": "counterparty_asserted"
+  "subject": "Rate card snapshot for IO-42-0004",
+  "timestamp": "2025-11-04",
+  "trust_class": "system_of_record"
 }

@@ -1,9 +1,9 @@
-Subject: Pacing call notes on IO-42-0053
-Date: January 20, 2026
+Subject: Rate question on IO-42-0045
+Date: December 28, 2025
 
-Notes from the call.
+Hi there,
 
-Quick notes from the pacing call. This one is on Verapine Studios for the Winter App Installs program, order line IO-42-0053. Pacing is paused for creative swap, and we review again through February 3, 2026. Let me know if anything looks off.
+One question came in about the rate. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0045. They think the rate should be $31.25. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Stonebrook Media team

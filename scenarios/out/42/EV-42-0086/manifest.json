@@ -1,53 +1,121 @@
 {
-  "advertiser_id": "ADV-42-10",
-  "advertiser_name": "Umberfield Outfitters",
-  "agency_name": "Saltmarsh Buying Desk",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Sorrel Nakashima",
-  "deal_id": "DEAL-42-033",
-  "deal_name": "Summer Product Launch",
+  "advertiser_id": "ADV-42-11",
+  "advertiser_name": "Ashgrove Labs",
+  "agency_name": "Cindersmith Trading",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-038",
+  "deal_name": "Autumn Store Visits",
   "event_id": "EV-42-0086",
   "facts": [
     {
-      "attribute": "pacing_status",
+      "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0061",
-      "fact_id": "F-42-0389",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0369",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
-      "validity_interval": {
-        "end": "2025-07-22",
-        "start": "2025-07-08"
-      },
-      "value": "on pace",
-      "volatility_class": "transient"
-    },
-    {
-      "attribute": "pacing_review_through",
-      "entity": "order-line",
-      "entity_id": "IO-42-0061",
-      "fact_id": "F-42-0390",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-08"
+        "start": "2025-06-29"
       },
-      "value": "2025-07-22",
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0370",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-29"
+      },
+      "value": "26830000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0371",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-07-14",
+        "start": "2025-06-29"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0372",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-29"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0373",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-29"
+      },
+      "value": "A18-34",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0069",
+      "fact_id": "F-42-0374",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-29"
+      },
+      "value": "Audio",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0061",
-  "scenario_kind": "pacing_note",
+  "io_id": "IO-42-0069",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0061",
-  "timestamp": "2025-07-08",
-  "trust_class": "first_party_note"
+  "subject": "Order line IO-42-0069 booked on Autumn Store Visits",
+  "timestamp": "2025-06-29",
+  "trust_class": "system_of_record"
 }

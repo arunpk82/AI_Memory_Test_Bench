@@ -1,0 +1,31 @@
+{
+  "by_as_of_horizon": {
+    "current": 200,
+    "early": 13,
+    "late": 9,
+    "mid": 18
+  },
+  "by_query_kind": {
+    "exact": 79,
+    "multi_hop": 52,
+    "similarity": 55,
+    "temporal_range": 54
+  },
+  "by_type": {
+    "abstention_false_premise": 20,
+    "conflict_resolution": 12,
+    "episodic": 20,
+    "expired_state": 14,
+    "inference_only": 20,
+    "injection_probe": 15,
+    "knowledge_update_current": 20,
+    "knowledge_update_past": 20,
+    "mapping_lookup": 19,
+    "multi_session": 20,
+    "order_state": 20,
+    "single_fact": 20,
+    "temporal": 20
+  },
+  "seed": 42,
+  "total": 240
+}

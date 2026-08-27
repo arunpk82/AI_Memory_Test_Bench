@@ -4,7 +4,7 @@
   "agency_name": "Inkwell Collective",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Ingrid Eyre",
+  "contact_name": "Marisol Sandoval",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0007",
@@ -91,7 +91,7 @@
         "end": null,
         "start": "2025-01-31"
       },
-      "value": "Ingrid Eyre",
+      "value": "Marisol Sandoval",
       "volatility_class": "slow_changing"
     }
   ],

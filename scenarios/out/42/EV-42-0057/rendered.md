@@ -1,9 +1,9 @@
-Subject: Revised rate on IO-42-0005
-Date: April 28, 2025
+Subject: IO-42-0060 moved into delivery
+Date: April 24, 2025
 
-Hi Tobias,
+System notification.
 
-Confirming the rate change we talked through. This one is on Cindervale Studios for the Back-to-School Store Visits program, order line IO-42-0005. We are holding at a $18.50 CPM. Let me know if anything looks off.
+The line started delivering. This one is on Umberfield Outfitters for the Summer Product Launch program, order line IO-42-0060. The line is delivering. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

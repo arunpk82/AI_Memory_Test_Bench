@@ -1,9 +1,9 @@
-Subject: Back-to-School Store Visits brief for Cindervale Studios
-Date: March 22, 2025
+Subject: Order line IO-42-0042 booked on Holiday Seasonal Clearance
+Date: March 20, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Cindervale Studios for the Back-to-School Store Visits program. The goal is store visits, and the working budget is $269,000. The flight opens April 27, 2025, and it wraps June 11, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Stonebrook Media for the Holiday Seasonal Clearance program, order line IO-42-0042. We are holding at a $24.00 CPM, and the goal is 29,960,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is P18-49, and the format is CTV. Let me know if anything looks off.
 
 Thanks,
-the Cindervale Studios team
+ad sales ops

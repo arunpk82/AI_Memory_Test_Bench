@@ -1,36 +1,36 @@
 {
-  "advertiser_id": "ADV-42-02",
-  "advertiser_name": "Cindervale Studios",
-  "agency_name": "Cindersmith Trading",
-  "author": "user",
-  "channel": "email_sent",
-  "contact_name": "Tobias Pemberly",
-  "deal_id": "DEAL-42-004",
-  "deal_name": "Back-to-School Store Visits",
+  "advertiser_id": "ADV-42-10",
+  "advertiser_name": "Umberfield Outfitters",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-033",
+  "deal_name": "Summer Product Launch",
   "event_id": "EV-42-0057",
   "facts": [
     {
-      "attribute": "cpm_rate",
+      "attribute": "line_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0005",
-      "fact_id": "F-42-0270",
+      "entity_id": "IO-42-0060",
+      "fact_id": "F-42-0267",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": "F-42-0216",
-      "trust_class": "first_party_sent",
+      "supersedes": "F-42-0225",
+      "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-05-26",
-        "start": "2025-04-28"
+        "end": null,
+        "start": "2025-04-24"
       },
-      "value": "18.50",
+      "value": "delivering",
       "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0005",
-  "scenario_kind": "rate_revision",
+  "io_id": "IO-42-0060",
+  "scenario_kind": "line_activation",
   "seed": 42,
-  "subject": "Revised rate on IO-42-0005",
-  "timestamp": "2025-04-28",
-  "trust_class": "first_party_sent"
+  "subject": "IO-42-0060 moved into delivery",
+  "timestamp": "2025-04-24",
+  "trust_class": "system_of_record"
 }

@@ -1,9 +1,9 @@
-Subject: Autumn Store Visits brief for Ashgrove Labs
-Date: June 18, 2025
+Subject: Order line IO-42-0002 booked on Holiday Brand Awareness
+Date: June 3, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Ashgrove Labs for the Autumn Store Visits program. The goal is store visits, and the working budget is $644,000. The flight opens August 16, 2025, and it wraps October 15, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Kelvinshaw Holdings for the Holiday Brand Awareness program, order line IO-42-0002. We are holding at a $48.00 CPM, and the goal is 6,120,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is A35-64, and the format is Audio. Let me know if anything looks off.
 
 Thanks,
-the Ashgrove Labs team
+ad sales ops

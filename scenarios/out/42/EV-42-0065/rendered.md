@@ -1,9 +1,9 @@
-Subject: Revised rate on IO-42-0005
-Date: May 27, 2025
+Subject: Rate card snapshot for IO-42-0012
+Date: May 18, 2025
 
-Hi Tobias,
+System notification.
 
-Confirming the rate change we talked through. This one is on Cindervale Studios for the Back-to-School Store Visits program, order line IO-42-0005. We are holding at a $18.50 CPM. Let me know if anything looks off.
+Today the rate card pull came through. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0012. The card is showing $42.00 CPM today. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

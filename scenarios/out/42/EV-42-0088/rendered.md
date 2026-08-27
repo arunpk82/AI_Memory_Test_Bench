@@ -1,9 +1,9 @@
-Subject: Agency of record change for Ravensmoor Holdings
-Date: July 11, 2025
+Subject: Order line IO-42-0036 booked on Spring Loyalty Retention
+Date: July 4, 2025
 
-Hi Yusuf,
+System notification.
 
-The buying assignment changed. This one is on Ravensmoor Holdings. Buying is handled by Cindersmith Trading. Let me know if anything looks off.
+The order line is in the system. This one is on Zellwood Labs for the Spring Loyalty Retention program, order line IO-42-0036. We are holding at a $31.25 CPM, and the goal is 24,220,000 impressions. The line is booked, and geo stays CO/AZ/UT. The demo is W25-54, and the format is Native. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

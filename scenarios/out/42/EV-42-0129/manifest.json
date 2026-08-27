@@ -1,104 +1,121 @@
 {
-  "advertiser_id": "ADV-42-11",
-  "advertiser_name": "Ashgrove Labs",
-  "agency_name": "Cindersmith Trading",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Corinne Birkenshaw",
-  "deal_id": "DEAL-42-037",
-  "deal_name": "Spring Store Visits",
+  "advertiser_id": "ADV-42-03",
+  "advertiser_name": "Ravensmoor Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-42-010",
+  "deal_name": "Autumn App Installs",
   "event_id": "EV-42-0129",
   "facts": [
     {
-      "attribute": "deal_name",
-      "entity": "deal",
-      "entity_id": "DEAL-42-037",
-      "fact_id": "F-42-0541",
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0533",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-13"
+        "start": "2025-09-12"
       },
-      "value": "Spring Store Visits",
-      "volatility_class": "permanent"
+      "value": "45.75",
+      "volatility_class": "slow_changing"
     },
     {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-037",
-      "fact_id": "F-42-0542",
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0534",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-13"
+        "start": "2025-09-12"
       },
-      "value": "store visits",
+      "value": "15320000",
       "volatility_class": "durable"
     },
     {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-037",
-      "fact_id": "F-42-0543",
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0535",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-13"
+        "start": "2025-09-12"
       },
-      "value": "658000",
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0536",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-12"
+      },
+      "value": "CA/NY/TX",
       "volatility_class": "durable"
     },
     {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-037",
-      "fact_id": "F-42-0544",
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0537",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-13"
+        "start": "2025-09-12"
       },
-      "value": "2025-10-19",
+      "value": "A18-34",
       "volatility_class": "durable"
     },
     {
-      "attribute": "flight_end",
-      "entity": "deal",
-      "entity_id": "DEAL-42-037",
-      "fact_id": "F-42-0545",
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0019",
+      "fact_id": "F-42-0538",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-13"
+        "start": "2025-09-12"
       },
-      "value": "2026-01-17",
+      "value": "Display",
       "volatility_class": "durable"
     }
   ],
-  "io_id": null,
-  "scenario_kind": "deal_kickoff",
+  "io_id": "IO-42-0019",
+  "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Spring Store Visits brief for Ashgrove Labs",
-  "timestamp": "2025-09-13",
-  "trust_class": "counterparty_asserted"
+  "subject": "Order line IO-42-0019 booked on Autumn App Installs",
+  "timestamp": "2025-09-12",
+  "trust_class": "system_of_record"
 }

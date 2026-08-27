@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0015 booked on Summer Loyalty Retention
-Date: July 3, 2025
+Subject: Autumn Store Visits brief for Ashgrove Labs
+Date: June 18, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0015. We are holding at a $18.50 CPM, and the goal is 45,620,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A35-64, and the format is Native. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Ashgrove Labs for the Autumn Store Visits program. The goal is store visits, and the working budget is $644,000. The flight opens August 16, 2025, and it wraps October 15, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ashgrove Labs team

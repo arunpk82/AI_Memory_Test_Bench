@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "pacing_note",
+  "scenario_kind": "renewal_conversation",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2026-02-07"
+  "timestamp": "2026-02-02"
 }

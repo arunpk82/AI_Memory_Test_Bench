@@ -1,9 +1,9 @@
-Subject: Summer Loyalty Retention flight moved for Umberfield Outfitters
-Date: November 24, 2025
+Subject: Updated remittance details for Ravensmoor Holdings
+Date: November 18, 2025
 
-Hi Sorrel,
+Hi there,
 
-We moved the dates the way you asked. This one is on Umberfield Outfitters for the Summer Loyalty Retention program. The flight opens January 11, 2026, and it wraps March 12, 2026. Let me know if anything looks off.
+One administrative item to pass along. This one is on Ravensmoor Holdings for the Holiday Brand Awareness program. Creative is due December 6, 2025, and please send remittance to Juneberry Settlements going forward. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Ravensmoor Holdings team

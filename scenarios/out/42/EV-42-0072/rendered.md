@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0070 booked on Holiday Seasonal Clearance
-Date: June 6, 2025
+Subject: Revised rate on IO-42-0005
+Date: June 1, 2025
 
-System notification.
+Hi Perrin,
 
-The order line is in the system. This one is on Ashgrove Labs for the Holiday Seasonal Clearance program, order line IO-42-0070. We are holding at a $34.00 CPM, and the goal is 21,650,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is A25-54, and the format is CTV. Let me know if anything looks off.
+Confirming the rate change we talked through. This one is on Cindervale Studios for the Back-to-School Store Visits program, order line IO-42-0005. We are holding at a $21.00 CPM. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

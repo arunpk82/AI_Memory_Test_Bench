@@ -1,8 +1,8 @@
 {
   "attempt_history": [],
   "attempts": 1,
-  "author": "system",
-  "channel": "order_system",
+  "author": "user",
+  "channel": "email_sent",
   "event_id": "EV-42-0102",
   "fidelity": "pass",
   "fidelity_missing_facts": [],
@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "line_hold",
+  "scenario_kind": "flight_shift",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-08-11"
+  "timestamp": "2025-08-03"
 }

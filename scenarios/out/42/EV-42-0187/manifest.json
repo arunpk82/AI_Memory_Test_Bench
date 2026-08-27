@@ -1,36 +1,70 @@
 {
-  "advertiser_id": "ADV-42-09",
-  "advertiser_name": "Verapine Studios",
-  "agency_name": null,
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-031",
-  "deal_name": "Autumn App Installs",
+  "advertiser_id": "ADV-42-01",
+  "advertiser_name": "Kelvinshaw Holdings",
+  "agency_name": "Saltmarsh Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Dana Birkenshaw",
+  "deal_id": "DEAL-42-001",
+  "deal_name": "Autumn Brand Awareness",
   "event_id": "EV-42-0187",
   "facts": [
     {
-      "attribute": "rate_card_cpm",
+      "attribute": "pacing_status",
       "entity": "order-line",
-      "entity_id": "IO-42-0057",
-      "fact_id": "F-42-0779",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0778",
       "injection": false,
-      "never_memorize": true,
+      "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "first_party_note",
       "validity_interval": {
-        "end": "2025-12-15",
-        "start": "2025-12-15"
+        "end": "2026-01-16",
+        "start": "2025-12-12"
       },
-      "value": "28.50",
-      "volatility_class": "ephemeral"
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0779",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-12"
+      },
+      "value": "2026-01-16",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-42-01",
+      "fact_id": "F-42-0780",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-12"
+      },
+      "value": "TAX-6573-RG",
+      "volatility_class": "permanent"
     }
   ],
-  "io_id": "IO-42-0057",
-  "scenario_kind": "rate_card_snapshot",
+  "io_id": "IO-42-0001",
+  "scenario_kind": "pacing_note",
   "seed": 42,
-  "subject": "Rate card snapshot for IO-42-0057",
-  "timestamp": "2025-12-15",
-  "trust_class": "system_of_record"
+  "subject": "Pacing call notes on IO-42-0001",
+  "timestamp": "2025-12-12",
+  "trust_class": "first_party_note"
 }

@@ -1,9 +1,9 @@
-Subject: Pacing call notes on IO-42-0045
-Date: November 30, 2025
+Subject: Order line IO-42-0027 booked on Spring Store Visits
+Date: November 23, 2025
 
-Notes from the call.
+System notification.
 
-Quick notes from the pacing call. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0045. Pacing is over-delivering, and we review again through January 4, 2026. Let me know if anything looks off.
+The order line is in the system. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0027. We are holding at a $22.75 CPM, and the goal is 13,930,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A25-54, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

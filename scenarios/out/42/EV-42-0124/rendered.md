@@ -1,9 +1,9 @@
-Subject: Housekeeping on Kestrelia Collective paperwork
-Date: September 8, 2025
+Subject: Order line IO-42-0043 booked on Spring Seasonal Clearance
+Date: September 7, 2025
 
-Hi there,
+System notification.
 
-A couple of housekeeping items on the paperwork. This one is on Kestrelia Collective for the Winter Loyalty Retention program. We now buy through Ironbark Collective, and creative is due September 26, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Stonebrook Media for the Spring Seasonal Clearance program, order line IO-42-0043. We are holding at a $36.50 CPM, and the goal is 24,600,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A25-54, and the format is Native. Let me know if anything looks off.
 
 Thanks,
-the Kestrelia Collective team
+ad sales ops

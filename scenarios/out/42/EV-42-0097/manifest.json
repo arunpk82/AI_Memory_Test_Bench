@@ -2,120 +2,103 @@
   "advertiser_id": "ADV-42-10",
   "advertiser_name": "Umberfield Outfitters",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Bertrand Whitfield",
   "deal_id": "DEAL-42-035",
   "deal_name": "Holiday Loyalty Retention",
   "event_id": "EV-42-0097",
   "facts": [
     {
-      "attribute": "cpm_rate",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0419",
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-42-035",
+      "fact_id": "F-42-0411",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-29"
+        "start": "2025-07-19"
       },
-      "value": "28.50",
-      "volatility_class": "slow_changing"
+      "value": "Holiday Loyalty Retention",
+      "volatility_class": "permanent"
     },
     {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0420",
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-42-035",
+      "fact_id": "F-42-0412",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
-        "end": "2025-08-20",
-        "start": "2025-07-29"
+        "end": null,
+        "start": "2025-07-19"
       },
-      "value": "20210000",
+      "value": "loyalty retention",
       "volatility_class": "durable"
     },
     {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0421",
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-42-035",
+      "fact_id": "F-42-0413",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-29"
+        "start": "2025-07-19"
       },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0422",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-07-29"
-      },
-      "value": "CO/AZ/UT",
+      "value": "576000",
       "volatility_class": "durable"
     },
     {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0423",
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-42-035",
+      "fact_id": "F-42-0414",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-29"
+        "start": "2025-07-19"
       },
-      "value": "M18-49",
+      "value": "2025-08-09",
       "volatility_class": "durable"
     },
     {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0064",
-      "fact_id": "F-42-0424",
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-42-035",
+      "fact_id": "F-42-0415",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2025-07-29"
+        "start": "2025-07-19"
       },
-      "value": "OLV",
+      "value": "2025-11-07",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0064",
-  "scenario_kind": "order_booked",
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "subject": "Order line IO-42-0064 booked on Holiday Loyalty Retention",
-  "timestamp": "2025-07-29",
-  "trust_class": "system_of_record"
+  "subject": "Holiday Loyalty Retention brief for Umberfield Outfitters",
+  "timestamp": "2025-07-19",
+  "trust_class": "counterparty_asserted"
 }

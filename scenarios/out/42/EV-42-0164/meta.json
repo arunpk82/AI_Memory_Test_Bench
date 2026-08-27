@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "order_booked",
+  "scenario_kind": "impressions_adjustment",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-10-28"
+  "timestamp": "2025-10-25"
 }

@@ -1,53 +1,36 @@
 {
-  "advertiser_id": "ADV-42-09",
-  "advertiser_name": "Verapine Studios",
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
   "agency_name": "Hollowell Buying Desk",
-  "author": "user",
-  "channel": "call_note",
-  "contact_name": "Rosalind Okonkwo",
-  "deal_id": "DEAL-42-030",
-  "deal_name": "Winter App Installs",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-024",
+  "deal_name": "Spring Seasonal Clearance",
   "event_id": "EV-42-0190",
   "facts": [
     {
-      "attribute": "pacing_status",
+      "attribute": "cpm_rate_claimed",
       "entity": "order-line",
-      "entity_id": "IO-42-0053",
+      "entity_id": "IO-42-0045",
       "fact_id": "F-42-0783",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "first_party_note",
-      "validity_interval": {
-        "end": "2026-02-03",
-        "start": "2026-01-20"
-      },
-      "value": "paused for creative swap",
-      "volatility_class": "transient"
-    },
-    {
-      "attribute": "pacing_review_through",
-      "entity": "order-line",
-      "entity_id": "IO-42-0053",
-      "fact_id": "F-42-0784",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "first_party_note",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
         "end": null,
-        "start": "2026-01-20"
+        "start": "2025-12-28"
       },
-      "value": "2026-02-03",
-      "volatility_class": "durable"
+      "value": "31.25",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0053",
-  "scenario_kind": "pacing_note",
+  "io_id": "IO-42-0045",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "Pacing call notes on IO-42-0053",
-  "timestamp": "2026-01-20",
-  "trust_class": "first_party_note"
+  "subject": "Rate question on IO-42-0045",
+  "timestamp": "2025-12-28",
+  "trust_class": "counterparty_asserted"
 }

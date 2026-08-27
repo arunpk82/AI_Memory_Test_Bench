@@ -1,36 +1,36 @@
 {
-  "advertiser_id": "ADV-42-11",
-  "advertiser_name": "Ashgrove Labs",
-  "agency_name": null,
-  "author": "system",
-  "channel": "order_system",
-  "contact_name": null,
-  "deal_id": "DEAL-42-037",
-  "deal_name": "Spring Store Visits",
+  "advertiser_id": "ADV-42-07",
+  "advertiser_name": "Stonebrook Media",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Yusuf Fenwicke",
+  "deal_id": "DEAL-42-024",
+  "deal_name": "Spring Seasonal Clearance",
   "event_id": "EV-42-0188",
   "facts": [
     {
-      "attribute": "rate_card_cpm",
+      "attribute": "cpm_rate_claimed",
       "entity": "order-line",
-      "entity_id": "IO-42-0067",
-      "fact_id": "F-42-0780",
+      "entity_id": "IO-42-0043",
+      "fact_id": "F-42-0781",
       "injection": false,
-      "never_memorize": true,
+      "never_memorize": false,
       "plausibility": null,
       "supersedes": null,
-      "trust_class": "system_of_record",
+      "trust_class": "counterparty_asserted",
       "validity_interval": {
-        "end": "2025-12-31",
-        "start": "2025-12-31"
+        "end": null,
+        "start": "2025-12-12"
       },
-      "value": "45.75",
-      "volatility_class": "ephemeral"
+      "value": "26.70",
+      "volatility_class": "slow_changing"
     }
   ],
-  "io_id": "IO-42-0067",
-  "scenario_kind": "rate_card_snapshot",
+  "io_id": "IO-42-0043",
+  "scenario_kind": "client_rate_claim",
   "seed": 42,
-  "subject": "Rate card snapshot for IO-42-0067",
-  "timestamp": "2025-12-31",
-  "trust_class": "system_of_record"
+  "subject": "Rate question on IO-42-0043",
+  "timestamp": "2025-12-12",
+  "trust_class": "counterparty_asserted"
 }

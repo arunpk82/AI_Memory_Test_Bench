@@ -1,19 +1,19 @@
 {
-  "advertiser_id": "ADV-42-03",
-  "advertiser_name": "Ravensmoor Holdings",
+  "advertiser_id": "ADV-42-08",
+  "advertiser_name": "Larkspire Provisions",
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-010",
-  "deal_name": "Autumn App Installs",
+  "deal_id": "DEAL-42-028",
+  "deal_name": "Summer Seasonal Clearance",
   "event_id": "EV-42-0135",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0575",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0568",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -21,16 +21,33 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-15"
+        "start": "2025-09-14"
       },
-      "value": "45.75",
+      "value": "34.00",
       "volatility_class": "slow_changing"
     },
     {
       "attribute": "impressions_goal",
       "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0576",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0569",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-10-06",
+        "start": "2025-09-14"
+      },
+      "value": "25240000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0570",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -38,24 +55,7 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-15"
-      },
-      "value": "15320000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0577",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": "2025-10-26",
-        "start": "2025-09-15"
+        "start": "2025-09-14"
       },
       "value": "booked",
       "volatility_class": "slow_changing"
@@ -63,8 +63,8 @@
     {
       "attribute": "geo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0578",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0571",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -72,16 +72,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-15"
+        "start": "2025-09-14"
       },
-      "value": "MA/CT/RI",
+      "value": "CA/NY/TX",
       "volatility_class": "durable"
     },
     {
       "attribute": "demo_targeting",
       "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0579",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0572",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -89,16 +89,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-15"
+        "start": "2025-09-14"
       },
-      "value": "A25-54",
+      "value": "W25-54",
       "volatility_class": "durable"
     },
     {
       "attribute": "creative_format",
       "entity": "order-line",
-      "entity_id": "IO-42-0018",
-      "fact_id": "F-42-0580",
+      "entity_id": "IO-42-0050",
+      "fact_id": "F-42-0573",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
@@ -106,16 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-09-15"
+        "start": "2025-09-14"
       },
-      "value": "Native",
+      "value": "Display",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0018",
+  "io_id": "IO-42-0050",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0018 booked on Autumn App Installs",
-  "timestamp": "2025-09-15",
+  "subject": "Order line IO-42-0050 booked on Summer Seasonal Clearance",
+  "timestamp": "2025-09-14",
   "trust_class": "system_of_record"
 }

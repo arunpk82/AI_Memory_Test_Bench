@@ -1,9 +1,9 @@
-Subject: Autumn App Installs brief for Verapine Studios
-Date: September 15, 2025
+Subject: Order line IO-42-0048 booked on Summer Store Visits
+Date: September 14, 2025
 
-Hi there,
+System notification.
 
-Thanks for sending the brief over. This one is on Verapine Studios for the Autumn App Installs program. The goal is app installs, and the working budget is $854,000. The flight opens October 26, 2025, and it wraps December 25, 2025. Let me know if anything looks off.
+The order line is in the system. This one is on Stonebrook Media for the Summer Store Visits program, order line IO-42-0048. We are holding at a $28.50 CPM, and the goal is 11,050,000 impressions. The line is booked, and geo stays MA/CT/RI. The demo is A25-54, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
-the Verapine Studios team
+ad sales ops

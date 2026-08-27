@@ -2,103 +2,52 @@
   "advertiser_id": "ADV-42-03",
   "advertiser_name": "Ravensmoor Holdings",
   "agency_name": "Saltmarsh Buying Desk",
-  "author": "counterparty",
-  "channel": "email_received",
-  "contact_name": "Yusuf Fenwicke",
-  "deal_id": "DEAL-42-009",
-  "deal_name": "Summer Loyalty Retention",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Oisin Zaragoza",
+  "deal_id": "DEAL-42-011",
+  "deal_name": "Autumn Product Launch",
   "event_id": "EV-42-0078",
   "facts": [
     {
-      "attribute": "deal_name",
+      "attribute": "flight_start",
       "entity": "deal",
-      "entity_id": "DEAL-42-009",
+      "entity_id": "DEAL-42-011",
       "fact_id": "F-42-0348",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "supersedes": "F-42-0282",
+      "trust_class": "first_party_sent",
       "validity_interval": {
         "end": null,
-        "start": "2025-06-28"
+        "start": "2025-06-11"
       },
-      "value": "Summer Loyalty Retention",
-      "volatility_class": "permanent"
-    },
-    {
-      "attribute": "objective",
-      "entity": "deal",
-      "entity_id": "DEAL-42-009",
-      "fact_id": "F-42-0349",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-28"
-      },
-      "value": "loyalty retention",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "budget_usd",
-      "entity": "deal",
-      "entity_id": "DEAL-42-009",
-      "fact_id": "F-42-0350",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-06-28"
-      },
-      "value": "844000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "flight_start",
-      "entity": "deal",
-      "entity_id": "DEAL-42-009",
-      "fact_id": "F-42-0351",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
-      "validity_interval": {
-        "end": "2025-07-27",
-        "start": "2025-06-28"
-      },
-      "value": "2025-08-17",
+      "value": "2025-07-25",
       "volatility_class": "durable"
     },
     {
       "attribute": "flight_end",
       "entity": "deal",
-      "entity_id": "DEAL-42-009",
-      "fact_id": "F-42-0352",
+      "entity_id": "DEAL-42-011",
+      "fact_id": "F-42-0349",
       "injection": false,
       "never_memorize": false,
       "plausibility": null,
-      "supersedes": null,
-      "trust_class": "counterparty_asserted",
+      "supersedes": "F-42-0283",
+      "trust_class": "first_party_sent",
       "validity_interval": {
-        "end": "2025-07-27",
-        "start": "2025-06-28"
+        "end": null,
+        "start": "2025-06-11"
       },
-      "value": "2025-10-16",
+      "value": "2025-09-23",
       "volatility_class": "durable"
     }
   ],
   "io_id": null,
-  "scenario_kind": "deal_kickoff",
+  "scenario_kind": "flight_shift",
   "seed": 42,
-  "subject": "Summer Loyalty Retention brief for Ravensmoor Holdings",
-  "timestamp": "2025-06-28",
-  "trust_class": "counterparty_asserted"
+  "subject": "Autumn Product Launch flight moved for Ravensmoor Holdings",
+  "timestamp": "2025-06-11",
+  "trust_class": "first_party_sent"
 }

@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "order_booked",
+  "scenario_kind": "line_hold",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-07-04"
+  "timestamp": "2025-06-23"
 }

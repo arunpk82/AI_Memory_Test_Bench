@@ -1,9 +1,9 @@
-Subject: New day-to-day contact at Cindervale Studios
-Date: July 14, 2025
+Subject: Order line IO-42-0017 booked on Summer Loyalty Retention
+Date: July 7, 2025
 
-Hi there,
+System notification.
 
-There is a contact change to pass along. This one is on Cindervale Studios. Day-to-day contact is Neveah Castellanos, and they come in as a account director. Reach them at neveah.castellanos@cindervale.example. Let me know if anything looks off.
+The order line is in the system. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0017. We are holding at a $22.75 CPM, and the goal is 37,100,000 impressions. The line is booked, and geo stays FL/GA/NC. The demo is A25-54, and the format is OLV. Let me know if anything looks off.
 
 Thanks,
-the Cindervale Studios team
+ad sales ops

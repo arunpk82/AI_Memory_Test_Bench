@@ -1,9 +1,9 @@
-Subject: Following up on IO-42-0011 billing
-Date: October 2, 2025
+Subject: Order line IO-42-0057 booked on Autumn App Installs
+Date: October 1, 2025
 
-Hi there,
+System notification.
 
-Following up on a couple of billing items. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0011. Creative is due October 14, 2025, and your team has us down at a $21.00 CPM. Let me know if anything looks off.
+The order line is in the system. This one is on Verapine Studios for the Autumn App Installs program, order line IO-42-0057. We are holding at a $28.50 CPM, and the goal is 29,960,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is P18-49, and the format is CTV. Let me know if anything looks off.
 
 Thanks,
-the Cindervale Studios team
+ad sales ops

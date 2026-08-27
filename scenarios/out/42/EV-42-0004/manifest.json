@@ -4,7 +4,7 @@
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
-  "contact_name": "Yusuf Fenwicke",
+  "contact_name": "Oisin Zaragoza",
   "deal_id": null,
   "deal_name": null,
   "event_id": "EV-42-0004",
@@ -71,7 +71,7 @@
       "supersedes": null,
       "trust_class": "system_of_record",
       "validity_interval": {
-        "end": "2025-07-10",
+        "end": null,
         "start": "2025-01-28"
       },
       "value": "Saltmarsh Buying Desk",
@@ -91,7 +91,7 @@
         "end": null,
         "start": "2025-01-28"
       },
-      "value": "Yusuf Fenwicke",
+      "value": "Oisin Zaragoza",
       "volatility_class": "slow_changing"
     }
   ],

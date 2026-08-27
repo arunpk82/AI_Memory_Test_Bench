@@ -1,9 +1,9 @@
-Subject: Hold placed on IO-42-0015
-Date: August 11, 2025
+Subject: Summer Loyalty Retention flight moved for Ravensmoor Holdings
+Date: August 3, 2025
 
-System notification.
+Hi Oisin,
 
-We put a hold on the line for now. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program, order line IO-42-0015. The line is on hold. Let me know if anything looks off.
+We moved the dates the way you asked. This one is on Ravensmoor Holdings for the Summer Loyalty Retention program. The flight opens August 31, 2025, and it wraps October 30, 2025. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

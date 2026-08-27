@@ -1,9 +1,9 @@
-Subject: Winter Loyalty Retention brief for Larkspire Provisions
-Date: April 14, 2025
+Subject: Pacing call notes on IO-42-0008
+Date: April 12, 2025
 
-Hi there,
+Notes from the call.
 
-Thanks for sending the brief over. This one is on Larkspire Provisions for the Winter Loyalty Retention program. The goal is loyalty retention, and the working budget is $140,000. The flight opens June 19, 2025, and it wraps August 3, 2025. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Cindervale Studios for the Holiday Brand Awareness program, order line IO-42-0008. Pacing is paused for creative swap, and we review again through May 10, 2025. Let me know if anything looks off.
 
 Thanks,
-the Larkspire Provisions team
+ad sales ops

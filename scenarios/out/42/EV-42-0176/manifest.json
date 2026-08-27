@@ -1,18 +1,103 @@
 {
-  "advertiser_id": "ADV-42-05",
-  "advertiser_name": "Zellwood Labs",
+  "advertiser_id": "ADV-42-01",
+  "advertiser_name": "Kelvinshaw Holdings",
   "agency_name": "Saltmarsh Buying Desk",
   "author": "system",
   "channel": "order_system",
   "contact_name": null,
-  "deal_id": "DEAL-42-018",
-  "deal_name": "Holiday Seasonal Clearance",
+  "deal_id": "DEAL-42-001",
+  "deal_name": "Autumn Brand Awareness",
   "event_id": "EV-42-0176",
   "facts": [
     {
       "attribute": "cpm_rate",
       "entity": "order-line",
-      "entity_id": "IO-42-0035",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0737",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "45.75",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0738",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "1790000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0739",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0740",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
+      "fact_id": "F-42-0741",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "A18-34",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-42-0001",
       "fact_id": "F-42-0742",
       "injection": false,
       "never_memorize": false,
@@ -21,101 +106,16 @@
       "trust_class": "system_of_record",
       "validity_interval": {
         "end": null,
-        "start": "2025-11-11"
+        "start": "2025-11-09"
       },
-      "value": "45.75",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "impressions_goal",
-      "entity": "order-line",
-      "entity_id": "IO-42-0035",
-      "fact_id": "F-42-0743",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-11"
-      },
-      "value": "9770000",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "line_status",
-      "entity": "order-line",
-      "entity_id": "IO-42-0035",
-      "fact_id": "F-42-0744",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-11"
-      },
-      "value": "booked",
-      "volatility_class": "slow_changing"
-    },
-    {
-      "attribute": "geo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0035",
-      "fact_id": "F-42-0745",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-11"
-      },
-      "value": "FL/GA/NC",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "demo_targeting",
-      "entity": "order-line",
-      "entity_id": "IO-42-0035",
-      "fact_id": "F-42-0746",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-11"
-      },
-      "value": "A35-64",
-      "volatility_class": "durable"
-    },
-    {
-      "attribute": "creative_format",
-      "entity": "order-line",
-      "entity_id": "IO-42-0035",
-      "fact_id": "F-42-0747",
-      "injection": false,
-      "never_memorize": false,
-      "plausibility": null,
-      "supersedes": null,
-      "trust_class": "system_of_record",
-      "validity_interval": {
-        "end": null,
-        "start": "2025-11-11"
-      },
-      "value": "Display",
+      "value": "CTV",
       "volatility_class": "durable"
     }
   ],
-  "io_id": "IO-42-0035",
+  "io_id": "IO-42-0001",
   "scenario_kind": "order_booked",
   "seed": 42,
-  "subject": "Order line IO-42-0035 booked on Holiday Seasonal Clearance",
-  "timestamp": "2025-11-11",
+  "subject": "Order line IO-42-0001 booked on Autumn Brand Awareness",
+  "timestamp": "2025-11-09",
   "trust_class": "system_of_record"
 }

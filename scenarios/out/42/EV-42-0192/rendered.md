@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Kelvinshaw Holdings
-Date: February 2, 2026
+Subject: Pacing call notes on IO-42-0027
+Date: January 27, 2026
 
 Notes from the call.
 
-Notes from the renewal chat. This one is on Kelvinshaw Holdings for the Autumn Brand Awareness program. They are reducing scope next year, and they floated roughly $275,000 for next year. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0027. The tax reference on file is TAX-3504-WD, and pacing is over-delivering. We review again through February 17, 2026. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

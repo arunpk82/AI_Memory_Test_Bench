@@ -1,9 +1,9 @@
-Subject: Renewal conversation notes for Harrowgate Holdings
-Date: February 14, 2026
+Subject: Rate question on IO-42-0027
+Date: February 4, 2026
 
-Notes from the call.
+Hi there,
 
-Notes from the renewal chat. This one is on Harrowgate Holdings for the Holiday Product Launch program. They are reducing scope next year, and they floated roughly $428,000 for next year. Let me know if anything looks off.
+One question came in about the rate. This one is on Harrowgate Holdings for the Spring Store Visits program, order line IO-42-0027. They think the rate should be $18.50. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Harrowgate Holdings team

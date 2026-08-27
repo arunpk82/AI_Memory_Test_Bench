@@ -1,9 +1,9 @@
-Subject: Rate card snapshot for IO-42-0057
-Date: December 15, 2025
+Subject: Pacing call notes on IO-42-0001
+Date: December 12, 2025
 
-System notification.
+Notes from the call.
 
-Today the rate card pull came through. This one is on Verapine Studios for the Autumn App Installs program, order line IO-42-0057. The card is showing $28.50 CPM today. Let me know if anything looks off.
+Quick notes from the pacing call. This one is on Kelvinshaw Holdings for the Autumn Brand Awareness program, order line IO-42-0001. The tax reference on file is TAX-6573-RG, and pacing is over-delivering. We review again through January 16, 2026. Let me know if anything looks off.
 
 Thanks,
 ad sales ops

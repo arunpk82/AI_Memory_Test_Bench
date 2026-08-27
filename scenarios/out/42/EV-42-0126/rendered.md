@@ -1,9 +1,9 @@
-Subject: Order line IO-42-0034 booked on Spring Product Launch
+Subject: Autumn Lead Generation brief for Kestrelia Collective
 Date: September 9, 2025
 
-System notification.
+Hi there,
 
-The order line is in the system. This one is on Zellwood Labs for the Spring Product Launch program, order line IO-42-0034. We are holding at a $26.70 CPM, and the goal is 19,510,000 impressions. The line is booked, and geo stays CA/NY/TX. The demo is P18-49, and the format is Audio. Let me know if anything looks off.
+Thanks for sending the brief over. This one is on Kestrelia Collective for the Autumn Lead Generation program. The goal is lead generation, and the working budget is $598,000. The flight opens October 28, 2025, and it wraps December 12, 2025. Let me know if anything looks off.
 
 Thanks,
-ad sales ops
+the Kestrelia Collective team

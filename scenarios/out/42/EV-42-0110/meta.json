@@ -1,8 +1,8 @@
 {
   "attempt_history": [],
   "attempts": 1,
-  "author": "counterparty",
-  "channel": "email_received",
+  "author": "system",
+  "channel": "order_system",
   "event_id": "EV-42-0110",
   "fidelity": "pass",
   "fidelity_missing_facts": [],
@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "deal_kickoff",
+  "scenario_kind": "order_booked",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-08-29"
+  "timestamp": "2025-08-22"
 }

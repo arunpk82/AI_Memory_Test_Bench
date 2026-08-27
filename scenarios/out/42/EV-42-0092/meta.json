@@ -13,8 +13,8 @@
   },
   "model": null,
   "render_mode": "deterministic",
-  "scenario_kind": "deal_kickoff",
+  "scenario_kind": "contact_handoff",
   "seed": 42,
   "template_version": "det-v2",
-  "timestamp": "2025-07-16"
+  "timestamp": "2025-07-12"
 }
