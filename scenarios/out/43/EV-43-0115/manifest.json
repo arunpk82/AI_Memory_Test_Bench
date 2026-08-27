@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-013",
+  "deal_name": "Autumn Lead Generation",
+  "event_id": "EV-43-0115",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-013",
+      "fact_id": "F-43-0502",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "Autumn Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-013",
+      "fact_id": "F-43-0503",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-013",
+      "fact_id": "F-43-0504",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "528000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-013",
+      "fact_id": "F-43-0505",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "2025-09-12",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-013",
+      "fact_id": "F-43-0506",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-16"
+      },
+      "value": "2025-10-27",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Autumn Lead Generation brief for Elmsworth Outfitters",
+  "timestamp": "2025-07-16",
+  "trust_class": "counterparty_asserted"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-009",
+  "deal_name": "Spring Product Launch",
+  "event_id": "EV-44-0193",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0016",
+      "fact_id": "F-44-0816",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0783",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2026-01-05",
+        "start": "2025-12-20"
+      },
+      "value": "on hold",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0016",
+  "scenario_kind": "line_hold",
+  "seed": 44,
+  "subject": "Hold placed on IO-44-0016",
+  "timestamp": "2025-12-20",
+  "trust_class": "system_of_record"
+}

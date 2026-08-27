@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Caspian Nakashima",
+  "deal_id": "DEAL-43-040",
+  "deal_name": "Winter Product Launch",
+  "event_id": "EV-43-0126",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0070",
+      "fact_id": "F-43-0556",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-09-13",
+        "start": "2025-08-09"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0070",
+      "fact_id": "F-43-0557",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-09"
+      },
+      "value": "2025-09-13",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0070",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0070",
+  "timestamp": "2025-08-09",
+  "trust_class": "first_party_note"
+}

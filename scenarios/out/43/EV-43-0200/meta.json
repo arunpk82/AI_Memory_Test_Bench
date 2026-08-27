@@ -1,0 +1,20 @@
+{
+  "attempt_history": [],
+  "attempts": 1,
+  "author": "user",
+  "channel": "call_note",
+  "event_id": "EV-43-0200",
+  "fidelity": "pass",
+  "fidelity_missing_facts": [],
+  "fidelity_unsupported": {
+    "dates": [],
+    "names": [],
+    "numbers": []
+  },
+  "model": null,
+  "render_mode": "deterministic",
+  "scenario_kind": "renewal_conversation",
+  "seed": 43,
+  "template_version": "det-v2",
+  "timestamp": "2026-01-22"
+}

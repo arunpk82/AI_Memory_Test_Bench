@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-06",
+  "advertiser_name": "Stonebrook Brands",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Bertrand Calloway",
+  "deal_id": "DEAL-43-023",
+  "deal_name": "Spring App Installs",
+  "event_id": "EV-43-0090",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-023",
+      "fact_id": "F-43-0406",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-04"
+      },
+      "value": "Spring App Installs",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-023",
+      "fact_id": "F-43-0407",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-04"
+      },
+      "value": "app installs",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-023",
+      "fact_id": "F-43-0408",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-04"
+      },
+      "value": "713000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-023",
+      "fact_id": "F-43-0409",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-04"
+      },
+      "value": "2025-07-07",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-023",
+      "fact_id": "F-43-0410",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-04"
+      },
+      "value": "2025-09-05",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Spring App Installs brief for Stonebrook Brands",
+  "timestamp": "2025-06-04",
+  "trust_class": "counterparty_asserted"
+}

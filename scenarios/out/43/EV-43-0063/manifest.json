@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Marisol Delacroix",
+  "deal_id": "DEAL-43-003",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0063",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0006",
+      "fact_id": "F-43-0293",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-05-03",
+        "start": "2025-04-05"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0006",
+      "fact_id": "F-43-0294",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-05"
+      },
+      "value": "2025-05-03",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0006",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0006",
+  "timestamp": "2025-04-05",
+  "trust_class": "first_party_note"
+}

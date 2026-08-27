@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Imani Castellanos",
+  "deal_id": "DEAL-44-041",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-44-0086",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0076",
+      "fact_id": "F-44-0373",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-08-21",
+        "start": "2025-07-17"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0076",
+      "fact_id": "F-44-0374",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-17"
+      },
+      "value": "2025-08-21",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0076",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0076",
+  "timestamp": "2025-07-17",
+  "trust_class": "first_party_note"
+}

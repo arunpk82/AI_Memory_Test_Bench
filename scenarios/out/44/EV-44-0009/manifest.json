@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-09",
+  "advertiser_name": "Zephyrine Provisions",
+  "agency_name": "Juneberry Connect",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": "Hollis Pemberly",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-44-0009",
+  "facts": [
+    {
+      "attribute": "legal_entity_name",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-09",
+      "fact_id": "F-44-0041",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "Zephyrine Provisions LLC",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "billing_country",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-09",
+      "fact_id": "F-44-0042",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "United States",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "industry_vertical",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-09",
+      "fact_id": "F-44-0043",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "automotive",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "agency_of_record",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-09",
+      "fact_id": "F-44-0044",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-08-16",
+        "start": "2025-01-27"
+      },
+      "value": "Juneberry Connect",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-09",
+      "fact_id": "F-44-0045",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-27"
+      },
+      "value": "Hollis Pemberly",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "account_setup",
+  "seed": 44,
+  "subject": "Zephyrine Provisions account record created",
+  "timestamp": "2025-01-27",
+  "trust_class": "system_of_record"
+}

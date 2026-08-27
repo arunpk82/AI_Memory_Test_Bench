@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-037",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-44-0092",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0398",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "42.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0399",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "10140000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0400",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0401",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "MA/CT/RI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0402",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "M18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-44-0071",
+      "fact_id": "F-44-0403",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-03"
+      },
+      "value": "Display",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0071",
+  "scenario_kind": "order_booked",
+  "seed": 44,
+  "subject": "Order line IO-44-0071 booked on Summer Product Launch",
+  "timestamp": "2025-08-03",
+  "trust_class": "system_of_record"
+}

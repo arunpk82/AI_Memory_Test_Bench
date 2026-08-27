@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-040",
+  "deal_name": "Winter Product Launch",
+  "event_id": "EV-43-0081",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0374",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0375",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "15430000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0376",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0377",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "CA/NY/TX",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0378",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "A18-34",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-43-0069",
+      "fact_id": "F-43-0379",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-06"
+      },
+      "value": "Display",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0069",
+  "scenario_kind": "order_booked",
+  "seed": 43,
+  "subject": "Order line IO-43-0069 booked on Winter Product Launch",
+  "timestamp": "2025-05-06",
+  "trust_class": "system_of_record"
+}

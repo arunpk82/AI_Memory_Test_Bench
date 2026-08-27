@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-07",
+  "advertiser_name": "Northwind Holdings",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Hollis Birkenshaw",
+  "deal_id": "DEAL-43-026",
+  "deal_name": "Holiday Seasonal Clearance",
+  "event_id": "EV-43-0171",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-43-0045",
+      "fact_id": "F-43-0718",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-25"
+      },
+      "value": "36.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0045",
+  "scenario_kind": "client_rate_claim",
+  "seed": 43,
+  "subject": "Rate question on IO-43-0045",
+  "timestamp": "2025-10-25",
+  "trust_class": "counterparty_asserted"
+}

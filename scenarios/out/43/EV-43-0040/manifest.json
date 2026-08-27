@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Marisol Delacroix",
+  "deal_id": "DEAL-43-001",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-43-0040",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0002",
+      "fact_id": "F-43-0200",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-03-24",
+        "start": "2025-03-03"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0002",
+      "fact_id": "F-43-0201",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-03"
+      },
+      "value": "2025-03-24",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-01",
+      "fact_id": "F-43-0202",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-03"
+      },
+      "value": "TAX-1994-ZL",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-43-0002",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0002",
+  "timestamp": "2025-03-03",
+  "trust_class": "first_party_note"
+}

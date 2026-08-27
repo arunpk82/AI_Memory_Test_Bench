@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-07",
+  "advertiser_name": "Larkspire Collective",
+  "agency_name": "Everlyn Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Oisin Gallardo",
+  "deal_id": "DEAL-44-027",
+  "deal_name": "Winter App Installs",
+  "event_id": "EV-44-0211",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-07",
+      "fact_id": "F-44-0843",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-19"
+      },
+      "value": "reducing scope next year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-07",
+      "fact_id": "F-44-0844",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-19"
+      },
+      "value": "127000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 44,
+  "subject": "Renewal conversation notes for Larkspire Collective",
+  "timestamp": "2026-02-19",
+  "trust_class": "first_party_note"
+}

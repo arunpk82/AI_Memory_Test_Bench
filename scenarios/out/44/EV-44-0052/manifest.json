@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": "Grantham Collective",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-005",
+  "deal_name": "Summer Store Visits",
+  "event_id": "EV-44-0052",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0252",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-06-09",
+        "start": "2025-05-18"
+      },
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0253",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-18"
+      },
+      "value": "17830000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0254",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-18"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0255",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-18"
+      },
+      "value": "WA/OR/NV",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0256",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-18"
+      },
+      "value": "M18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0257",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-18"
+      },
+      "value": "Display",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0009",
+  "scenario_kind": "order_booked",
+  "seed": 44,
+  "subject": "Order line IO-44-0009 booked on Summer Store Visits",
+  "timestamp": "2025-05-18",
+  "trust_class": "system_of_record"
+}

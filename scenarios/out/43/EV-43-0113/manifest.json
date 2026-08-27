@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-07",
+  "advertiser_name": "Northwind Holdings",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-027",
+  "deal_name": "Winter Lead Generation",
+  "event_id": "EV-43-0113",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0047",
+      "fact_id": "F-43-0498",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0439",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-15"
+      },
+      "value": "2690000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0047",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 43,
+  "subject": "Delivery goal reset on IO-43-0047",
+  "timestamp": "2025-07-15",
+  "trust_class": "system_of_record"
+}

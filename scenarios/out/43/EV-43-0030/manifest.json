@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-43-05",
+  "advertiser_name": "Nettlecombe Collective",
+  "agency_name": "Broadleaf Trading",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-018",
+  "deal_name": "Holiday Brand Awareness",
+  "event_id": "EV-43-0030",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0153",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "36.50",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0154",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "9640000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0155",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0156",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "FL/GA/NC",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0157",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "A25-54",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-43-0032",
+      "fact_id": "F-43-0158",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-17"
+      },
+      "value": "Display",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0032",
+  "scenario_kind": "order_booked",
+  "seed": 43,
+  "subject": "Order line IO-43-0032 booked on Holiday Brand Awareness",
+  "timestamp": "2025-02-17",
+  "trust_class": "system_of_record"
+}

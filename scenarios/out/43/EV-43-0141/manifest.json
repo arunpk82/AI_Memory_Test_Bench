@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-06",
+  "advertiser_name": "Stonebrook Brands",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Bertrand Calloway",
+  "deal_id": "DEAL-43-024",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-43-0141",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0043",
+      "fact_id": "F-43-0607",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-10-08",
+        "start": "2025-09-10"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0043",
+      "fact_id": "F-43-0608",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-10"
+      },
+      "value": "2025-10-08",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0043",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0043",
+  "timestamp": "2025-09-10",
+  "trust_class": "first_party_note"
+}

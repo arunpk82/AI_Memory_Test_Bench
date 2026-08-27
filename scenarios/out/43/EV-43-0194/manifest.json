@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-05",
+  "advertiser_name": "Nettlecombe Collective",
+  "agency_name": "Broadleaf Trading",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Delphine Okonkwo",
+  "deal_id": "DEAL-43-017",
+  "deal_name": "Back-to-School Brand Awareness",
+  "event_id": "EV-43-0194",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0029",
+      "fact_id": "F-43-0790",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2026-02-06",
+        "start": "2026-01-02"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0029",
+      "fact_id": "F-43-0791",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-02"
+      },
+      "value": "2026-02-06",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-05",
+      "fact_id": "F-43-0792",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-02"
+      },
+      "value": "TAX-4596-RJ",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-43-0029",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0029",
+  "timestamp": "2026-01-02",
+  "trust_class": "first_party_note"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": "Kingfisher Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Marisol Delacroix",
+  "deal_id": "DEAL-43-002",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-43-0183",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0760",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-09"
+      },
+      "value": "28.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0004",
+  "scenario_kind": "client_rate_claim",
+  "seed": 43,
+  "subject": "Rate question on IO-43-0004",
+  "timestamp": "2025-11-09",
+  "trust_class": "counterparty_asserted"
+}

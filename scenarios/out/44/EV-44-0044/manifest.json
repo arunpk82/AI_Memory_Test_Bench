@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-08",
+  "advertiser_name": "Halcyon Holdings",
+  "agency_name": "Inkwell Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Quentin Iyengar",
+  "deal_id": "DEAL-44-030",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-44-0044",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-030",
+      "fact_id": "F-44-0220",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0138",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-21"
+      },
+      "value": "2025-06-11",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-030",
+      "fact_id": "F-44-0221",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0139",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-21"
+      },
+      "value": "2025-08-10",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 44,
+  "subject": "Back-to-School Lead Generation flight moved for Halcyon Holdings",
+  "timestamp": "2025-04-21",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-039",
+  "deal_name": "Holiday App Installs",
+  "event_id": "EV-44-0134",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0595",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0596",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "34120000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0597",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0598",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "MA/CT/RI",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0599",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "A35-64",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-44-0073",
+      "fact_id": "F-44-0600",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-20"
+      },
+      "value": "Native",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0073",
+  "scenario_kind": "order_booked",
+  "seed": 44,
+  "subject": "Order line IO-44-0073 booked on Holiday App Installs",
+  "timestamp": "2025-09-20",
+  "trust_class": "system_of_record"
+}

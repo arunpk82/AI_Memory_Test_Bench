@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-011",
+  "deal_name": "Back-to-School Product Launch",
+  "event_id": "EV-44-0068",
+  "facts": [
+    {
+      "attribute": "rate_card_cpm",
+      "entity": "order-line",
+      "entity_id": "IO-44-0023",
+      "fact_id": "F-44-0316",
+      "injection": false,
+      "never_memorize": true,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-06-17",
+        "start": "2025-06-17"
+      },
+      "value": "42.00",
+      "volatility_class": "ephemeral"
+    }
+  ],
+  "io_id": "IO-44-0023",
+  "scenario_kind": "rate_card_snapshot",
+  "seed": 44,
+  "subject": "Rate card snapshot for IO-44-0023",
+  "timestamp": "2025-06-17",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-013",
+  "deal_name": "Autumn Lead Generation",
+  "event_id": "EV-43-0152",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0025",
+      "fact_id": "F-43-0648",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-10-26",
+        "start": "2025-09-28"
+      },
+      "value": "paused for creative swap",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0025",
+      "fact_id": "F-43-0649",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-28"
+      },
+      "value": "2025-10-26",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0025",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0025",
+  "timestamp": "2025-09-28",
+  "trust_class": "first_party_note"
+}

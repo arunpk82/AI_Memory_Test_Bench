@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-009",
+  "deal_name": "Spring Product Launch",
+  "event_id": "EV-44-0202",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0016",
+      "fact_id": "F-44-0828",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0816",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-06"
+      },
+      "value": "cancelled",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0016",
+  "scenario_kind": "line_cancellation",
+  "seed": 44,
+  "subject": "Cancellation posted for IO-44-0016",
+  "timestamp": "2026-01-06",
+  "trust_class": "system_of_record"
+}

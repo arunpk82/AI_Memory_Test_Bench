@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Imani Castellanos",
+  "deal_id": "DEAL-44-041",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-44-0036",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-041",
+      "fact_id": "F-44-0183",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-08"
+      },
+      "value": "Autumn App Installs",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-041",
+      "fact_id": "F-44-0184",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-08"
+      },
+      "value": "app installs",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-041",
+      "fact_id": "F-44-0185",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-08"
+      },
+      "value": "138000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-041",
+      "fact_id": "F-44-0186",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-08"
+      },
+      "value": "2025-05-27",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-041",
+      "fact_id": "F-44-0187",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-08"
+      },
+      "value": "2025-08-25",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Autumn App Installs brief for Stonebrook Labs",
+  "timestamp": "2025-04-08",
+  "trust_class": "counterparty_asserted"
+}

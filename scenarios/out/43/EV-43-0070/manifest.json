@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-011",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0070",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0021",
+      "fact_id": "F-43-0319",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-05-11",
+        "start": "2025-04-20"
+      },
+      "value": "on pace",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0021",
+      "fact_id": "F-43-0320",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-20"
+      },
+      "value": "2025-05-11",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-03",
+      "fact_id": "F-43-0321",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-20"
+      },
+      "value": "TAX-6661-VF",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-43-0021",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0021",
+  "timestamp": "2025-04-20",
+  "trust_class": "first_party_note"
+}

@@ -1,0 +1,121 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": "Kingfisher Connect",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-002",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-43-0136",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0586",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-09-20",
+        "start": "2025-08-30"
+      },
+      "value": "48.00",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0587",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "6100000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0588",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "booked",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "geo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0589",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "CO/AZ/UT",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "demo_targeting",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0590",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "P18-49",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "creative_format",
+      "entity": "order-line",
+      "entity_id": "IO-43-0004",
+      "fact_id": "F-43-0591",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "OLV",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0004",
+  "scenario_kind": "order_booked",
+  "seed": 43,
+  "subject": "Order line IO-43-0004 booked on Winter Loyalty Retention",
+  "timestamp": "2025-08-30",
+  "trust_class": "system_of_record"
+}

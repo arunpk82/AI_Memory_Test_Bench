@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": "Grantham Collective",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Ingrid Merriweather",
+  "deal_id": "DEAL-44-005",
+  "deal_name": "Summer Store Visits",
+  "event_id": "EV-44-0080",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0009",
+      "fact_id": "F-44-0353",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0306",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-09"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0009",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0009",
+  "timestamp": "2025-07-09",
+  "trust_class": "first_party_sent"
+}

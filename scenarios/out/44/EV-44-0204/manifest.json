@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": "Grantham Collective",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Ingrid Merriweather",
+  "deal_id": "DEAL-44-004",
+  "deal_name": "Winter Lead Generation",
+  "event_id": "EV-44-0204",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-02",
+      "fact_id": "F-44-0831",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-30"
+      },
+      "value": "reducing scope next year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-02",
+      "fact_id": "F-44-0832",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-30"
+      },
+      "value": "496000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 44,
+  "subject": "Renewal conversation notes for Vellichor Traders",
+  "timestamp": "2026-01-30",
+  "trust_class": "first_party_note"
+}

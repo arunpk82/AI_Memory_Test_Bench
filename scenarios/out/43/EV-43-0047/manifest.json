@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-001",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-43-0047",
+  "facts": [
+    {
+      "attribute": "rate_card_cpm",
+      "entity": "order-line",
+      "entity_id": "IO-43-0001",
+      "fact_id": "F-43-0232",
+      "injection": false,
+      "never_memorize": true,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-03-11",
+        "start": "2025-03-11"
+      },
+      "value": "36.50",
+      "volatility_class": "ephemeral"
+    }
+  ],
+  "io_id": "IO-43-0001",
+  "scenario_kind": "rate_card_snapshot",
+  "seed": 43,
+  "subject": "Rate card snapshot for IO-43-0001",
+  "timestamp": "2025-03-11",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": "Kingfisher Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Xiomara Delacroix",
+  "deal_id": "DEAL-44-008",
+  "deal_name": "Spring Store Visits",
+  "event_id": "EV-44-0072",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-44-0013",
+      "fact_id": "F-44-0334",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-23"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0013",
+  "scenario_kind": "client_rate_claim",
+  "seed": 44,
+  "subject": "Rate question on IO-44-0013",
+  "timestamp": "2025-06-23",
+  "trust_class": "counterparty_asserted"
+}

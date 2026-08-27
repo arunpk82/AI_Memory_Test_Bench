@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-06",
+  "advertiser_name": "Xanthemum Outfitters",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-022",
+  "deal_name": "Holiday Lead Generation",
+  "event_id": "EV-44-0079",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0039",
+      "fact_id": "F-44-0352",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0324",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-08"
+      },
+      "value": "delivering",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0039",
+  "scenario_kind": "line_activation",
+  "seed": 44,
+  "subject": "IO-44-0039 moved into delivery",
+  "timestamp": "2025-07-08",
+  "trust_class": "system_of_record"
+}

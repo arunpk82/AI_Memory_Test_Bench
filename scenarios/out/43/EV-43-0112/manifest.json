@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Rafael Wexler",
+  "deal_id": "DEAL-43-029",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-43-0112",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-43-0051",
+      "fact_id": "F-43-0497",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-14"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0051",
+  "scenario_kind": "client_rate_claim",
+  "seed": 43,
+  "subject": "Rate question on IO-43-0051",
+  "timestamp": "2025-07-14",
+  "trust_class": "counterparty_asserted"
+}

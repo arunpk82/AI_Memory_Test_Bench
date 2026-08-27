@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-05",
+  "advertiser_name": "Northwind Outfitters",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Corinne Hargreave",
+  "deal_id": "DEAL-44-020",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-44-0111",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0490",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-28"
+      },
+      "value": "Winter Store Visits",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0491",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-28"
+      },
+      "value": "store visits",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0492",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-28"
+      },
+      "value": "381000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0493",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-09-26",
+        "start": "2025-08-28"
+      },
+      "value": "2025-10-21",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0494",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-09-26",
+        "start": "2025-08-28"
+      },
+      "value": "2025-11-20",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Winter Store Visits brief for Northwind Outfitters",
+  "timestamp": "2025-08-28",
+  "trust_class": "counterparty_asserted"
+}

@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-01",
+  "advertiser_name": "Dunmoreau Labs",
+  "agency_name": "Everlyn Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Marisol Voss",
+  "deal_id": "DEAL-44-003",
+  "deal_name": "Summer Lead Generation",
+  "event_id": "EV-44-0061",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-003",
+      "fact_id": "F-44-0289",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "Summer Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-003",
+      "fact_id": "F-44-0290",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-003",
+      "fact_id": "F-44-0291",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "329000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-003",
+      "fact_id": "F-44-0292",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "2025-07-22",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-003",
+      "fact_id": "F-44-0293",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-07"
+      },
+      "value": "2025-09-20",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Summer Lead Generation brief for Dunmoreau Labs",
+  "timestamp": "2025-06-07",
+  "trust_class": "counterparty_asserted"
+}

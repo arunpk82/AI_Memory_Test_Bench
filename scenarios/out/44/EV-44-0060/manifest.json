@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-008",
+  "deal_name": "Spring Store Visits",
+  "event_id": "EV-44-0060",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0013",
+      "fact_id": "F-44-0288",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0216",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-06-23",
+        "start": "2025-05-31"
+      },
+      "value": "on hold",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0013",
+  "scenario_kind": "line_hold",
+  "seed": 44,
+  "subject": "Hold placed on IO-44-0013",
+  "timestamp": "2025-05-31",
+  "trust_class": "system_of_record"
+}

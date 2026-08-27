@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": "Broadleaf Trading",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Anouk Iyengar",
+  "deal_id": "DEAL-43-008",
+  "deal_name": "Holiday Lead Generation",
+  "event_id": "EV-43-0026",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-008",
+      "fact_id": "F-43-0136",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-02"
+      },
+      "value": "Holiday Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-008",
+      "fact_id": "F-43-0137",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-02"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-008",
+      "fact_id": "F-43-0138",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-02"
+      },
+      "value": "721000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-008",
+      "fact_id": "F-43-0139",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-02"
+      },
+      "value": "2025-03-19",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-008",
+      "fact_id": "F-43-0140",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-02"
+      },
+      "value": "2025-06-17",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Holiday Lead Generation brief for Cragmont Media",
+  "timestamp": "2025-02-02",
+  "trust_class": "counterparty_asserted"
+}

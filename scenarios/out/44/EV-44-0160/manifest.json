@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": "Grantham Collective",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Ingrid Merriweather",
+  "deal_id": "DEAL-44-006",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-44-0160",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0011",
+      "fact_id": "F-44-0712",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-11-16",
+        "start": "2025-10-26"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0011",
+      "fact_id": "F-44-0713",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-26"
+      },
+      "value": "2025-11-16",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-02",
+      "fact_id": "F-44-0714",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-26"
+      },
+      "value": "TAX-4983-QF",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-44-0011",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0011",
+  "timestamp": "2025-10-26",
+  "trust_class": "first_party_note"
+}

@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-05",
+  "advertiser_name": "Nettlecombe Collective",
+  "agency_name": "Broadleaf Trading",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Delphine Okonkwo",
+  "deal_id": "DEAL-43-019",
+  "deal_name": "Autumn Brand Awareness",
+  "event_id": "EV-43-0046",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-019",
+      "fact_id": "F-43-0227",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-11"
+      },
+      "value": "Autumn Brand Awareness",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-019",
+      "fact_id": "F-43-0228",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-11"
+      },
+      "value": "brand awareness",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-019",
+      "fact_id": "F-43-0229",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-11"
+      },
+      "value": "384000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-019",
+      "fact_id": "F-43-0230",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-11"
+      },
+      "value": "2025-05-12",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-019",
+      "fact_id": "F-43-0231",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-11"
+      },
+      "value": "2025-08-10",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Autumn Brand Awareness brief for Nettlecombe Collective",
+  "timestamp": "2025-03-11",
+  "trust_class": "counterparty_asserted"
+}

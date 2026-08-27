@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-037",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-44-0131",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-44-0069",
+      "fact_id": "F-44-0583",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0424",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-15"
+      },
+      "value": "14410000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0069",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 44,
+  "subject": "Delivery goal reset on IO-44-0069",
+  "timestamp": "2025-09-15",
+  "trust_class": "system_of_record"
+}

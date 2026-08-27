@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-01",
+  "advertiser_name": "Dunmoreau Labs",
+  "agency_name": "Kingfisher Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Marisol Voss",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-44-0066",
+  "facts": [
+    {
+      "attribute": "agency_of_record",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-01",
+      "fact_id": "F-44-0313",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0004",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-16"
+      },
+      "value": "Kingfisher Activation",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "agency_change",
+  "seed": 44,
+  "subject": "Agency of record change for Dunmoreau Labs",
+  "timestamp": "2025-06-16",
+  "trust_class": "first_party_sent"
+}

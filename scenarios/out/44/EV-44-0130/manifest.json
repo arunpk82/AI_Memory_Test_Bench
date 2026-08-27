@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-09",
+  "advertiser_name": "Zephyrine Provisions",
+  "agency_name": "Juneberry Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Hollis Pemberly",
+  "deal_id": "DEAL-44-035",
+  "deal_name": "Winter Brand Awareness",
+  "event_id": "EV-44-0130",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0063",
+      "fact_id": "F-44-0582",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0458",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-14"
+      },
+      "value": "26.70",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0063",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0063",
+  "timestamp": "2025-09-14",
+  "trust_class": "first_party_sent"
+}

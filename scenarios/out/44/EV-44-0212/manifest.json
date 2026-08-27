@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-08",
+  "advertiser_name": "Halcyon Holdings",
+  "agency_name": "Inkwell Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Quentin Iyengar",
+  "deal_id": "DEAL-44-030",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-44-0212",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-08",
+      "fact_id": "F-44-0845",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-23"
+      },
+      "value": "reducing scope next year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-08",
+      "fact_id": "F-44-0846",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-23"
+      },
+      "value": "945000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 44,
+  "subject": "Renewal conversation notes for Halcyon Holdings",
+  "timestamp": "2026-02-23",
+  "trust_class": "first_party_note"
+}

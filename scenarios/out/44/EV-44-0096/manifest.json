@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": "Kingfisher Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Xiomara Delacroix",
+  "deal_id": "DEAL-44-012",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-44-0096",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-012",
+      "fact_id": "F-44-0418",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "Back-to-School Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-012",
+      "fact_id": "F-44-0419",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-012",
+      "fact_id": "F-44-0420",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "479000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-012",
+      "fact_id": "F-44-0421",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "2025-09-09",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-012",
+      "fact_id": "F-44-0422",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-11"
+      },
+      "value": "2025-10-09",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Back-to-School Lead Generation brief for Mossbridge Provisions",
+  "timestamp": "2025-08-11",
+  "trust_class": "counterparty_asserted"
+}

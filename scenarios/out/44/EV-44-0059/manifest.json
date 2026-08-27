@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": "Kingfisher Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Xiomara Delacroix",
+  "deal_id": "DEAL-44-011",
+  "deal_name": "Back-to-School Product Launch",
+  "event_id": "EV-44-0059",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0023",
+      "fact_id": "F-44-0285",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-06-13",
+        "start": "2025-05-30"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0023",
+      "fact_id": "F-44-0286",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "2025-06-13",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-03",
+      "fact_id": "F-44-0287",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-30"
+      },
+      "value": "TAX-2196-VJ",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-44-0023",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0023",
+  "timestamp": "2025-05-30",
+  "trust_class": "first_party_note"
+}

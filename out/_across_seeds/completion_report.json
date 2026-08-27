@@ -1,0 +1,615 @@
+{
+  "across_seeds": {
+    "advertiser_name_overlap": {
+      "42x43": [],
+      "42x44": [],
+      "43x44": []
+    },
+    "advertiser_names": {
+      "42": [
+        "Ashgrove Labs",
+        "Cindervale Studios",
+        "Harrowgate Holdings",
+        "Kelvinshaw Holdings",
+        "Kestrelia Collective",
+        "Larkspire Provisions",
+        "Ravensmoor Holdings",
+        "Stonebrook Media",
+        "Umberfield Outfitters",
+        "Verapine Studios",
+        "Zellwood Labs"
+      ],
+      "43": [
+        "Cragmont Media",
+        "Elmsworth Outfitters",
+        "Harrowgate Traders",
+        "Mossbridge Interactive",
+        "Nettlecombe Collective",
+        "Northwind Holdings",
+        "Stonebrook Brands",
+        "Tessellate Media",
+        "Vantablu Brands",
+        "Vellichor Provisions"
+      ],
+      "44": [
+        "Dunmoreau Labs",
+        "Halcyon Holdings",
+        "Larkspire Collective",
+        "Mossbridge Provisions",
+        "Northwind Outfitters",
+        "Stonebrook Labs",
+        "Vellichor Traders",
+        "Xanthemum Outfitters",
+        "Yewbrook Provisions",
+        "Zephyrine Provisions"
+      ]
+    },
+    "deal_count_vectors": {
+      "42": [
+        3,
+        4,
+        5,
+        4,
+        3,
+        3,
+        4,
+        3,
+        3,
+        4,
+        3
+      ],
+      "43": [
+        3,
+        5,
+        5,
+        3,
+        5,
+        3,
+        4,
+        4,
+        5,
+        4
+      ],
+      "44": [
+        3,
+        4,
+        5,
+        4,
+        5,
+        5,
+        3,
+        3,
+        4,
+        5
+      ]
+    },
+    "per_seed": {
+      "42": {
+        "advertisers": 11,
+        "current_as_of": "2027-03-14",
+        "deals": 39,
+        "events": 208,
+        "facts": 816,
+        "facts_sha256": "bd2778919ac91fea204d028694c02a1b12ee00d1abcb35d6f40a63cd4a5e45c1",
+        "order_lines": 71,
+        "questions": 240,
+        "scenarios": 208,
+        "timeline_span_days": 412
+      },
+      "43": {
+        "advertisers": 10,
+        "current_as_of": "2027-02-23",
+        "deals": 41,
+        "events": 209,
+        "facts": 820,
+        "facts_sha256": "9c67185ace9ea77cc618804b7d7f19d1c32920fe00484d97b6c89406ce994ddc",
+        "order_lines": 71,
+        "questions": 240,
+        "scenarios": 209,
+        "timeline_span_days": 412
+      },
+      "44": {
+        "advertisers": 10,
+        "current_as_of": "2027-03-03",
+        "deals": 41,
+        "events": 214,
+        "facts": 850,
+        "facts_sha256": "8c58ef08150cff55ade9cb89a841fb1a96345195ead222ad94e0bdddf57288ae",
+        "order_lines": 76,
+        "questions": 240,
+        "scenarios": 214,
+        "timeline_span_days": 408
+      }
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "totals": {
+      "events": 631,
+      "facts": 2486,
+      "questions": 720,
+      "scenarios": 631
+    }
+  },
+  "deviations": {
+    "entries": 20,
+    "exists": true,
+    "file": "DEVIATIONS.md",
+    "ids": [
+      "D-001",
+      "D-002",
+      "D-003",
+      "D-004",
+      "D-005",
+      "D-006",
+      "D-007",
+      "D-008",
+      "D-009",
+      "D-010",
+      "D-011",
+      "D-012",
+      "D-013",
+      "D-014",
+      "D-015",
+      "D-016",
+      "D-017",
+      "D-018",
+      "D-019",
+      "D-020"
+    ]
+  },
+  "dormant_paths": [
+    {
+      "detail": "The Bedrock session, credential resolution and converse call are driven with a fake session and a capturing client in the tests. No live Bedrock call is made in CI or in this run.",
+      "kind": "live network path",
+      "location": "scenarios/renderer.py :: bedrock_client, converse"
+    },
+    {
+      "detail": "The LLM render of a whole seed is human-triggered for cost control. render_llm itself, including the fidelity retry loop and the exhausted-retry outcome, is tested with a stubbed converse.",
+      "kind": "live network path",
+      "location": "scenarios/renderer.py :: render_seed(deterministic=False)"
+    },
+    {
+      "detail": "The oracle audit is human-triggered. ask_oracle is tested against a capturing client; run_audit's verdict logic is tested through classify(), which the calibration suite drives directly.",
+      "kind": "live network path",
+      "location": "verify/answerability.py :: oracle_client, ask_oracle, run_audit"
+    },
+    {
+      "detail": "The configured oracle is amazon.nova-pro-v1:0, so the inference-profile-prefix check for Anthropic oracle ids cannot fire. It exists for anyone who swaps the oracle family.",
+      "kind": "unreachable with the shipped config",
+      "location": "verify/answerability.py :: resolve_oracle_model, Anthropic prefix branch"
+    },
+    {
+      "detail": "Only the us. inference profile is accepted in practice because that is what config.yaml sets; the eu. and apac. prefixes are allowed but never taken.",
+      "kind": "unreachable with the shipped config",
+      "location": "scenarios/renderer.py :: resolve_renderer_model, eu./apac. prefixes"
+    },
+    {
+      "detail": "A supersession graph can only become cyclic via a fact with two successors, and build_successor_map rejects that first. The double-supersession guard is tested; this one cannot be reached through any public shape and is kept as a backstop.",
+      "kind": "defensive, provably unreachable",
+      "location": "universe/generator.py :: supersession_chains, cycle guard"
+    },
+    {
+      "detail": "The rate ladder has twelve rungs and no chain uses more than three, so the exhaustion raise never fires on seeds 42, 43 or 44.",
+      "kind": "guard never fired",
+      "location": "universe/generator.py :: bump_cpm, ladder-exhausted raise"
+    },
+    {
+      "detail": "44 advertiser roots against at most 12 advertisers, and 18 agency roots against at most 7 agencies. The raise protects a future increase in entity counts.",
+      "kind": "guard never fired",
+      "location": "universe/generator.py :: _distinct_names, wordlist-exhausted raise"
+    },
+    {
+      "detail": "Both raise if an (entity, attribute) pair has two active facts. The duplicate_active_facts quota now makes that impossible at generation time, so the runtime raise is redundant protection. It fired once during development, which is why the quota exists.",
+      "kind": "guard never fired",
+      "location": "universe/generator.py :: current_value / UniverseIndex.active_at, multi-active raise"
+    },
+    {
+      "detail": "The generator produces facts on (order_system, system), (email_received, counterparty), (email_sent, user) and (call_note, user). The other five rows -- (order_system, user), (email_sent, system), (email_received, system), (email_received, user) and (call_note, counterparty) -- are derived correctly and tested directly, but no fact in any of the three universes carries them.",
+      "kind": "table entry with no generated fact",
+      "location": "universe/schema.py :: TRUST_TABLE, five of nine rows"
+    },
+    {
+      "detail": "The schema allows an 'agency' entity but the generator records agency relationships as advertiser attributes (agency_of_record), so no fact has entity == 'agency' and the label branch is never taken.",
+      "kind": "branch with no data",
+      "location": "questions/instantiate.py :: UniverseIndex.label, agency entity branch"
+    },
+    {
+      "detail": "Fabricated order-line ids use the 9xxx block and real ones never reach it, so the collision check never skips.",
+      "kind": "guard never fired",
+      "location": "questions/instantiate.py :: build_abstention_false_premise, fake-id collision guard"
+    },
+    {
+      "detail": "The 'no progress' break covers a universe with fewer candidates than the target total. All three seeds have surplus, so allocation always reaches its target and the break is not used.",
+      "kind": "branch never taken",
+      "location": "questions/instantiate.py :: allocate, starvation break"
+    },
+    {
+      "detail": "Sentence splitting declines to split after a single capital letter (an initial such as 'J. Whitfield'). The generator never produces initials, so only the abbreviation-word half of the guard runs against the corpus. Both halves are covered by the matching self-tests.",
+      "kind": "branch with no data",
+      "location": "verify/matching.py :: _is_abbreviation_boundary, single-initial branch"
+    },
+    {
+      "detail": "The per-scenario failure printout is exercised by the CLI failure test but never by a clean run, because the deterministic corpus has no fidelity failures.",
+      "kind": "branch reached only on failure",
+      "location": "verify/fidelity.py :: main, failure detail printing"
+    }
+  ],
+  "pytest": null,
+  "seeds": [
+    {
+      "advertisers": 11,
+      "deals": 39,
+      "dry_run": {
+        "clean": true,
+        "corpus_scenarios": 208,
+        "findings_by_check": {},
+        "questions": 240
+      },
+      "events": 208,
+      "events_sha256": "0dd035c7ebf84a6363f8da5279622b7405638aa72c640659d218d1362e60f790",
+      "facts": 816,
+      "facts_sha256": {
+        "fresh_generation_1": "bd2778919ac91fea204d028694c02a1b12ee00d1abcb35d6f40a63cd4a5e45c1",
+        "fresh_generation_2": "bd2778919ac91fea204d028694c02a1b12ee00d1abcb35d6f40a63cd4a5e45c1",
+        "identical": true,
+        "matches_on_disk": true,
+        "on_disk_facts_jsonl": "bd2778919ac91fea204d028694c02a1b12ee00d1abcb35d6f40a63cd4a5e45c1"
+      },
+      "fidelity": {
+        "failed": 0,
+        "missing_fact_total": 0,
+        "passed": 208,
+        "scenarios": 208,
+        "unsupported_total": 0
+      },
+      "order_lines": 71,
+      "questions_by_as_of_horizon": {
+        "current": 200,
+        "early": 13,
+        "late": 9,
+        "mid": 18
+      },
+      "questions_by_query_kind": {
+        "exact": 79,
+        "multi_hop": 52,
+        "similarity": 55,
+        "temporal_range": 54
+      },
+      "questions_by_type": {
+        "abstention_false_premise": 20,
+        "conflict_resolution": 12,
+        "episodic": 20,
+        "expired_state": 14,
+        "inference_only": 20,
+        "injection_probe": 15,
+        "knowledge_update_current": 20,
+        "knowledge_update_past": 20,
+        "mapping_lookup": 19,
+        "multi_session": 20,
+        "order_state": 20,
+        "single_fact": 20,
+        "temporal": 20
+      },
+      "questions_sha256": "7a6b81ade876ac5067ac121979ad19ecc62a3bac3d825d1343ae60d91bdaaec8",
+      "questions_total": 240,
+      "quotas": {
+        "advertisers": 11,
+        "agencies": 4,
+        "correction_chains": 35,
+        "current_as_of": "2027-03-14",
+        "deals": 39,
+        "deals_with_correction_chains": 18,
+        "deals_with_correction_chains_pct": 46.2,
+        "duplicate_active_facts": [],
+        "events_with_permanent_and_volatile_facts": 5,
+        "facts": 816,
+        "injection_plausibility": {
+          "high": 3,
+          "low": 3,
+          "medium": 3
+        },
+        "injections": 9,
+        "injections_targeting_corrected_fact": 5,
+        "multi_step_chains": 6,
+        "never_memorize_probes": 6,
+        "order_lines": 71,
+        "scenario_kinds": {
+          "account_setup": 11,
+          "agency_change": 4,
+          "client_rate_claim": 12,
+          "contact_handoff": 4,
+          "deal_kickoff": 39,
+          "flight_shift": 6,
+          "impressions_adjustment": 3,
+          "injection_false_agency": 3,
+          "injection_false_payment": 3,
+          "injection_false_rate": 3,
+          "line_activation": 3,
+          "line_cancellation": 3,
+          "line_hold": 3,
+          "order_booked": 71,
+          "pacing_note": 14,
+          "rate_card_snapshot": 6,
+          "rate_revision": 9,
+          "renewal_conversation": 11
+        },
+        "scenarios": 208,
+        "supersession_edges": 41,
+        "timeline_end": "2026-03-14",
+        "timeline_span_days": 412,
+        "timeline_start": "2025-01-26",
+        "transient_facts_with_end_dates": 14
+      },
+      "render": {
+        "attempt_histogram": {
+          "1": 208
+        },
+        "fidelity_failed": 0,
+        "fidelity_pass": 208,
+        "render_mode": "deterministic",
+        "scenarios": 208,
+        "seed": 42
+      },
+      "scenarios": 208,
+      "seed": 42,
+      "shipped_questions_total": 240,
+      "timeline": {
+        "current_as_of": "2027-03-14",
+        "end": "2026-03-14",
+        "span_days": 412,
+        "start": "2025-01-26"
+      }
+    },
+    {
+      "advertisers": 10,
+      "deals": 41,
+      "dry_run": {
+        "clean": true,
+        "corpus_scenarios": 209,
+        "findings_by_check": {},
+        "questions": 240
+      },
+      "events": 209,
+      "events_sha256": "8443800c148824f585c933a94bc4fa859e13a89eaacfcdca43b3711ffb3f9606",
+      "facts": 820,
+      "facts_sha256": {
+        "fresh_generation_1": "9c67185ace9ea77cc618804b7d7f19d1c32920fe00484d97b6c89406ce994ddc",
+        "fresh_generation_2": "9c67185ace9ea77cc618804b7d7f19d1c32920fe00484d97b6c89406ce994ddc",
+        "identical": true,
+        "matches_on_disk": true,
+        "on_disk_facts_jsonl": "9c67185ace9ea77cc618804b7d7f19d1c32920fe00484d97b6c89406ce994ddc"
+      },
+      "fidelity": {
+        "failed": 0,
+        "missing_fact_total": 0,
+        "passed": 209,
+        "scenarios": 209,
+        "unsupported_total": 0
+      },
+      "order_lines": 71,
+      "questions_by_as_of_horizon": {
+        "current": 200,
+        "early": 10,
+        "late": 12,
+        "mid": 18
+      },
+      "questions_by_query_kind": {
+        "exact": 79,
+        "multi_hop": 52,
+        "similarity": 55,
+        "temporal_range": 54
+      },
+      "questions_by_type": {
+        "abstention_false_premise": 20,
+        "conflict_resolution": 12,
+        "episodic": 20,
+        "expired_state": 14,
+        "inference_only": 20,
+        "injection_probe": 15,
+        "knowledge_update_current": 20,
+        "knowledge_update_past": 20,
+        "mapping_lookup": 19,
+        "multi_session": 20,
+        "order_state": 20,
+        "single_fact": 20,
+        "temporal": 20
+      },
+      "questions_sha256": "fc4276d0236611709bcb4de9670e92098145821004addd5453a5d0b83eafc852",
+      "questions_total": 240,
+      "quotas": {
+        "advertisers": 10,
+        "agencies": 5,
+        "correction_chains": 36,
+        "current_as_of": "2027-02-23",
+        "deals": 41,
+        "deals_with_correction_chains": 19,
+        "deals_with_correction_chains_pct": 46.3,
+        "duplicate_active_facts": [],
+        "events_with_permanent_and_volatile_facts": 5,
+        "facts": 820,
+        "injection_plausibility": {
+          "high": 3,
+          "low": 3,
+          "medium": 3
+        },
+        "injections": 9,
+        "injections_targeting_corrected_fact": 4,
+        "multi_step_chains": 6,
+        "never_memorize_probes": 6,
+        "order_lines": 71,
+        "scenario_kinds": {
+          "account_setup": 10,
+          "agency_change": 4,
+          "client_rate_claim": 12,
+          "contact_handoff": 4,
+          "deal_kickoff": 41,
+          "flight_shift": 6,
+          "impressions_adjustment": 3,
+          "injection_false_agency": 3,
+          "injection_false_payment": 3,
+          "injection_false_rate": 3,
+          "line_activation": 3,
+          "line_cancellation": 3,
+          "line_hold": 3,
+          "order_booked": 71,
+          "pacing_note": 14,
+          "rate_card_snapshot": 6,
+          "rate_revision": 10,
+          "renewal_conversation": 10
+        },
+        "scenarios": 209,
+        "supersession_edges": 42,
+        "timeline_end": "2026-02-23",
+        "timeline_span_days": 412,
+        "timeline_start": "2025-01-07",
+        "transient_facts_with_end_dates": 14
+      },
+      "render": {
+        "attempt_histogram": {
+          "1": 209
+        },
+        "fidelity_failed": 0,
+        "fidelity_pass": 209,
+        "render_mode": "deterministic",
+        "scenarios": 209,
+        "seed": 43
+      },
+      "scenarios": 209,
+      "seed": 43,
+      "shipped_questions_total": 240,
+      "timeline": {
+        "current_as_of": "2027-02-23",
+        "end": "2026-02-23",
+        "span_days": 412,
+        "start": "2025-01-07"
+      }
+    },
+    {
+      "advertisers": 10,
+      "deals": 41,
+      "dry_run": {
+        "clean": true,
+        "corpus_scenarios": 214,
+        "findings_by_check": {},
+        "questions": 240
+      },
+      "events": 214,
+      "events_sha256": "92a7d2fcae6b003927c1bbf3862a0a1077df7f1dfe722d7350224350913a8d60",
+      "facts": 850,
+      "facts_sha256": {
+        "fresh_generation_1": "8c58ef08150cff55ade9cb89a841fb1a96345195ead222ad94e0bdddf57288ae",
+        "fresh_generation_2": "8c58ef08150cff55ade9cb89a841fb1a96345195ead222ad94e0bdddf57288ae",
+        "identical": true,
+        "matches_on_disk": true,
+        "on_disk_facts_jsonl": "8c58ef08150cff55ade9cb89a841fb1a96345195ead222ad94e0bdddf57288ae"
+      },
+      "fidelity": {
+        "failed": 0,
+        "missing_fact_total": 0,
+        "passed": 214,
+        "scenarios": 214,
+        "unsupported_total": 0
+      },
+      "order_lines": 76,
+      "questions_by_as_of_horizon": {
+        "current": 200,
+        "early": 8,
+        "late": 14,
+        "mid": 18
+      },
+      "questions_by_query_kind": {
+        "exact": 79,
+        "multi_hop": 52,
+        "similarity": 55,
+        "temporal_range": 54
+      },
+      "questions_by_type": {
+        "abstention_false_premise": 20,
+        "conflict_resolution": 12,
+        "episodic": 20,
+        "expired_state": 14,
+        "inference_only": 20,
+        "injection_probe": 15,
+        "knowledge_update_current": 20,
+        "knowledge_update_past": 20,
+        "mapping_lookup": 19,
+        "multi_session": 20,
+        "order_state": 20,
+        "single_fact": 20,
+        "temporal": 20
+      },
+      "questions_sha256": "c059f4684d83a29c3bd702c12f7be4ac44a1e19c953ed35ca3f340b3645be2a3",
+      "questions_total": 240,
+      "quotas": {
+        "advertisers": 10,
+        "agencies": 5,
+        "correction_chains": 37,
+        "current_as_of": "2027-03-03",
+        "deals": 41,
+        "deals_with_correction_chains": 19,
+        "deals_with_correction_chains_pct": 46.3,
+        "duplicate_active_facts": [],
+        "events_with_permanent_and_volatile_facts": 5,
+        "facts": 850,
+        "injection_plausibility": {
+          "high": 3,
+          "low": 3,
+          "medium": 3
+        },
+        "injections": 9,
+        "injections_targeting_corrected_fact": 6,
+        "multi_step_chains": 6,
+        "never_memorize_probes": 6,
+        "order_lines": 76,
+        "scenario_kinds": {
+          "account_setup": 10,
+          "agency_change": 4,
+          "client_rate_claim": 12,
+          "contact_handoff": 4,
+          "deal_kickoff": 41,
+          "flight_shift": 6,
+          "impressions_adjustment": 3,
+          "injection_false_agency": 3,
+          "injection_false_payment": 3,
+          "injection_false_rate": 3,
+          "line_activation": 3,
+          "line_cancellation": 3,
+          "line_hold": 3,
+          "order_booked": 76,
+          "pacing_note": 14,
+          "rate_card_snapshot": 6,
+          "rate_revision": 10,
+          "renewal_conversation": 10
+        },
+        "scenarios": 214,
+        "supersession_edges": 43,
+        "timeline_end": "2026-03-03",
+        "timeline_span_days": 408,
+        "timeline_start": "2025-01-19",
+        "transient_facts_with_end_dates": 14
+      },
+      "render": {
+        "attempt_histogram": {
+          "1": 214
+        },
+        "fidelity_failed": 0,
+        "fidelity_pass": 214,
+        "render_mode": "deterministic",
+        "scenarios": 214,
+        "seed": 44
+      },
+      "scenarios": 214,
+      "seed": 44,
+      "shipped_questions_total": 240,
+      "timeline": {
+        "current_as_of": "2027-03-03",
+        "end": "2026-03-03",
+        "span_days": 408,
+        "start": "2025-01-19"
+      }
+    }
+  ]
+}

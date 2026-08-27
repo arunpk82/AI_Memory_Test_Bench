@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-06",
+  "advertiser_name": "Xanthemum Outfitters",
+  "agency_name": "Juneberry Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Marcus Kastellan",
+  "deal_id": "DEAL-44-025",
+  "deal_name": "Winter Seasonal Clearance",
+  "event_id": "EV-44-0183",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0046",
+      "fact_id": "F-44-0796",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0733",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-24"
+      },
+      "value": "42.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0046",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0046",
+  "timestamp": "2025-11-24",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-01",
+  "advertiser_name": "Dunmoreau Labs",
+  "agency_name": "Everlyn Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Marisol Voss",
+  "deal_id": "DEAL-44-001",
+  "deal_name": "Spring Lead Generation",
+  "event_id": "EV-44-0182",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0001",
+      "fact_id": "F-44-0795",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0739",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": "2025-12-31",
+        "start": "2025-11-23"
+      },
+      "value": "26.70",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0001",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0001",
+  "timestamp": "2025-11-23",
+  "trust_class": "first_party_sent"
+}

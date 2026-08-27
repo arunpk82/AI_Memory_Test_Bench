@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-040",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-44-0025",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0075",
+      "fact_id": "F-44-0129",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0091",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-15"
+      },
+      "value": "delivering",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0075",
+  "scenario_kind": "line_activation",
+  "seed": 44,
+  "subject": "IO-44-0075 moved into delivery",
+  "timestamp": "2025-03-15",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-05",
+  "advertiser_name": "Northwind Outfitters",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Corinne Hargreave",
+  "deal_id": "DEAL-44-018",
+  "deal_name": "Winter Product Launch",
+  "event_id": "EV-44-0143",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-018",
+      "fact_id": "F-44-0633",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "Winter Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-018",
+      "fact_id": "F-44-0634",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-018",
+      "fact_id": "F-44-0635",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "86000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-018",
+      "fact_id": "F-44-0636",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "2025-11-13",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-018",
+      "fact_id": "F-44-0637",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-01"
+      },
+      "value": "2025-12-28",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Winter Product Launch brief for Northwind Outfitters",
+  "timestamp": "2025-10-01",
+  "trust_class": "counterparty_asserted"
+}

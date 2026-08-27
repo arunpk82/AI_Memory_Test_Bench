@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-07",
+  "advertiser_name": "Larkspire Collective",
+  "agency_name": "Everlyn Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Oisin Gallardo",
+  "deal_id": "DEAL-44-029",
+  "deal_name": "Spring Product Launch",
+  "event_id": "EV-44-0054",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0051",
+      "fact_id": "F-44-0264",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-06-10",
+        "start": "2025-05-20"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0051",
+      "fact_id": "F-44-0265",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-20"
+      },
+      "value": "2025-06-10",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0051",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0051",
+  "timestamp": "2025-05-20",
+  "trust_class": "first_party_note"
+}

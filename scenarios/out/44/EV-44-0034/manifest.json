@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-01",
+  "advertiser_name": "Dunmoreau Labs",
+  "agency_name": "Everlyn Activation",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Marisol Voss",
+  "deal_id": "DEAL-44-002",
+  "deal_name": "Autumn Brand Awareness",
+  "event_id": "EV-44-0034",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0004",
+      "fact_id": "F-44-0175",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-05-07",
+        "start": "2025-04-02"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0004",
+      "fact_id": "F-44-0176",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-02"
+      },
+      "value": "2025-05-07",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0004",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0004",
+  "timestamp": "2025-04-02",
+  "trust_class": "first_party_note"
+}

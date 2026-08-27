@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Rafael Wexler",
+  "deal_id": "DEAL-43-029",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-43-0206",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0814",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-11"
+      },
+      "value": "reducing scope next year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0815",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-11"
+      },
+      "value": "177000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 43,
+  "subject": "Renewal conversation notes for Mossbridge Interactive",
+  "timestamp": "2026-02-11",
+  "trust_class": "first_party_note"
+}

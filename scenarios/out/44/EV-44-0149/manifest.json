@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-09",
+  "advertiser_name": "Zephyrine Provisions",
+  "agency_name": "Juneberry Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Hollis Pemberly",
+  "deal_id": "DEAL-44-036",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-44-0149",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-036",
+      "fact_id": "F-44-0659",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-09"
+      },
+      "value": "Summer Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-036",
+      "fact_id": "F-44-0660",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-09"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-036",
+      "fact_id": "F-44-0661",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-09"
+      },
+      "value": "581000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-036",
+      "fact_id": "F-44-0662",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-09"
+      },
+      "value": "2025-11-27",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-036",
+      "fact_id": "F-44-0663",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-09"
+      },
+      "value": "2025-12-27",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Summer Product Launch brief for Zephyrine Provisions",
+  "timestamp": "2025-10-09",
+  "trust_class": "counterparty_asserted"
+}

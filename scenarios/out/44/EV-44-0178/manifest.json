@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-09",
+  "advertiser_name": "Zephyrine Provisions",
+  "agency_name": "Juneberry Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Hollis Pemberly",
+  "deal_id": "DEAL-44-033",
+  "deal_name": "Back-to-School App Installs",
+  "event_id": "EV-44-0178",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0059",
+      "fact_id": "F-44-0787",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-12-19",
+        "start": "2025-11-14"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0059",
+      "fact_id": "F-44-0788",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-14"
+      },
+      "value": "2025-12-19",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0059",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0059",
+  "timestamp": "2025-11-14",
+  "trust_class": "first_party_note"
+}

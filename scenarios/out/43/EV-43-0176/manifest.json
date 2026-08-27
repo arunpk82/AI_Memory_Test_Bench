@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Rafael Wexler",
+  "deal_id": "DEAL-43-031",
+  "deal_name": "Spring Lead Generation",
+  "event_id": "EV-43-0176",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-031",
+      "fact_id": "F-43-0733",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-02"
+      },
+      "value": "Spring Lead Generation",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-031",
+      "fact_id": "F-43-0734",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-02"
+      },
+      "value": "lead generation",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-031",
+      "fact_id": "F-43-0735",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-02"
+      },
+      "value": "134000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-031",
+      "fact_id": "F-43-0736",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-02"
+      },
+      "value": "2025-11-25",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-031",
+      "fact_id": "F-43-0737",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-02"
+      },
+      "value": "2026-01-24",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Spring Lead Generation brief for Mossbridge Interactive",
+  "timestamp": "2025-11-02",
+  "trust_class": "counterparty_asserted"
+}

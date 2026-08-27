@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": "Broadleaf Trading",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Anouk Iyengar",
+  "deal_id": "DEAL-43-008",
+  "deal_name": "Holiday Lead Generation",
+  "event_id": "EV-43-0061",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0015",
+      "fact_id": "F-43-0287",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0187",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-04"
+      },
+      "value": "24.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0015",
+  "scenario_kind": "rate_revision",
+  "seed": 43,
+  "subject": "Revised rate on IO-43-0015",
+  "timestamp": "2025-04-04",
+  "trust_class": "first_party_sent"
+}

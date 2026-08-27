@@ -1,0 +1,134 @@
+{
+  "advertiser_name_overlap": {
+    "42x43": [],
+    "42x44": [],
+    "43x44": []
+  },
+  "advertiser_names": {
+    "42": [
+      "Ashgrove Labs",
+      "Cindervale Studios",
+      "Harrowgate Holdings",
+      "Kelvinshaw Holdings",
+      "Kestrelia Collective",
+      "Larkspire Provisions",
+      "Ravensmoor Holdings",
+      "Stonebrook Media",
+      "Umberfield Outfitters",
+      "Verapine Studios",
+      "Zellwood Labs"
+    ],
+    "43": [
+      "Cragmont Media",
+      "Elmsworth Outfitters",
+      "Harrowgate Traders",
+      "Mossbridge Interactive",
+      "Nettlecombe Collective",
+      "Northwind Holdings",
+      "Stonebrook Brands",
+      "Tessellate Media",
+      "Vantablu Brands",
+      "Vellichor Provisions"
+    ],
+    "44": [
+      "Dunmoreau Labs",
+      "Halcyon Holdings",
+      "Larkspire Collective",
+      "Mossbridge Provisions",
+      "Northwind Outfitters",
+      "Stonebrook Labs",
+      "Vellichor Traders",
+      "Xanthemum Outfitters",
+      "Yewbrook Provisions",
+      "Zephyrine Provisions"
+    ]
+  },
+  "deal_count_vectors": {
+    "42": [
+      3,
+      4,
+      5,
+      4,
+      3,
+      3,
+      4,
+      3,
+      3,
+      4,
+      3
+    ],
+    "43": [
+      3,
+      5,
+      5,
+      3,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4
+    ],
+    "44": [
+      3,
+      4,
+      5,
+      4,
+      5,
+      5,
+      3,
+      3,
+      4,
+      5
+    ]
+  },
+  "per_seed": {
+    "42": {
+      "advertisers": 11,
+      "current_as_of": "2027-03-14",
+      "deals": 39,
+      "events": 208,
+      "facts": 816,
+      "facts_sha256": "bd2778919ac91fea204d028694c02a1b12ee00d1abcb35d6f40a63cd4a5e45c1",
+      "order_lines": 71,
+      "questions": 240,
+      "scenarios": 208,
+      "timeline_span_days": 412
+    },
+    "43": {
+      "advertisers": 10,
+      "current_as_of": "2027-02-23",
+      "deals": 41,
+      "events": 209,
+      "facts": 820,
+      "facts_sha256": "9c67185ace9ea77cc618804b7d7f19d1c32920fe00484d97b6c89406ce994ddc",
+      "order_lines": 71,
+      "questions": 240,
+      "scenarios": 209,
+      "timeline_span_days": 412
+    },
+    "44": {
+      "advertisers": 10,
+      "current_as_of": "2027-03-03",
+      "deals": 41,
+      "events": 214,
+      "facts": 850,
+      "facts_sha256": "8c58ef08150cff55ade9cb89a841fb1a96345195ead222ad94e0bdddf57288ae",
+      "order_lines": 76,
+      "questions": 240,
+      "scenarios": 214,
+      "timeline_span_days": 408
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "totals": {
+    "events": 631,
+    "facts": 2486,
+    "questions": 720,
+    "scenarios": 631
+  }
+}

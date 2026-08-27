@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": "Grantham Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Ingrid Merriweather",
+  "deal_id": "DEAL-44-006",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-44-0115",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-006",
+      "fact_id": "F-44-0508",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "Autumn Product Launch",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-006",
+      "fact_id": "F-44-0509",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "product launch",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-006",
+      "fact_id": "F-44-0510",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "310000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-006",
+      "fact_id": "F-44-0511",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-10-03",
+        "start": "2025-08-30"
+      },
+      "value": "2025-09-26",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-006",
+      "fact_id": "F-44-0512",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": "2025-10-03",
+        "start": "2025-08-30"
+      },
+      "value": "2025-10-26",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Autumn Product Launch brief for Vellichor Traders",
+  "timestamp": "2025-08-30",
+  "trust_class": "counterparty_asserted"
+}

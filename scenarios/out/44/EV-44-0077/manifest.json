@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-04",
+  "advertiser_name": "Yewbrook Provisions",
+  "agency_name": "Grantham Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Kiona Drummond",
+  "deal_id": "DEAL-44-013",
+  "deal_name": "Winter Seasonal Clearance",
+  "event_id": "EV-44-0077",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-013",
+      "fact_id": "F-44-0346",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-06"
+      },
+      "value": "Winter Seasonal Clearance",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-013",
+      "fact_id": "F-44-0347",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-06"
+      },
+      "value": "seasonal clearance",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-013",
+      "fact_id": "F-44-0348",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-06"
+      },
+      "value": "409000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-013",
+      "fact_id": "F-44-0349",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-06"
+      },
+      "value": "2025-07-29",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-013",
+      "fact_id": "F-44-0350",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-06"
+      },
+      "value": "2025-10-27",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Winter Seasonal Clearance brief for Yewbrook Provisions",
+  "timestamp": "2025-07-06",
+  "trust_class": "counterparty_asserted"
+}

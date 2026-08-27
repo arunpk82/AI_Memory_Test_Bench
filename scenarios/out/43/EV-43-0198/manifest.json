@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-01",
+  "advertiser_name": "Vellichor Provisions",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Marisol Delacroix",
+  "deal_id": "DEAL-43-001",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-43-0198",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-01",
+      "fact_id": "F-43-0798",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-14"
+      },
+      "value": "leaning toward renewal",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-01",
+      "fact_id": "F-43-0799",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-14"
+      },
+      "value": "390000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 43,
+  "subject": "Renewal conversation notes for Vellichor Provisions",
+  "timestamp": "2026-01-14",
+  "trust_class": "first_party_note"
+}

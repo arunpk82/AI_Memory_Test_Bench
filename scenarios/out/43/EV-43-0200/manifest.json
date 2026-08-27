@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-009",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-43-0200",
+  "facts": [
+    {
+      "attribute": "renewal_intent",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-03",
+      "fact_id": "F-43-0802",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-22"
+      },
+      "value": "committed for next fiscal year",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "renewal_budget_indication",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-03",
+      "fact_id": "F-43-0803",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-22"
+      },
+      "value": "505000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "renewal_conversation",
+  "seed": 43,
+  "subject": "Renewal conversation notes for Elmsworth Outfitters",
+  "timestamp": "2026-01-22",
+  "trust_class": "first_party_note"
+}

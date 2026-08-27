@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": "Kingfisher Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Xiomara Delacroix",
+  "deal_id": "DEAL-44-012",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-44-0128",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0024",
+      "fact_id": "F-44-0575",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0470",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-13"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0024",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0024",
+  "timestamp": "2025-09-13",
+  "trust_class": "first_party_sent"
+}

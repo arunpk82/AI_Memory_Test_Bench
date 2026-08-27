@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": "Broadleaf Trading",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Anouk Iyengar",
+  "deal_id": "DEAL-43-008",
+  "deal_name": "Holiday Lead Generation",
+  "event_id": "EV-43-0053",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0015",
+      "fact_id": "F-43-0257",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2025-04-08",
+        "start": "2025-03-25"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0015",
+      "fact_id": "F-43-0258",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-25"
+      },
+      "value": "2025-04-08",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0015",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0015",
+  "timestamp": "2025-03-25",
+  "trust_class": "first_party_note"
+}

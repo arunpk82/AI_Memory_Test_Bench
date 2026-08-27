@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-44-04",
+  "advertiser_name": "Yewbrook Provisions",
+  "agency_name": "Grantham Collective",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Kiona Drummond",
+  "deal_id": "DEAL-44-016",
+  "deal_name": "Spring Brand Awareness",
+  "event_id": "EV-44-0155",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-44-016",
+      "fact_id": "F-44-0688",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-20"
+      },
+      "value": "Spring Brand Awareness",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-44-016",
+      "fact_id": "F-44-0689",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-20"
+      },
+      "value": "brand awareness",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-44-016",
+      "fact_id": "F-44-0690",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-20"
+      },
+      "value": "558000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-016",
+      "fact_id": "F-44-0691",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-20"
+      },
+      "value": "2025-11-15",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-016",
+      "fact_id": "F-44-0692",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-20"
+      },
+      "value": "2026-02-13",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 44,
+  "subject": "Spring Brand Awareness brief for Yewbrook Provisions",
+  "timestamp": "2025-10-20",
+  "trust_class": "counterparty_asserted"
+}

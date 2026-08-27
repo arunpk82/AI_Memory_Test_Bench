@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-009",
+  "deal_name": "Back-to-School Lead Generation",
+  "event_id": "EV-43-0157",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-009",
+      "fact_id": "F-43-0665",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0605",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-08"
+      },
+      "value": "2025-10-26",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-009",
+      "fact_id": "F-43-0666",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0606",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-08"
+      },
+      "value": "2025-12-25",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 43,
+  "subject": "Back-to-School Lead Generation flight moved for Elmsworth Outfitters",
+  "timestamp": "2025-10-08",
+  "trust_class": "first_party_sent"
+}

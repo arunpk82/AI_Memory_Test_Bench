@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-09",
+  "advertiser_name": "Harrowgate Traders",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Perrin Drummond",
+  "deal_id": "DEAL-43-037",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-43-0153",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-43-0063",
+      "fact_id": "F-43-0650",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-10-04"
+      },
+      "value": "26.70",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0063",
+  "scenario_kind": "client_rate_claim",
+  "seed": 43,
+  "subject": "Rate question on IO-43-0063",
+  "timestamp": "2025-10-04",
+  "trust_class": "counterparty_asserted"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-04",
+  "advertiser_name": "Yewbrook Provisions",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-016",
+  "deal_name": "Spring Brand Awareness",
+  "event_id": "EV-44-0185",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-44-0029",
+      "fact_id": "F-44-0803",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0755",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-26"
+      },
+      "value": "11960000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-44-0029",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 44,
+  "subject": "Delivery goal reset on IO-44-0029",
+  "timestamp": "2025-11-26",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-007",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0100",
+  "facts": [
+    {
+      "attribute": "rate_card_cpm",
+      "entity": "order-line",
+      "entity_id": "IO-43-0013",
+      "fact_id": "F-43-0450",
+      "injection": false,
+      "never_memorize": true,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-06-20",
+        "start": "2025-06-20"
+      },
+      "value": "24.00",
+      "volatility_class": "ephemeral"
+    }
+  ],
+  "io_id": "IO-43-0013",
+  "scenario_kind": "rate_card_snapshot",
+  "seed": 43,
+  "subject": "Rate card snapshot for IO-43-0013",
+  "timestamp": "2025-06-20",
+  "trust_class": "system_of_record"
+}

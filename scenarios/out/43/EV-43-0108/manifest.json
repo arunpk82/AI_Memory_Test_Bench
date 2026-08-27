@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-09",
+  "advertiser_name": "Harrowgate Traders",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-037",
+  "deal_name": "Winter Loyalty Retention",
+  "event_id": "EV-43-0108",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0063",
+      "fact_id": "F-43-0485",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0412",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-07-05"
+      },
+      "value": "11290000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0063",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 43,
+  "subject": "Delivery goal reset on IO-43-0063",
+  "timestamp": "2025-07-05",
+  "trust_class": "system_of_record"
+}

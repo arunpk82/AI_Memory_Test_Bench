@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": "Trellis Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Corinne Eyre",
+  "deal_id": "DEAL-43-011",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0054",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-011",
+      "fact_id": "F-43-0259",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0162",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-26"
+      },
+      "value": "2025-04-08",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-011",
+      "fact_id": "F-43-0260",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0163",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-26"
+      },
+      "value": "2025-05-08",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 43,
+  "subject": "Back-to-School Loyalty Retention flight moved for Elmsworth Outfitters",
+  "timestamp": "2025-03-26",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-039",
+  "deal_name": "Winter Brand Awareness",
+  "event_id": "EV-43-0029",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0067",
+      "fact_id": "F-43-0152",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0120",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-14"
+      },
+      "value": "delivering",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0067",
+  "scenario_kind": "line_activation",
+  "seed": 43,
+  "subject": "IO-43-0067 moved into delivery",
+  "timestamp": "2025-02-14",
+  "trust_class": "system_of_record"
+}

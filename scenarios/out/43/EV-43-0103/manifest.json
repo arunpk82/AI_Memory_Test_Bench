@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": "Broadleaf Trading",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Lorcan Ollivander",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-43-0103",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-02",
+      "fact_id": "F-43-0463",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0010",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-22"
+      },
+      "value": "Lorcan Ollivander",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-43-002-B",
+      "fact_id": "F-43-0464",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-22"
+      },
+      "value": "activation manager",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-43-002-B",
+      "fact_id": "F-43-0465",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-22"
+      },
+      "value": "lorcan.ollivander@cragmont.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 43,
+  "subject": "New day-to-day contact at Cragmont Media",
+  "timestamp": "2025-06-22",
+  "trust_class": "counterparty_asserted"
+}

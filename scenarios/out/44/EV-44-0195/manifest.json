@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-05",
+  "advertiser_name": "Northwind Outfitters",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Corinne Hargreave",
+  "deal_id": "DEAL-44-019",
+  "deal_name": "Summer Brand Awareness",
+  "event_id": "EV-44-0195",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-44-0036",
+      "fact_id": "F-44-0819",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-20"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0036",
+  "scenario_kind": "client_rate_claim",
+  "seed": 44,
+  "subject": "Rate question on IO-44-0036",
+  "timestamp": "2025-12-20",
+  "trust_class": "counterparty_asserted"
+}

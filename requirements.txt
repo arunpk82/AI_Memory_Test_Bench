@@ -1,0 +1,8 @@
+# Runtime
+PyYAML>=6.0.1
+# Only needed for the two human-triggered Bedrock paths (LLM render, oracle
+# audit). Everything else, including the whole test suite, runs without it.
+boto3>=1.34.0
+
+# Development
+pytest>=8.0.0

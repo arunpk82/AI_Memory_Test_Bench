@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Caspian Nakashima",
+  "deal_id": "DEAL-43-041",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-43-0019",
+  "facts": [
+    {
+      "attribute": "deal_name",
+      "entity": "deal",
+      "entity_id": "DEAL-43-041",
+      "fact_id": "F-43-0095",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-23"
+      },
+      "value": "Winter Store Visits",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "objective",
+      "entity": "deal",
+      "entity_id": "DEAL-43-041",
+      "fact_id": "F-43-0096",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-23"
+      },
+      "value": "store visits",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "budget_usd",
+      "entity": "deal",
+      "entity_id": "DEAL-43-041",
+      "fact_id": "F-43-0097",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-23"
+      },
+      "value": "202000",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-041",
+      "fact_id": "F-43-0098",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-23"
+      },
+      "value": "2025-03-07",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-041",
+      "fact_id": "F-43-0099",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-23"
+      },
+      "value": "2025-04-06",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "deal_kickoff",
+  "seed": 43,
+  "subject": "Winter Store Visits brief for Vantablu Brands",
+  "timestamp": "2025-01-23",
+  "trust_class": "counterparty_asserted"
+}

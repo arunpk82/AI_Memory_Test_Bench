@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-05",
+  "advertiser_name": "Nettlecombe Collective",
+  "agency_name": "Broadleaf Trading",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Delphine Okonkwo",
+  "deal_id": "DEAL-43-018",
+  "deal_name": "Holiday Brand Awareness",
+  "event_id": "EV-43-0045",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-018",
+      "fact_id": "F-43-0225",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0144",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-09"
+      },
+      "value": "2025-03-14",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-018",
+      "fact_id": "F-43-0226",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0145",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-03-09"
+      },
+      "value": "2025-06-12",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 43,
+  "subject": "Holiday Brand Awareness flight moved for Nettlecombe Collective",
+  "timestamp": "2025-03-09",
+  "trust_class": "first_party_sent"
+}

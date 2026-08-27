@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Imani Castellanos",
+  "deal_id": "DEAL-44-041",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-44-0046",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-44-0076",
+      "fact_id": "F-44-0228",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0196",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-05-05"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0076",
+  "scenario_kind": "rate_revision",
+  "seed": 44,
+  "subject": "Revised rate on IO-44-0076",
+  "timestamp": "2025-05-05",
+  "trust_class": "first_party_sent"
+}

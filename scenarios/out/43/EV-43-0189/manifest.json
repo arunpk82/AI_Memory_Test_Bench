@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-05",
+  "advertiser_name": "Nettlecombe Collective",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-017",
+  "deal_name": "Back-to-School Brand Awareness",
+  "event_id": "EV-43-0189",
+  "facts": [
+    {
+      "attribute": "impressions_goal",
+      "entity": "order-line",
+      "entity_id": "IO-43-0029",
+      "fact_id": "F-43-0782",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0720",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-19"
+      },
+      "value": "16730000",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0029",
+  "scenario_kind": "impressions_adjustment",
+  "seed": 43,
+  "subject": "Delivery goal reset on IO-43-0029",
+  "timestamp": "2025-11-19",
+  "trust_class": "system_of_record"
+}

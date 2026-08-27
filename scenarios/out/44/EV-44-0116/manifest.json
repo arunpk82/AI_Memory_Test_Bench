@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-44-08",
+  "advertiser_name": "Halcyon Holdings",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Nadia Sandoval",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-44-0116",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-08",
+      "fact_id": "F-44-0513",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0040",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "Nadia Sandoval",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-44-008-B",
+      "fact_id": "F-44-0514",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "investment lead",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-44-008-B",
+      "fact_id": "F-44-0515",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-30"
+      },
+      "value": "nadia.sandoval@halcyon.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 44,
+  "subject": "New day-to-day contact at Halcyon Holdings",
+  "timestamp": "2025-08-30",
+  "trust_class": "counterparty_asserted"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-09",
+  "advertiser_name": "Harrowgate Traders",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-035",
+  "deal_name": "Summer Loyalty Retention",
+  "event_id": "EV-43-0178",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0059",
+      "fact_id": "F-43-0744",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0675",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-11-04"
+      },
+      "value": "delivering",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0059",
+  "scenario_kind": "line_activation",
+  "seed": 43,
+  "subject": "IO-43-0059 moved into delivery",
+  "timestamp": "2025-11-04",
+  "trust_class": "system_of_record"
+}

@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Adaeze Rothwell",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-44-0136",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-10",
+      "fact_id": "F-44-0607",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0050",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-21"
+      },
+      "value": "Adaeze Rothwell",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-44-010-B",
+      "fact_id": "F-44-0608",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-21"
+      },
+      "value": "account director",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-44-010-B",
+      "fact_id": "F-44-0609",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-21"
+      },
+      "value": "adaeze.rothwell@stonebrook.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 44,
+  "subject": "New day-to-day contact at Stonebrook Labs",
+  "timestamp": "2025-09-21",
+  "trust_class": "counterparty_asserted"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-04",
+  "advertiser_name": "Tessellate Media",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-014",
+  "deal_name": "Winter Brand Awareness",
+  "event_id": "EV-43-0196",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0026",
+      "fact_id": "F-43-0795",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0786",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-07"
+      },
+      "value": "cancelled",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0026",
+  "scenario_kind": "line_cancellation",
+  "seed": 43,
+  "subject": "Cancellation posted for IO-43-0026",
+  "timestamp": "2026-01-07",
+  "trust_class": "system_of_record"
+}

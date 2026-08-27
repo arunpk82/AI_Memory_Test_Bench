@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Imani Gallardo",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-43-0139",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-10",
+      "fact_id": "F-43-0599",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0077",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-08"
+      },
+      "value": "Imani Gallardo",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-43-010-B",
+      "fact_id": "F-43-0600",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-08"
+      },
+      "value": "account director",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-43-010-B",
+      "fact_id": "F-43-0601",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-08"
+      },
+      "value": "imani.gallardo@vantablu.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 43,
+  "subject": "New day-to-day contact at Vantablu Brands",
+  "timestamp": "2025-09-08",
+  "trust_class": "counterparty_asserted"
+}

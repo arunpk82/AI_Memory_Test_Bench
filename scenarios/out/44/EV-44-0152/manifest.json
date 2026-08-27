@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-02",
+  "advertiser_name": "Vellichor Traders",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-006",
+  "deal_name": "Autumn Product Launch",
+  "event_id": "EV-44-0152",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0010",
+      "fact_id": "F-44-0676",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0571",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-10-30",
+        "start": "2025-10-16"
+      },
+      "value": "on hold",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0010",
+  "scenario_kind": "line_hold",
+  "seed": 44,
+  "subject": "Hold placed on IO-44-0010",
+  "timestamp": "2025-10-16",
+  "trust_class": "system_of_record"
+}

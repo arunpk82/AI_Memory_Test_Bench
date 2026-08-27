@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-05",
+  "advertiser_name": "Northwind Outfitters",
+  "agency_name": "Inkwell Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Corinne Hargreave",
+  "deal_id": "DEAL-44-020",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-44-0139",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0618",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0493",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-27"
+      },
+      "value": "2025-11-11",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-020",
+      "fact_id": "F-44-0619",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0494",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-09-27"
+      },
+      "value": "2025-12-11",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 44,
+  "subject": "Winter Store Visits flight moved for Northwind Outfitters",
+  "timestamp": "2025-09-27",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-10",
+  "advertiser_name": "Stonebrook Labs",
+  "agency_name": "Inkwell Activation",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Imani Castellanos",
+  "deal_id": "DEAL-44-037",
+  "deal_name": "Summer Product Launch",
+  "event_id": "EV-44-0190",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-44-0070",
+      "fact_id": "F-44-0812",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-13"
+      },
+      "value": "18.50",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-44-0070",
+  "scenario_kind": "client_rate_claim",
+  "seed": 44,
+  "subject": "Rate question on IO-44-0070",
+  "timestamp": "2025-12-13",
+  "trust_class": "counterparty_asserted"
+}

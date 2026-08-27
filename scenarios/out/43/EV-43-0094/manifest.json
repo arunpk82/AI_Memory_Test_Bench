@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-02",
+  "advertiser_name": "Cragmont Media",
+  "agency_name": "Broadleaf Trading",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Anouk Iyengar",
+  "deal_id": "DEAL-43-007",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0094",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0012",
+      "fact_id": "F-43-0421",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0393",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-06-14"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0012",
+  "scenario_kind": "rate_revision",
+  "seed": 43,
+  "subject": "Revised rate on IO-43-0012",
+  "timestamp": "2025-06-14",
+  "trust_class": "first_party_sent"
+}

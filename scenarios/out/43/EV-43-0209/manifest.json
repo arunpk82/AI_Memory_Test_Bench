@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Rafael Wexler",
+  "deal_id": "DEAL-43-032",
+  "deal_name": "Summer Brand Awareness",
+  "event_id": "EV-43-0209",
+  "facts": [
+    {
+      "attribute": "cpm_rate_claimed",
+      "entity": "order-line",
+      "entity_id": "IO-43-0054",
+      "fact_id": "F-43-0820",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-02-23"
+      },
+      "value": "21.00",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0054",
+  "scenario_kind": "client_rate_claim",
+  "seed": 43,
+  "subject": "Rate question on IO-43-0054",
+  "timestamp": "2026-02-23",
+  "trust_class": "counterparty_asserted"
+}

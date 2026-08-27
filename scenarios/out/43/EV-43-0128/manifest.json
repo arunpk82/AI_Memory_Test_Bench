@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "counterparty",
+  "channel": "email_received",
+  "contact_name": "Vesper Umberto",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-43-0128",
+  "facts": [
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0560",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0055",
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-15"
+      },
+      "value": "Vesper Umberto",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_role",
+      "entity": "contact",
+      "entity_id": "CT-43-008-B",
+      "fact_id": "F-43-0561",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-15"
+      },
+      "value": "investment lead",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "contact_email",
+      "entity": "contact",
+      "entity_id": "CT-43-008-B",
+      "fact_id": "F-43-0562",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "counterparty_asserted",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-15"
+      },
+      "value": "vesper.umberto@mossbridge.example",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "contact_handoff",
+  "seed": 43,
+  "subject": "New day-to-day contact at Mossbridge Interactive",
+  "timestamp": "2025-08-15",
+  "trust_class": "counterparty_asserted"
+}

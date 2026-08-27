@@ -1,0 +1,70 @@
+{
+  "advertiser_id": "ADV-44-04",
+  "advertiser_name": "Yewbrook Provisions",
+  "agency_name": "Grantham Collective",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Kiona Drummond",
+  "deal_id": "DEAL-44-016",
+  "deal_name": "Spring Brand Awareness",
+  "event_id": "EV-44-0199",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-44-0029",
+      "fact_id": "F-44-0823",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2026-01-12",
+        "start": "2025-12-29"
+      },
+      "value": "under-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-44-0029",
+      "fact_id": "F-44-0824",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-29"
+      },
+      "value": "2026-01-12",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "advertiser_tax_id",
+      "entity": "advertiser",
+      "entity_id": "ADV-44-04",
+      "fact_id": "F-44-0825",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-29"
+      },
+      "value": "TAX-8415-VD",
+      "volatility_class": "permanent"
+    }
+  ],
+  "io_id": "IO-44-0029",
+  "scenario_kind": "pacing_note",
+  "seed": 44,
+  "subject": "Pacing call notes on IO-44-0029",
+  "timestamp": "2025-12-29",
+  "trust_class": "first_party_note"
+}

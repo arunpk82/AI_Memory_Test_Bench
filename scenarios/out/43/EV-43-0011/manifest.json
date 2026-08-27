@@ -1,0 +1,104 @@
+{
+  "advertiser_id": "ADV-43-08",
+  "advertiser_name": "Mossbridge Interactive",
+  "agency_name": "Saltmarsh Connect",
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": "Rafael Wexler",
+  "deal_id": null,
+  "deal_name": null,
+  "event_id": "EV-43-0011",
+  "facts": [
+    {
+      "attribute": "legal_entity_name",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0051",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-14"
+      },
+      "value": "Mossbridge Interactive LLC",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "billing_country",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0052",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-14"
+      },
+      "value": "United States",
+      "volatility_class": "permanent"
+    },
+    {
+      "attribute": "industry_vertical",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0053",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-14"
+      },
+      "value": "consumer electronics",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "agency_of_record",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0054",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-01-14"
+      },
+      "value": "Saltmarsh Connect",
+      "volatility_class": "slow_changing"
+    },
+    {
+      "attribute": "primary_contact",
+      "entity": "advertiser",
+      "entity_id": "ADV-43-08",
+      "fact_id": "F-43-0055",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-08-14",
+        "start": "2025-01-14"
+      },
+      "value": "Rafael Wexler",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "account_setup",
+  "seed": 43,
+  "subject": "Mossbridge Interactive account record created",
+  "timestamp": "2025-01-14",
+  "trust_class": "system_of_record"
+}

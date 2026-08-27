@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-44-03",
+  "advertiser_name": "Mossbridge Provisions",
+  "agency_name": "Kingfisher Activation",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Xiomara Delacroix",
+  "deal_id": "DEAL-44-009",
+  "deal_name": "Spring Product Launch",
+  "event_id": "EV-44-0187",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-44-009",
+      "fact_id": "F-44-0806",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0724",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-03"
+      },
+      "value": "2025-12-26",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-44-009",
+      "fact_id": "F-44-0807",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-44-0725",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-12-03"
+      },
+      "value": "2026-03-26",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 44,
+  "subject": "Spring Product Launch flight moved for Mossbridge Provisions",
+  "timestamp": "2025-12-03",
+  "trust_class": "first_party_sent"
+}

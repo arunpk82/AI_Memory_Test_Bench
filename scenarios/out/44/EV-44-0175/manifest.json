@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-44-05",
+  "advertiser_name": "Northwind Outfitters",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-44-017",
+  "deal_name": "Autumn App Installs",
+  "event_id": "EV-44-0175",
+  "facts": [
+    {
+      "attribute": "rate_card_cpm",
+      "entity": "order-line",
+      "entity_id": "IO-44-0031",
+      "fact_id": "F-44-0778",
+      "injection": false,
+      "never_memorize": true,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2025-11-10",
+        "start": "2025-11-10"
+      },
+      "value": "48.00",
+      "volatility_class": "ephemeral"
+    }
+  ],
+  "io_id": "IO-44-0031",
+  "scenario_kind": "rate_card_snapshot",
+  "seed": 44,
+  "subject": "Rate card snapshot for IO-44-0031",
+  "timestamp": "2025-11-10",
+  "trust_class": "system_of_record"
+}

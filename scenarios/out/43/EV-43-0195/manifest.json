@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-09",
+  "advertiser_name": "Harrowgate Traders",
+  "agency_name": "Hollowell Buying Desk",
+  "author": "user",
+  "channel": "call_note",
+  "contact_name": "Perrin Drummond",
+  "deal_id": "DEAL-43-035",
+  "deal_name": "Summer Loyalty Retention",
+  "event_id": "EV-43-0195",
+  "facts": [
+    {
+      "attribute": "pacing_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0061",
+      "fact_id": "F-43-0793",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": "2026-02-09",
+        "start": "2026-01-05"
+      },
+      "value": "over-delivering",
+      "volatility_class": "transient"
+    },
+    {
+      "attribute": "pacing_review_through",
+      "entity": "order-line",
+      "entity_id": "IO-43-0061",
+      "fact_id": "F-43-0794",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": null,
+      "trust_class": "first_party_note",
+      "validity_interval": {
+        "end": null,
+        "start": "2026-01-05"
+      },
+      "value": "2026-02-09",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": "IO-43-0061",
+  "scenario_kind": "pacing_note",
+  "seed": 43,
+  "subject": "Pacing call notes on IO-43-0061",
+  "timestamp": "2026-01-05",
+  "trust_class": "first_party_note"
+}

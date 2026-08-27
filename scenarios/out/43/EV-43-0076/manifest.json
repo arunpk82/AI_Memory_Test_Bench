@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-03",
+  "advertiser_name": "Elmsworth Outfitters",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-011",
+  "deal_name": "Back-to-School Loyalty Retention",
+  "event_id": "EV-43-0076",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0021",
+      "fact_id": "F-43-0350",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0312",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-04-28"
+      },
+      "value": "cancelled",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0021",
+  "scenario_kind": "line_cancellation",
+  "seed": 43,
+  "subject": "Cancellation posted for IO-43-0021",
+  "timestamp": "2025-04-28",
+  "trust_class": "system_of_record"
+}

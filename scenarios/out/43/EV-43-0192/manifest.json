@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-04",
+  "advertiser_name": "Tessellate Media",
+  "agency_name": null,
+  "author": "system",
+  "channel": "order_system",
+  "contact_name": null,
+  "deal_id": "DEAL-43-014",
+  "deal_name": "Winter Brand Awareness",
+  "event_id": "EV-43-0192",
+  "facts": [
+    {
+      "attribute": "line_status",
+      "entity": "order-line",
+      "entity_id": "IO-43-0026",
+      "fact_id": "F-43-0786",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0771",
+      "trust_class": "system_of_record",
+      "validity_interval": {
+        "end": "2026-01-06",
+        "start": "2025-12-17"
+      },
+      "value": "on hold",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0026",
+  "scenario_kind": "line_hold",
+  "seed": 43,
+  "subject": "Hold placed on IO-43-0026",
+  "timestamp": "2025-12-17",
+  "trust_class": "system_of_record"
+}

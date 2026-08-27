@@ -1,0 +1,36 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Caspian Nakashima",
+  "deal_id": "DEAL-43-041",
+  "deal_name": "Winter Store Visits",
+  "event_id": "EV-43-0032",
+  "facts": [
+    {
+      "attribute": "cpm_rate",
+      "entity": "order-line",
+      "entity_id": "IO-43-0071",
+      "fact_id": "F-43-0164",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0124",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-02-20"
+      },
+      "value": "22.75",
+      "volatility_class": "slow_changing"
+    }
+  ],
+  "io_id": "IO-43-0071",
+  "scenario_kind": "rate_revision",
+  "seed": 43,
+  "subject": "Revised rate on IO-43-0071",
+  "timestamp": "2025-02-20",
+  "trust_class": "first_party_sent"
+}

@@ -1,0 +1,53 @@
+{
+  "advertiser_id": "ADV-43-10",
+  "advertiser_name": "Vantablu Brands",
+  "agency_name": "Kingfisher Connect",
+  "author": "user",
+  "channel": "email_sent",
+  "contact_name": "Caspian Nakashima",
+  "deal_id": "DEAL-43-038",
+  "deal_name": "Back-to-School Product Launch",
+  "event_id": "EV-43-0130",
+  "facts": [
+    {
+      "attribute": "flight_start",
+      "entity": "deal",
+      "entity_id": "DEAL-43-038",
+      "fact_id": "F-43-0568",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0523",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-18"
+      },
+      "value": "2025-08-25",
+      "volatility_class": "durable"
+    },
+    {
+      "attribute": "flight_end",
+      "entity": "deal",
+      "entity_id": "DEAL-43-038",
+      "fact_id": "F-43-0569",
+      "injection": false,
+      "never_memorize": false,
+      "plausibility": null,
+      "supersedes": "F-43-0524",
+      "trust_class": "first_party_sent",
+      "validity_interval": {
+        "end": null,
+        "start": "2025-08-18"
+      },
+      "value": "2025-10-24",
+      "volatility_class": "durable"
+    }
+  ],
+  "io_id": null,
+  "scenario_kind": "flight_shift",
+  "seed": 43,
+  "subject": "Back-to-School Product Launch flight moved for Vantablu Brands",
+  "timestamp": "2025-08-18",
+  "trust_class": "first_party_sent"
+}
