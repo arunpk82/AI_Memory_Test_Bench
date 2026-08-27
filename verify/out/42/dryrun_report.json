@@ -1,0 +1,10 @@
+{
+  "clean": true,
+  "corpus_chars": 82349,
+  "corpus_scenarios": 208,
+  "findings": [],
+  "findings_by_check": {},
+  "mode": "dry-run",
+  "questions": 240,
+  "seed": 42
+}

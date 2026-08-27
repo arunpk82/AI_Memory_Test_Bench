@@ -43,6 +43,7 @@ from decimal import Decimal, InvalidOperation
 __all__ = [
     "ValueKind",
     "Extraction",
+    "TextIndex",
     "classify_value",
     "canonical_number",
     "canonical_date",
@@ -588,17 +589,42 @@ def values_match(left: str, right: str) -> bool:
     return normalize_name(left) == normalize_name(right)
 
 
-def _phrase_in_segments(phrase: str, text: str) -> bool:
-    wanted = name_tokens(phrase)
-    if not wanted:
+class TextIndex:
+    """A text prepared once for repeated containment queries.
+
+    Segmentation and extraction are the expensive part of a containment check.
+    The answerability audit asks hundreds of questions against one 80 KB corpus,
+    so the corpus is indexed once. :func:`value_in_text` is a thin wrapper over
+    this class rather than a second implementation -- there is one containment
+    code path, and it is this one.
+    """
+
+    def __init__(self, text: str) -> None:
+        self._segments = [name_tokens(segment.text)
+                          for segment in sentence_segments(str(text))]
+        extraction = extract_all(str(text))
+        self._numbers = {number for _, number in extraction.numbers}
+        self._dates = {found for _, found in extraction.dates}
+
+    def contains(self, value: str) -> bool:
+        if value is None:
+            return False
+        value = str(value)
+        kind = classify_value(value)
+        if kind == ValueKind.DATE:
+            return canonical_date(value) in self._dates
+        if kind == ValueKind.NUMBER:
+            target = canonical_number(value)
+            return any(target == number for number in self._numbers)
+        wanted = name_tokens(value)
+        if not wanted:
+            return False
+        width = len(wanted)
+        for tokens in self._segments:
+            for index in range(len(tokens) - width + 1):
+                if tokens[index:index + width] == wanted:
+                    return True
         return False
-    width = len(wanted)
-    for segment in sentence_segments(text):
-        tokens = name_tokens(segment.text)
-        for index in range(len(tokens) - width + 1):
-            if tokens[index:index + width] == wanted:
-                return True
-    return False
 
 
 def value_in_text(value: str, text: str) -> bool:
@@ -610,15 +636,7 @@ def value_in_text(value: str, text: str) -> bool:
     """
     if value is None or text is None:
         return False
-    value = str(value)
-    kind = classify_value(value)
-    if kind == ValueKind.DATE:
-        target = canonical_date(value)
-        return any(found == target for _, found in extract_dates(text))
-    if kind == ValueKind.NUMBER:
-        target = canonical_number(value)
-        return any(found == target for _, found in extract_numbers(text))
-    return _phrase_in_segments(value, text)
+    return TextIndex(text).contains(value)
 
 
 def token_in_text(token: str, text: str) -> bool:
