@@ -90,6 +90,22 @@ def test_oracle_missing_credentials_error_names_aws_credentials(monkeypatch,
         answerability.oracle_client(base_config)
 
 
+def test_missing_boto3_error_names_boto3(monkeypatch, base_config):
+    """One of the four fail-fast causes the spec requires by name."""
+    import sys
+    monkeypatch.setitem(sys.modules, "boto3", None)
+    with pytest.raises(renderer.RenderError, match="requires boto3"):
+        renderer.bedrock_client(base_config)
+    with pytest.raises(answerability.OracleError, match="requires boto3"):
+        answerability.oracle_client(base_config)
+
+
+def test_missing_region_error_names_the_region_key(monkeypatch):
+    monkeypatch.delenv("AWS_REGION", raising=False)
+    with pytest.raises(settings.ConfigError, match="aws.region"):
+        settings.aws_region({"aws": {}})
+
+
 def test_region_comes_from_the_environment_when_set(monkeypatch, base_config):
     monkeypatch.setenv("AWS_REGION", "eu-west-2")
     assert settings.aws_region(base_config) == "eu-west-2"
@@ -207,6 +223,54 @@ def test_llm_render_retries_until_fidelity_passes(monkeypatch, artifacts, base_c
     assert outcome["report"].ok
     # The second call must have carried the first draft back to the model.
     assert "nothing useful here" in calls[1]
+
+
+def test_llm_render_seed_writes_the_same_artifacts_as_the_template_path(
+        monkeypatch, artifacts, tmp_path):
+    """The whole LLM path, orchestration included, with the network stubbed.
+
+    Only the Bedrock call itself is replaced. Manifest construction, the fidelity
+    loop, the retry accounting and every artifact are the real code, so this is
+    the check that the LLM path is not a stub.
+    """
+    from scenarios.renderer import build_manifest, deal_name_map
+    from scenarios.templates import render_deterministic
+
+    deal_names = deal_name_map(artifacts.facts)
+    by_event = {}
+    for event in artifacts.events:
+        manifest = build_manifest(event, artifacts.facts_by_id, deal_names)
+        by_event[manifest["subject"]] = render_deterministic(manifest)
+
+    def fake_converse(client, model, system, message, *, temperature, max_tokens):
+        subject = message.split("Subject: ", 1)[1].split("\n", 1)[0]
+        return by_event[subject]
+
+    monkeypatch.setattr(renderer, "converse", fake_converse)
+    monkeypatch.setattr(renderer, "bedrock_client", lambda config: "stub-client")
+
+    results = renderer.render_seed(artifacts.seed, deterministic=False,
+                                   out_root=tmp_path,
+                                   universe_root=artifacts.universe_root, limit=4)
+    assert results["render_mode"] == "llm"
+    assert results["scenarios"] == 4
+    assert results["fidelity_failed"] == 0
+    assert results["attempt_histogram"] == {"1": 4}
+
+    import json
+    for directory in sorted(path for path in
+                            (tmp_path / str(artifacts.seed)).iterdir()
+                            if path.is_dir()):
+        meta = json.loads((directory / "meta.json").read_text(encoding="utf-8"))
+        assert meta["render_mode"] == "llm"
+        assert meta["model"] == "us.anthropic.claude-sonnet-4-6"
+        assert meta["template_version"] is None
+        assert meta["fidelity"] == "pass"
+        assert meta["timestamp"]
+        assert meta["attempt_history"] == [
+            {"attempt": 1, "status": "pass", "missing_facts": 0, "unsupported": 0}]
+        assert (directory / "rendered.md").read_text(encoding="utf-8").strip()
+        assert (directory / "manifest.json").exists()
 
 
 def test_llm_render_marks_fidelity_failed_when_retries_are_exhausted(

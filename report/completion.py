@@ -55,12 +55,16 @@ KNOWN_DORMANT: tuple[dict[str, str], ...] = (
                   "tests. No live Bedrock call is made in CI or in this run.",
     },
     {
-        "location": "scenarios/renderer.py :: render_seed(deterministic=False)",
+        "location": "scenarios/renderer.py :: render_seed(deterministic=False), "
+                    "against live Bedrock",
         "kind": "live network path",
         "detail": "The LLM render of a whole seed is human-triggered for cost "
-                  "control. render_llm itself, including the fidelity retry loop "
-                  "and the exhausted-retry outcome, is tested with a stubbed "
-                  "converse.",
+                  "control, so no seed in this run was rendered by a model. The "
+                  "orchestration is not dormant: a test drives render_seed in llm "
+                  "mode with only the converse call stubbed and asserts every "
+                  "artifact, and separate tests cover the fidelity retry loop and "
+                  "the exhausted-retry outcome. What has never executed here is "
+                  "the HTTP call.",
     },
     {
         "location": "verify/answerability.py :: oracle_client, ask_oracle, run_audit",
@@ -162,6 +166,15 @@ KNOWN_DORMANT: tuple[dict[str, str], ...] = (
                   "never produces initials, so only the abbreviation-word half of "
                   "the guard runs against the corpus. Both halves are covered by "
                   "the matching self-tests.",
+    },
+    {
+        "location": "scenarios/renderer.py :: bedrock_client / "
+                    "verify/answerability.py :: oracle_client, empty-region guard",
+        "kind": "defensive, unreachable",
+        "detail": "Both raise if the resolved region is empty, but "
+                  "settings.aws_region raises a ConfigError naming aws.region "
+                  "before it can return an empty value. The ConfigError path is "
+                  "tested; these two guards cannot be reached.",
     },
     {
         "location": "verify/fidelity.py :: main, failure detail printing",

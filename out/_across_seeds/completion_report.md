@@ -67,14 +67,23 @@ The LLM render is human-triggered after review, so no LLM fidelity numbers are r
 
 ## 4. Full pytest output
 
-Skipped with `--skip-tests`.
+Exit code: `0`
+
+```
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 72%]
+........................................................................ [ 96%]
+..........                                                               [100%]
+298 passed in 10.73s
+```
 
 ## 5. Dormant paths
 
-15 entries. An empty section here would be a claim, so the list is curated by hand as well as scanned. Every entry is a path that exists in the shipped code and is not exercised by the test suite.
+16 entries. An empty section here would be a claim, so the list is curated by hand as well as scanned. Every entry is a path that exists in the shipped code and is not exercised by the test suite.
 
 - **scenarios/renderer.py :: bedrock_client, converse** — _live network path_. The Bedrock session, credential resolution and converse call are driven with a fake session and a capturing client in the tests. No live Bedrock call is made in CI or in this run.
-- **scenarios/renderer.py :: render_seed(deterministic=False)** — _live network path_. The LLM render of a whole seed is human-triggered for cost control. render_llm itself, including the fidelity retry loop and the exhausted-retry outcome, is tested with a stubbed converse.
+- **scenarios/renderer.py :: render_seed(deterministic=False), against live Bedrock** — _live network path_. The LLM render of a whole seed is human-triggered for cost control, so no seed in this run was rendered by a model. The orchestration is not dormant: a test drives render_seed in llm mode with only the converse call stubbed and asserts every artifact, and separate tests cover the fidelity retry loop and the exhausted-retry outcome. What has never executed here is the HTTP call.
 - **verify/answerability.py :: oracle_client, ask_oracle, run_audit** — _live network path_. The oracle audit is human-triggered. ask_oracle is tested against a capturing client; run_audit's verdict logic is tested through classify(), which the calibration suite drives directly.
 - **verify/answerability.py :: resolve_oracle_model, Anthropic prefix branch** — _unreachable with the shipped config_. The configured oracle is amazon.nova-pro-v1:0, so the inference-profile-prefix check for Anthropic oracle ids cannot fire. It exists for anyone who swaps the oracle family.
 - **scenarios/renderer.py :: resolve_renderer_model, eu./apac. prefixes** — _unreachable with the shipped config_. Only the us. inference profile is accepted in practice because that is what config.yaml sets; the eu. and apac. prefixes are allowed but never taken.
@@ -87,9 +96,10 @@ Skipped with `--skip-tests`.
 - **questions/instantiate.py :: build_abstention_false_premise, fake-id collision guard** — _guard never fired_. Fabricated order-line ids use the 9xxx block and real ones never reach it, so the collision check never skips.
 - **questions/instantiate.py :: allocate, starvation break** — _branch never taken_. The 'no progress' break covers a universe with fewer candidates than the target total. All three seeds have surplus, so allocation always reaches its target and the break is not used.
 - **verify/matching.py :: _is_abbreviation_boundary, single-initial branch** — _branch with no data_. Sentence splitting declines to split after a single capital letter (an initial such as 'J. Whitfield'). The generator never produces initials, so only the abbreviation-word half of the guard runs against the corpus. Both halves are covered by the matching self-tests.
+- **scenarios/renderer.py :: bedrock_client / verify/answerability.py :: oracle_client, empty-region guard** — _defensive, unreachable_. Both raise if the resolved region is empty, but settings.aws_region raises a ConfigError naming aws.region before it can return an empty value. The ConfigError path is tested; these two guards cannot be reached.
 - **verify/fidelity.py :: main, failure detail printing** — _branch reached only on failure_. The per-scenario failure printout is exercised by the CLI failure test but never by a clean run, because the deterministic corpus has no fidelity failures.
 
-All 15 entries are curated. The automated scan found nothing: the source contains no unimplemented raises, no stub bodies, no unfinished-work comments, and no unset or placeholder configuration keys. The scan reads the syntax tree and the comment tokens rather than grepping lines, so a marker word inside a string literal cannot produce a false clean or a false finding.
+All 16 entries are curated. The automated scan found nothing: the source contains no unimplemented raises, no stub bodies, no unfinished-work comments, and no unset or placeholder configuration keys. The scan reads the syntax tree and the comment tokens rather than grepping lines, so a marker word inside a string literal cannot produce a false clean or a false finding.
 
 ## 6. Deviations
 
