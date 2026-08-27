@@ -1222,7 +1222,17 @@ def memory_point_status(fact: dict, facts_by_id: dict[str, dict],
     *superseded* means a later fact replaced it. *expired* means its validity
     lapsed with nothing taking its place. The two are not interchangeable: the
     first says the memory has a newer value, the second says it has none.
+
+    A fact whose validity has not begun at ``as_of`` has no status, because
+    memory should not hold it at all. Callers must filter those out; returning
+    "active" for them once put a not-yet-recorded revision into the expected
+    memory of a question asked before the revision existed.
     """
+    if parse_day(fact["validity_interval"]["start"]) > as_of:
+        raise SchemaError(
+            f"fact {fact['fact_id']} does not start until "
+            f"{fact['validity_interval']['start']}, so it has no memory-point "
+            f"status at {as_of}")
     successor_id = successors.get(fact["fact_id"])
     if successor_id is not None:
         successor = facts_by_id[successor_id]

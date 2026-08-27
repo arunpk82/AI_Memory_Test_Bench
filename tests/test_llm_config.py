@@ -1,0 +1,225 @@
+"""LLM-path configuration tests, hermetic.
+
+These tests exercise the Bedrock code paths without a network call and without
+credentials. What they pin is the set of fail-fast behaviours: every failure
+names the exact thing that is missing, because "render failed" with no cause is
+a bug report nobody can act on.
+"""
+
+from __future__ import annotations
+
+import pytest
+
+import settings
+from scenarios import renderer
+from verify import answerability
+
+boto3 = pytest.importorskip("boto3")
+
+
+class _FakeSession:
+    def __init__(self, credentials, **_kwargs):
+        self._credentials = credentials
+
+    def get_credentials(self):
+        return self._credentials
+
+    def client(self, name):
+        return f"client:{name}"
+
+
+@pytest.fixture
+def base_config():
+    return settings.load_config()
+
+
+# --------------------------------------------------------------- config keys ---
+
+def test_missing_model_key_names_the_key():
+    with pytest.raises(settings.ConfigError, match="renderer.model"):
+        settings.require({"renderer": {}}, "renderer.model")
+
+
+def test_tbd_model_is_rejected():
+    with pytest.raises(settings.ConfigError, match="placeholder"):
+        settings.require({"renderer": {"model": "TBD"}}, "renderer.model")
+
+
+def test_null_config_value_is_rejected():
+    with pytest.raises(settings.ConfigError, match="null"):
+        settings.require({"renderer": {"model": None}}, "renderer.model")
+
+
+def test_tbd_model_is_rejected_through_the_renderer():
+    with pytest.raises(settings.ConfigError, match="renderer.model"):
+        renderer.resolve_renderer_model({"renderer": {"model": "TBD"}})
+
+
+def test_anthropic_model_without_inference_profile_prefix_is_rejected():
+    config = {"renderer": {"model": "anthropic.claude-sonnet-4-6"}}
+    with pytest.raises(renderer.RenderError, match="inference-profile prefix"):
+        renderer.resolve_renderer_model(config)
+
+
+def test_configured_anthropic_model_carries_the_prefix(base_config):
+    model = renderer.resolve_renderer_model(base_config)
+    assert model.startswith("us.")
+    assert renderer.resolve_renderer_model(base_config) == model
+
+
+# --------------------------------------------------------------- credentials ---
+
+def test_missing_credentials_error_names_aws_credentials(monkeypatch, base_config):
+    monkeypatch.setattr(boto3, "Session",
+                        lambda **kwargs: _FakeSession(None, **kwargs))
+    with pytest.raises(renderer.RenderError, match="AWS credentials"):
+        renderer.bedrock_client(base_config)
+
+
+def test_present_credentials_yield_a_client(monkeypatch, base_config):
+    monkeypatch.setattr(boto3, "Session",
+                        lambda **kwargs: _FakeSession(object(), **kwargs))
+    assert renderer.bedrock_client(base_config) == "client:bedrock-runtime"
+
+
+def test_oracle_missing_credentials_error_names_aws_credentials(monkeypatch,
+                                                               base_config):
+    monkeypatch.setattr(boto3, "Session",
+                        lambda **kwargs: _FakeSession(None, **kwargs))
+    with pytest.raises(answerability.OracleError, match="AWS credentials"):
+        answerability.oracle_client(base_config)
+
+
+def test_region_comes_from_the_environment_when_set(monkeypatch, base_config):
+    monkeypatch.setenv("AWS_REGION", "eu-west-2")
+    assert settings.aws_region(base_config) == "eu-west-2"
+
+
+def test_region_falls_back_to_config(monkeypatch, base_config):
+    monkeypatch.delenv("AWS_REGION", raising=False)
+    assert settings.aws_region(base_config) == "us-east-1"
+
+
+# ------------------------------------------------------------ inference args ---
+
+class _CapturingClient:
+    def __init__(self, text="Subject: x\nDate: y\n\nbody\n\nThanks,\nad sales ops"):
+        self.calls = []
+        self._text = text
+
+    def converse(self, **kwargs):
+        self.calls.append(kwargs)
+        return {"output": {"message": {"content": [{"text": self._text}]}}}
+
+
+def test_converse_sends_temperature_and_never_top_p():
+    """Claude on Bedrock rejects temperature and topP together."""
+    client = _CapturingClient()
+    renderer.converse(client, "us.anthropic.claude-sonnet-4-6", "sys", "msg",
+                      temperature=0.7, max_tokens=1024)
+    config = client.calls[0]["inferenceConfig"]
+    assert config == {"temperature": 0.7, "maxTokens": 1024}
+    assert "topP" not in config
+    assert "top_p" not in config
+
+
+def test_converse_rejects_an_empty_completion():
+    client = _CapturingClient(text="   ")
+    with pytest.raises(renderer.RenderError, match="empty message"):
+        renderer.converse(client, "model", "sys", "msg", temperature=0.7,
+                          max_tokens=64)
+
+
+def test_oracle_call_sends_temperature_zero_and_one_question():
+    client = _CapturingClient(text="INSUFFICIENT_EVIDENCE")
+    answer = answerability.ask_oracle(client, "amazon.nova-pro-v1:0", "CORPUS",
+                                      "What is the rate?", temperature=0.0,
+                                      max_tokens=512)
+    assert answer == "INSUFFICIENT_EVIDENCE"
+    assert len(client.calls) == 1
+    call = client.calls[0]
+    assert call["inferenceConfig"] == {"temperature": 0.0, "maxTokens": 512}
+    assert len(call["messages"]) == 1
+    assert "What is the rate?" in call["messages"][0]["content"][0]["text"]
+
+
+# ------------------------------------------------------------- cross-family ---
+
+def test_oracle_model_must_be_cross_family(base_config):
+    model = answerability.resolve_oracle_model(base_config)
+    assert model == "amazon.nova-pro-v1:0"
+
+
+def test_same_family_oracle_is_rejected():
+    config = {"renderer": {"model": "us.anthropic.claude-sonnet-4-6"},
+              "answerability": {"oracle_model": "us.anthropic.claude-haiku-4-5"}}
+    with pytest.raises(answerability.OracleError, match="same model family"):
+        answerability.resolve_oracle_model(config)
+
+
+# ------------------------------------------------------------- retry prompts ---
+
+def test_retry_prompt_carries_the_previous_draft_and_the_failure_list():
+    """Blind retries failed 4/4 on the same omission; the draft is mandatory."""
+    prompt = renderer.RETRY_PROMPT.format(previous_draft="THE DRAFT",
+                                          failures="THE FAILURES")
+    assert "THE DRAFT" in prompt
+    assert "THE FAILURES" in prompt
+    assert "smallest possible set of edits" in prompt
+
+
+def test_system_prompt_forbids_lists_and_placeholders_and_demands_role_signoff():
+    prompt = renderer.system_prompt({"author": "user", "channel": "email_sent"})
+    for requirement in ("bullet lists", "character-exact", "ad sales ops",
+                        "[Your Name]", "CTV"):
+        assert requirement in prompt
+
+
+def test_user_prompt_lists_every_fact(artifacts):
+    from scenarios.renderer import build_manifest, deal_name_map
+    deal_names = deal_name_map(artifacts.facts)
+    manifest = build_manifest(artifacts.events[0], artifacts.facts_by_id, deal_names)
+    prompt = renderer.user_prompt(manifest)
+    for fact in manifest["facts"]:
+        assert fact["value"] in prompt
+        assert fact["attribute"] in prompt
+
+
+def test_llm_render_retries_until_fidelity_passes(monkeypatch, artifacts, base_config):
+    """The loop must stop retrying the moment fidelity passes."""
+    from scenarios.renderer import build_manifest, deal_name_map
+    from scenarios.templates import render_deterministic
+
+    deal_names = deal_name_map(artifacts.facts)
+    manifest = build_manifest(artifacts.events[0], artifacts.facts_by_id, deal_names)
+    good = render_deterministic(manifest)
+
+    drafts = iter(["Subject: nope\nDate: nope\n\nnothing useful here.", good])
+    calls = []
+
+    def fake_converse(client, model, system, message, *, temperature, max_tokens):
+        calls.append(message)
+        return next(drafts)
+
+    monkeypatch.setattr(renderer, "converse", fake_converse)
+    outcome = renderer.render_llm(manifest, client=None, config=base_config)
+    assert outcome["attempts"] == 2
+    assert outcome["report"].ok
+    # The second call must have carried the first draft back to the model.
+    assert "nothing useful here" in calls[1]
+
+
+def test_llm_render_marks_fidelity_failed_when_retries_are_exhausted(
+        monkeypatch, artifacts, base_config):
+    """Exhausted retries are recorded as failed, never silently shipped."""
+    from scenarios.renderer import build_manifest, deal_name_map
+
+    deal_names = deal_name_map(artifacts.facts)
+    manifest = build_manifest(artifacts.events[0], artifacts.facts_by_id, deal_names)
+
+    monkeypatch.setattr(renderer, "converse",
+                        lambda *args, **kwargs: "Subject: x\nDate: y\n\nuseless.")
+    outcome = renderer.render_llm(manifest, client=None, config=base_config)
+    assert outcome["attempts"] == int(base_config["renderer"]["max_retries"]) + 1
+    assert not outcome["report"].ok
+    assert outcome["report"].status == "failed"

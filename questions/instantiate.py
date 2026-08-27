@@ -233,10 +233,19 @@ class UniverseIndex:
 # --------------------------------------------------------------------------
 
 def _memory_points(index: UniverseIndex, facts: list[dict], as_of: date) -> list[dict]:
-    """Memory points for ``facts``, dropping injected and never-memorize facts."""
+    """Memory points for ``facts`` at ``as_of``.
+
+    Three kinds of fact are dropped: injected facts and never-memorize facts,
+    which a correct system must not hold at all, and facts whose validity has
+    not begun at ``as_of``, which it cannot yet know. The last case matters for
+    past-state questions, where the as-of date deliberately precedes the
+    correction being asked about.
+    """
     points = []
     for fact in facts:
         if not index.memorable(fact):
+            continue
+        if parse_day(fact["validity_interval"]["start"]) > as_of:
             continue
         points.append({"fact_id": fact["fact_id"],
                        "status": index.status(fact, as_of)})
