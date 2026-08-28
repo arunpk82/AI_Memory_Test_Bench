@@ -1,8 +1,14 @@
-# Runtime
+# Everything needed to generate universes, render the deterministic corpus,
+# instantiate questions, run the network-free audit, build the completion report
+# and run the whole test suite.
 PyYAML>=6.0.1
-# Only needed for the two human-triggered Bedrock paths (LLM render, oracle
-# audit). Everything else, including the whole test suite, runs without it.
-boto3>=1.34.0
-
-# Development
 pytest>=8.0.0
+
+# boto3 is NOT here on purpose. It is only needed for the two human-triggered
+# Bedrock paths (the LLM render and the oracle audit), it pulls a 15 MB botocore
+# wheel, and nothing else in the repository imports it. Install it separately
+# when you actually want to spend money:
+#
+#     pip install -r requirements-bedrock.txt
+#
+# Without it the suite runs in full and the Bedrock tests skip themselves.

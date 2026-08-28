@@ -46,7 +46,7 @@ require it.
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 # 1. Generate the universes (deterministic, no network).
 python3 -m universe.generator --seeds 42,43,44
@@ -75,11 +75,18 @@ package. No seed is hardcoded anywhere; `tests/test_cli.py` checks that by
 driving each entry point with a seed other than 42 and looking at where the bytes
 landed. Cross-seed artifacts live in `out/_across_seeds/`.
 
+`requirements.txt` is deliberately just PyYAML and pytest. boto3 lives in
+`requirements-bedrock.txt` because it is only needed for the two paths below, it
+pulls a 15 MB botocore wheel, and nothing else in the repository imports it.
+Without it the suite still runs in full and the Bedrock tests skip themselves.
+
 ### The paths that cost money
 
 Two paths call Bedrock and are **human-triggered**, never part of a test run:
 
 ```bash
+python3 -m pip install -r requirements-bedrock.txt
+
 # LLM render. --limit and --only exist for cost control.
 python3 -m scenarios.renderer --seed 42 --limit 5
 
@@ -251,6 +258,10 @@ Two constraints are enforced in code rather than documented and hoped for:
 ```bash
 python3 -m pytest tests/ -q     # whole suite, no network, no credentials
 ```
+
+No credentials, no network access and no boto3 are required. With boto3 absent,
+`tests/test_llm_config.py` skips as a module via `pytest.importorskip` and
+everything else runs unchanged.
 
 Notable groups:
 

@@ -126,9 +126,44 @@ def test_every_deviation_states_decision_alternative_and_why():
 
 def test_required_documents_exist():
     for name in ("README.md", "LICENSE", "DEVIATIONS.md", "PRINCIPLES.md",
-                 "config.yaml", "requirements.txt",
+                 "config.yaml", "requirements.txt", "requirements-bedrock.txt",
                  "decisions/ADR-000-rebuild.md"):
         assert (REPO_ROOT / name).exists(), name
+
+
+def test_base_requirements_do_not_pull_boto3():
+    """The default install must stay small enough not to time out.
+
+    boto3 is only needed for the two Bedrock paths and drags in a 15 MB
+    botocore wheel. Putting it in the base requirements made a first-time setup
+    fail on a slow link, for a dependency the failing commands never import.
+    """
+    base = (REPO_ROOT / "requirements.txt").read_text(encoding="utf-8")
+    requirements = [line.split("#")[0].strip() for line in base.splitlines()]
+    assert not any(line.startswith("boto3") for line in requirements if line)
+
+    optional = (REPO_ROOT / "requirements-bedrock.txt").read_text(encoding="utf-8")
+    assert any(line.split("#")[0].strip().startswith("boto3")
+               for line in optional.splitlines())
+
+
+def test_bedrock_imports_are_lazy():
+    """Nothing may import boto3 at module scope, or the skip would not work."""
+    import ast
+    for path in sorted(REPO_ROOT.rglob("*.py")):
+        if ".venv" in path.parts or "tests" in path.parts:
+            continue
+        tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+        for node in tree.body:
+            names = []
+            if isinstance(node, ast.Import):
+                names = [alias.name for alias in node.names]
+            elif isinstance(node, ast.ImportFrom):
+                names = [node.module or ""]
+            assert not any(name.split(".")[0] in ("boto3", "botocore")
+                           for name in names), (
+                f"{path.relative_to(REPO_ROOT)} imports boto3 at module scope; it "
+                f"must be imported inside the function that needs it")
 
 
 def test_license_is_apache_2():

@@ -1,0 +1,14 @@
+# Optional: only for the two human-triggered paths that call Bedrock.
+#
+#     python3 -m scenarios.renderer --seed 42          # LLM render
+#     python3 -m verify.answerability --seed 42        # oracle audit
+#
+# Everything else -- generation, the deterministic render, fidelity, question
+# instantiation, the --dry-run audit, the completion report and the full test
+# suite -- runs without this file installed.
+#
+# botocore is a ~15 MB wheel. On a slow link, raise pip's patience:
+#
+#     pip install --timeout 120 --retries 10 -r requirements-bedrock.txt
+-r requirements.txt
+boto3>=1.34.0
