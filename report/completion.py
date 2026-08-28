@@ -48,11 +48,27 @@ COMMENT_MARKERS = ("TODO", "FIXME", "XXX", "HACK")
 #: point: the section is a claim about the build.
 KNOWN_DORMANT: tuple[dict[str, str], ...] = (
     {
-        "location": "scenarios/renderer.py :: bedrock_client, converse",
+        "location": "providers.py :: _post_json, against a real endpoint",
         "kind": "live network path",
-        "detail": "The Bedrock session, credential resolution and converse call "
-                  "are driven with a fake session and a capturing client in the "
-                  "tests. No live Bedrock call is made in CI or in this run.",
+        "detail": "The Groq and Gemini transports are exercised against a fake "
+                  "urlopen that pins the URL, headers, body shape, retry "
+                  "behaviour and every error branch. No socket has been opened "
+                  "to either service from this repository.",
+    },
+    {
+        "location": "providers.py :: _bedrock_client, live session",
+        "kind": "live network path",
+        "detail": "Credential resolution and client construction are driven with "
+                  "a fake boto3 session. No live Bedrock call is made in CI or in "
+                  "this run.",
+    },
+    {
+        "location": "providers.py :: complete, unsupported-provider fallback",
+        "kind": "defensive, unreachable",
+        "detail": "The final else in the dispatch cannot be reached because "
+                  "ModelSpec rejects an unknown provider at construction. It is "
+                  "kept so that adding a provider to PROVIDERS without adding a "
+                  "transport fails loudly instead of silently.",
     },
     {
         "location": "scenarios/renderer.py :: render_seed(deterministic=False), "
@@ -67,27 +83,18 @@ KNOWN_DORMANT: tuple[dict[str, str], ...] = (
                   "the HTTP call.",
     },
     {
-        "location": "verify/answerability.py :: oracle_client, ask_oracle, run_audit",
+        "location": "verify/answerability.py :: run_audit, against a live model",
         "kind": "live network path",
         "detail": "The oracle audit is human-triggered. ask_oracle is tested "
                   "against a capturing client; run_audit's verdict logic is tested "
                   "through classify(), which the calibration suite drives directly.",
     },
     {
-        "location": "verify/answerability.py :: resolve_oracle_model, "
-                    "Anthropic prefix branch",
+        "location": "providers.py :: BEDROCK_PROFILE_PREFIXES, eu. and apac.",
         "kind": "unreachable with the shipped config",
-        "detail": "The configured oracle is amazon.nova-pro-v1:0, so the "
-                  "inference-profile-prefix check for Anthropic oracle ids cannot "
-                  "fire. It exists for anyone who swaps the oracle family.",
-    },
-    {
-        "location": "scenarios/renderer.py :: resolve_renderer_model, "
-                    "eu./apac. prefixes",
-        "kind": "unreachable with the shipped config",
-        "detail": "Only the us. inference profile is accepted in practice because "
+        "detail": "Only the us. inference profile is used in practice because "
                   "that is what config.yaml sets; the eu. and apac. prefixes are "
-                  "allowed but never taken.",
+                  "accepted but never taken.",
     },
     {
         "location": "universe/generator.py :: supersession_chains, cycle guard",
@@ -168,13 +175,12 @@ KNOWN_DORMANT: tuple[dict[str, str], ...] = (
                   "the matching self-tests.",
     },
     {
-        "location": "scenarios/renderer.py :: bedrock_client / "
-                    "verify/answerability.py :: oracle_client, empty-region guard",
+        "location": "providers.py :: _bedrock_client, empty-region guard",
         "kind": "defensive, unreachable",
-        "detail": "Both raise if the resolved region is empty, but "
+        "detail": "It raises if the resolved region is empty, but "
                   "settings.aws_region raises a ConfigError naming aws.region "
                   "before it can return an empty value. The ConfigError path is "
-                  "tested; these two guards cannot be reached.",
+                  "tested; this guard cannot be reached.",
     },
     {
         "location": "verify/fidelity.py :: main, failure detail printing",

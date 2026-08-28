@@ -5,6 +5,10 @@
 # substituting a fallback model. See DORMANT PATHS in the completion report.
 
 renderer:
+  # bedrock | groq | gemini. Bedrock is the default and needs boto3 plus AWS
+  # credentials; groq and gemini are plain HTTPS calls made with the standard
+  # library and need only GROQ_API_KEY or GEMINI_API_KEY. See README.
+  provider: bedrock
   # Anthropic models on Bedrock require the `us.` inference-profile prefix.
   model: us.anthropic.claude-sonnet-4-6
   # Claude on Bedrock rejects temperature and top_p together. Only temperature
@@ -16,8 +20,10 @@ renderer:
   max_retries: 3
 
 answerability:
+  provider: bedrock
   # Cross-family from renderer.model by requirement: a Claude-rendered corpus
-  # must not be audited by a Claude oracle.
+  # must not be audited by a Claude oracle. The provider counts towards the
+  # family, so a Gemini renderer audited by a Groq oracle also satisfies it.
   oracle_model: amazon.nova-pro-v1:0
   temperature: 0.0
   max_tokens: 512

@@ -39,6 +39,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import providers
 import settings
 from questions.instantiate import UniverseIndex, load_questions
 from universe.generator import load_universe
@@ -383,68 +384,45 @@ class OracleError(RuntimeError):
     """Raised when the oracle path cannot run."""
 
 
-def oracle_client(config: dict):
-    """Build the Bedrock client for the oracle, failing fast and by name."""
-    try:
-        import boto3
-    except ImportError as exc:
-        raise OracleError(
-            "the oracle path requires boto3, which is not installed; "
-            "`pip install boto3` or use --dry-run") from exc
+def oracle_spec(config: dict) -> providers.ModelSpec:
+    """Read the oracle's provider and model, and enforce cross-family auditing.
 
-    region = settings.aws_region(config)
-    if not region:
-        raise OracleError(
-            "no AWS region configured: set AWS_REGION or aws.region in config.yaml")
-    session = boto3.Session(region_name=region)
-    if session.get_credentials() is None:
-        raise OracleError(
-            "no AWS credentials found for the oracle path; configure AWS "
-            "credentials (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY / "
-            "AWS_SESSION_TOKEN, or an instance role) or use --dry-run")
-    return session.client("bedrock-runtime")
+    The renderer and the oracle must not share a model family. An oracle grading
+    text written in its own idiom is measuring the wrong thing: it finds its own
+    phrasings easy and everything else hard, and the audit reports that as a
+    property of the corpus.
 
-
-def resolve_oracle_model(config: dict) -> str:
-    """Read ``answerability.oracle_model`` and enforce cross-family auditing."""
-    model = str(settings.require(config, "answerability.oracle_model")).strip()
-    renderer_model = str(settings.require(config, "renderer.model")).strip()
-    if _family(model) == _family(renderer_model):
+    Family includes the provider, so switching one side to Groq or Gemini
+    satisfies the rule the same way switching vendors within Bedrock does.
+    """
+    spec = providers.spec_from_config(config, "oracle", model_key="oracle_model")
+    renderer = providers.spec_from_config(config, "renderer", model_key="model")
+    if spec.family == renderer.family:
         raise OracleError(
-            f"oracle_model {model!r} is the same model family as renderer.model "
-            f"{renderer_model!r}; the audit must be cross-family, or the oracle is "
+            f"oracle {spec.provider}/{spec.model} is the same model family "
+            f"({spec.family}) as the renderer {renderer.provider}/"
+            f"{renderer.model}; the audit must be cross-family, or the oracle is "
             f"grading text written in its own idiom")
-    if "anthropic." in model and not model.startswith(("us.", "eu.", "apac.")):
-        raise OracleError(
-            f"oracle_model {model!r} is an Anthropic model id without an "
-            f"inference-profile prefix; Bedrock requires 'us.{model}'")
-    return model
+    return spec
 
 
-def _family(model_id: str) -> str:
-    body = model_id.split(".", 1)[1] if model_id.startswith(("us.", "eu.", "apac.")) \
-        else model_id
-    return body.split(".", 1)[0]
+def oracle_client(config: dict, spec: providers.ModelSpec | None = None):
+    """Prepare the oracle's provider, failing fast and by name."""
+    return providers.build_client(spec or oracle_spec(config), config)
 
 
-def ask_oracle(client, model: str, corpus: str, question_text: str, *,
-               temperature: float, max_tokens: int) -> str:
+def ask_oracle(client, spec: providers.ModelSpec, corpus: str,
+               question_text: str) -> str:
     """One question, one call.
 
     Batching questions into a single call lets the oracle carry context between
     them; an answer to question 7 then reflects evidence surfaced by question 3,
     and the audit stops measuring per-question answerability.
     """
-    response = client.converse(
-        modelId=model,
-        system=[{"text": ORACLE_SYSTEM}],
-        messages=[{"role": "user", "content": [
-            {"text": ORACLE_USER.format(corpus=corpus, question=question_text)}]}],
-        inferenceConfig={"temperature": float(temperature),
-                         "maxTokens": int(max_tokens)},
-    )
-    blocks = response["output"]["message"]["content"]
-    return "".join(block.get("text", "") for block in blocks).strip()
+    return providers.complete(
+        spec, ORACLE_SYSTEM,
+        ORACLE_USER.format(corpus=corpus, question=question_text),
+        client=client)
 
 
 def classify(question: dict, answer: str, facts_by_id: dict[str, dict],
@@ -507,15 +485,12 @@ def run_audit(seed: int, *, scenario_root: Path | None = None,
     if limit is not None:
         questions = questions[:limit]
 
-    model = resolve_oracle_model(config)
-    client = oracle_client(config)
-    temperature = settings.require(config, "answerability.temperature")
-    max_tokens = settings.require(config, "answerability.max_tokens")
+    spec = oracle_spec(config)
+    client = oracle_client(config, spec)
 
     records = []
     for question in questions:
-        answer = ask_oracle(client, model, full_text, question["text"],
-                            temperature=temperature, max_tokens=max_tokens)
+        answer = ask_oracle(client, spec, full_text, question["text"])
         records.append(classify(question, answer, facts_by_id, facts, corpus_index))
 
     counts = {verdict: 0 for verdict in VERDICTS}
@@ -524,7 +499,8 @@ def run_audit(seed: int, *, scenario_root: Path | None = None,
     return {
         "seed": seed,
         "mode": "live",
-        "oracle_model": model,
+        "oracle_provider": spec.provider,
+        "oracle_model": spec.model,
         "questions": len(records),
         "verdicts": counts,
         "match_disputes": [record["question_id"] for record in records
@@ -585,7 +561,8 @@ def main(argv: list[str] | None = None) -> int:
                        question_root=args.question_root, limit=args.limit,
                        only_types=args.types)
     path = write_report(args.seed, report, args.out_root)
-    print(f"seed {report['seed']} audit [{report['oracle_model']}]: "
+    print(f"seed {report['seed']} audit "
+          f"[{report['oracle_provider']}/{report['oracle_model']}]: "
           f"{report['questions']} questions")
     for verdict in VERDICTS:
         print(f"  {verdict:14s} {report['verdicts'][verdict]:4d}")

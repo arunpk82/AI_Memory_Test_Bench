@@ -31,7 +31,9 @@ import argparse
 import json
 from pathlib import Path
 
+import providers
 import settings
+from providers import complete
 from universe.generator import load_universe
 from universe.schema import derive_trust_class
 from verify import fidelity
@@ -189,74 +191,19 @@ def system_prompt(manifest: dict) -> str:
     return SYSTEM_PROMPT.format(author=manifest["author"], channel=manifest["channel"])
 
 
-def bedrock_client(config: dict):
-    """Build a Bedrock runtime client, failing fast and by name.
-
-    Every failure mode names the exact thing that is missing: boto3, the region,
-    the credentials, or the model id. "Could not render" with no cause is a bug
-    report nobody can act on.
-    """
-    try:
-        import boto3
-        from botocore.exceptions import BotoCoreError, NoCredentialsError  # noqa: F401
-    except ImportError as exc:
-        raise RenderError(
-            "the LLM render path requires boto3, which is not installed; "
-            "`pip install boto3` or use --deterministic") from exc
-
-    region = settings.aws_region(config)
-    if not region:
-        raise RenderError(
-            "no AWS region configured: set the AWS_REGION environment variable "
-            "or aws.region in config.yaml")
-
-    session = boto3.Session(region_name=region)
-    if session.get_credentials() is None:
-        raise RenderError(
-            "no AWS credentials found for the Bedrock render path; configure AWS "
-            "credentials (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY / "
-            "AWS_SESSION_TOKEN, or an instance role) or use --deterministic")
-    return session.client("bedrock-runtime")
+def renderer_spec(config: dict) -> providers.ModelSpec:
+    """Read and sanity-check the renderer's provider and model."""
+    return providers.spec_from_config(config, "renderer", model_key="model")
 
 
-def resolve_renderer_model(config: dict) -> str:
-    """Read and sanity-check ``renderer.model``."""
-    model = str(settings.require(config, "renderer.model")).strip()
-    if "anthropic." in model and not model.startswith(("us.", "eu.", "apac.")):
-        raise RenderError(
-            f"renderer.model {model!r} is an Anthropic model id without an "
-            f"inference-profile prefix; Bedrock requires 'us.{model}' (or the "
-            f"prefix for your region)")
-    return model
-
-
-def converse(client, model: str, system: str, message: str, *,
-             temperature: float, max_tokens: int) -> str:
-    """One Bedrock ``converse`` call.
-
-    ``topP`` is deliberately absent: Claude on Bedrock rejects a request that
-    carries both ``temperature`` and ``topP``, so this testbed sends temperature
-    only, for every model, on every call.
-    """
-    response = client.converse(
-        modelId=model,
-        system=[{"text": system}],
-        messages=[{"role": "user", "content": [{"text": message}]}],
-        inferenceConfig={"temperature": float(temperature),
-                         "maxTokens": int(max_tokens)},
-    )
-    blocks = response["output"]["message"]["content"]
-    text = "".join(block.get("text", "") for block in blocks).strip()
-    if not text:
-        raise RenderError(f"Bedrock returned an empty message for model {model}")
-    return text
+def build_client(config: dict, spec: providers.ModelSpec | None = None):
+    """Prepare the configured provider, failing fast and by name."""
+    return providers.build_client(spec or renderer_spec(config), config)
 
 
 def render_llm(manifest: dict, client, config: dict) -> dict:
-    """Render one scenario through Bedrock with a fidelity-driven retry loop."""
-    model = resolve_renderer_model(config)
-    temperature = settings.require(config, "renderer.temperature")
-    max_tokens = settings.require(config, "renderer.max_tokens")
+    """Render one scenario through a model, with a fidelity-driven retry loop."""
+    spec = renderer_spec(config)
     max_retries = int(settings.require(config, "renderer.max_retries"))
 
     system = system_prompt(manifest)
@@ -268,8 +215,7 @@ def render_llm(manifest: dict, client, config: dict) -> dict:
 
     for attempt in range(max_retries + 1):
         attempts = attempt + 1
-        draft = converse(client, model, system, message,
-                         temperature=temperature, max_tokens=max_tokens)
+        draft = complete(spec, system, message, client=client)
         report = fidelity.verify_render(manifest, draft)
         history.append({"attempt": attempts, "status": report.status,
                         "missing_facts": len(report.missing_facts),
@@ -280,7 +226,7 @@ def render_llm(manifest: dict, client, config: dict) -> dict:
                                       failures=report.failure_summary())
 
     return {"text": draft, "attempts": attempts, "report": report,
-            "history": history, "model": model}
+            "history": history, "model": spec.model, "provider": spec.provider}
 
 
 # --------------------------------------------------------------------------
@@ -317,7 +263,7 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
     client = None
     if not deterministic:
         config = config or settings.load_config()
-        client = bedrock_client(config)
+        client = build_client(config)
 
     results = {"seed": seed, "render_mode": "deterministic" if deterministic else "llm",
                "scenarios": 0, "fidelity_pass": 0, "fidelity_failed": 0,
@@ -328,7 +274,7 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
         if deterministic:
             text = render_deterministic(manifest)
             report = fidelity.verify_render(manifest, text)
-            attempts, model = 1, None
+            attempts, model, provider = 1, None, None
             history: list[dict] = []
         else:
             outcome = render_llm(manifest, client, config)
@@ -336,6 +282,7 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
             report = outcome["report"]
             attempts = outcome["attempts"]
             model = outcome["model"]
+            provider = outcome["provider"]
             history = outcome["history"]
 
         meta = {
@@ -346,6 +293,7 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
             "channel": manifest["channel"],
             "author": manifest["author"],
             "render_mode": results["render_mode"],
+            "provider": provider,
             "model": model,
             "template_version": TEMPLATE_VERSION if deterministic else None,
             "attempts": attempts,

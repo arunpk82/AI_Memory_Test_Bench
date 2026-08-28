@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import pytest
 
+import providers
 import settings
 from scenarios import renderer
 from verify import answerability
@@ -52,19 +53,21 @@ def test_null_config_value_is_rejected():
 
 def test_tbd_model_is_rejected_through_the_renderer():
     with pytest.raises(settings.ConfigError, match="renderer.model"):
-        renderer.resolve_renderer_model({"renderer": {"model": "TBD"}})
+        renderer.renderer_spec({"renderer": {"model": "TBD"}})
 
 
-def test_anthropic_model_without_inference_profile_prefix_is_rejected():
-    config = {"renderer": {"model": "anthropic.claude-sonnet-4-6"}}
-    with pytest.raises(renderer.RenderError, match="inference-profile prefix"):
-        renderer.resolve_renderer_model(config)
+def test_anthropic_model_without_inference_profile_prefix_is_rejected(base_config):
+    config = dict(base_config)
+    config["renderer"] = dict(base_config["renderer"],
+                              model="anthropic.claude-sonnet-4-6")
+    with pytest.raises(providers.ProviderError, match="inference-profile prefix"):
+        renderer.renderer_spec(config)
 
 
 def test_configured_anthropic_model_carries_the_prefix(base_config):
-    model = renderer.resolve_renderer_model(base_config)
-    assert model.startswith("us.")
-    assert renderer.resolve_renderer_model(base_config) == model
+    spec = renderer.renderer_spec(base_config)
+    assert spec.model.startswith("us.")
+    assert spec.provider == "bedrock"
 
 
 # --------------------------------------------------------------- credentials ---
@@ -72,21 +75,21 @@ def test_configured_anthropic_model_carries_the_prefix(base_config):
 def test_missing_credentials_error_names_aws_credentials(monkeypatch, base_config):
     monkeypatch.setattr(boto3, "Session",
                         lambda **kwargs: _FakeSession(None, **kwargs))
-    with pytest.raises(renderer.RenderError, match="AWS credentials"):
-        renderer.bedrock_client(base_config)
+    with pytest.raises(providers.ProviderError, match="AWS credentials"):
+        renderer.build_client(base_config)
 
 
 def test_present_credentials_yield_a_client(monkeypatch, base_config):
     monkeypatch.setattr(boto3, "Session",
                         lambda **kwargs: _FakeSession(object(), **kwargs))
-    assert renderer.bedrock_client(base_config) == "client:bedrock-runtime"
+    assert renderer.build_client(base_config) == "client:bedrock-runtime"
 
 
 def test_oracle_missing_credentials_error_names_aws_credentials(monkeypatch,
                                                                base_config):
     monkeypatch.setattr(boto3, "Session",
                         lambda **kwargs: _FakeSession(None, **kwargs))
-    with pytest.raises(answerability.OracleError, match="AWS credentials"):
+    with pytest.raises(providers.ProviderError, match="AWS credentials"):
         answerability.oracle_client(base_config)
 
 
@@ -94,9 +97,9 @@ def test_missing_boto3_error_names_boto3(monkeypatch, base_config):
     """One of the four fail-fast causes the spec requires by name."""
     import sys
     monkeypatch.setitem(sys.modules, "boto3", None)
-    with pytest.raises(renderer.RenderError, match="requires boto3"):
-        renderer.bedrock_client(base_config)
-    with pytest.raises(answerability.OracleError, match="requires boto3"):
+    with pytest.raises(providers.ProviderError, match="requires boto3"):
+        renderer.build_client(base_config)
+    with pytest.raises(providers.ProviderError, match="requires boto3"):
         answerability.oracle_client(base_config)
 
 
@@ -128,29 +131,30 @@ class _CapturingClient:
         return {"output": {"message": {"content": [{"text": self._text}]}}}
 
 
-def test_converse_sends_temperature_and_never_top_p():
+def test_bedrock_sends_temperature_and_never_top_p():
     """Claude on Bedrock rejects temperature and topP together."""
     client = _CapturingClient()
-    renderer.converse(client, "us.anthropic.claude-sonnet-4-6", "sys", "msg",
-                      temperature=0.7, max_tokens=1024)
+    spec = providers.ModelSpec("bedrock", "us.anthropic.claude-sonnet-4-6",
+                               0.7, 1024, "renderer")
+    providers.complete(spec, "sys", "msg", client=client)
     config = client.calls[0]["inferenceConfig"]
     assert config == {"temperature": 0.7, "maxTokens": 1024}
     assert "topP" not in config
     assert "top_p" not in config
 
 
-def test_converse_rejects_an_empty_completion():
+def test_bedrock_rejects_an_empty_completion():
     client = _CapturingClient(text="   ")
-    with pytest.raises(renderer.RenderError, match="empty message"):
-        renderer.converse(client, "model", "sys", "msg", temperature=0.7,
-                          max_tokens=64)
+    spec = providers.ModelSpec("bedrock", "amazon.nova-pro-v1:0", 0.7, 64,
+                               "renderer")
+    with pytest.raises(providers.ProviderError, match="empty completion"):
+        providers.complete(spec, "sys", "msg", client=client)
 
 
-def test_oracle_call_sends_temperature_zero_and_one_question():
+def test_oracle_call_sends_temperature_zero_and_one_question(base_config):
     client = _CapturingClient(text="INSUFFICIENT_EVIDENCE")
-    answer = answerability.ask_oracle(client, "amazon.nova-pro-v1:0", "CORPUS",
-                                      "What is the rate?", temperature=0.0,
-                                      max_tokens=512)
+    spec = answerability.oracle_spec(base_config)
+    answer = answerability.ask_oracle(client, spec, "CORPUS", "What is the rate?")
     assert answer == "INSUFFICIENT_EVIDENCE"
     assert len(client.calls) == 1
     call = client.calls[0]
@@ -162,15 +166,17 @@ def test_oracle_call_sends_temperature_zero_and_one_question():
 # ------------------------------------------------------------- cross-family ---
 
 def test_oracle_model_must_be_cross_family(base_config):
-    model = answerability.resolve_oracle_model(base_config)
-    assert model == "amazon.nova-pro-v1:0"
+    spec = answerability.oracle_spec(base_config)
+    assert spec.model == "amazon.nova-pro-v1:0"
+    assert spec.provider == "bedrock"
 
 
-def test_same_family_oracle_is_rejected():
-    config = {"renderer": {"model": "us.anthropic.claude-sonnet-4-6"},
-              "answerability": {"oracle_model": "us.anthropic.claude-haiku-4-5"}}
+def test_same_family_oracle_is_rejected(base_config):
+    config = dict(base_config)
+    config["answerability"] = dict(base_config["answerability"],
+                                   oracle_model="us.anthropic.claude-haiku-4-5")
     with pytest.raises(answerability.OracleError, match="same model family"):
-        answerability.resolve_oracle_model(config)
+        answerability.oracle_spec(config)
 
 
 # ------------------------------------------------------------- retry prompts ---
@@ -213,11 +219,11 @@ def test_llm_render_retries_until_fidelity_passes(monkeypatch, artifacts, base_c
     drafts = iter(["Subject: nope\nDate: nope\n\nnothing useful here.", good])
     calls = []
 
-    def fake_converse(client, model, system, message, *, temperature, max_tokens):
+    def fake_complete(spec, system, message, *, client=None):
         calls.append(message)
         return next(drafts)
 
-    monkeypatch.setattr(renderer, "converse", fake_converse)
+    monkeypatch.setattr(renderer, "complete", fake_complete)
     outcome = renderer.render_llm(manifest, client=None, config=base_config)
     assert outcome["attempts"] == 2
     assert outcome["report"].ok
@@ -242,12 +248,12 @@ def test_llm_render_seed_writes_the_same_artifacts_as_the_template_path(
         manifest = build_manifest(event, artifacts.facts_by_id, deal_names)
         by_event[manifest["subject"]] = render_deterministic(manifest)
 
-    def fake_converse(client, model, system, message, *, temperature, max_tokens):
+    def fake_complete(spec, system, message, *, client=None):
         subject = message.split("Subject: ", 1)[1].split("\n", 1)[0]
         return by_event[subject]
 
-    monkeypatch.setattr(renderer, "converse", fake_converse)
-    monkeypatch.setattr(renderer, "bedrock_client", lambda config: "stub-client")
+    monkeypatch.setattr(renderer, "complete", fake_complete)
+    monkeypatch.setattr(renderer, "build_client", lambda config: "stub-client")
 
     results = renderer.render_seed(artifacts.seed, deterministic=False,
                                    out_root=tmp_path,
@@ -281,7 +287,7 @@ def test_llm_render_marks_fidelity_failed_when_retries_are_exhausted(
     deal_names = deal_name_map(artifacts.facts)
     manifest = build_manifest(artifacts.events[0], artifacts.facts_by_id, deal_names)
 
-    monkeypatch.setattr(renderer, "converse",
+    monkeypatch.setattr(renderer, "complete",
                         lambda *args, **kwargs: "Subject: x\nDate: y\n\nuseless.")
     outcome = renderer.render_llm(manifest, client=None, config=base_config)
     assert outcome["attempts"] == int(base_config["renderer"]["max_retries"]) + 1

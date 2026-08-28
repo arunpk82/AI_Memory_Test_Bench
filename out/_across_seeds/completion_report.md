@@ -70,23 +70,24 @@ The LLM render is human-triggered after review, so no LLM fidelity numbers are r
 Exit code: `0`
 
 ```
-........................................................................ [ 23%]
-........................................................................ [ 47%]
-........................................................................ [ 71%]
-........................................................................ [ 95%]
-..............                                                           [100%]
-302 passed in 10.81s
+........................................................................ [ 21%]
+........................................................................ [ 42%]
+........................................................................ [ 63%]
+........................................................................ [ 84%]
+...................................................                      [100%]
+339 passed in 10.87s
 ```
 
 ## 5. Dormant paths
 
-16 entries. An empty section here would be a claim, so the list is curated by hand as well as scanned. Every entry is a path that exists in the shipped code and is not exercised by the test suite.
+17 entries. An empty section here would be a claim, so the list is curated by hand as well as scanned. Every entry is a path that exists in the shipped code and is not exercised by the test suite.
 
-- **scenarios/renderer.py :: bedrock_client, converse** — _live network path_. The Bedrock session, credential resolution and converse call are driven with a fake session and a capturing client in the tests. No live Bedrock call is made in CI or in this run.
+- **providers.py :: _post_json, against a real endpoint** — _live network path_. The Groq and Gemini transports are exercised against a fake urlopen that pins the URL, headers, body shape, retry behaviour and every error branch. No socket has been opened to either service from this repository.
+- **providers.py :: _bedrock_client, live session** — _live network path_. Credential resolution and client construction are driven with a fake boto3 session. No live Bedrock call is made in CI or in this run.
+- **providers.py :: complete, unsupported-provider fallback** — _defensive, unreachable_. The final else in the dispatch cannot be reached because ModelSpec rejects an unknown provider at construction. It is kept so that adding a provider to PROVIDERS without adding a transport fails loudly instead of silently.
 - **scenarios/renderer.py :: render_seed(deterministic=False), against live Bedrock** — _live network path_. The LLM render of a whole seed is human-triggered for cost control, so no seed in this run was rendered by a model. The orchestration is not dormant: a test drives render_seed in llm mode with only the converse call stubbed and asserts every artifact, and separate tests cover the fidelity retry loop and the exhausted-retry outcome. What has never executed here is the HTTP call.
-- **verify/answerability.py :: oracle_client, ask_oracle, run_audit** — _live network path_. The oracle audit is human-triggered. ask_oracle is tested against a capturing client; run_audit's verdict logic is tested through classify(), which the calibration suite drives directly.
-- **verify/answerability.py :: resolve_oracle_model, Anthropic prefix branch** — _unreachable with the shipped config_. The configured oracle is amazon.nova-pro-v1:0, so the inference-profile-prefix check for Anthropic oracle ids cannot fire. It exists for anyone who swaps the oracle family.
-- **scenarios/renderer.py :: resolve_renderer_model, eu./apac. prefixes** — _unreachable with the shipped config_. Only the us. inference profile is accepted in practice because that is what config.yaml sets; the eu. and apac. prefixes are allowed but never taken.
+- **verify/answerability.py :: run_audit, against a live model** — _live network path_. The oracle audit is human-triggered. ask_oracle is tested against a capturing client; run_audit's verdict logic is tested through classify(), which the calibration suite drives directly.
+- **providers.py :: BEDROCK_PROFILE_PREFIXES, eu. and apac.** — _unreachable with the shipped config_. Only the us. inference profile is used in practice because that is what config.yaml sets; the eu. and apac. prefixes are accepted but never taken.
 - **universe/generator.py :: supersession_chains, cycle guard** — _defensive, provably unreachable_. A supersession graph can only become cyclic via a fact with two successors, and build_successor_map rejects that first. The double-supersession guard is tested; this one cannot be reached through any public shape and is kept as a backstop.
 - **universe/generator.py :: bump_cpm, ladder-exhausted raise** — _guard never fired_. The rate ladder has twelve rungs and no chain uses more than three, so the exhaustion raise never fires on seeds 42, 43 or 44.
 - **universe/generator.py :: _distinct_names, wordlist-exhausted raise** — _guard never fired_. 44 advertiser roots against at most 12 advertisers, and 18 agency roots against at most 7 agencies. The raise protects a future increase in entity counts.
@@ -96,12 +97,12 @@ Exit code: `0`
 - **questions/instantiate.py :: build_abstention_false_premise, fake-id collision guard** — _guard never fired_. Fabricated order-line ids use the 9xxx block and real ones never reach it, so the collision check never skips.
 - **questions/instantiate.py :: allocate, starvation break** — _branch never taken_. The 'no progress' break covers a universe with fewer candidates than the target total. All three seeds have surplus, so allocation always reaches its target and the break is not used.
 - **verify/matching.py :: _is_abbreviation_boundary, single-initial branch** — _branch with no data_. Sentence splitting declines to split after a single capital letter (an initial such as 'J. Whitfield'). The generator never produces initials, so only the abbreviation-word half of the guard runs against the corpus. Both halves are covered by the matching self-tests.
-- **scenarios/renderer.py :: bedrock_client / verify/answerability.py :: oracle_client, empty-region guard** — _defensive, unreachable_. Both raise if the resolved region is empty, but settings.aws_region raises a ConfigError naming aws.region before it can return an empty value. The ConfigError path is tested; these two guards cannot be reached.
+- **providers.py :: _bedrock_client, empty-region guard** — _defensive, unreachable_. It raises if the resolved region is empty, but settings.aws_region raises a ConfigError naming aws.region before it can return an empty value. The ConfigError path is tested; this guard cannot be reached.
 - **verify/fidelity.py :: main, failure detail printing** — _branch reached only on failure_. The per-scenario failure printout is exercised by the CLI failure test but never by a clean run, because the deterministic corpus has no fidelity failures.
 
-All 16 entries are curated. The automated scan found nothing: the source contains no unimplemented raises, no stub bodies, no unfinished-work comments, and no unset or placeholder configuration keys. The scan reads the syntax tree and the comment tokens rather than grepping lines, so a marker word inside a string literal cannot produce a false clean or a false finding.
+All 17 entries are curated. The automated scan found nothing: the source contains no unimplemented raises, no stub bodies, no unfinished-work comments, and no unset or placeholder configuration keys. The scan reads the syntax tree and the comment tokens rather than grepping lines, so a marker word inside a string literal cannot produce a false clean or a false finding.
 
 ## 6. Deviations
 
-`DEVIATIONS.md` contains **20** entries: D-001, D-002, D-003, D-004, D-005, D-006, D-007, D-008, D-009, D-010, D-011, D-012, D-013, D-014, D-015, D-016, D-017, D-018, D-019, D-020.
+`DEVIATIONS.md` contains **21** entries: D-001, D-002, D-003, D-004, D-005, D-006, D-007, D-008, D-009, D-010, D-011, D-012, D-013, D-014, D-015, D-016, D-017, D-018, D-019, D-020, D-021.
 

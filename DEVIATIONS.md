@@ -336,3 +336,36 @@ conflicts, and the fabricated identifier for false-premise questions.
 looked-up one (D-008) and a never-memorize probe from an injection probe
 (D-007). Parsing free text to make a verdict decision is how a checker starts
 disagreeing with the thing it checks.
+
+---
+
+## D-021 Groq and Gemini are supported alongside Bedrock
+
+**Decision.** Every model call goes through one function, `providers.complete`,
+which dispatches to Bedrock, Groq or Gemini. The provider is set per role in
+`config.yaml` and **defaults to Bedrock**, so the specified configuration — a
+Claude renderer on Bedrock audited by Amazon Nova — is unchanged and is what
+ships. Groq and Gemini are plain HTTPS calls made with the standard library, so
+selecting either adds no dependency.
+
+**Alternative.** Call the Bedrock `converse` API directly from the renderer and
+from the oracle, as originally specified.
+
+**Why.** The specification pins Bedrock, and the shipped configuration still
+does. But Bedrock is the highest-friction way to run this: it needs an AWS
+account, a 15 MB SDK and a region with model access, and that friction falls
+entirely on the open-source reader who wants to reproduce a number. Making the
+transport pluggable costs one module and removes that barrier.
+
+Two properties are preserved rather than relaxed. The **cross-family rule** is
+enforced across providers, not just within Bedrock: the provider is part of the
+computed family, so a Gemini renderer audited by a Gemini oracle is refused
+before any call is made, and a Gemini renderer audited by a Groq oracle
+satisfies the rule the same way an Anthropic/Amazon pairing does. And **no
+provider sends `top_p`** — that constraint began as a Claude-on-Bedrock
+requirement, and applying it only to Bedrock would have made it a latent
+surprise for whoever switched provider first.
+
+The single-entry-point shape is the matching-module rule applied again: if the
+renderer and the oracle each built their own request, they would drift, and
+"the model" would silently mean two different things in one report.

@@ -82,11 +82,10 @@ Without it the suite still runs in full and the Bedrock tests skip themselves.
 
 ### The paths that cost money
 
-Two paths call Bedrock and are **human-triggered**, never part of a test run:
+Two paths call a language model and are **human-triggered**, never part of a
+test run:
 
 ```bash
-python3 -m pip install -r requirements-bedrock.txt
-
 # LLM render. --limit and --only exist for cost control.
 python3 -m scenarios.renderer --seed 42 --limit 5
 
@@ -94,11 +93,60 @@ python3 -m scenarios.renderer --seed 42 --limit 5
 python3 -m verify.answerability --seed 42 --limit 20
 ```
 
-They need AWS credentials and Bedrock access in the configured region
-(`AWS_REGION`, falling back to `aws.region` in `config.yaml`). Every failure mode
-names the exact thing that is missing — boto3, the region, the credentials, or
-the model id — because "render failed" with no cause is a bug report nobody can
-act on.
+Every failure mode names the exact thing that is missing — the package, the
+credential, the environment variable, or the model id — because "render failed"
+with no cause is a bug report nobody can act on.
+
+### Choosing a provider
+
+Three providers are supported, set per role in `config.yaml`. Bedrock is the
+default because it is what the build specification pins, but nothing else
+depends on it.
+
+| provider | needs | credential |
+|---|---|---|
+| `bedrock` | `pip install -r requirements-bedrock.txt` | AWS credentials + `AWS_REGION` |
+| `groq` | nothing | `GROQ_API_KEY` |
+| `gemini` | nothing | `GEMINI_API_KEY` (or `GOOGLE_API_KEY`) |
+
+Groq and Gemini are plain HTTPS calls made with the standard library, so
+choosing either adds **no dependency at all** — the base install stays two
+wheels and you never need an AWS account.
+
+```yaml
+renderer:
+  provider: gemini
+  model: gemini-2.5-flash
+  temperature: 0.7
+  max_tokens: 1024
+  max_retries: 3
+
+answerability:
+  provider: groq
+  oracle_model: llama-3.3-70b-versatile
+  temperature: 0.0
+  max_tokens: 512
+```
+
+```bash
+export GEMINI_API_KEY=...
+export GROQ_API_KEY=...
+python3 -m scenarios.renderer --seed 42 --limit 5
+```
+
+Every model call in the repository goes through one function,
+`providers.complete`. That is the same rule the matching policy lives under: two
+implementations of a shared operation disagree silently, and if the renderer
+sent one sampling parameter and the oracle sent another, "the model" would mean
+two different things in one report.
+
+The **cross-family rule still applies** and is enforced in code. The provider
+counts towards the family, so a Gemini renderer audited by a Groq oracle
+satisfies it, and a Gemini renderer audited by a Gemini oracle is refused before
+a single call is made.
+
+The `--dry-run` audit, the deterministic render, generation, fidelity and the
+whole test suite need no provider, no key and no network.
 
 ## Layout
 
@@ -107,6 +155,7 @@ universe/      generator.py, schema.py   -> out/<seed>/{facts,events}.jsonl, sch
 scenarios/     renderer.py, templates/   -> out/<seed>/<event_id>/{manifest,meta}.json, rendered.md
 questions/     instantiate.py            -> out/<seed>/questions.jsonl
 verify/        matching.py, fidelity.py, answerability.py
+providers.py   the single model-call entry point (bedrock | groq | gemini)
 report/        completion.py             -> out/_across_seeds/
 tests/         full suite, zero network
 decisions/     ADR-000-rebuild.md
@@ -238,20 +287,24 @@ authoring defects be reported as model failures.
 Set in `config.yaml`. A missing or `TBD` value is a hard error naming the exact
 key; nothing substitutes a default model.
 
-| role | model | sampling |
-|---|---|---|
-| renderer | `us.anthropic.claude-sonnet-4-6` | temperature 0.7, max_tokens 1024 |
-| oracle | `amazon.nova-pro-v1:0` | temperature 0.0, max_tokens 512 |
+| role | provider | model | sampling |
+|---|---|---|---|
+| renderer | bedrock | `us.anthropic.claude-sonnet-4-6` | temperature 0.7, max_tokens 1024 |
+| oracle | bedrock | `amazon.nova-pro-v1:0` | temperature 0.0, max_tokens 512 |
 
 Two constraints are enforced in code rather than documented and hoped for:
 
-- **Cross-family auditing.** `resolve_oracle_model` refuses a configuration where
-  the oracle shares a model family with the renderer. An oracle grading text
-  written in its own idiom measures the wrong thing.
+- **Cross-family auditing.** `answerability.oracle_spec` refuses a configuration
+  where the oracle shares a model family with the renderer. An oracle grading
+  text written in its own idiom measures the wrong thing: it finds its own
+  phrasings easy and everything else hard, and the audit reports that as a
+  property of the corpus.
 - **Temperature only, never `top_p`.** Claude on Bedrock rejects a request
-  carrying both, so no code path in this repository ever sends `topP`. Anthropic
-  model ids also require the `us.` inference-profile prefix, and a bare
-  `anthropic.*` id is rejected with a message saying so.
+  carrying both. Rather than make that a Bedrock-only special case — the kind of
+  asymmetry that becomes a confusing bug the day someone switches providers —
+  *no* provider in this repository sends `top_p`, and a test asserts it for each
+  one. Anthropic model ids also require the `us.` inference-profile prefix, and a
+  bare `anthropic.*` id is rejected with a message saying so.
 
 ## Testing
 
