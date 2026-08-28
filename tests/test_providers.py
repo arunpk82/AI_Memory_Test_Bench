@@ -364,7 +364,7 @@ def test_renderer_can_be_driven_by_groq(monkeypatch, artifacts, tmp_path):
     assert results["fidelity_failed"] == 0
     assert results["scenarios"] == 3
 
-    meta_path = next((tmp_path / str(artifacts.seed)).iterdir()) / "meta.json"
+    meta_path = next(p for p in (tmp_path / str(artifacts.seed)).iterdir() if p.is_dir()) / "meta.json"
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
     assert meta["provider"] == "groq"
     assert meta["model"] == "llama-3.3-70b-versatile"
