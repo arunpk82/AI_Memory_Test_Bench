@@ -134,7 +134,7 @@
     }
   },
   "deviations": {
-    "entries": 21,
+    "entries": 20,
     "exists": true,
     "file": "DEVIATIONS.md",
     "ids": [
@@ -157,25 +157,14 @@
       "D-017",
       "D-018",
       "D-019",
-      "D-020",
-      "D-021"
+      "D-020"
     ]
   },
   "dormant_paths": [
     {
-      "detail": "The Groq and Gemini transports are exercised against a fake urlopen that pins the URL, headers, body shape, retry behaviour and every error branch. No socket has been opened to either service from this repository.",
+      "detail": "The Bedrock session, credential resolution and converse call are driven with a fake session and a capturing client in the tests. No live Bedrock call is made in CI or in this run.",
       "kind": "live network path",
-      "location": "providers.py :: _post_json, against a real endpoint"
-    },
-    {
-      "detail": "Credential resolution and client construction are driven with a fake boto3 session. No live Bedrock call is made in CI or in this run.",
-      "kind": "live network path",
-      "location": "providers.py :: _bedrock_client, live session"
-    },
-    {
-      "detail": "The final else in the dispatch cannot be reached because ModelSpec rejects an unknown provider at construction. It is kept so that adding a provider to PROVIDERS without adding a transport fails loudly instead of silently.",
-      "kind": "defensive, unreachable",
-      "location": "providers.py :: complete, unsupported-provider fallback"
+      "location": "scenarios/renderer.py :: bedrock_client, converse"
     },
     {
       "detail": "The LLM render of a whole seed is human-triggered for cost control, so no seed in this run was rendered by a model. The orchestration is not dormant: a test drives render_seed in llm mode with only the converse call stubbed and asserts every artifact, and separate tests cover the fidelity retry loop and the exhausted-retry outcome. What has never executed here is the HTTP call.",
@@ -185,12 +174,17 @@
     {
       "detail": "The oracle audit is human-triggered. ask_oracle is tested against a capturing client; run_audit's verdict logic is tested through classify(), which the calibration suite drives directly.",
       "kind": "live network path",
-      "location": "verify/answerability.py :: run_audit, against a live model"
+      "location": "verify/answerability.py :: oracle_client, ask_oracle, run_audit"
     },
     {
-      "detail": "Only the us. inference profile is used in practice because that is what config.yaml sets; the eu. and apac. prefixes are accepted but never taken.",
+      "detail": "The configured oracle is amazon.nova-pro-v1:0, so the inference-profile-prefix check for Anthropic oracle ids cannot fire. It exists for anyone who swaps the oracle family.",
       "kind": "unreachable with the shipped config",
-      "location": "providers.py :: BEDROCK_PROFILE_PREFIXES, eu. and apac."
+      "location": "verify/answerability.py :: resolve_oracle_model, Anthropic prefix branch"
+    },
+    {
+      "detail": "Only the us. inference profile is accepted in practice because that is what config.yaml sets; the eu. and apac. prefixes are allowed but never taken.",
+      "kind": "unreachable with the shipped config",
+      "location": "scenarios/renderer.py :: resolve_renderer_model, eu./apac. prefixes"
     },
     {
       "detail": "A supersession graph can only become cyclic via a fact with two successors, and build_successor_map rejects that first. The double-supersession guard is tested; this one cannot be reached through any public shape and is kept as a backstop.",
@@ -238,9 +232,9 @@
       "location": "verify/matching.py :: _is_abbreviation_boundary, single-initial branch"
     },
     {
-      "detail": "It raises if the resolved region is empty, but settings.aws_region raises a ConfigError naming aws.region before it can return an empty value. The ConfigError path is tested; this guard cannot be reached.",
+      "detail": "Both raise if the resolved region is empty, but settings.aws_region raises a ConfigError naming aws.region before it can return an empty value. The ConfigError path is tested; these two guards cannot be reached.",
       "kind": "defensive, unreachable",
-      "location": "providers.py :: _bedrock_client, empty-region guard"
+      "location": "scenarios/renderer.py :: bedrock_client / verify/answerability.py :: oracle_client, empty-region guard"
     },
     {
       "detail": "The per-scenario failure printout is exercised by the CLI failure test but never by a clean run, because the deterministic corpus has no fidelity failures.",
@@ -251,7 +245,7 @@
   "pytest": {
     "exit_code": 0,
     "stderr": "",
-    "stdout": "........................................................................ [ 21%]\n........................................................................ [ 42%]\n........................................................................ [ 63%]\n........................................................................ [ 84%]\n...................................................                      [100%]\n339 passed in 10.87s\n"
+    "stdout": "........................................................................ [ 25%]\n........................................................................ [ 51%]\n........................................................................ [ 77%]\n..............................................................           [100%]\n278 passed, 1 skipped in 57.51s\n"
   },
   "seeds": [
     {
