@@ -38,8 +38,11 @@ which recomputes every hash from a fresh generation rather than quoting one.
 
 ## Install and run
 
-Python 3.12. Every module runs as `python3 -m <package>.<module>` from the
-repository root — relative imports require it.
+Python 3.10 or newer. The suite is run on 3.10, 3.11 and 3.12, and all three
+produce byte-identical `facts.jsonl` for every seed — determinism holds across
+interpreter versions, not just across runs. Every module runs as
+`python3 -m <package>.<module>` from the repository root; relative imports
+require it.
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate

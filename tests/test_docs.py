@@ -64,6 +64,24 @@ def test_readme_timeline_spans_match(readme, all_universes):
     assert stated == actual
 
 
+def test_running_interpreter_meets_the_declared_floor():
+    import sys
+
+    import settings
+    assert sys.version_info[:2] >= settings.MINIMUM_PYTHON, (
+        f"this interpreter is {sys.version_info.major}.{sys.version_info.minor}, "
+        f"below the declared floor of "
+        f"{settings.MINIMUM_PYTHON[0]}.{settings.MINIMUM_PYTHON[1]}")
+
+
+def test_readme_states_the_declared_python_floor(readme):
+    """The floor lives in one place and the README has to agree with it."""
+    import settings
+    major, minor = settings.MINIMUM_PYTHON
+    assert f"Python {major}.{minor} or newer" in readme, (
+        f"README does not state the declared floor of Python {major}.{minor}")
+
+
 def test_readme_documents_the_current_as_of_rule(readme):
     """The spec requires the "current" as-of definition to be in the README."""
     assert "max(fact.validity_interval.start) + 365 days" in readme

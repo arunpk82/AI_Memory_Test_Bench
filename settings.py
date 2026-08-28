@@ -16,6 +16,13 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_CONFIG_PATH = REPO_ROOT / "config.yaml"
 
+#: Oldest interpreter this testbed is supported on. The whole suite passes on
+#: 3.10, 3.11 and 3.12, and all three produce byte-identical ``facts.jsonl`` for
+#: every seed. 3.9 also passes today but is past end of life, so it is not
+#: claimed. ``tests/test_docs.py`` checks that the README states this same
+#: version, so the number cannot drift out of the documentation.
+MINIMUM_PYTHON = (3, 10)
+
 #: Placeholder values that must never be used as if they were configured.
 UNSET_MARKERS = {"", "TBD", "tbd", "TODO", "todo", None}
 
