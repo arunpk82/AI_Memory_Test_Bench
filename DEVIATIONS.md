@@ -369,3 +369,26 @@ surprise for whoever switched provider first.
 The single-entry-point shape is the matching-module rule applied again: if the
 renderer and the oracle each built their own request, they would drift, and
 "the model" would silently mean two different things in one report.
+
+---
+
+## D-022 As-of horizon mix is a first-class allocation constraint
+
+**Decision.** Question allocation targets **140 current / 33 early / 33 mid /
+34 late** (240 total) with hard floors of 25 in each historical bucket. As-of
+variants are built only for types where a dated question changes the gold:
+`temporal`, `knowledge_update_past`, `expired_state`, `order_state`,
+`knowledge_update_current`, `mapping_lookup`. The other seven types stay
+current-only.
+
+**Alternative.** Keep allocating by type alone and hope the three horizon
+depths fill in, or pad the mix by duplicating `temporal` questions until the
+historical buckets look thick.
+
+**Why.** Type-only allocation left 200 of 240 questions at "current" and 8–18
+in each historical bucket — too thin to say anything about whether a memory
+system degrades with age. Stuffing the gap with more `temporal` questions would
+make horizon analysis a property of one type. Asking an episodic, refusal or
+injection probe "as of mid-timeline" does not change the answer, so those types
+are the wrong place to spend the extra dated slots.
+

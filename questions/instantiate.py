@@ -41,6 +41,7 @@ from universe.generator import (
     memory_point_status,
 )
 from universe.schema import (
+    AS_OF_HORIZONS,
     QUERY_KIND_BY_TYPE,
     QUESTION_TYPES,
     SchemaError,
@@ -57,6 +58,26 @@ CURRENT_STATE_TYPES = frozenset({
     "single_fact", "knowledge_update_current", "order_state", "mapping_lookup",
     "inference_only",
 })
+
+#: Types for which a dated question is meaningful. The rest stay current-only:
+#: asking an episodic, refusal or injection probe "as of mid-timeline" does
+#: not change what a correct system should say.
+AS_OF_VARIANT_TYPES = frozenset({
+    "temporal",
+    "knowledge_update_past",
+    "expired_state",
+    "order_state",
+    "knowledge_update_current",
+    "mapping_lookup",
+})
+
+#: Target mix in a 240-question seed. Historical buckets used to land at 8–18
+#: each, which is too thin for horizon analysis; see D-022.
+HORIZON_TARGETS = {"current": 140, "early": 33, "mid": 33, "late": 34}
+
+#: Hard floors the allocated mix must clear. Targets sit above these so a
+#: seed that undershoots a target a little still remains analysable.
+HORIZON_FLOORS = {"early": 25, "mid": 25, "late": 25}
 
 #: Human phrasing for each channel, for episodic question text. Raw channel
 #: identifiers read badly in a question ("In the order system dated ...").
@@ -465,20 +486,24 @@ def build_knowledge_update_current(index: UniverseIndex) -> list[dict]:
         if len(chain) < 2:
             continue
         last = chain[-1]
-        if index.status(last, index.current) != "active":
-            continue
         entity = last["entity"]
         io_id = entity_id if entity == "order-line" else None
-        out.append(_question(
-            index, qtype="knowledge_update_current",
-            text=f"The {_phrase(attribute)} on {index.label(entity, entity_id)} was "
-                 f"revised at least once. What is the value in force as of "
-                 f"{iso_day(index.current)}?",
-            as_of=index.current, gold_answer=last["value"],
-            gold_tokens=[last["value"]], gold_kind="value",
-            memory_facts=chain, evidence_facts=[last],
-            entity=entity, entity_id=entity_id, io_id=io_id,
-            notes={"attribute": attribute, "superseded_count": len(chain) - 1}))
+        for horizon, as_of in index.horizons.items():
+            fact = index.active_at(entity_id, attribute, as_of)
+            if fact is None:
+                continue
+            verb = "is" if horizon == "current" else "was"
+            out.append(_question(
+                index, qtype="knowledge_update_current",
+                text=f"The {_phrase(attribute)} on {index.label(entity, entity_id)} "
+                     f"was revised at least once. What {verb} the value in force "
+                     f"as of {iso_day(as_of)}?",
+                as_of=as_of, gold_answer=fact["value"],
+                gold_tokens=[fact["value"]], gold_kind="value",
+                memory_facts=chain, evidence_facts=[fact],
+                entity=entity, entity_id=entity_id, io_id=io_id,
+                notes={"attribute": attribute, "superseded_count": len(chain) - 1,
+                       "horizon": horizon}))
     return out
 
 
@@ -520,23 +545,29 @@ def build_expired_state(index: UniverseIndex) -> list[dict]:
             end = fact["validity_interval"]["end"]
             if end is None:
                 continue
-            if index.status(fact, index.current) != "expired":
-                continue
-            expiry = index.active_at(entity_id, "pacing_review_through", index.current)
-            evidence = [fact] + ([expiry] if expiry else [])
-            out.append(_question(
-                index, qtype="expired_state",
-                text=f"The pacing status \"{fact['value']}\" was logged for "
-                     f"{index.label(fact['entity'], entity_id)}. As of "
-                     f"{iso_day(index.current)}, is it still in effect, and if not, "
-                     f"what date did it run through?",
-                as_of=index.current,
-                gold_answer=f"no longer in effect; it ran through {end}",
-                gold_tokens=[end], gold_kind="value",
-                memory_facts=evidence, evidence_facts=evidence,
-                entity=fact["entity"], entity_id=entity_id, io_id=entity_id,
-                notes={"attribute": attribute, "lapsed_on": end,
-                       "distinction": "expired, not superseded"}))
+            for horizon, as_of in index.horizons.items():
+                if parse_day(fact["validity_interval"]["start"]) > as_of:
+                    continue
+                if index.status(fact, as_of) != "expired":
+                    continue
+                expiry = index.active_at(entity_id, "pacing_review_through", as_of)
+                if expiry is None:
+                    continue
+                evidence = [fact, expiry]
+                out.append(_question(
+                    index, qtype="expired_state",
+                    text=f"The pacing status \"{fact['value']}\" was logged for "
+                         f"{index.label(fact['entity'], entity_id)}. As of "
+                         f"{iso_day(as_of)}, is it still in effect, and if not, "
+                         f"what date did it run through?",
+                    as_of=as_of,
+                    gold_answer=f"no longer in effect; it ran through {end}",
+                    gold_tokens=[end], gold_kind="value",
+                    memory_facts=evidence, evidence_facts=evidence,
+                    entity=fact["entity"], entity_id=entity_id, io_id=entity_id,
+                    notes={"attribute": attribute, "lapsed_on": end,
+                           "distinction": "expired, not superseded",
+                           "horizon": horizon}))
     return out
 
 
@@ -572,45 +603,61 @@ def build_order_state(index: UniverseIndex) -> list[dict]:
     for (entity_id, attribute), facts in sorted(index.by_key.items()):
         if attribute != "line_status":
             continue
-        fact = index.active_at(entity_id, "line_status", index.current)
-        if fact is None:
-            continue
         chain = index.chain(entity_id, attribute)
-        out.append(_question(
-            index, qtype="order_state",
-            text=f"What is the current line status of "
-                 f"{index.label('order-line', entity_id)} as of "
-                 f"{iso_day(index.current)}?",
-            as_of=index.current, gold_answer=fact["value"],
-            gold_tokens=[fact["value"]], gold_kind="value",
-            memory_facts=chain, evidence_facts=[fact],
-            entity="order-line", entity_id=entity_id, io_id=entity_id,
-            notes={"status_changes": len(chain) - 1}))
+        for horizon, as_of in index.horizons.items():
+            fact = index.active_at(entity_id, "line_status", as_of)
+            if fact is None:
+                continue
+            if horizon == "current":
+                text = (f"What is the current line status of "
+                        f"{index.label('order-line', entity_id)} as of "
+                        f"{iso_day(as_of)}?")
+            else:
+                text = (f"What was the line status of "
+                        f"{index.label('order-line', entity_id)} as of "
+                        f"{iso_day(as_of)}?")
+            out.append(_question(
+                index, qtype="order_state",
+                text=text,
+                as_of=as_of, gold_answer=fact["value"],
+                gold_tokens=[fact["value"]], gold_kind="value",
+                memory_facts=chain, evidence_facts=[fact],
+                entity="order-line", entity_id=entity_id, io_id=entity_id,
+                notes={"status_changes": len(chain) - 1, "horizon": horizon}))
     return out
 
 
 def build_mapping_lookup(index: UniverseIndex) -> list[dict]:
     out = []
     for advertiser_id, advertiser in sorted(index.advertiser_names.items()):
-        for attribute, phrasing in (
-            ("agency_of_record",
-             "Which agency currently buys on behalf of {advertiser}?"),
-            ("primary_contact",
-             "Who is the current day-to-day contact at {advertiser}?"),
-        ):
-            fact = index.active_at(advertiser_id, attribute, index.current)
-            if fact is None:
-                continue
+        for attribute in ("agency_of_record", "primary_contact"):
             chain = index.chain(advertiser_id, attribute)
-            out.append(_question(
-                index, qtype="mapping_lookup",
-                text=phrasing.format(advertiser=advertiser)
-                     + f" Answer as of {iso_day(index.current)}.",
-                as_of=index.current, gold_answer=fact["value"],
-                gold_tokens=[fact["value"]], gold_kind="value",
-                memory_facts=chain, evidence_facts=[fact],
-                entity="advertiser", entity_id=advertiser_id,
-                notes={"attribute": attribute}))
+            for horizon, as_of in index.horizons.items():
+                fact = index.active_at(advertiser_id, attribute, as_of)
+                if fact is None:
+                    continue
+                if attribute == "agency_of_record":
+                    if horizon == "current":
+                        text = (f"Which agency currently buys on behalf of "
+                                f"{advertiser}? Answer as of {iso_day(as_of)}.")
+                    else:
+                        text = (f"Which agency bought on behalf of {advertiser} "
+                                f"as of {iso_day(as_of)}?")
+                else:
+                    if horizon == "current":
+                        text = (f"Who is the current day-to-day contact at "
+                                f"{advertiser}? Answer as of {iso_day(as_of)}.")
+                    else:
+                        text = (f"Who was the day-to-day contact at {advertiser} "
+                                f"as of {iso_day(as_of)}?")
+                out.append(_question(
+                    index, qtype="mapping_lookup",
+                    text=text,
+                    as_of=as_of, gold_answer=fact["value"],
+                    gold_tokens=[fact["value"]], gold_kind="value",
+                    memory_facts=chain, evidence_facts=[fact],
+                    entity="advertiser", entity_id=advertiser_id,
+                    notes={"attribute": attribute, "horizon": horizon}))
     return out
 
 
@@ -729,13 +776,22 @@ assert set(BUILDERS) == set(QUESTION_TYPES), "every question type needs a builde
 # Allocation
 # --------------------------------------------------------------------------
 
+def _horizon_of(question: dict) -> str:
+    return question.get("as_of_horizon") or "current"
+
+
 def allocate(candidates: dict[str, list[dict]], *, target_min: int, target_max: int,
-             min_per_type: int, rng: random.Random) -> list[dict]:
+             min_per_type: int, rng: random.Random,
+             horizon_targets: dict[str, int] | None = None) -> list[dict]:
     """Choose a set hitting the total window with every type above its floor.
 
     Allocation is deterministic given the seed. Candidates are shuffled first so
     that different seeds select different slices, which is part of what makes the
     three universes independent replications rather than three views of one.
+
+    When ``horizon_targets`` is given, the pick also tracks as-of horizon counts
+    so the historical buckets stay thick enough for horizon analysis. Types that
+    cannot produce a dated question still contribute only to ``current``.
     """
     shortfalls = {qtype: len(items) for qtype, items in candidates.items()
                   if len(items) < min_per_type}
@@ -751,6 +807,22 @@ def allocate(candidates: dict[str, list[dict]], *, target_min: int, target_max: 
         rng.shuffle(items)
         pools[qtype] = items
 
+    if horizon_targets is None:
+        selected = _allocate_type_window(pools, target_min, target_max, min_per_type)
+    else:
+        selected = _allocate_horizon_mix(
+            pools, target_min, target_max, min_per_type, horizon_targets)
+
+    selected.sort(key=lambda item: (item["type"], item["as_of"], item["entity_id"],
+                                    item["text"]))
+    for position, question in enumerate(selected, start=1):
+        question["question_id"] = f"Q-{question['seed']}-{position:04d}"
+    return selected
+
+
+def _allocate_type_window(pools: dict[str, list[dict]], target_min: int,
+                          target_max: int, min_per_type: int) -> list[dict]:
+    """The original type-floor then fill-to-total pick, used by the guard tests."""
     allocation = {qtype: min_per_type for qtype in pools}
     target = (target_min + target_max) // 2
     order = sorted(pools, key=lambda qtype: (-len(pools[qtype]), qtype))
@@ -774,10 +846,87 @@ def allocate(candidates: dict[str, list[dict]], *, target_min: int, target_max: 
     selected: list[dict] = []
     for qtype in sorted(pools):
         selected.extend(pools[qtype][:allocation[qtype]])
-    selected.sort(key=lambda item: (item["type"], item["as_of"], item["entity_id"],
-                                    item["text"]))
-    for position, question in enumerate(selected, start=1):
-        question["question_id"] = f"Q-{question['seed']}-{position:04d}"
+    return selected
+
+
+def _allocate_horizon_mix(pools: dict[str, list[dict]], target_min: int,
+                          target_max: int, min_per_type: int,
+                          horizon_targets: dict[str, int]) -> list[dict]:
+    """Fill type floors, then fill each as-of horizon toward its target."""
+    buckets: dict[str, dict[str, list[dict]]] = {}
+    for qtype, items in pools.items():
+        by_horizon = {name: [] for name in AS_OF_HORIZONS}
+        for item in items:
+            by_horizon.setdefault(_horizon_of(item), []).append(item)
+        buckets[qtype] = by_horizon
+
+    selected: list[dict] = []
+    type_count = {qtype: 0 for qtype in buckets}
+    horizon_count = {name: 0 for name in AS_OF_HORIZONS}
+
+    def remaining(horizon: str) -> int:
+        return horizon_targets.get(horizon, 0) - horizon_count.get(horizon, 0)
+
+    def pick(qtype: str, horizon: str) -> bool:
+        pool = buckets[qtype].get(horizon) or []
+        if not pool:
+            return False
+        selected.append(pool.pop(0))
+        type_count[qtype] += 1
+        horizon_count[horizon] = horizon_count.get(horizon, 0) + 1
+        return True
+
+    def preferred_horizon(qtype: str, *, must_pick: bool) -> str | None:
+        available = [name for name, pool in buckets[qtype].items() if pool]
+        if not available:
+            return None
+        under = [name for name in available if remaining(name) > 0]
+        if not under:
+            return available[0] if must_pick else None
+
+        def fill_key(name: str) -> tuple:
+            target = max(horizon_targets.get(name, 1), 1)
+            return (horizon_count.get(name, 0) / target, name)
+
+        return min(under, key=fill_key)
+
+    for qtype in sorted(buckets):
+        while type_count[qtype] < min_per_type:
+            horizon = preferred_horizon(qtype, must_pick=True)
+            if horizon is None or not pick(qtype, horizon):
+                raise QuestionBuildError(
+                    f"{qtype} ran out of candidates before the floor of "
+                    f"{min_per_type}")
+
+    target = (target_min + target_max) // 2
+    order = sorted(buckets, key=lambda qtype: (
+        -sum(len(pool) for pool in buckets[qtype].values()), qtype))
+    while len(selected) < target:
+        progressed = False
+        for qtype in order:
+            if len(selected) >= target:
+                break
+            horizon = preferred_horizon(qtype, must_pick=False)
+            if horizon is None:
+                continue
+            if pick(qtype, horizon):
+                progressed = True
+        if not progressed:
+            break
+
+    total = len(selected)
+    if not target_min <= total <= target_max:
+        raise QuestionBuildError(
+            f"allocated {total} questions, outside the required window "
+            f"[{target_min}, {target_max}]")
+
+    missed = {name: horizon_count.get(name, 0)
+              for name, floor in HORIZON_FLOORS.items()
+              if horizon_count.get(name, 0) < floor}
+    if missed:
+        raise QuestionBuildError(
+            f"as-of horizon mix below analysis floors {HORIZON_FLOORS}: "
+            f"{dict(sorted(horizon_count.items()))}")
     return selected
 
 
@@ -793,6 +942,7 @@ def build_questions(facts: list[dict], events: list[dict], seed: int,
         target_max=int(settings.require(config, "questions.target_max")),
         min_per_type=int(settings.require(config, "questions.min_per_type")),
         rng=random.Random(seed * 7919 + 13),
+        horizon_targets=HORIZON_TARGETS,
     )
     for question in questions:
         validate_question(question)
@@ -814,6 +964,12 @@ def _assert_invariants(questions: list[dict], index: UniverseIndex) -> None:
                     f"{question['question_id']} lists {point['fact_id']} as an "
                     f"expected memory point, but it is "
                     f"{'injected' if fact['injection'] else 'never-memorize'}")
+        if question["type"] not in AS_OF_VARIANT_TYPES \
+                and question["as_of_horizon"] != "current":
+            raise QuestionBuildError(
+                f"{question['question_id']} is type {question['type']} but carries "
+                f"as_of_horizon={question['as_of_horizon']!r}; dated questions are "
+                f"restricted to {sorted(AS_OF_VARIANT_TYPES)}")
         if question["type"] in CURRENT_STATE_TYPES and question["gold_kind"] == "value":
             for point in question["expected_memory_points"]:
                 fact = index.facts_by_id[point["fact_id"]]
@@ -880,12 +1036,17 @@ def main(argv: list[str] | None = None) -> int:
         questions = build_questions(facts, events, seed)
         path = write_questions(seed, questions, args.out_root)
         counts: dict[str, int] = {}
+        horizons: dict[str, int] = {}
         for question in questions:
             counts[question["type"]] = counts.get(question["type"], 0) + 1
+            horizons[question["as_of_horizon"]] = (
+                horizons.get(question["as_of_horizon"], 0) + 1)
         print(f"seed {seed}: {len(questions)} questions -> {path}")
         for qtype in QUESTION_TYPES:
             print(f"  {qtype:28s} {counts.get(qtype, 0):3d}  "
                   f"[{QUERY_KIND_BY_TYPE[qtype]}]")
+        for name in AS_OF_HORIZONS:
+            print(f"  as_of {name:22s} {horizons.get(name, 0):3d}")
     return 0
 
 

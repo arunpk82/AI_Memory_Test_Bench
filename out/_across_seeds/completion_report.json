@@ -134,7 +134,7 @@
     }
   },
   "deviations": {
-    "entries": 21,
+    "entries": 22,
     "exists": true,
     "file": "DEVIATIONS.md",
     "ids": [
@@ -158,7 +158,8 @@
       "D-018",
       "D-019",
       "D-020",
-      "D-021"
+      "D-021",
+      "D-022"
     ]
   },
   "dormant_paths": [
@@ -228,7 +229,7 @@
       "location": "questions/instantiate.py :: build_abstention_false_premise, fake-id collision guard"
     },
     {
-      "detail": "The 'no progress' break covers a universe with fewer candidates than the target total. All three seeds have surplus, so allocation always reaches its target and the break is not used.",
+      "detail": "The 'no progress' break covers a universe with fewer candidates than the target total. All three seeds have surplus on every horizon, so allocation always reaches the 240-question mix (140 current / 33 early / 33 mid / 34 late) and the break is not used.",
       "kind": "branch never taken",
       "location": "questions/instantiate.py :: allocate, starvation break"
     },
@@ -251,7 +252,7 @@
   "pytest": {
     "exit_code": 0,
     "stderr": "",
-    "stdout": "........................................................................ [ 22%]\n........................................................................ [ 45%]\n........................................................................ [ 68%]\n........................................................................ [ 91%]\n...........................                                              [100%]\n315 passed, 1 skipped in 31.87s\n"
+    "stdout": "C:\\Users\\arunp\\AppData\\Local\\Programs\\Python\\Python314\\python.exe -m pytest -q tests/\n........................................................................ [ 22%]\n........................................................................ [ 45%]\n........................................................................ [ 67%]\n........................................................................ [ 90%]\n..............................                                           [100%]\n318 passed, 1 skipped in 31.20s\n"
   },
   "seeds": [
     {
@@ -282,33 +283,33 @@
       },
       "order_lines": 71,
       "questions_by_as_of_horizon": {
-        "current": 200,
-        "early": 13,
-        "late": 9,
-        "mid": 18
+        "current": 140,
+        "early": 33,
+        "late": 34,
+        "mid": 33
       },
       "questions_by_query_kind": {
-        "exact": 79,
-        "multi_hop": 52,
-        "similarity": 55,
-        "temporal_range": 54
+        "exact": 78,
+        "multi_hop": 50,
+        "similarity": 54,
+        "temporal_range": 58
       },
       "questions_by_type": {
-        "abstention_false_premise": 20,
+        "abstention_false_premise": 19,
         "conflict_resolution": 12,
         "episodic": 20,
-        "expired_state": 14,
-        "inference_only": 20,
+        "expired_state": 19,
+        "inference_only": 19,
         "injection_probe": 15,
-        "knowledge_update_current": 20,
-        "knowledge_update_past": 20,
+        "knowledge_update_current": 19,
+        "knowledge_update_past": 19,
         "mapping_lookup": 19,
-        "multi_session": 20,
+        "multi_session": 19,
         "order_state": 20,
         "single_fact": 20,
         "temporal": 20
       },
-      "questions_sha256": "07c0f1ffbfcef5cd4ccbe140d7ea9ca56f605725713378f59cac897001484739",
+      "questions_sha256": "35f2e7531a81c73c3de0141992f8c2faf77cfbc1b4d3924fe32d9ab601b6a762",
       "questions_total": 240,
       "quotas": {
         "advertisers": 11,
@@ -406,33 +407,33 @@
       },
       "order_lines": 71,
       "questions_by_as_of_horizon": {
-        "current": 200,
-        "early": 10,
-        "late": 12,
-        "mid": 18
+        "current": 140,
+        "early": 33,
+        "late": 34,
+        "mid": 33
       },
       "questions_by_query_kind": {
-        "exact": 79,
-        "multi_hop": 52,
-        "similarity": 55,
-        "temporal_range": 54
+        "exact": 78,
+        "multi_hop": 50,
+        "similarity": 54,
+        "temporal_range": 58
       },
       "questions_by_type": {
-        "abstention_false_premise": 20,
+        "abstention_false_premise": 19,
         "conflict_resolution": 12,
         "episodic": 20,
-        "expired_state": 14,
-        "inference_only": 20,
+        "expired_state": 19,
+        "inference_only": 19,
         "injection_probe": 15,
-        "knowledge_update_current": 20,
-        "knowledge_update_past": 20,
+        "knowledge_update_current": 19,
+        "knowledge_update_past": 19,
         "mapping_lookup": 19,
-        "multi_session": 20,
+        "multi_session": 19,
         "order_state": 20,
         "single_fact": 20,
         "temporal": 20
       },
-      "questions_sha256": "6c0159e044d4d5702e260b49356d38b712718dd55669b4ef40733b7b85b9c12f",
+      "questions_sha256": "b0fde66171d944a2e39cd24f7f7b57b6cbffe3f0cf9be1f1970196b332113ca3",
       "questions_total": 240,
       "quotas": {
         "advertisers": 10,
@@ -530,33 +531,33 @@
       },
       "order_lines": 76,
       "questions_by_as_of_horizon": {
-        "current": 200,
-        "early": 8,
-        "late": 14,
-        "mid": 18
+        "current": 140,
+        "early": 33,
+        "late": 34,
+        "mid": 33
       },
       "questions_by_query_kind": {
-        "exact": 79,
-        "multi_hop": 52,
-        "similarity": 55,
-        "temporal_range": 54
+        "exact": 78,
+        "multi_hop": 50,
+        "similarity": 54,
+        "temporal_range": 58
       },
       "questions_by_type": {
-        "abstention_false_premise": 20,
+        "abstention_false_premise": 19,
         "conflict_resolution": 12,
         "episodic": 20,
-        "expired_state": 14,
-        "inference_only": 20,
+        "expired_state": 19,
+        "inference_only": 19,
         "injection_probe": 15,
-        "knowledge_update_current": 20,
-        "knowledge_update_past": 20,
+        "knowledge_update_current": 19,
+        "knowledge_update_past": 19,
         "mapping_lookup": 19,
-        "multi_session": 20,
+        "multi_session": 19,
         "order_state": 20,
         "single_fact": 20,
         "temporal": 20
       },
-      "questions_sha256": "5470e9b8e0f1d212491d7637a3a31cbae56b1134aecb0ccdf80c8bf47e714621",
+      "questions_sha256": "47486d78dc6c2b93e3c0c5965b2e63d00d5cc517c3a89819c772a186fee3589a",
       "questions_total": 240,
       "quotas": {
         "advertisers": 10,

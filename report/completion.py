@@ -161,8 +161,9 @@ KNOWN_DORMANT: tuple[dict[str, str], ...] = (
         "kind": "branch never taken",
         "detail": "The 'no progress' break covers a universe with fewer "
                   "candidates than the target total. All three seeds have "
-                  "surplus, so allocation always reaches its target and the break "
-                  "is not used.",
+                  "surplus on every horizon, so allocation always reaches the "
+                  "240-question mix (140 current / 33 early / 33 mid / 34 late) "
+                  "and the break is not used.",
     },
     {
         "location": "verify/matching.py :: _is_abbreviation_boundary, "
@@ -407,12 +408,13 @@ def deviation_count() -> dict:
 
 
 def run_pytest() -> dict:
-    """Run the suite and capture its full output."""
+    """Run the suite and capture its full output, with the command echoed."""
+    command = [sys.executable, "-m", "pytest", "-q", "tests/"]
     completed = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q", "tests/"],
-        cwd=REPO_ROOT, capture_output=True, text=True, check=False)
+        command, cwd=REPO_ROOT, capture_output=True, text=True, check=False)
+    echoed = " ".join(command) + "\n" + completed.stdout
     return {"exit_code": completed.returncode,
-            "stdout": completed.stdout,
+            "stdout": echoed,
             "stderr": completed.stderr}
 
 

@@ -1,27 +1,27 @@
 {
   "by_as_of_horizon": {
-    "current": 200,
-    "early": 8,
-    "late": 14,
-    "mid": 18
+    "current": 140,
+    "early": 33,
+    "late": 34,
+    "mid": 33
   },
   "by_query_kind": {
-    "exact": 79,
-    "multi_hop": 52,
-    "similarity": 55,
-    "temporal_range": 54
+    "exact": 78,
+    "multi_hop": 50,
+    "similarity": 54,
+    "temporal_range": 58
   },
   "by_type": {
-    "abstention_false_premise": 20,
+    "abstention_false_premise": 19,
     "conflict_resolution": 12,
     "episodic": 20,
-    "expired_state": 14,
-    "inference_only": 20,
+    "expired_state": 19,
+    "inference_only": 19,
     "injection_probe": 15,
-    "knowledge_update_current": 20,
-    "knowledge_update_past": 20,
+    "knowledge_update_current": 19,
+    "knowledge_update_past": 19,
     "mapping_lookup": 19,
-    "multi_session": 20,
+    "multi_session": 19,
     "order_state": 20,
     "single_fact": 20,
     "temporal": 20

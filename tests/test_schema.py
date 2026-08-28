@@ -168,6 +168,22 @@ def test_as_of_horizons_cover_three_depths_plus_current(artifacts):
     assert {"early", "mid", "late", "current"} <= horizons
 
 
+@pytest.mark.parametrize("seed", SEEDS)
+def test_as_of_horizon_distribution_meets_analysis_floors(seed):
+    """Historical buckets used to be 8–18 each; that is too thin to analyse."""
+    from questions.instantiate import HORIZON_FLOORS, build_questions
+
+    universe = generate(seed)
+    questions = build_questions(universe.facts, universe.events, seed)
+    counts: dict[str, int] = {}
+    for question in questions:
+        counts[question["as_of_horizon"]] = counts.get(question["as_of_horizon"], 0) + 1
+    missed = {name: counts.get(name, 0) for name, floor in HORIZON_FLOORS.items()
+              if counts.get(name, 0) < floor}
+    assert not missed, (seed, counts)
+    assert 220 <= len(questions) <= 260
+
+
 def test_order_line_questions_name_their_io_id(artifacts):
     scoped = [question for question in artifacts.questions if question["io_id"]]
     assert scoped
