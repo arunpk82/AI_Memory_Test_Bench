@@ -1,9 +1,11 @@
-Subject: Autumn Store Visits brief for Harrowgate Holdings
-Date: March 2, 2025
+Subject: Autumn Store Visits brief for Harrowgate Holdings  
+Date: March 2, 2025  
 
-Hi there,
+Tobias,
 
-Thanks for sending the brief over. This one is on Harrowgate Holdings for the Autumn Store Visits program. The goal is store visits, and the working budget is $731,000. The flight opens April 9, 2025, and it wraps June 8, 2025. Let me know if anything looks off.
+Thanks for sending over the brief for the Autumn Store Visits deal. I have the core details down: we’re looking at a store visits objective for Harrowgate Holdings, working through Saltmarsh Buying Desk, with a total budget of 731000. The flight is set to kick off on 2025-04-09 and run through 2025-06-08.
 
-Thanks,
-the Harrowgate Holdings team
+I will start pulling the inventory and pacing options that line up with those dates and the store‑visit goal. Let me know if there are any specific markets or dayparts you want us to prioritize, otherwise I will put together a first‑pass plan and get it back to you early next week.
+
+Best,
+ad sales ops

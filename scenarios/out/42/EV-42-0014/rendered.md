@@ -1,9 +1,8 @@
 Subject: Back-to-School Brand Awareness brief for Verapine Studios
 Date: February 10, 2025
 
-Hi there,
+Hey Lorcan,
 
-Thanks for sending the brief over. This one is on Verapine Studios for the Back-to-School Brand Awareness program. The goal is brand awareness, and the working budget is $95,000. The flight opens March 18, 2025, and it wraps May 2, 2025. Let me know if anything looks off.
+Thanks for sending over the brief for the Back-to-School Brand Awareness deal for Verapine Studios. The objective is locked in as brand awareness with a budget of 95000 and the flight slated from 2025-03-18 through 2025-05-02. We will start pulling the inventory and aim to have a tentative media plan back to you by the end of the week. If there are any creative specs, daypart preferences, or other details the Hollowell Buying Desk wants us to keep in mind, just let me know.
 
-Thanks,
-the Verapine Studios team
+ad sales ops

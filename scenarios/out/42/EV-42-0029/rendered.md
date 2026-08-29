@@ -1,9 +1,10 @@
 Subject: Order line IO-42-0031 booked on Autumn Store Visits
 Date: March 6, 2025
 
-System notification.
+Hey team,
 
-The order line is in the system. This one is on Harrowgate Holdings for the Autumn Store Visits program, order line IO-42-0031. We are holding at a $45.75 CPM, and the goal is 15,980,000 impressions. The line is booked, and geo stays PA/NJ/MD. The demo is A35-64, and the format is Display. Let me know if anything looks off.
+Just confirming that the IO-42-0031 line for Harrowgate Holdings with Saltmarsh Buying Desk under the Autumn Store Visits deal is now officially booked. Set with a CPM rate of $45.75 and an impressions goal of 15,980,000. The targeting is locked in for PA/NJ/MD and the demo slice is A35-64, and we’ll be running it in a Display creative format.
 
-Thanks,
+Let me know if anything else pops up.
+
 ad sales ops

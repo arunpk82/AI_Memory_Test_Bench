@@ -3,7 +3,7 @@ Date: March 3, 2025
 
 Hi Oisin,
 
-Confirming the rate change we talked through. This one is on Ravensmoor Holdings for the Autumn Brand Awareness program, order line IO-42-0023. We are holding at a $18.50 CPM. Let me know if anything looks off.
+Reaching out regarding the Autumn Brand Awareness deal for Ravensmoor Holdings. The CPM on order line IO-42-0023 is updated to $18.50. Please let us know if you need any further details from the Saltmarsh Buying Desk team.
 
-Thanks,
+Best regards,
 ad sales ops

@@ -1,9 +1,6 @@
-Subject: Order line IO-42-0013 booked on Spring Store Visits
-Date: February 27, 2025
+Subject: Order line IO-42-0013 booked on Spring Store Visits  
+Date: February 27, 2025  
 
-System notification.
+Hey team, just a quick note that the order line IO-42-0013 for the Spring Store Visits deal with Cindervale Studios, run through Cindersmith Trading, is now booked. The CPM rate is locked in at 24.00 and we are aiming for 24540000 impressions. The targeting is set to WA/OR/NV for geography and A25-54 for the demo, and the creative format will be Native. Let me know if anything else is needed.  
 
-The order line is in the system. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0013. We are holding at a $24.00 CPM, and the goal is 24,540,000 impressions. The line is booked, and geo stays WA/OR/NV. The demo is A25-54, and the format is Native. Let me know if anything looks off.
-
-Thanks,
 ad sales ops

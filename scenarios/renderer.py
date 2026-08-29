@@ -23,17 +23,20 @@ Usage::
     python3 -m scenarios.renderer --seed 42 --deterministic
     python3 -m scenarios.renderer --seed 42                    # LLM path
     python3 -m scenarios.renderer --seed 42 --limit 5          # cost control
+    python3 -m scenarios.renderer --seed 42 --force            # ignore existing passes
+    python3 -m scenarios.renderer --seed 42 --provider groq --model openai/gpt-oss-120b
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 import providers
 import settings
-from providers import complete
+from providers import EmptyCompletionError, complete
 from universe.generator import load_universe
 from universe.schema import derive_trust_class
 from verify import fidelity
@@ -123,6 +126,21 @@ Absolute requirements:
    you were supplied.
 5. Sign off with the role "ad sales ops". Never sign with a personal name and
    never leave a placeholder such as [Your Name].
+6. Write monetary amounts, dates, and quantities in natural business style:
+   "$342,000" or "$342K" (not "342000"), "April 24" or "late April 2025"
+   (not "2025-04-24"). Reformatting a supplied number or date into natural
+   prose is expected and is NOT "introducing" anything — requirement 4
+   forbids new facts, not natural formatting of supplied ones. Only company
+   names, person names, order-line ids, and targeting codes must appear
+   character-exact (requirement 3).
+7. Refer to each fact by its natural business term, never the raw field label
+   from the fact list. Those labels are database column names, not vocabulary
+   for the email: "cpm_rate" is "the CPM", "line_status" is "the status" (or
+   just state it: "the line is live"), "flight_start" and "flight_end" are
+   "the flight" ("runs from X to Y", "flighting April 24 through June 23"),
+   "budget_usd" is "the budget". Say what the field means in plain ad-sales
+   language; never write the underscore label itself. This is about attribute
+   NAMES only — the supplied values still follow requirements 3 and 6.
 
 Begin the output with the Subject line, then the Date line, then a blank line,
 then the message.
@@ -156,6 +174,15 @@ Rewrite the full message with those fixes applied. Same rules as before: one
 message, prose only, no invented details, sign off as ad sales ops.
 """
 
+EMPTY_RETRY_PROMPT = """\
+Your previous reply came back with an empty message body -- the answer field was
+blank, most likely because the response ran past its length budget. Write the
+message directly and concisely this time: do not deliberate at length before
+answering, just produce the message.
+
+{original}
+"""
+
 
 class RenderError(RuntimeError):
     """Raised when the LLM render path cannot run or cannot succeed."""
@@ -174,9 +201,32 @@ def _about_line(manifest: dict) -> str:
     return "; ".join(parts)
 
 
+#: A value that is *exactly* an ISO date and nothing else. Detection is by
+#: shape, never by attribute name: any fact value shaped ``YYYY-MM-DD`` is a
+#: date regardless of what it is called, and no other value shape is.
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _naturalize_fact_value(value: str) -> str:
+    """Long-form a bare ISO date so the model never copies a raw token.
+
+    A raw ``2025-04-24`` in the fact list fights the system prompt: rule 4
+    ("introduce nothing not supplied") plus a visible ISO token beats rule 6's
+    permission to naturalize, so the model echoes the ISO string. Rewriting the
+    date to ``April 24, 2025`` here removes the token it was tempted to copy.
+    Fidelity is unaffected: matching canonicalizes both forms, and only date
+    values are touched -- integers, names, codes and targeting strings, none of
+    which match the exact ISO shape, pass through verbatim.
+    """
+    if _ISO_DATE_RE.match(value):
+        return long_date(value)
+    return value
+
+
 def user_prompt(manifest: dict) -> str:
     fact_lines = "\n".join(
-        f"- {fact['attribute']}: {fact['value']}" for fact in manifest["facts"])
+        f"- {fact['attribute']}: {_naturalize_fact_value(fact['value'])}"
+        for fact in manifest["facts"])
     return USER_PROMPT.format(
         subject=manifest["subject"],
         date_long=long_date(manifest["timestamp"]),
@@ -202,20 +252,42 @@ def build_client(config: dict, spec: providers.ModelSpec | None = None):
 
 
 def render_llm(manifest: dict, client, config: dict) -> dict:
-    """Render one scenario through a model, with a fidelity-driven retry loop."""
+    """Render one scenario through a model, with a fidelity-driven retry loop.
+
+    Two failure kinds share the loop. A draft that fails fidelity is re-asked
+    with the previous draft and the exact failures. An *empty* completion --
+    common with reasoning models that spend the token budget thinking -- is
+    also retried rather than raised, so one bad scenario does not abort the
+    whole seed. If every attempt comes back empty, the empty draft fails
+    fidelity naturally and the scenario is recorded as a fidelity failure.
+    """
     spec = renderer_spec(config)
     max_retries = int(settings.require(config, "renderer.max_retries"))
 
     system = system_prompt(manifest)
-    message = user_prompt(manifest)
+    original = user_prompt(manifest)
+    message = original
     attempts = 0
     draft = ""
     report = None
     history: list[dict] = []
+    empty_note = None
 
     for attempt in range(max_retries + 1):
         attempts = attempt + 1
-        draft = complete(spec, system, message, client=client)
+        try:
+            draft = complete(spec, system, message, client=client)
+        except EmptyCompletionError as exc:
+            empty_note = str(exc)
+            draft = ""
+            report = fidelity.verify_render(manifest, draft)
+            history.append({"attempt": attempts, "status": "empty",
+                            "missing_facts": len(report.missing_facts),
+                            "unsupported": sum(len(v) for v in
+                                               report.unsupported.values())})
+            message = EMPTY_RETRY_PROMPT.format(original=original)
+            continue
+
         report = fidelity.verify_render(manifest, draft)
         history.append({"attempt": attempts, "status": report.status,
                         "missing_facts": len(report.missing_facts),
@@ -226,7 +298,8 @@ def render_llm(manifest: dict, client, config: dict) -> dict:
                                       failures=report.failure_summary())
 
     return {"text": draft, "attempts": attempts, "report": report,
-            "history": history, "model": spec.model, "provider": spec.provider}
+            "history": history, "model": spec.model, "provider": spec.provider,
+            "empty_note": empty_note}
 
 
 # --------------------------------------------------------------------------
@@ -242,10 +315,50 @@ def write_scenario(out_dir: Path, manifest: dict, text: str, meta: dict) -> None
         json.dumps(meta, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _already_complete(out_dir: Path, render_mode: str) -> bool:
+    """True when this scenario already passed in the requested render mode."""
+    meta_path = out_dir / "meta.json"
+    if not meta_path.exists():
+        return False
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return meta.get("render_mode") == render_mode and meta.get("fidelity") == "pass"
+
+
+def _override_config(config: dict, provider: str | None, model: str | None) -> dict:
+    """Return a config copy with the renderer's provider and/or model replaced.
+
+    Overrides come from the CLI and take precedence over ``config.yaml``. The
+    committed defaults are never mutated: a shallow copy of the renderer section
+    is enough because that is the only section touched.
+    """
+    if provider is None and model is None:
+        return config
+    merged = dict(config)
+    merged["renderer"] = dict(config.get("renderer", {}))
+    if provider is not None:
+        merged["renderer"]["provider"] = provider
+    if model is not None:
+        merged["renderer"]["model"] = model
+    return merged
+
+
 def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
                 universe_root: Path | None = None, limit: int | None = None,
-                only: str | None = None, config: dict | None = None) -> dict:
-    """Render every (or a limited slice of) scenario for ``seed``."""
+                only: str | None = None, config: dict | None = None,
+                force: bool = False, provider: str | None = None,
+                model: str | None = None) -> dict:
+    """Render every (or a limited slice of) scenario for ``seed``.
+
+    Scenarios that already have a passing ``meta.json`` in the requested
+    ``render_mode`` are skipped, so a killed LLM run can resume without
+    re-spending. ``force=True`` re-renders everything.
+
+    ``provider`` and ``model`` override ``config.yaml`` for this run when given,
+    and flow through the spec into each scenario's ``meta.json`` verbatim.
+    """
     facts, events = load_universe(seed, universe_root)
     facts_by_id = {fact["fact_id"]: fact for fact in facts}
     deal_names = deal_name_map(facts)
@@ -260,17 +373,27 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
     if limit is not None:
         selected = selected[:limit]
 
+    requested_mode = "deterministic" if deterministic else "llm"
     client = None
     if not deterministic:
         config = config or settings.load_config()
+        config = _override_config(config, provider, model)
         client = build_client(config)
 
-    results = {"seed": seed, "render_mode": "deterministic" if deterministic else "llm",
+    results = {"seed": seed, "render_mode": requested_mode,
                "scenarios": 0, "fidelity_pass": 0, "fidelity_failed": 0,
-               "attempt_histogram": {}}
+               "skipped": 0, "empty": 0, "attempt_histogram": {}}
 
     for event in selected:
+        out_dir = root / event["event_id"]
+        if not force and _already_complete(out_dir, requested_mode):
+            results["scenarios"] += 1
+            results["fidelity_pass"] += 1
+            results["skipped"] += 1
+            continue
+
         manifest = build_manifest(event, facts_by_id, deal_names)
+        empty_note = None
         if deterministic:
             text = render_deterministic(manifest)
             report = fidelity.verify_render(manifest, text)
@@ -284,6 +407,7 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
             model = outcome["model"]
             provider = outcome["provider"]
             history = outcome["history"]
+            empty_note = outcome.get("empty_note")
 
         meta = {
             "event_id": manifest["event_id"],
@@ -302,7 +426,9 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
             "fidelity_missing_facts": report.missing_facts,
             "fidelity_unsupported": report.unsupported,
         }
-        write_scenario(root / manifest["event_id"], manifest, text, meta)
+        if empty_note:
+            meta["empty_completion_diagnostic"] = empty_note
+        write_scenario(out_dir, manifest, text, meta)
 
         results["scenarios"] += 1
         key = str(attempts)
@@ -311,6 +437,8 @@ def render_seed(seed: int, *, deterministic: bool, out_root: Path | None = None,
             results["fidelity_pass"] += 1
         else:
             results["fidelity_failed"] += 1
+            if empty_note and not text.strip():
+                results["empty"] += 1
 
     root.mkdir(parents=True, exist_ok=True)
     (root / "render_summary.json").write_text(
@@ -329,15 +457,24 @@ def main(argv: list[str] | None = None) -> int:
                         help="comma-separated event ids to render")
     parser.add_argument("--out-root", type=Path, default=None)
     parser.add_argument("--universe-root", type=Path, default=None)
+    parser.add_argument("--force", action="store_true",
+                        help="re-render even when a passing meta.json already exists")
+    parser.add_argument("--provider", type=str, default=None,
+                        help="override renderer.provider from config.yaml for this run")
+    parser.add_argument("--model", type=str, default=None,
+                        help="override renderer.model from config.yaml for this run")
     args = parser.parse_args(argv)
 
     results = render_seed(args.seed, deterministic=args.deterministic,
                           out_root=args.out_root, universe_root=args.universe_root,
-                          limit=args.limit, only=args.only)
+                          limit=args.limit, only=args.only, force=args.force,
+                          provider=args.provider, model=args.model)
     print(f"seed {results['seed']} [{results['render_mode']}]: "
           f"{results['scenarios']} scenarios, "
           f"{results['fidelity_pass']} fidelity pass, "
-          f"{results['fidelity_failed']} failed")
+          f"{results['fidelity_failed']} failed, "
+          f"{results['skipped']} skipped, "
+          f"{results['empty']} empty")
     print(f"  attempts: {json.dumps(results['attempt_histogram'], sort_keys=True)}")
     return 0 if results["fidelity_failed"] == 0 else 1
 

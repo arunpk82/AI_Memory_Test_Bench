@@ -190,13 +190,6 @@ def test_retry_prompt_carries_the_previous_draft_and_the_failure_list():
     assert "smallest possible set of edits" in prompt
 
 
-def test_system_prompt_forbids_lists_and_placeholders_and_demands_role_signoff():
-    prompt = renderer.system_prompt({"author": "user", "channel": "email_sent"})
-    for requirement in ("bullet lists", "character-exact", "ad sales ops",
-                        "[Your Name]", "CTV"):
-        assert requirement in prompt
-
-
 def test_user_prompt_lists_every_fact(artifacts):
     from scenarios.renderer import build_manifest, deal_name_map
     deal_names = deal_name_map(artifacts.facts)

@@ -1,6 +1,19 @@
 {
-  "attempt_history": [],
-  "attempts": 1,
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "missing_facts": 0,
+      "status": "failed",
+      "unsupported": 1
+    },
+    {
+      "attempt": 2,
+      "missing_facts": 0,
+      "status": "pass",
+      "unsupported": 0
+    }
+  ],
+  "attempts": 2,
   "author": "system",
   "channel": "order_system",
   "event_id": "EV-42-0005",
@@ -11,10 +24,11 @@
     "names": [],
     "numbers": []
   },
-  "model": null,
-  "render_mode": "deterministic",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "render_mode": "llm",
   "scenario_kind": "account_setup",
   "seed": 42,
-  "template_version": "det-v2",
+  "template_version": null,
   "timestamp": "2025-01-29"
 }

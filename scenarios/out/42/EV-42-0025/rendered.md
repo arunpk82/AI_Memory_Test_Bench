@@ -1,9 +1,5 @@
 Subject: Order line IO-42-0007 booked on Holiday Brand Awareness
 Date: March 3, 2025
 
-System notification.
-
-The order line is in the system. This one is on Cindervale Studios for the Holiday Brand Awareness program, order line IO-42-0007. We are holding at a $24.00 CPM, and the goal is 7,080,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is M18-49, and the format is Audio. Let me know if anything looks off.
-
-Thanks,
+Hey team, just confirming that the order line IO-42-0007 for Cindervale Studios, placed through Cindersmith Trading under the Holiday Brand Awareness deal, is now booked. The line is set for an Audio creative format, targeting the M18-49 demo across IL/OH/MI, with an impressions goal of 7080000 and a CPM rate of 24.00. Let me know if anything else is needed.  
 ad sales ops

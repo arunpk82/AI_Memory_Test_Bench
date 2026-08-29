@@ -1,9 +1,8 @@
 Subject: Holiday Brand Awareness brief for Cindervale Studios
 Date: February 20, 2025
 
-Hi there,
+Hi Perrin Drummond,
 
-Thanks for sending the brief over. This one is on Cindervale Studios for the Holiday Brand Awareness program. The goal is brand awareness, and the working budget is $170,000. The flight opens April 23, 2025, and it wraps May 23, 2025. Let me know if anything looks off.
+I am writing to confirm the details for the Holiday Brand Awareness campaign for Cindervale Studios. We have received the brief from Cindersmith Trading and noted that the primary objective is brand awareness. The total budget for this initiative is set at $170,000. The flight is scheduled to run from April 23, 2025, through May 23, 2025. Please let me know if there are any further adjustments needed before we move forward.
 
-Thanks,
-the Cindervale Studios team
+ad sales ops

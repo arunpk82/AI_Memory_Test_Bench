@@ -1,9 +1,5 @@
 Subject: Kestrelia Collective account record created
 Date: January 31, 2025
 
-System notification.
-
-The account record is open on our side now. This one is on Kestrelia Collective. The paperwork is filed under Kestrelia Collective LLC, and billing runs out of United States. They sit in apparel retail, and buying is handled by Inkwell Collective. Day-to-day contact is Marisol Sandoval. Let me know if anything looks off.
-
-Thanks,
+Hey team, just confirming we’ve created the advertiser record for Kestrelia Collective LLC. The billing country is set to United States and the industry vertical is apparel retail. Inkwell Collective is listed as the agency of record and Marisol Sandoval is the primary contact on file. Let me know if anything else needs tweaking.  
 ad sales ops

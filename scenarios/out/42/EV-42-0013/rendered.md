@@ -1,9 +1,6 @@
 Subject: Ashgrove Labs account record created
 Date: February 5, 2025
 
-System notification.
+Hey team, just a heads‑up that we’ve got the new advertiser set up – Ashgrove Labs LLC is now in the system, billing out of the United States and flagged under the streaming entertainment vertical. Their agency of record is Cindersmith Trading and the primary contact we’ll be working with is Simone Ashcombe. Let me know if anything else is needed.
 
-The account record is open on our side now. This one is on Ashgrove Labs. The paperwork is filed under Ashgrove Labs LLC, and billing runs out of United States. They sit in streaming entertainment, and buying is handled by Cindersmith Trading. Day-to-day contact is Simone Ashcombe. Let me know if anything looks off.
-
-Thanks,
 ad sales ops

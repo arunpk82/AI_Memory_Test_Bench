@@ -1,6 +1,25 @@
 {
-  "attempt_history": [],
-  "attempts": 1,
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "missing_facts": 0,
+      "status": "failed",
+      "unsupported": 1
+    },
+    {
+      "attempt": 2,
+      "missing_facts": 0,
+      "status": "failed",
+      "unsupported": 1
+    },
+    {
+      "attempt": 3,
+      "missing_facts": 0,
+      "status": "pass",
+      "unsupported": 0
+    }
+  ],
+  "attempts": 3,
   "author": "counterparty",
   "channel": "email_received",
   "event_id": "EV-42-0030",
@@ -11,10 +30,11 @@
     "names": [],
     "numbers": []
   },
-  "model": null,
-  "render_mode": "deterministic",
+  "model": "qwen/qwen3.8-27b",
+  "provider": "groq",
+  "render_mode": "llm",
   "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "template_version": "det-v2",
+  "template_version": null,
   "timestamp": "2025-03-08"
 }

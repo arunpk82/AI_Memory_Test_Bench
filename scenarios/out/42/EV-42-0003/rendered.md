@@ -1,9 +1,13 @@
 Subject: Autumn Brand Awareness brief for Ravensmoor Holdings
 Date: January 27, 2025
 
-Hi there,
+Hi Oisin,
 
-Thanks for sending the brief over. This one is on Ravensmoor Holdings for the Autumn Brand Awareness program. The goal is brand awareness, and the working budget is $727,000. The flight opens March 10, 2025, and it wraps April 24, 2025. Let me know if anything looks off.
+Thanks for looping us in on the Autumn Brand Awareness deal for Ravensmoor Holdings. I have the brief from Saltmarsh Buying Desk and wanted to confirm a few details before we lock anything down.
 
-Thanks,
-the Ravensmoor Holdings team
+The objective is brand awareness, with a total budget of 727000. The flight kicks off on 2025-03-10 and wraps up on 2025-04-24. Let me know if those dates line up with your media plan and if there are any specific dayparts or inventory preferences we should be aware of.
+
+Once we have a final go‑ahead, we will push the order through and get the trafficking details over to you. If you need any tweaks or have additional specs, just give me a shout.
+
+Best,
+ad sales ops

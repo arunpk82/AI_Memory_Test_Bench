@@ -1,9 +1,10 @@
 Subject: Umberfield Outfitters account record created
 Date: February 4, 2025
 
-System notification.
+Hey team,
 
-The account record is open on our side now. This one is on Umberfield Outfitters. The paperwork is filed under Umberfield Outfitters LLC, and billing runs out of United States. They sit in financial services, and buying is handled by Saltmarsh Buying Desk. Day-to-day contact is Bertrand Whitfield. Let me know if anything looks off.
+Just wanted to let you know I created the new account record for Umberfield Outfitters. The legal entity name is Umberfield Outfitters LLC and the billing country is United States. They sit in the financial services vertical, and their agency of record is Saltmarsh Buying Desk. The primary contact we have on file is Bertrand Whitfield, so any outreach should go through him.
 
-Thanks,
+Let me know if anything else is needed.
+
 ad sales ops

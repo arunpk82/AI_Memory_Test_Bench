@@ -1,9 +1,6 @@
 Subject: Zellwood Labs account record created
 Date: January 30, 2025
 
-System notification.
+Wilhelmina Rothwell, thanks for the heads‑up. Just created the account for Zellwood Labs LLC, listed under the United States billing country, and flagged it as an automotive vertical. Saltmarsh Buying Desk is now set as the agency of record, with you as the primary contact. Let me know if anything else needs tweaking.
 
-The account record is open on our side now. This one is on Zellwood Labs. The paperwork is filed under Zellwood Labs LLC, and billing runs out of United States. They sit in automotive, and buying is handled by Saltmarsh Buying Desk. Day-to-day contact is Wilhelmina Rothwell. Let me know if anything looks off.
-
-Thanks,
 ad sales ops

@@ -1,9 +1,6 @@
 Subject: Harrowgate Holdings account record created
 Date: January 29, 2025
 
-System notification.
+The account record for Harrowgate Holdings LLC, the financial services advertiser based in the United States, has just been created. Saltmarsh Buying Desk is listed as the agency of record, and Tobias Pemberly is noted as the primary contact for any follow‑up. Let me know if anything else needs to be tweaked.
 
-The account record is open on our side now. This one is on Harrowgate Holdings. The paperwork is filed under Harrowgate Holdings LLC, and billing runs out of United States. They sit in financial services, and buying is handled by Saltmarsh Buying Desk. Day-to-day contact is Tobias Pemberly. Let me know if anything looks off.
-
-Thanks,
 ad sales ops

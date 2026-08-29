@@ -61,6 +61,14 @@ def _groq_ok(text="the rate is 26.70"):
     return {"choices": [{"message": {"role": "assistant", "content": text}}]}
 
 
+def _groq_empty(finish_reason="length", reasoning="deliberating at length..."):
+    """A gpt-oss-style reply: empty answer, chain-of-thought in ``reasoning``."""
+    return {"choices": [{"message": {"role": "assistant", "content": "",
+                                     "reasoning": reasoning},
+                         "finish_reason": finish_reason}],
+            "usage": {"completion_tokens": 1024, "prompt_tokens": 210}}
+
+
 def _gemini_ok(text="the rate is 26.70"):
     return {"candidates": [{"content": {"parts": [{"text": text}]},
                             "finishReason": "STOP"}]}
@@ -170,6 +178,8 @@ def test_groq_request_shape(monkeypatch):
     assert sent["method"] == "POST"
     assert sent["headers"]["authorization"] == "Bearer secret-key"
     assert sent["headers"]["content-type"] == "application/json"
+    assert sent["headers"]["user-agent"] == providers.HTTP_USER_AGENT
+    assert "python-urllib" not in sent["headers"]["user-agent"].casefold()
     assert sent["body"]["model"] == "llama-3.3-70b-versatile"
     assert sent["body"]["messages"] == [
         {"role": "system", "content": "SYSTEM"},
@@ -194,7 +204,41 @@ def test_groq_empty_completion_is_reported(monkeypatch):
         providers.complete(GROQ, "s", "u", client="k")
 
 
-# ----------------------------------------------------------------- gemini ---
+def test_groq_empty_completion_raises_empty_error_with_raw_body(monkeypatch):
+    """The empty-completion error must carry finish_reason, reasoning and raw body."""
+    from providers import EmptyCompletionError
+
+    monkeypatch.setattr(providers.urllib.request, "urlopen",
+                        _Recorder(_groq_empty(reasoning="thinking " * 40)))
+    with pytest.raises(EmptyCompletionError) as excinfo:
+        providers.complete(GROQ, "s", "u", client="k")
+    message = str(excinfo.value)
+    assert "finish_reason='length'" in message
+    assert "reasoning_chars=" in message
+    assert "reasoning_snippet=" in message
+    assert "raw=" in message
+    assert "usage=" in message
+
+
+def test_empty_completion_error_is_a_provider_error():
+    """Callers that already catch ProviderError keep working; retriers can be finer."""
+    from providers import EmptyCompletionError
+    assert issubclass(EmptyCompletionError, ProviderError)
+
+
+def test_http_user_agent_is_not_the_urllib_default(monkeypatch):
+    """Cloudflare 1010 is a signature block of Python-urllib, not a bad key."""
+    recorder = _Recorder(_groq_ok())
+    monkeypatch.setattr(providers.urllib.request, "urlopen", recorder)
+    providers.complete(GROQ, "s", "u", client="k")
+    ua = recorder.requests[0]["headers"]["user-agent"]
+    assert ua == providers.HTTP_USER_AGENT
+    assert "python-urllib" not in ua.casefold()
+
+
+def test_api_key_strips_trailing_whitespace(monkeypatch):
+    monkeypatch.setenv("GROQ_API_KEY", "gsk_live  \n")
+    assert providers.api_key("groq") == "gsk_live"
 
 def test_gemini_request_shape(monkeypatch):
     recorder = _Recorder(_gemini_ok())
@@ -238,8 +282,8 @@ def test_gemini_truncated_candidate_suggests_raising_max_tokens(monkeypatch):
 
 # ------------------------------------------------------------ http errors ---
 
-def _http_error(code):
-    return urllib.error.HTTPError("https://x", code, "boom", {}, None)
+def _http_error(code, headers=None):
+    return urllib.error.HTTPError("https://x", code, "boom", headers or {}, None)
 
 
 @pytest.mark.parametrize("code", [401, 403])
@@ -265,13 +309,34 @@ def test_non_retryable_error_is_raised_immediately(monkeypatch):
     assert len(recorder.requests) == 1
 
 
-def test_rate_limit_is_retried_then_reported(monkeypatch):
+def test_rate_limit_is_retried_then_named_as_rate_limit(monkeypatch):
     recorder = _Recorder(error=_http_error(429))
+    sleeps = []
     monkeypatch.setattr(providers.urllib.request, "urlopen", recorder)
-    monkeypatch.setattr(providers.time, "sleep", lambda seconds: None)
-    with pytest.raises(ProviderError, match="unreachable"):
+    monkeypatch.setattr(providers.time, "sleep", lambda seconds: sleeps.append(seconds))
+    with pytest.raises(ProviderError, match="ran out of patience"):
         providers.complete(GROQ, "s", "u", client="k")
-    assert len(recorder.requests) == providers.HTTP_RETRIES
+    assert len(recorder.requests) == providers.RATE_LIMIT_RETRIES + 1
+    assert sleeps[0] == providers.RATE_LIMIT_BACKOFF_START_SECONDS
+    assert sleeps[1] == providers.RATE_LIMIT_BACKOFF_START_SECONDS * 2
+    assert sleeps[0] >= 8
+
+
+def test_a_429_then_success_uses_retry_after_backoff(monkeypatch):
+    attempts = {"n": 0}
+    sleeps = []
+
+    def flaky(request, timeout=None):
+        attempts["n"] += 1
+        if attempts["n"] == 1:
+            raise _http_error(429, headers={"Retry-After": "11"})
+        return _FakeResponse(_groq_ok())
+
+    monkeypatch.setattr(providers.urllib.request, "urlopen", flaky)
+    monkeypatch.setattr(providers.time, "sleep", lambda seconds: sleeps.append(seconds))
+    assert providers.complete(GROQ, "s", "u", client="k") == "the rate is 26.70"
+    assert attempts["n"] == 2
+    assert sleeps == [11.0]
 
 
 def test_a_transient_failure_recovers_on_retry(monkeypatch):

@@ -3,7 +3,8 @@ Date: March 17, 2025
 
 Hi Perrin,
 
-Confirming the rate change we talked through. This one is on Cindervale Studios for the Spring Store Visits program, order line IO-42-0011. We are holding at a $31.25 CPM. Let me know if anything looks off.
+Following up on the Spring Store Visits campaign for Cindervale Studios via Cindersmith Trading. We have updated the pricing for order line IO-42-0011, and the CPM is now set at 31.25.
 
-Thanks,
+Let me know if you need any further details.
+
 ad sales ops
