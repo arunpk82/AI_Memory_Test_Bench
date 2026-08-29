@@ -351,5 +351,3 @@ A rendered scenario is three files:
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
-#   t e s t  
- 
