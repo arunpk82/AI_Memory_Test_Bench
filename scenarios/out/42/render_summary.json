@@ -1,10 +1,13 @@
 {
   "attempt_histogram": {
-    "1": 208
+    "1": 1,
+    "2": 2
   },
+  "empty": 0,
   "fidelity_failed": 0,
-  "fidelity_pass": 208,
-  "render_mode": "deterministic",
-  "scenarios": 208,
-  "seed": 42
+  "fidelity_pass": 3,
+  "render_mode": "llm",
+  "scenarios": 3,
+  "seed": 42,
+  "skipped": 0
 }

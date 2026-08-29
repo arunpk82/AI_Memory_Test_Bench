@@ -1,9 +1,8 @@
 Subject: Larkspire Provisions account record created
 Date: February 2, 2025
 
-System notification.
+Hey team,
 
-The account record is open on our side now. This one is on Larkspire Provisions. The paperwork is filed under Larkspire Provisions LLC, and billing runs out of United States. They sit in consumer electronics, and buying is handled by Saltmarsh Buying Desk. Day-to-day contact is Jarrah Bramhall. Let me know if anything looks off.
+Just confirming that we’ve got the new advertiser on file – Larkspire Provisions LLC is now set up with billing in the United States and flagged under the consumer electronics vertical. Saltmarsh Buying Desk is listed as the agency of record, and Jarrah Bramhall is noted as the primary contact. Let me know if anything else is needed to get the campaign rolling.
 
-Thanks,
 ad sales ops

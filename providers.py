@@ -46,6 +46,14 @@ DEFAULT_PROVIDER = "bedrock"
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
+#: urllib.request adds ``User-Agent: Python-urllib/3.x`` unless we set one.
+#: Groq sits behind Cloudflare, which rejects that signature with HTTP 403
+#: error 1010 (browser_signature_banned) even when Authorization is a valid
+#: ``Bearer <key>``. Invoke-WebRequest succeeds with the same key because
+#: PowerShell sends a different User-Agent. The fake urlopen in tests never
+#: sees the default, which is why this stayed green.
+HTTP_USER_AGENT = "mem-testbed/2"
+
 #: Environment variables that carry each provider's credential, in priority
 #: order. Bedrock is absent because boto3 resolves credentials itself.
 API_KEY_VARS = {
@@ -58,11 +66,28 @@ BEDROCK_PROFILE_PREFIXES = ("us.", "eu.", "apac.")
 
 HTTP_TIMEOUT_SECONDS = 120
 HTTP_RETRIES = 3
-RETRYABLE_STATUS = frozenset({408, 429, 500, 502, 503, 504})
+#: 429 is handled separately: Groq's per-minute ceiling is not a blip, and
+#: retrying it on the same cadence as a 503 just re-hits the ceiling.
+RETRYABLE_STATUS = frozenset({408, 500, 502, 503, 504})
+RATE_LIMIT_RETRIES = 5
+RATE_LIMIT_BACKOFF_START_SECONDS = 8
+RATE_LIMIT_MAX_WAIT_SECONDS = 300
 
 
 class ProviderError(RuntimeError):
     """Raised when a completion cannot be requested or cannot be parsed."""
+
+
+class EmptyCompletionError(ProviderError):
+    """The model returned a 200 with no usable text.
+
+    A distinct type because it is *recoverable*: unlike an auth or model-id
+    error, an empty completion is often intermittent (a reasoning model such as
+    ``openai/gpt-oss-120b`` can spend its whole ``max_tokens`` budget on
+    chain-of-thought and return an empty ``content`` with
+    ``finish_reason: "length"``). The render loop retries it instead of letting
+    one scenario kill the whole seed run.
+    """
 
 
 @dataclass(frozen=True)
@@ -210,7 +235,7 @@ def complete(spec: ModelSpec, system: str, user: str, *, client=None) -> str:
 
     text = (text or "").strip()
     if not text:
-        raise ProviderError(
+        raise EmptyCompletionError(
             f"{spec.provider} returned an empty completion for model {spec.model}")
     return text
 
@@ -242,11 +267,48 @@ def _complete_groq(spec: ModelSpec, system: str, user: str, key) -> str:
                "Content-Type": "application/json"}
     body = _post_json(GROQ_ENDPOINT, payload, headers, spec)
     try:
-        return body["choices"][0]["message"]["content"]
+        choice = body["choices"][0]
+        message = choice["message"]
     except (KeyError, IndexError, TypeError) as exc:
         raise ProviderError(
             f"groq response for {spec.model} had no message content: "
             f"{json.dumps(body)[:400]}") from exc
+    content = (message.get("content") or "").strip()
+    if not content:
+        raise EmptyCompletionError(_empty_groq_detail(spec, choice, message, body))
+    return content
+
+
+def _empty_groq_detail(spec: ModelSpec, choice: dict, message: dict,
+                       body: dict) -> str:
+    """A diagnostic that shows the raw body: finish_reason, content, reasoning.
+
+    ``openai/gpt-oss-120b`` returns its chain-of-thought in a separate
+    ``reasoning`` field. When the answer field is empty, this is almost always
+    ``finish_reason == "length"`` with a non-empty ``reasoning`` -- the budget
+    was spent thinking. Surfacing the raw fields turns the old "empty
+    completion" crash into an evidence trail.
+    """
+    finish = choice.get("finish_reason")
+    reasoning = message.get("reasoning") or message.get("reasoning_content") or ""
+    usage = body.get("usage") or {}
+    parts = [
+        f"{spec.provider} returned an empty completion for model {spec.model}",
+        f"finish_reason={finish!r}",
+        f"content={message.get('content')!r}",
+        f"reasoning_chars={len(reasoning)}",
+    ]
+    if usage:
+        parts.append(f"usage={json.dumps(usage, sort_keys=True)}")
+    if finish == "length":
+        parts.append(
+            "the token budget was exhausted before a final answer -- this is a "
+            "reasoning model spending max_tokens on chain-of-thought; raising "
+            "renderer.max_tokens or lowering reasoning effort avoids it")
+    if reasoning:
+        parts.append(f"reasoning_snippet={reasoning[:200]!r}")
+    parts.append(f"raw={json.dumps(body)[:600]}")
+    return "; ".join(parts)
 
 
 def _complete_gemini(spec: ModelSpec, system: str, user: str, key) -> str:
@@ -277,13 +339,40 @@ def _complete_gemini(spec: ModelSpec, system: str, user: str, key) -> str:
     return text
 
 
+def _retry_after_seconds(exc: urllib.error.HTTPError) -> float | None:
+    """Seconds to wait from a Retry-After header, or None if none/unusable."""
+    headers = getattr(exc, "headers", None) or getattr(exc, "hdrs", None)
+    if headers is None or not hasattr(headers, "get"):
+        return None
+    raw = headers.get("Retry-After") or headers.get("retry-after")
+    if raw is None:
+        return None
+    try:
+        wait = float(str(raw).strip())
+    except ValueError:
+        return None
+    if wait < 0:
+        return None
+    return min(wait, RATE_LIMIT_MAX_WAIT_SECONDS)
+
+
 def _post_json(url: str, payload: dict, headers: dict, spec: ModelSpec) -> dict:
-    """POST JSON with bounded retries on transient failures."""
+    """POST JSON with bounded retries on transient failures.
+
+    HTTP 429 is not lumped in with 503. A rate limit needs a wait measured in
+    seconds (Retry-After, else exponential from
+    ``RATE_LIMIT_BACKOFF_START_SECONDS``) and a distinct error when patience
+    runs out, so it cannot be read as an auth or network failure.
+    """
     data = json.dumps(payload).encode("utf-8")
     last_error: Exception | None = None
+    request_headers = dict(headers)
+    request_headers.setdefault("User-Agent", HTTP_USER_AGENT)
+    transient_attempts = 0
+    rate_limit_hits = 0
 
-    for attempt in range(1, HTTP_RETRIES + 1):
-        request = urllib.request.Request(url, data=data, headers=headers,
+    while True:
+        request = urllib.request.Request(url, data=data, headers=request_headers,
                                          method="POST")
         try:
             with urllib.request.urlopen(request,
@@ -301,20 +390,41 @@ def _post_json(url: str, payload: dict, headers: dict, spec: ModelSpec) -> dict:
                     f"{spec.provider} does not know the model {spec.model!r} "
                     f"(HTTP 404); check the model id in config.yaml. "
                     f"{detail}") from exc
+            if exc.code == 429:
+                rate_limit_hits += 1
+                if rate_limit_hits > RATE_LIMIT_RETRIES:
+                    raise ProviderError(
+                        f"{spec.provider} rate-limited {spec.model} (HTTP 429) "
+                        f"and ran out of patience after {RATE_LIMIT_RETRIES} "
+                        f"retries. {detail}") from exc
+                wait = _retry_after_seconds(exc)
+                if wait is None:
+                    wait = RATE_LIMIT_BACKOFF_START_SECONDS * (
+                        2 ** (rate_limit_hits - 1))
+                    wait = min(wait, RATE_LIMIT_MAX_WAIT_SECONDS)
+                time.sleep(wait)
+                continue
             if exc.code not in RETRYABLE_STATUS:
                 raise ProviderError(
                     f"{spec.provider} returned HTTP {exc.code} for {spec.model}. "
                     f"{detail}") from exc
             last_error = exc
+            transient_attempts += 1
+            if transient_attempts >= HTTP_RETRIES:
+                break
+            time.sleep(2 ** transient_attempts)
+            continue
         except urllib.error.URLError as exc:
             last_error = exc
+            transient_attempts += 1
+            if transient_attempts >= HTTP_RETRIES:
+                break
+            time.sleep(2 ** transient_attempts)
+            continue
         except json.JSONDecodeError as exc:
             raise ProviderError(
                 f"{spec.provider} returned a non-JSON body for "
                 f"{spec.model}") from exc
-
-        if attempt < HTTP_RETRIES:
-            time.sleep(2 ** attempt)
 
     raise ProviderError(
         f"{spec.provider} was unreachable for {spec.model} after {HTTP_RETRIES} "

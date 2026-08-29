@@ -1,5 +1,12 @@
 {
-  "attempt_history": [],
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "missing_facts": 0,
+      "status": "pass",
+      "unsupported": 0
+    }
+  ],
   "attempts": 1,
   "author": "counterparty",
   "channel": "email_received",
@@ -11,10 +18,11 @@
     "names": [],
     "numbers": []
   },
-  "model": null,
-  "render_mode": "deterministic",
+  "model": "qwen/qwen3.8-27b",
+  "provider": "groq",
+  "render_mode": "llm",
   "scenario_kind": "deal_kickoff",
   "seed": 42,
-  "template_version": "det-v2",
+  "template_version": null,
   "timestamp": "2025-02-20"
 }

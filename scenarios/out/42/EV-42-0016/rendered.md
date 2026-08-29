@@ -1,9 +1,10 @@
 Subject: Order line IO-42-0025 booked on Autumn Brand Awareness
 Date: February 13, 2025
 
-System notification.
+Hey team,
 
-The order line is in the system. This one is on Ravensmoor Holdings for the Autumn Brand Awareness program, order line IO-42-0025. We are holding at a $48.00 CPM, and the goal is 15,150,000 impressions. The line is booked, and geo stays IL/OH/MI. The demo is A35-64, and the format is CTV. Let me know if anything looks off.
+Just confirming that the order line IO-42-0025 for Ravensmoor Holdings, managed through Saltmarsh Buying Desk under the Autumn Brand Awareness deal, is now officially booked. Set with a CPM rate of $48.00 and an impressions goal of 15150000. The creative will run in CTV format, targeting the IL/OH/MI geo set and the A35-64 demo segment.
 
-Thanks,
+Let me know if anything else needs tweaking.
+
 ad sales ops
